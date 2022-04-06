@@ -9,7 +9,8 @@ import spacy
 from spacy.training.example import Example
 from spacy.util import minibatch, compounding
 
-LABEL = ['Programming Language', 'Certification', 'Seniority', 'Tool/Framework', 'IT Specialization', 'Programming Concept']
+LABEL = ['Programming Language', 'Certification', 'Seniority', 'Tool/Framework', 'IT Specialization',
+         'Programming Concept']
 
 
 def create_tsv_file(input_path):
@@ -118,7 +119,7 @@ def json_to_spacy_format(input_file):
 
 
 def create_custom_spacy_model(train_data, model=None, new_model_name='technology_it_model', output_dir=None,
-                              n_iter=20):
+                              n_iter=200):
     """Setting up the pipeline and entity recognizer, and training the new entity."""
     if model is not None:
         nlp = spacy.load(model)  # load existing spacy model
@@ -140,6 +141,8 @@ def create_custom_spacy_model(train_data, model=None, new_model_name='technology
     else:
         optimizer = nlp.create_optimizer()
 
+    optimizer.learn_rate = 0.0001
+
     # Get names of other pipes to disable them during training to train only NER
     other_pipes = [pipe for pipe in nlp.pipe_names if pipe != 'ner']
     print(n_iter)
@@ -157,13 +160,6 @@ def create_custom_spacy_model(train_data, model=None, new_model_name='technology
                     nlp.update([example], sgd=optimizer, drop=0.35, losses=losses)
             print('Losses', losses)
 
-    # Test the trained model
-    test_text = 'I am specialized in Java and Cloud with technologies such as SpringBoot, Docker and JUnit.'
-    doc = nlp(test_text)
-    print("Entities in '%s'" % test_text)
-    for ent in doc.ents:
-        print(ent.label_, ent.text)
-
     # Save model
     if output_dir is not None:
         output_dir = Path(output_dir)
@@ -173,20 +169,67 @@ def create_custom_spacy_model(train_data, model=None, new_model_name='technology
         nlp.to_disk(output_dir)
         print("Saved model to", output_dir)
 
-        # Test the saved model
-        print("Loading from", output_dir)
-        nlp2 = spacy.load(output_dir)
-        doc2 = nlp2(test_text)
-        for ent in doc2.ents:
+
+def validate_model(model, input_file):
+    # Test the saved model
+    validate_text = """Wanted: Java Engineer with experience in building high-performing, scalable, enterprise-grade applications.
+You need to have proven knowledge in Web applications with JEE/Spring, DevOps experience with high focus on cloud-based operating systems (particularly AWS), Jenkins, Docker and Kubernetes are a plus.
+Looking for people with experience in Kafka, Big-Data and Python.
+Must have experience with build tools (Maven, Gradle) and a Object-Oriented Analysis and design using common design patterns.
+Hiring people with good knowledge of Relational Databases, PostgreSQL and ORM technologies (JPA, Hibernate).
+Orientation towards test-driven development and clean code is a plus
+Requirements: experience with version control systems (Git) and a Bachelor/Master degree in Computer Science, Engineering, or a related subject.
+You need to have development experience in Java and Java frameworks and SQL/Relational Databases skills.
+One requirement is having practical skills in CI/CD - some of Git, Maven, Gradle, Docker, Jenkins, Jira.
+Skills description: 4+ years’ experience with Java (developing backend/web applications, Java 8+), 3+ years’ experience with Spring Boot (Spring Data, Spring Cloud), good unit/integration testing experience.
+Nice-to-Have Skills: experience with software provisioning/configuration (e.g. Puppet, Ansible), with Oracle  and Angular 2+.
+We are looking for: experience in Apache Camel, experience with MSSQL, PostgreSQL, experience with Unit and integration testing with JUnit and Mockito, CI/CD tools: Git, Jenkins, Maven, SonarQube, Artifactory and Microservices, Dockers, and Kubernetes.
+Nice to have: exposure to NoSQL databases (MongoDBB), exposure to Python, Jupyter Hub.
+Requirements: strong knowledge of Java Fundamentals and OOP principles and good understanding of design patterns.
+At the moment we're using a mix of Python and Javascript.
+We know you want to know so here is the stack: Python, Django, React, Redux, Express.
+Other buzzwords: Universal Web Apps, Machine Learning, Heroku, AWS, Algolia.
+Have already used at least one of these technologies amongst JavaScript, TypeScript, React, Vue.js, Kafka, ElasticSearch, MongoDB, and Python.
+The general tech stack of the project is: iOS (Swuift), Android (Kotzlin), Modern Web Apps (Angular, React), Microservice architecture with OpenAPI contracts.
+Basic qualifications: experience with web application development (.NET/JavaScript or equivalent).
+Open to work with other programming languages (Python, Scala).
+Qualifications and Experience: Knowledge of Spring (Boot, Data, Security).
+University degree in a technical subject (Computer Science, Mathematics, or similar) or equivalent experience in the industry.
+Qualifications: FPGA Digital Design experience, C++, Qt framework experience
+The requirements are the following: knowledge of .Net, .Net Core, WebAPI, ASP.Net MVC, Razor Views or equivalent single page application framework, C#, JavaScript, CSS, HTML5 & Azure Cloud services or AWS, Active Directory.
+You need to have experience with the ASP.NET framework and ideally SQL Server.
+Capability to design complex SQL queries.
+You know the ins and outs of several cloud providers like AWS, Azure, Heroku and profound experience in Terraform, Google Cloud.
+Here are the technologies you must have experience with: Django, Node.js, Nginx, React, React Native, Redis, RabbitMQ.
+The following are a must: Selenium, Grafana."""
+    print("Loading from", model)
+    nlp2 = spacy.load(model)
+    doc2 = nlp2(validate_text)
+    csv_file = open(input_file, 'r')
+    csv_file_reader = csv.reader(csv_file)
+    rows = list(filter(lambda row: row[1] != 'O', list(csv_file_reader)))
+    print(rows)
+    nr_of_entities = len(rows)
+    nr_of_matches = 0
+    for ent in doc2.ents:
+        if [ent.text, ent.label_] in rows:
             print(ent.label_, ent.text)
+            nr_of_matches += 1
+    print(nr_of_matches/nr_of_entities)
+
+
+def get_key_value_entites_from_job_description(job_description_text, nlp_it_model):
+    job_description_entities = nlp_it_model(job_description_text)
+    return job_description_entities
 
 
 def main(input_file):
-    json_file_name = csv_to_json_with_labels(input_file, '-')
-    training_data = json_to_spacy_format(json_file_name)
-    create_custom_spacy_model(training_data,
-                              "en_core_web_sm",
-                              output_dir='Model')
+    # json_file_name = csv_to_json_with_labels(input_file, '-')
+    # training_data = json_to_spacy_format(json_file_name)
+    # create_custom_spacy_model(training_data,
+    #                           "en_core_web_sm",
+    #                           output_dir='Model')
+    validate_model('Model', 'Data/validate.csv')
 
 
 if __name__ == "__main__":
