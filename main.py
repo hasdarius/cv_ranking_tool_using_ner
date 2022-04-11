@@ -4,19 +4,19 @@ import logging
 import os
 import random
 from pathlib import Path
-
+from os import path
 import spacy
 from spacy.training.example import Example
 from spacy.util import minibatch, compounding
 
 LABEL = ['Programming Language', 'Certification', 'Seniority', 'Tool/Framework', 'IT Specialization',
          'Programming Concept']
+CUSTOM_SPACY_MODEL = 'Model'
 
 
 def create_tsv_file(input_path):
     csv_file = open(input_path, 'r')
     csv_file_reader = csv.reader(csv_file)
-    # next(csv_file_reader, None)  # skip header
     input_file_name, _ = os.path.splitext(input_path)
     tsv_file_name = input_file_name + '.tsv'
     tsv_file = open(tsv_file_name, 'wt', newline='')
@@ -118,32 +118,13 @@ def json_to_spacy_format(input_file):
         return None
 
 
-def create_custom_spacy_model(train_data, model=None, new_model_name='technology_it_model', output_dir=None,
-                              n_iter=200):
-    """Setting up the pipeline and entity recognizer, and training the new entity."""
-    if model is not None:
-        nlp = spacy.load(model)  # load existing spacy model
-        print("Loaded model '%s'" % model)
-    else:
-        nlp = spacy.blank('en')  # create blank Language class
-        print("Created blank 'en' model")
-    if 'ner' not in nlp.pipe_names:
-        ner = nlp.create_pipe('ner')
-        nlp.add_pipe(ner)
-    else:
-        ner = nlp.get_pipe('ner')
-
-    for i in LABEL:
-        ner.add_label(i)  # Add new entity labels to entity recognizer
-
+def train_model(n_iter, train_data, model, learn_rate, nlp):
     if model is None:
         optimizer = nlp.begin_training()
     else:
         optimizer = nlp.create_optimizer()
 
-    optimizer.learn_rate = 0.0001
-
-    # Get names of other pipes to disable them during training to train only NER
+    optimizer.learn_rate = learn_rate
     other_pipes = [pipe for pipe in nlp.pipe_names if pipe != 'ner']
     print(n_iter)
     with nlp.disable_pipes(*other_pipes):  # only train NER
@@ -160,7 +141,8 @@ def create_custom_spacy_model(train_data, model=None, new_model_name='technology
                     nlp.update([example], sgd=optimizer, drop=0.35, losses=losses)
             print('Losses', losses)
 
-    # Save model
+
+def save_model(output_dir, new_model_name, nlp):
     if output_dir is not None:
         output_dir = Path(output_dir)
         if not output_dir.exists():
@@ -190,7 +172,7 @@ At the moment we're using a mix of Python and Javascript.
 We know you want to know so here is the stack: Python, Django, React, Redux, Express.
 Other buzzwords: Universal Web Apps, Machine Learning, Heroku, AWS, Algolia.
 Have already used at least one of these technologies amongst JavaScript, TypeScript, React, Vue.js, Kafka, ElasticSearch, MongoDB, and Python.
-The general tech stack of the project is: iOS (Swuift), Android (Kotzlin), Modern Web Apps (Angular, React), Microservice architecture with OpenAPI contracts.
+The general tech stack of the project is: iOS (Swift), Android (Kotlin), Modern Web Apps (Angular, React), Microservice architecture with OpenAPI contracts.
 Basic qualifications: experience with web application development (.NET/JavaScript or equivalent).
 Open to work with other programming languages (Python, Scala).
 Qualifications and Experience: Knowledge of Spring (Boot, Data, Security).
@@ -202,7 +184,7 @@ Capability to design complex SQL queries.
 You know the ins and outs of several cloud providers like AWS, Azure, Heroku and profound experience in Terraform, Google Cloud.
 Here are the technologies you must have experience with: Django, Node.js, Nginx, React, React Native, Redis, RabbitMQ.
 The following are a must: Selenium, Grafana."""
-    print("Loading from", model)
+    print("Loading from custom model", model)
     nlp2 = spacy.load(model)
     doc2 = nlp2(validate_text)
     csv_file = open(input_file, 'r')
@@ -215,21 +197,39 @@ The following are a must: Selenium, Grafana."""
         if [ent.text, ent.label_] in rows:
             print(ent.label_, ent.text)
             nr_of_matches += 1
-    print(nr_of_matches/nr_of_entities)
+    print(nr_of_matches / nr_of_entities)
 
 
-def get_key_value_entites_from_job_description(job_description_text, nlp_it_model):
-    job_description_entities = nlp_it_model(job_description_text)
-    return job_description_entities
+def create_custom_spacy_model(train_data, model=None, new_model_name='technology_it_model', output_dir=None,
+                              n_iter=200):
+    """Setting up the pipeline and entity recognizer, and training the new entity."""
+    if model is not None:
+        nlp = spacy.load(model)  # load existing spacy model
+        print("Loaded model '%s'" % model)
+    else:
+        nlp = spacy.blank('en')  # create blank Language class
+        print("Created blank 'en' model")
+    if 'ner' not in nlp.pipe_names:
+        ner = nlp.create_pipe('ner')
+        nlp.add_pipe(ner)
+    else:
+        ner = nlp.get_pipe('ner')
+
+    for i in LABEL:
+        ner.add_label(i)  # Add new entity labels to entity recognizer
+
+    train_model(n_iter, train_data, model, learn_rate=0.0001, nlp=nlp)
+    save_model(output_dir, new_model_name, nlp=nlp)
 
 
 def main(input_file):
-    # json_file_name = csv_to_json_with_labels(input_file, '-')
-    # training_data = json_to_spacy_format(json_file_name)
-    # create_custom_spacy_model(training_data,
-    #                           "en_core_web_sm",
-    #                           output_dir='Model')
-    validate_model('Model', 'Data/validate.csv')
+    if not path.exists(CUSTOM_SPACY_MODEL):
+        json_file_name = csv_to_json_with_labels(input_file, '-')
+        training_data = json_to_spacy_format(json_file_name)
+        create_custom_spacy_model(training_data,
+                                  'en_core_web_sm',
+                                  output_dir=CUSTOM_SPACY_MODEL)
+    validate_model(CUSTOM_SPACY_MODEL, 'Data/validate.csv')
 
 
 if __name__ == "__main__":
