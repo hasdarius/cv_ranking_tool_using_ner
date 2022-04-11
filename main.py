@@ -184,7 +184,7 @@ Capability to design complex SQL queries.
 You know the ins and outs of several cloud providers like AWS, Azure, Heroku and profound experience in Terraform, Google Cloud.
 Here are the technologies you must have experience with: Django, Node.js, Nginx, React, React Native, Redis, RabbitMQ.
 The following are a must: Selenium, Grafana."""
-    print("Loading from custom model", model)
+    print("Loading from custom model named:", model)
     nlp2 = spacy.load(model)
     doc2 = nlp2(validate_text)
     csv_file = open(input_file, 'r')
@@ -200,7 +200,7 @@ The following are a must: Selenium, Grafana."""
     print(nr_of_matches / nr_of_entities)
 
 
-def create_custom_spacy_model(train_data, model=None, new_model_name='technology_it_model', output_dir=None,
+def create_custom_spacy_model(train_data, model=None, new_model_name=None, output_dir=None,
                               n_iter=200):
     """Setting up the pipeline and entity recognizer, and training the new entity."""
     if model is not None:
@@ -211,7 +211,7 @@ def create_custom_spacy_model(train_data, model=None, new_model_name='technology
         print("Created blank 'en' model")
     if 'ner' not in nlp.pipe_names:
         ner = nlp.create_pipe('ner')
-        nlp.add_pipe(ner)
+        nlp.add_pipe('ner')
     else:
         ner = nlp.get_pipe('ner')
 
@@ -227,7 +227,8 @@ def main(input_file):
         json_file_name = csv_to_json_with_labels(input_file, '-')
         training_data = json_to_spacy_format(json_file_name)
         create_custom_spacy_model(training_data,
-                                  'en_core_web_sm',
+                                  None,
+                                  new_model_name='technology_it_model',
                                   output_dir=CUSTOM_SPACY_MODEL)
     validate_model(CUSTOM_SPACY_MODEL, 'Data/validate.csv')
 
