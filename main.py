@@ -139,7 +139,7 @@ def train_model(n_iter, train_data, model, learn_rate, nlp):
                     example = Example.from_dict(doc, annotations)
                     # Update the model
                     nlp.update([example], sgd=optimizer, drop=0.35, losses=losses)
-            print('Losses', losses)
+            # print('Losses', losses)
 
 
 def save_model(output_dir, new_model_name, nlp):
@@ -152,7 +152,7 @@ def save_model(output_dir, new_model_name, nlp):
         print("Saved model to", output_dir)
 
 
-def validate_model(model, input_file):
+def validate_model(nlp, input_file):
     # Test the saved model
     validate_text = """Wanted: Java Engineer with experience in building high-performing, scalable, enterprise-grade applications.
 You need to have proven knowledge in Web applications with JEE/Spring, DevOps experience with high focus on cloud-based operating systems (particularly AWS), Jenkins, Docker and Kubernetes are a plus.
@@ -184,9 +184,9 @@ Capability to design complex SQL queries.
 You know the ins and outs of several cloud providers like AWS, Azure, Heroku and profound experience in Terraform, Google Cloud.
 Here are the technologies you must have experience with: Django, Node.js, Nginx, React, React Native, Redis, RabbitMQ.
 The following are a must: Selenium, Grafana."""
-    print("Loading from custom model named:", model)
-    nlp2 = spacy.load(model)
-    doc2 = nlp2(validate_text)
+    # print("Loading from custom model named:", model)
+    # nlp2 = spacy.load(model)
+    doc2 = nlp(validate_text)
     csv_file = open(input_file, 'r')
     csv_file_reader = csv.reader(csv_file)
     rows = list(filter(lambda row: row[1] != 'O', list(csv_file_reader)))
@@ -197,11 +197,14 @@ The following are a must: Selenium, Grafana."""
         if [ent.text, ent.label_] in rows:
             print(ent.label_, ent.text)
             nr_of_matches += 1
-    print(nr_of_matches / nr_of_entities)
+    accuracy = nr_of_matches / nr_of_entities
+    print(accuracy)
+    return accuracy
 
 
-def create_custom_spacy_model(train_data, model=None, new_model_name=None, output_dir=None,
-                              n_iter=200):
+def fine_tune_and_save_custom_model(train_data, model=None, new_model_name=None, output_dir=None):
+    learn_rates = [0.1, 0.05, 0.01, 0.005, 0.001]
+    n_iters = [10, 20, 50, 100, 150, 200, 250, 300]
     """Setting up the pipeline and entity recognizer, and training the new entity."""
     if model is not None:
         nlp = spacy.load(model)  # load existing spacy model
@@ -210,27 +213,40 @@ def create_custom_spacy_model(train_data, model=None, new_model_name=None, outpu
         nlp = spacy.blank('en')  # create blank Language class
         print("Created blank 'en' model")
     if 'ner' not in nlp.pipe_names:
-        ner = nlp.create_pipe('ner')
+        nlp.create_pipe('ner')
         nlp.add_pipe('ner')
-    else:
-        ner = nlp.get_pipe('ner')
+    ner = nlp.get_pipe('ner')
 
     for i in LABEL:
         ner.add_label(i)  # Add new entity labels to entity recognizer
 
-    train_model(n_iter, train_data, model, learn_rate=0.0001, nlp=nlp)
-    save_model(output_dir, new_model_name, nlp=nlp)
+    best_nlp = nlp
+    best_accuracy = 0
+    best_learn_rate = learn_rates[0]
+    best_iter = n_iters[0]
+
+    for n_iter in n_iters:
+        for learn_rate in learn_rates:
+            train_nlp = nlp
+            train_model(n_iter, train_data, model=model, learn_rate=learn_rate, nlp=train_nlp)
+            accuracy = validate_model(train_nlp, 'Data/validate.csv')
+            if accuracy > best_accuracy:
+                best_iter = n_iter
+                best_learn_rate = learn_rate
+                best_accuracy = accuracy
+                best_nlp = train_nlp
+    save_model(output_dir, new_model_name, nlp=best_nlp)
+    print('Iterations: ' + best_iter + ' Learn rate:' + best_learn_rate + ' Accuracy:' + best_accuracy)
 
 
 def main(input_file):
     if not path.exists(CUSTOM_SPACY_MODEL):
         json_file_name = csv_to_json_with_labels(input_file, '-')
         training_data = json_to_spacy_format(json_file_name)
-        create_custom_spacy_model(training_data,
-                                  None,
-                                  new_model_name='technology_it_model',
-                                  output_dir=CUSTOM_SPACY_MODEL)
-    validate_model(CUSTOM_SPACY_MODEL, 'Data/validate.csv')
+        fine_tune_and_save_custom_model(training_data,
+                                        new_model_name='technology_it_model',
+                                        output_dir=CUSTOM_SPACY_MODEL)
+    # here we will test the model
 
 
 if __name__ == "__main__":
