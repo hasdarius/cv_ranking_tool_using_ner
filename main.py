@@ -236,7 +236,7 @@ def fine_tune_and_save_custom_model(train_data, model=None, new_model_name=None,
                 best_accuracy = accuracy
                 best_nlp = train_nlp
     save_model(output_dir, new_model_name, nlp=best_nlp)
-    print('Iterations: ' + best_iter + ' Learn rate:' + best_learn_rate + ' Accuracy:' + best_accuracy)
+    print('Iterations: ' + str(best_iter) + ' Learn rate:' + str(best_learn_rate) + ' Accuracy:' + str(best_accuracy))
 
 
 def main(input_file):
@@ -247,6 +247,73 @@ def main(input_file):
                                         new_model_name='technology_it_model',
                                         output_dir=CUSTOM_SPACY_MODEL)
     # here we will test the model
+
+
+def get_cv_ranking_score(cv_file, job_description_dictionary):
+    concepts_scores = {
+        "Intern": {
+            "Seniority": 0,
+            "Max Programming Languages": 2,
+            "Max Tool/Framework": 4,
+            "Max Certification": 4,
+            "Full Match Programming Language": 7,
+            "Partial Match Programming Language": 3,
+            "Full Tool/Framework": 3,
+            "Partial Tool/Framework": 1.5,
+            "Full Certification": 0,
+            "Partial Certification": 0,
+            "Full Programming Concept": 5,
+            "Partial Programming Concept": 3,
+            "Full IT Specialization": 0,
+            "Partial IT Specialization": 0
+        },
+        "Junior": {
+            "Seniority": 1,
+            "Max Programming Languages": 4,
+            "Max Tool/Framework": 8,
+            "Full Match Programming Language": 7,
+            "Partial Match Programming Language": 3,
+            "Full Tool/Framework": 5,
+            "Partial Tool/Framework": 2,
+            "Full Certification": 1,
+            "Partial Certification": 0.5,
+            "Full Programming Concept": 3,
+            "Partial Programming Concept": 1.5,
+            "Full IT Specialization": 1,
+            "Partial IT Specialization": 0.5
+        },
+        "Mid": {
+            "Seniority": 2,
+            "Max Programming Languages": 6,
+            "Max Tool/Framework": 12,
+            "Full Match Programming Language": 5,
+            "Partial Match Programming Language": 2,
+            "Full Tool/Framework": 7,
+            "Partial Tool/Framework": 3,
+            "Full Certification": 3,
+            "Partial Certification": 1.5,
+            "Full Programming Concept": 2,
+            "Partial Programming Concept": 1,
+            "Full IT Specialization": 3,
+            "Partial IT Specialization": 1.5
+        },
+        "Senior": {
+            "Seniority": 3,
+            "Max Programming Languages": 8,
+            "Max Tool/Framework": 15,
+            "Full Match Programming Language": 5,
+            "Partial Match Programming Language": 2,
+            "Full Tool/Framework": 7,
+            "Partial Tool/Framework": 3,
+            "Full Certification": 4,
+            "Partial Certification": 2,
+            "Full Programming Concept": 2,
+            "Partial Programming Concept": 1,
+            "Full IT Specialization": 3,
+            "Partial IT Specialization": 1.5
+        }
+    }
+    return 0
 
 
 if __name__ == "__main__":
