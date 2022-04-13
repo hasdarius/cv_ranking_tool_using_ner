@@ -13,6 +13,81 @@ LABEL = ['Programming Language', 'Certification', 'Seniority', 'Tool/Framework',
          'Programming Concept']
 CUSTOM_SPACY_MODEL = 'Model'
 
+CONCEPTS_SCORES = {
+    "Intern": {
+        "Seniority": 0,
+        "Max Programming Languages": 2,
+        "Max Tool/Framework": 4,
+        "Max Certification": 2,
+        "Max Programming Concept": 8,
+        "Max IT Specialization": 0,
+        "Full Match Programming Language": 7,
+        "Partial Match Programming Language": 3,
+        "Full Tool/Framework": 3,
+        "Partial Tool/Framework": 1.5,
+        "Full Certification": 0,
+        "Partial Certification": 0,
+        "Full Programming Concept": 5,
+        "Partial Programming Concept": 3,
+        "Full IT Specialization": 0,
+        "Partial IT Specialization": 0
+    },
+    "Junior": {
+        "Seniority": 1,
+        "Max Programming Languages": 4,
+        "Max Tool/Framework": 8,
+        "Max Certification": 3,
+        "Max Programming Concept": 10,
+        "Max IT Specialization": 2,
+        "Full Match Programming Language": 7,
+        "Partial Match Programming Language": 3,
+        "Full Tool/Framework": 5,
+        "Partial Tool/Framework": 2,
+        "Full Certification": 1,
+        "Partial Certification": 0.5,
+        "Full Programming Concept": 3,
+        "Partial Programming Concept": 1.5,
+        "Full IT Specialization": 1,
+        "Partial IT Specialization": 0.5
+    },
+    "Mid": {
+        "Seniority": 2,
+        "Max Programming Languages": 6,
+        "Max Tool/Framework": 12,
+        "Max Certification": 4,
+        "Max Programming Concept": 12,
+        "Max IT Specialization": 3,
+        "Full Match Programming Language": 5,
+        "Partial Match Programming Language": 2,
+        "Full Tool/Framework": 7,
+        "Partial Tool/Framework": 3,
+        "Full Certification": 3,
+        "Partial Certification": 1.5,
+        "Full Programming Concept": 2,
+        "Partial Programming Concept": 1,
+        "Full IT Specialization": 3,
+        "Partial IT Specialization": 1.5
+    },
+    "Senior": {
+        "Seniority": 3,
+        "Max Programming Languages": 8,
+        "Max Tool/Framework": 15,
+        "Max Certification": 4,
+        "Max Programming Concept": 15,
+        "Max IT Specialization": 4,
+        "Full Match Programming Language": 5,
+        "Partial Match Programming Language": 2,
+        "Full Tool/Framework": 7,
+        "Partial Tool/Framework": 3,
+        "Full Certification": 4,
+        "Partial Certification": 2,
+        "Full Programming Concept": 2,
+        "Partial Programming Concept": 1,
+        "Full IT Specialization": 3,
+        "Partial IT Specialization": 1.5
+    }
+}
+
 
 def create_tsv_file(input_path):
     csv_file = open(input_path, 'r')
@@ -249,72 +324,22 @@ def main(input_file):
     # here we will test the model
 
 
-def get_cv_ranking_score(cv_file, job_description_dictionary):
-    concepts_scores = {
-        "Intern": {
-            "Seniority": 0,
-            "Max Programming Languages": 2,
-            "Max Tool/Framework": 4,
-            "Max Certification": 4,
-            "Full Match Programming Language": 7,
-            "Partial Match Programming Language": 3,
-            "Full Tool/Framework": 3,
-            "Partial Tool/Framework": 1.5,
-            "Full Certification": 0,
-            "Partial Certification": 0,
-            "Full Programming Concept": 5,
-            "Partial Programming Concept": 3,
-            "Full IT Specialization": 0,
-            "Partial IT Specialization": 0
-        },
-        "Junior": {
-            "Seniority": 1,
-            "Max Programming Languages": 4,
-            "Max Tool/Framework": 8,
-            "Full Match Programming Language": 7,
-            "Partial Match Programming Language": 3,
-            "Full Tool/Framework": 5,
-            "Partial Tool/Framework": 2,
-            "Full Certification": 1,
-            "Partial Certification": 0.5,
-            "Full Programming Concept": 3,
-            "Partial Programming Concept": 1.5,
-            "Full IT Specialization": 1,
-            "Partial IT Specialization": 0.5
-        },
-        "Mid": {
-            "Seniority": 2,
-            "Max Programming Languages": 6,
-            "Max Tool/Framework": 12,
-            "Full Match Programming Language": 5,
-            "Partial Match Programming Language": 2,
-            "Full Tool/Framework": 7,
-            "Partial Tool/Framework": 3,
-            "Full Certification": 3,
-            "Partial Certification": 1.5,
-            "Full Programming Concept": 2,
-            "Partial Programming Concept": 1,
-            "Full IT Specialization": 3,
-            "Partial IT Specialization": 1.5
-        },
-        "Senior": {
-            "Seniority": 3,
-            "Max Programming Languages": 8,
-            "Max Tool/Framework": 15,
-            "Full Match Programming Language": 5,
-            "Partial Match Programming Language": 2,
-            "Full Tool/Framework": 7,
-            "Partial Tool/Framework": 3,
-            "Full Certification": 4,
-            "Partial Certification": 2,
-            "Full Programming Concept": 2,
-            "Partial Programming Concept": 1,
-            "Full IT Specialization": 3,
-            "Partial IT Specialization": 1.5
-        }
-    }
+def get_max_seniority(list_of_seniorities):
+    seniority_priority_list = ['senior', 'mid', 'junior', 'intern']
+    final_seniority_priority_list = ['senior', 'mid', 'junior', 'intern']
+    for priority in seniority_priority_list:
+        if priority not in list_of_seniorities:
+            final_seniority_priority_list.remove(priority)
+    return final_seniority_priority_list[0]
+
+
+def get_cv_ranking_score(cv_file_dictionary, job_description_dictionary):
+    max_required_seniority = get_max_seniority(job_description_dictionary['Seniority'])
+    # for label in job_description_dictionary:
+
     return 0
 
 
 if __name__ == "__main__":
-    main("Data/it_dataset.csv")
+    # main("Data/it_dataset.csv")
+    print(get_max_seniority(['senior', 'junior', 'mid']))
