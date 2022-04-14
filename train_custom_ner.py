@@ -8,6 +8,7 @@ import csv
 import json
 import logging
 from pathlib import Path
+from constants import VALIDATE_TEXT, TEST_TEXT
 
 LABEL = ['Programming Language', 'Certification', 'Seniority', 'Tool/Framework', 'IT Specialization',
          'Programming Concept']
@@ -153,53 +154,8 @@ def save_model(output_dir, new_model_name, nlp):
 
 
 def validate_model(nlp, input_file):
-    # Test the saved model
-    validate_text = """Wanted: Java Engineer with experience in building high-performing, scalable, enterprise-grade applications.
-You need to have proven knowledge in Web applications with JEE/Spring, DevOps experience with high focus on cloud-based operating systems (particularly AWS), Jenkins, Docker and Kubernetes are a plus.
-Looking for people with experience in Kafka, Big-Data and Python.
-Must have experience with build tools (Maven, Gradle) and a Object-Oriented Analysis and design using common design patterns.
-Hiring people with good knowledge of Relational Databases, PostgreSQL and ORM technologies (JPA, Hibernate).
-Orientation towards test-driven development and clean code is a plus
-Requirements: experience with version control systems (Git) and a Bachelor/Master degree in Computer Science, Engineering, or a related subject.
-You need to have development experience in Java and Java frameworks and SQL/Relational Databases skills.
-One requirement is having practical skills in CI/CD - some of Git, Maven, Gradle, Docker, Jenkins, Jira.
-Skills description: 4+ years’ experience with Java (developing backend/web applications, Java 8+), 3+ years’ experience with Spring Boot (Spring Data, Spring Cloud), good unit/integration testing experience.
-Nice-to-Have Skills: experience with software provisioning/configuration (e.g. Puppet, Ansible), with Oracle  and Angular 2+.
-We are looking for: experience in Apache Camel, experience with MSSQL, PostgreSQL, experience with Unit and integration testing with JUnit and Mockito, CI/CD tools: Git, Jenkins, Maven, SonarQube, Artifactory and Microservices, Dockers, and Kubernetes.
-Nice to have: exposure to NoSQL databases (MongoDBB), exposure to Python, Jupyter Hub.
-Requirements: strong knowledge of Java Fundamentals and OOP principles and good understanding of design patterns.
-At the moment we're using a mix of Python and Javascript.
-We know you want to know so here is the stack: Python, Django, React, Redux, Express.
-Other buzzwords: Universal Web Apps, Machine Learning, Heroku, AWS, Algolia.
-Have already used at least one of these technologies amongst JavaScript, TypeScript, React, Vue.js, Kafka, ElasticSearch, MongoDB, and Python.
-The general tech stack of the project is: iOS (Swift), Android (Kotlin), Modern Web Apps (Angular, React), Microservice architecture with OpenAPI contracts.
-Basic qualifications: experience with web application development (.NET/JavaScript or equivalent).
-Open to work with other programming languages (Python, Scala).
-Qualifications and Experience: Knowledge of Spring (Boot, Data, Security).
-University degree in a technical subject (Computer Science, Mathematics, or similar) or equivalent experience in the industry.
-Qualifications: FPGA Digital Design experience, C++, Qt framework experience
-The requirements are the following: knowledge of .Net, .Net Core, WebAPI, ASP.Net MVC, Razor Views or equivalent single page application framework, C#, JavaScript, CSS, HTML5 & Azure Cloud services or AWS, Active Directory.
-You need to have experience with the ASP.NET framework and ideally SQL Server.
-Capability to design complex SQL queries.
-You know the ins and outs of several cloud providers like AWS, Azure, Heroku and profound experience in Terraform, Google Cloud.
-Here are the technologies you must have experience with: Django, Node.js, Nginx, React, React Native, Redis, RabbitMQ.
-The following are a must: Selenium, Grafana."""
-    # print("Loading from custom model named:", model)
-    # nlp2 = spacy.load(model)
-    doc2 = nlp(validate_text)
-    csv_file = open(input_file, 'r')
-    csv_file_reader = csv.reader(csv_file)
-    rows = list(filter(lambda row: row[1] != 'O', list(csv_file_reader)))
-    print(rows)
-    nr_of_entities = len(rows)
-    nr_of_matches = 0
-    for ent in doc2.ents:
-        if [ent.text, ent.label_] in rows:
-            print(ent.label_, ent.text)
-            nr_of_matches += 1
-    accuracy = nr_of_matches / nr_of_entities
-    print(accuracy)
-    return accuracy
+    doc2 = nlp(VALIDATE_TEXT)
+    return get_model_accuracy(input_file, doc2)
 
 
 def fine_tune_and_save_custom_model(train_data, model=None, new_model_name=None, output_dir=None):
@@ -237,3 +193,25 @@ def fine_tune_and_save_custom_model(train_data, model=None, new_model_name=None,
                 best_nlp = train_nlp
     save_model(output_dir, new_model_name, nlp=best_nlp)
     print('Iterations: ' + str(best_iter) + ' Learn rate:' + str(best_learn_rate) + ' Accuracy:' + str(best_accuracy))
+
+
+def get_model_accuracy(input_file, doc2):
+    csv_file = open(input_file, 'r')
+    csv_file_reader = csv.reader(csv_file)
+    rows = list(filter(lambda row: row[1] != 'O', list(csv_file_reader)))
+    print(rows)
+    nr_of_entities = len(rows)
+    nr_of_matches = 0
+    for ent in doc2.ents:
+        if [ent.text, ent.label_] in rows:
+            print(ent.label_, ent.text)
+            nr_of_matches += 1
+    accuracy = nr_of_matches / nr_of_entities
+    print(accuracy)
+    return accuracy
+
+
+def test_model(input_file):
+    nlp2 = spacy.load(CUSTOM_SPACY_MODEL)
+    doc2 = nlp2(TEST_TEXT)
+    get_model_accuracy(doc2, input_file)

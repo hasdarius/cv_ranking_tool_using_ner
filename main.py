@@ -70,10 +70,10 @@ def read_cv_entities_from_txt(document_path, nlp):
     return generate_dictionary_of_concepts(doc)
 
 
-def rank_cvs(job_description_text, cv_folder, model):
-    custom_nlp = spacy.load(model)
+def rank_cvs(job_description_text, cv_folder):
+    custom_nlp = spacy.load(train_custom_ner.CUSTOM_SPACY_MODEL)
     nlp_doc = custom_nlp(job_description_text)
-    job_description_entities = generate_dictionary_of_concepts(nlp_doc)  # read dictionary entities
+    job_description_entities = generate_dictionary_of_concepts(nlp_doc)  # read job description entities in dictionary
     cv_files = [file for file in listdir(cv_folder) if isfile(join(cv_folder, file))]
     score_list = []
     for cv_file in cv_files:
@@ -93,7 +93,7 @@ def rank_cvs(job_description_text, cv_folder, model):
 if __name__ == "__main__":
     # main("Data/it_dataset.csv")
     nlp = spacy.load(train_custom_ner.CUSTOM_SPACY_MODEL)
-    doc = nlp("I am a Java Software decveloper specialized in Spring, Docker, JUnit and Git.")
+    doc = nlp("I am a Java Software Developer specialized in Spring, Docker, JUnit and Git.")
     generate_dictionary_of_concepts(doc)
 
 
