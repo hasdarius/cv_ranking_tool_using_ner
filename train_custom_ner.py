@@ -153,11 +153,6 @@ def save_model(output_dir, new_model_name, nlp):
         print("Saved model to", output_dir)
 
 
-def validate_model(nlp, input_file):
-    doc2 = nlp(VALIDATE_TEXT)
-    return get_model_accuracy(input_file, doc2)
-
-
 def fine_tune_and_save_custom_model(train_data, model=None, new_model_name=None, output_dir=None):
     learn_rates = [0.1, 0.05, 0.01, 0.005, 0.001]
     n_iters = [10, 20, 50, 100, 150, 200, 250, 300]
@@ -186,7 +181,7 @@ def fine_tune_and_save_custom_model(train_data, model=None, new_model_name=None,
             train_nlp = nlp
             train_model(n_iter, train_data, model=model, learn_rate=learn_rate, nlp=train_nlp)
             accuracy = validate_model(train_nlp, 'Data/validate.csv')
-            if accuracy > best_accuracy:
+            if accuracy >= best_accuracy:
                 best_iter = n_iter
                 best_learn_rate = learn_rate
                 best_accuracy = accuracy
@@ -211,7 +206,11 @@ def get_model_accuracy(input_file, doc2):
     return accuracy
 
 
+def validate_model(nlp, input_file):
+    doc2 = nlp(VALIDATE_TEXT)
+    return get_model_accuracy(input_file, doc2)
+
+
 def test_model(input_file):
     nlp2 = spacy.load(CUSTOM_SPACY_MODEL)
-    doc2 = nlp2(TEST_TEXT)
-    get_model_accuracy(doc2, input_file)
+    validate_model(nlp2, input_file)

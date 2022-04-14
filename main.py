@@ -90,13 +90,6 @@ def rank_cvs(job_description_text, cv_folder):
     return score_list.sort(key=lambda cv: cv[1])
 
 
-if __name__ == "__main__":
-    # main("Data/it_dataset.csv")
-    nlp = spacy.load(train_custom_ner.CUSTOM_SPACY_MODEL)
-    doc = nlp("I am a Java Software Developer specialized in Spring, Docker, JUnit and Git.")
-    generate_dictionary_of_concepts(doc)
-
-
 def main(input_file):
     if not path.exists(train_custom_ner.CUSTOM_SPACY_MODEL):
         json_file_name = train_custom_ner.csv_to_json_with_labels(input_file, '-')
@@ -104,4 +97,11 @@ def main(input_file):
         train_custom_ner.fine_tune_and_save_custom_model(training_data,
                                                          new_model_name='technology_it_model',
                                                          output_dir=train_custom_ner.CUSTOM_SPACY_MODEL)
-    # here we will test the model
+    train_custom_ner.test_model("Data/test.csv")
+
+
+if __name__ == "__main__":
+    main("Data/it_dataset.csv")
+    nlp = spacy.load(train_custom_ner.CUSTOM_SPACY_MODEL)
+    doc = nlp("I am a Java Software Developer specialized in Spring, Docker, JUnit and Git")
+    generate_dictionary_of_concepts(doc)
