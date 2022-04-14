@@ -3,8 +3,9 @@ import json
 import logging
 import os
 import random
-from pathlib import Path
 from os import path
+from pathlib import Path
+
 import spacy
 from spacy.training.example import Example
 from spacy.util import minibatch, compounding
@@ -14,7 +15,7 @@ LABEL = ['Programming Language', 'Certification', 'Seniority', 'Tool/Framework',
 CUSTOM_SPACY_MODEL = 'Model'
 
 CONCEPTS_SCORES = {
-    "Intern": {
+    "intern": {
         "Seniority": 0,
         "Max Programming Languages": 2,
         "Max Tool/Framework": 4,
@@ -32,7 +33,7 @@ CONCEPTS_SCORES = {
         "Full IT Specialization": 0,
         "Partial IT Specialization": 0
     },
-    "Junior": {
+    "junior": {
         "Seniority": 1,
         "Max Programming Languages": 4,
         "Max Tool/Framework": 8,
@@ -50,7 +51,7 @@ CONCEPTS_SCORES = {
         "Full IT Specialization": 1,
         "Partial IT Specialization": 0.5
     },
-    "Mid": {
+    "mid": {
         "Seniority": 2,
         "Max Programming Languages": 6,
         "Max Tool/Framework": 12,
@@ -68,7 +69,7 @@ CONCEPTS_SCORES = {
         "Full IT Specialization": 3,
         "Partial IT Specialization": 1.5
     },
-    "Senior": {
+    "senior": {
         "Seniority": 3,
         "Max Programming Languages": 8,
         "Max Tool/Framework": 15,
@@ -335,9 +336,21 @@ def get_max_seniority(list_of_seniorities):
 
 def get_cv_ranking_score(cv_file_dictionary, job_description_dictionary):
     max_required_seniority = get_max_seniority(job_description_dictionary['Seniority'])
-    # for label in job_description_dictionary:
-
-    return 0
+    max_given_seniority = get_max_seniority(cv_file_dictionary['Seniority'])
+    score = CONCEPTS_SCORES[max_given_seniority]['Seniority']
+    for label in job_description_dictionary:
+        required_label_values_list = job_description_dictionary[label]
+        given_label_values_list = cv_file_dictionary[label]
+        max_values = max(2*len(required_label_values_list), CONCEPTS_SCORES[max_required_seniority]['Max ' + label])
+        overflow = len(given_label_values_list) - max_values
+        if overflow > 0:
+            score -= overflow * CONCEPTS_SCORES[max_required_seniority]['Full Match ' + label]
+        for given_label_value in given_label_values_list:
+            if given_label_value in required_label_values_list:
+                score += CONCEPTS_SCORES[max_required_seniority]['Full Match ' + label]
+            else:
+                score += CONCEPTS_SCORES[max_required_seniority]['Partial Match ' + label]
+    return score
 
 
 if __name__ == "__main__":
