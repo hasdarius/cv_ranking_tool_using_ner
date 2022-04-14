@@ -3,6 +3,7 @@ import json
 import logging
 import os
 import random
+import pdfplumber
 from os import path
 from pathlib import Path
 
@@ -17,13 +18,13 @@ CUSTOM_SPACY_MODEL = 'Model'
 CONCEPTS_SCORES = {
     "intern": {
         "Seniority": 0,
-        "Max Programming Languages": 2,
+        "Max Programming Language": 2,
         "Max Tool/Framework": 4,
         "Max Certification": 2,
         "Max Programming Concept": 8,
         "Max IT Specialization": 0,
-        "Full Match Programming Language": 7,
-        "Partial Match Programming Language": 3,
+        "Full Programming Language": 7,
+        "Partial Programming Language": 3,
         "Full Tool/Framework": 3,
         "Partial Tool/Framework": 1.5,
         "Full Certification": 0,
@@ -35,13 +36,13 @@ CONCEPTS_SCORES = {
     },
     "junior": {
         "Seniority": 1,
-        "Max Programming Languages": 4,
+        "Max Programming Language": 4,
         "Max Tool/Framework": 8,
         "Max Certification": 3,
         "Max Programming Concept": 10,
         "Max IT Specialization": 2,
-        "Full Match Programming Language": 7,
-        "Partial Match Programming Language": 3,
+        "Full Programming Language": 7,
+        "Partial Programming Language": 3,
         "Full Tool/Framework": 5,
         "Partial Tool/Framework": 2,
         "Full Certification": 1,
@@ -53,13 +54,13 @@ CONCEPTS_SCORES = {
     },
     "mid": {
         "Seniority": 2,
-        "Max Programming Languages": 6,
+        "Max Programming Language": 6,
         "Max Tool/Framework": 12,
         "Max Certification": 4,
         "Max Programming Concept": 12,
         "Max IT Specialization": 3,
-        "Full Match Programming Language": 5,
-        "Partial Match Programming Language": 2,
+        "Full Programming Language": 5,
+        "Partial Programming Language": 2,
         "Full Tool/Framework": 7,
         "Partial Tool/Framework": 3,
         "Full Certification": 3,
@@ -71,13 +72,13 @@ CONCEPTS_SCORES = {
     },
     "senior": {
         "Seniority": 3,
-        "Max Programming Languages": 8,
+        "Max Programming Language": 8,
         "Max Tool/Framework": 15,
         "Max Certification": 4,
         "Max Programming Concept": 15,
         "Max IT Specialization": 4,
-        "Full Match Programming Language": 5,
-        "Partial Match Programming Language": 2,
+        "Full Programming Language": 5,
+        "Partial Programming Language": 2,
         "Full Tool/Framework": 7,
         "Partial Tool/Framework": 3,
         "Full Certification": 4,
@@ -325,7 +326,19 @@ def main(input_file):
     # here we will test the model
 
 
+def test_read_pdf(document_path, model):
+    print("Loading from custom model named:", model)
+    nlp2 = spacy.load(model)
+    pdf = pdfplumber.open(document_path)
+    first_page = pdf.pages[0]
+    validate_text = first_page.extract_text()
+    doc2 = nlp2(validate_text)
+    for ent in doc2.ents:
+        print(ent.label_, ent.text)
+
+
 def get_max_seniority(list_of_seniorities):
+    # print(list_of_seniorities)
     seniority_priority_list = ['senior', 'mid', 'junior', 'intern']
     final_seniority_priority_list = ['senior', 'mid', 'junior', 'intern']
     for priority in seniority_priority_list:
@@ -335,24 +348,42 @@ def get_max_seniority(list_of_seniorities):
 
 
 def get_cv_ranking_score(cv_file_dictionary, job_description_dictionary):
-    max_required_seniority = get_max_seniority(job_description_dictionary['Seniority'])
-    max_given_seniority = get_max_seniority(cv_file_dictionary['Seniority'])
+    max_required_seniority = get_max_seniority(list(map(lambda x: x.lower(), job_description_dictionary['Seniority'])))
+    max_given_seniority = get_max_seniority(list(map(lambda x: x.lower(), cv_file_dictionary['Seniority'])))
     score = CONCEPTS_SCORES[max_given_seniority]['Seniority']
+    print("Max required seniority: " + max_required_seniority)
+    print("Max given seniority: " + max_given_seniority)
+    max_absolute_seniority = get_max_seniority([max_required_seniority, max_given_seniority])
+    print("Max absolute seniority: " + max_absolute_seniority)
     for label in job_description_dictionary:
-        required_label_values_list = job_description_dictionary[label]
-        given_label_values_list = cv_file_dictionary[label]
-        max_values = max(2*len(required_label_values_list), CONCEPTS_SCORES[max_required_seniority]['Max ' + label])
-        overflow = len(given_label_values_list) - max_values
-        if overflow > 0:
-            score -= overflow * CONCEPTS_SCORES[max_required_seniority]['Full Match ' + label]
-        for given_label_value in given_label_values_list:
-            if given_label_value in required_label_values_list:
-                score += CONCEPTS_SCORES[max_required_seniority]['Full Match ' + label]
-            else:
-                score += CONCEPTS_SCORES[max_required_seniority]['Partial Match ' + label]
+        if label != 'Seniority':
+            required_label_values_list = job_description_dictionary[label]
+            given_label_values_list = cv_file_dictionary[label]
+            max_values = max(2 * len(required_label_values_list),
+                             CONCEPTS_SCORES[max_absolute_seniority]['Max ' + label])
+            overflow = len(given_label_values_list) - max_values
+            if overflow > 0:
+                score -= overflow * CONCEPTS_SCORES[max_required_seniority]['Full ' + label]
+            for given_label_value in given_label_values_list:
+                if given_label_value in required_label_values_list:
+                    score += CONCEPTS_SCORES[max_required_seniority]['Full ' + label]
+                    print("Full: " + given_label_value)
+                else:
+                    score += CONCEPTS_SCORES[max_required_seniority]['Partial ' + label]
+                    print("Partial: " + given_label_value)
     return score
 
 
 if __name__ == "__main__":
     # main("Data/it_dataset.csv")
-    print(get_max_seniority(['senior', 'junior', 'mid']))
+    job_description_dictionary = {'Seniority': ["Junior"], 'Programming Language': ["Python", "Scala"],
+                                  'Certification': ["oracle oca certification"],
+                                  'Tool/Framework': ["Spark", "Django", "Flusk", "BigQuery"],
+                                  'IT Specialization': ["Data Engineer"],
+                                  'Programming Concept': ["Big Data", "Artificial intelligence", "Scrum"]}
+    cv_file_dictionary = {'Seniority': ["mid", "Junior"], 'Programming Language': ["Python", "Java", "C"],
+                          'Certification': [],
+                          'Tool/Framework': ["Spark", "Django", "Spring", "SqlServer", "GitHub"],
+                          'IT Specialization': ["Data Engineer"],
+                          'Programming Concept': ["OOP", "Scrum", "Rest"]}
+    print(get_cv_ranking_score(cv_file_dictionary, job_description_dictionary))
