@@ -7,6 +7,7 @@ from os.path import isfile, join
 from os import path, listdir
 from constants import CONCEPTS_SCORES
 
+
 def get_max_seniority(list_of_seniorities):
     # print(list_of_seniorities)
     seniority_priority_list = ['senior', 'mid', 'junior', 'intern']
@@ -17,18 +18,19 @@ def get_max_seniority(list_of_seniorities):
     return final_seniority_priority_list[0]
 
 
-def get_cv_ranking_score(cv_file_dictionary, job_description_dictionary):
-    max_required_seniority = get_max_seniority(list(map(lambda x: x.lower(), job_description_dictionary['Seniority'])))
-    max_given_seniority = get_max_seniority(list(map(lambda x: x.lower(), cv_file_dictionary['Seniority'])))
+def get_cv_ranking_score(cv_entities_dictionary, job_description_entities_dictionary):
+    max_required_seniority = get_max_seniority(
+        list(map(lambda x: x.lower(), job_description_entities_dictionary['Seniority'])))
+    max_given_seniority = get_max_seniority(list(map(lambda x: x.lower(), cv_entities_dictionary['Seniority'])))
     score = CONCEPTS_SCORES[max_given_seniority]['Seniority']
     print("Max required seniority: " + max_required_seniority)
     print("Max given seniority: " + max_given_seniority)
     max_absolute_seniority = get_max_seniority([max_required_seniority, max_given_seniority])
     print("Max absolute seniority: " + max_absolute_seniority)
-    for label in job_description_dictionary:
+    for label in job_description_entities_dictionary:
         if label != 'Seniority':
-            required_label_values_list = job_description_dictionary[label]
-            given_label_values_list = cv_file_dictionary[label]
+            required_label_values_list = job_description_entities_dictionary[label]
+            given_label_values_list = cv_entities_dictionary[label]
             max_values = max(2 * len(required_label_values_list),
                              CONCEPTS_SCORES[max_absolute_seniority]['Max ' + label])
             overflow = len(given_label_values_list) - max_values
@@ -47,7 +49,8 @@ def get_cv_ranking_score(cv_file_dictionary, job_description_dictionary):
 def generate_dictionary_of_concepts(doc):
     final_dictionary = {}
     for ent in doc.ents:
-        final_dictionary[ent.label_].append(ent.text)
+        final_dictionary.setdefault(ent.label_, []).append(ent.text)
+    print(final_dictionary)
     return final_dictionary
 
 
@@ -68,18 +71,18 @@ def read_cv_entities_from_txt(document_path, nlp):
 
 
 def rank_cvs(job_description_text, cv_folder, model):
-    nlp = spacy.load(model)
-    doc = nlp(job_description_text)
-    job_description_entities = generate_dictionary_of_concepts(doc)  # read dictionary entities
+    custom_nlp = spacy.load(model)
+    nlp_doc = custom_nlp(job_description_text)
+    job_description_entities = generate_dictionary_of_concepts(nlp_doc)  # read dictionary entities
     cv_files = [file for file in listdir(cv_folder) if isfile(join(cv_folder, file))]
     score_list = []
     for cv_file in cv_files:
         _, file_extension = os.path.splitext(cv_file)
         match file_extension:
             case ".pdf":
-                cv_entities_dictionary = read_cv_entities_from_pdf(cv_file, nlp)
+                cv_entities_dictionary = read_cv_entities_from_pdf(cv_file, custom_nlp)
             case ".txt":
-                cv_entities_dictionary = read_cv_entities_from_txt(cv_file, nlp)
+                cv_entities_dictionary = read_cv_entities_from_txt(cv_file, custom_nlp)
             case _:
                 cv_entities_dictionary = {}  # here would be better to throw exception, decide with David
         cv_score = get_cv_ranking_score(cv_entities_dictionary, job_description_entities)
@@ -89,17 +92,9 @@ def rank_cvs(job_description_text, cv_folder, model):
 
 if __name__ == "__main__":
     # main("Data/it_dataset.csv")
-    job_description_dictionary = {'Seniority': ["Junior"], 'Programming Language': ["Python", "Scala"],
-                                  'Certification': ["oracle oca certification"],
-                                  'Tool/Framework': ["Spark", "Django", "Flusk", "BigQuery"],
-                                  'IT Specialization': ["Data Engineer"],
-                                  'Programming Concept': ["Big Data", "Artificial intelligence", "Scrum"]}
-    cv_file_dictionary = {'Seniority': ["mid", "Junior"], 'Programming Language': ["Python", "Java", "C"],
-                          'Certification': [],
-                          'Tool/Framework': ["Spark", "Django", "Spring", "SqlServer", "GitHub"],
-                          'IT Specialization': ["Data Engineer"],
-                          'Programming Concept': ["OOP", "Scrum", "Rest"]}
-    print(get_cv_ranking_score(cv_file_dictionary, job_description_dictionary))
+    nlp = spacy.load(train_custom_ner.CUSTOM_SPACY_MODEL)
+    doc = nlp("I am a Java Software decveloper specialized in Spring, Docker, JUnit and Git.")
+    generate_dictionary_of_concepts(doc)
 
 
 def main(input_file):
