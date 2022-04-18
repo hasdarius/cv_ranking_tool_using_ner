@@ -9,7 +9,6 @@ from constants import CONCEPTS_SCORES, LABELS_LIST
 
 
 def get_max_seniority(list_of_seniorities):
-    # print(list_of_seniorities)
     seniority_priority_list = ['senior', 'mid', 'junior', 'intern']
     final_seniority_priority_list = ['senior', 'mid', 'junior', 'intern']
     for priority in seniority_priority_list:
@@ -27,10 +26,7 @@ def get_cv_ranking_score(cv_entities_dictionary, job_description_entities_dictio
     score = 0
     if max_given_seniority is not None:
         score = CONCEPTS_SCORES[max_given_seniority]['Seniority']
-    #   print("Max given seniority: " + max_given_seniority)
-    # print("Max required seniority: " + max_required_seniority)
     max_absolute_seniority = get_max_seniority([max_required_seniority, max_given_seniority])
-    # print("Max absolute seniority: " + max_absolute_seniority)
     for label in job_description_entities_dictionary:
         if label != 'Seniority':
             required_label_values_list = job_description_entities_dictionary[label]
@@ -43,10 +39,8 @@ def get_cv_ranking_score(cv_entities_dictionary, job_description_entities_dictio
             for given_label_value in given_label_values_list:
                 if given_label_value in required_label_values_list:
                     score += CONCEPTS_SCORES[max_required_seniority]['Full ' + label]
-                #               print("Full: " + given_label_value)
                 else:
                     score += CONCEPTS_SCORES[max_required_seniority]['Partial ' + label]
-    #              print("Partial: " + given_label_value)
     return score
 
 
@@ -96,9 +90,9 @@ def rank_cvs(job_description_text, cv_folder):
         #         cv_entities_dictionary = {}
         match file_extension:
             case ".pdf":
-                cv_entities_dictionary = read_cv_entities_from_pdf(cv_file, custom_nlp)
+                cv_entities_dictionary = read_cv_entities_from_pdf(cv_folder + '/' + cv_file, custom_nlp)
             case ".txt":
-                cv_entities_dictionary = read_cv_entities_from_txt(cv_file, custom_nlp)
+                cv_entities_dictionary = read_cv_entities_from_txt(cv_folder + '/' + cv_file, custom_nlp)
             case _:
                 cv_entities_dictionary = {}  # here would be better to throw exception, decide with David
         cv_score = get_cv_ranking_score(cv_entities_dictionary, job_description_entities)
@@ -156,8 +150,4 @@ Seniority
 Junior"""
 
 if __name__ == "__main__":
-    # main("Data/it_dataset.csv")
-    # nlp = spacy.load(train_custom_ner.CUSTOM_SPACY_MODEL)
-    # doc = nlp("I am a Java Software Developer specialized in Spring, Docker, JUnit and Git")
-    # generate_dictionary_of_concepts(doc)
     print(rank_cvs(JOB_DESCRIPTION_EXAMPLE, 'D:/faculta/licenta/cv-directory'))
