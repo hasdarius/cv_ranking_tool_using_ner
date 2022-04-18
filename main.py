@@ -5,7 +5,7 @@ import spacy
 import train_custom_ner
 from os.path import isfile, join
 from os import path, listdir
-from constants import CONCEPTS_SCORES
+from constants import CONCEPTS_SCORES, LABELS_LIST
 
 
 def get_max_seniority(list_of_seniorities):
@@ -15,18 +15,22 @@ def get_max_seniority(list_of_seniorities):
     for priority in seniority_priority_list:
         if priority not in list_of_seniorities:
             final_seniority_priority_list.remove(priority)
-    return final_seniority_priority_list[0]
+    if final_seniority_priority_list:
+        return final_seniority_priority_list[0]
+    return None
 
 
 def get_cv_ranking_score(cv_entities_dictionary, job_description_entities_dictionary):
     max_required_seniority = get_max_seniority(
         list(map(lambda x: x.lower(), job_description_entities_dictionary['Seniority'])))
     max_given_seniority = get_max_seniority(list(map(lambda x: x.lower(), cv_entities_dictionary['Seniority'])))
-    score = CONCEPTS_SCORES[max_given_seniority]['Seniority']
-    print("Max required seniority: " + max_required_seniority)
-    print("Max given seniority: " + max_given_seniority)
+    score = 0
+    if max_given_seniority is not None:
+        score = CONCEPTS_SCORES[max_given_seniority]['Seniority']
+    #   print("Max given seniority: " + max_given_seniority)
+    # print("Max required seniority: " + max_required_seniority)
     max_absolute_seniority = get_max_seniority([max_required_seniority, max_given_seniority])
-    print("Max absolute seniority: " + max_absolute_seniority)
+    # print("Max absolute seniority: " + max_absolute_seniority)
     for label in job_description_entities_dictionary:
         if label != 'Seniority':
             required_label_values_list = job_description_entities_dictionary[label]
@@ -39,10 +43,10 @@ def get_cv_ranking_score(cv_entities_dictionary, job_description_entities_dictio
             for given_label_value in given_label_values_list:
                 if given_label_value in required_label_values_list:
                     score += CONCEPTS_SCORES[max_required_seniority]['Full ' + label]
-                    print("Full: " + given_label_value)
+                #               print("Full: " + given_label_value)
                 else:
                     score += CONCEPTS_SCORES[max_required_seniority]['Partial ' + label]
-                    print("Partial: " + given_label_value)
+    #              print("Partial: " + given_label_value)
     return score
 
 
@@ -50,6 +54,11 @@ def generate_dictionary_of_concepts(doc):
     final_dictionary = {}
     for ent in doc.ents:
         final_dictionary.setdefault(ent.label_, []).append(ent.text)
+
+    detected_keys = final_dictionary.keys()
+    for label in LABELS_LIST:
+        if label not in detected_keys:
+            final_dictionary[label] = []
     print(final_dictionary)
     return final_dictionary
 
@@ -78,6 +87,13 @@ def rank_cvs(job_description_text, cv_folder):
     score_list = []
     for cv_file in cv_files:
         _, file_extension = os.path.splitext(cv_file)
+        # if file_extension == ".pdf":
+        #     cv_entities_dictionary = read_cv_entities_from_pdf(cv_folder + '/' + cv_file, custom_nlp)
+        # else:
+        #     if file_extension == ".txt":
+        #         cv_entities_dictionary = read_cv_entities_from_txt(cv_folder + '/' + cv_file, custom_nlp)
+        #     else:
+        #         cv_entities_dictionary = {}
         match file_extension:
             case ".pdf":
                 cv_entities_dictionary = read_cv_entities_from_pdf(cv_file, custom_nlp)
@@ -87,7 +103,7 @@ def rank_cvs(job_description_text, cv_folder):
                 cv_entities_dictionary = {}  # here would be better to throw exception, decide with David
         cv_score = get_cv_ranking_score(cv_entities_dictionary, job_description_entities)
         score_list.append((cv_file, cv_score))
-    return score_list.sort(key=lambda cv: cv[1])
+    return sorted(score_list, key=lambda cv: cv[1], reverse=True)
 
 
 def main(input_file):
@@ -100,8 +116,48 @@ def main(input_file):
     train_custom_ner.test_model("Data/test.csv")
 
 
+JOB_DESCRIPTION_EXAMPLE = """Skills
+
+Must have
+
+- Mandatory Computer Science Faculty / Cybernetics / Mathematics / Informatics graduated
+- Min 1 Year working hands on experience in Java
+- Java 8
+- Dependency Injection/ Inversion of Control (Spring or JBoss)
+- Unit and Mock Testing (JUnit, Mockito, Arquillian, Cucumber)
+- Java Message Service (JMS)
+- Web Services (JAX-RS, JAX-WS)
+- Strong understanding of Design and Architectural Patterns
+- Apache Maven
+- Continuous Integration tools (Jenkins or similar)
+- Linux operating system
+- Stash: GIT Repository Management
+- Spoken English language is a must
+
+Nice to have
+
+- Apache Camel
+- Enterprise Integration Patterns
+- Java Architecture for XML Binding (JAXB)
+- XML Transformations (XSLT, XSD, DTD)
+- FitNesse
+- Drools
+- Agile Methodologies (SCRUM and Kanban)
+- Additional knowledge of financial products is a plus
+
+Languages
+
+Romanian: C2 Proficient
+
+English: C1 Advanced
+
+Seniority
+
+Junior"""
+
 if __name__ == "__main__":
-    main("Data/it_dataset.csv")
-    nlp = spacy.load(train_custom_ner.CUSTOM_SPACY_MODEL)
-    doc = nlp("I am a Java Software Developer specialized in Spring, Docker, JUnit and Git")
-    generate_dictionary_of_concepts(doc)
+    # main("Data/it_dataset.csv")
+    # nlp = spacy.load(train_custom_ner.CUSTOM_SPACY_MODEL)
+    # doc = nlp("I am a Java Software Developer specialized in Spring, Docker, JUnit and Git")
+    # generate_dictionary_of_concepts(doc)
+    print(rank_cvs(JOB_DESCRIPTION_EXAMPLE, 'D:/faculta/licenta/cv-directory'))

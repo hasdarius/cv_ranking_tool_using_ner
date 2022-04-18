@@ -117,3 +117,6 @@ Three or more years experience with HTML, CSS, and/or CSS Preprocessors
 6 + months demonstrated experience in writing clean, high-quality HTML5, CSS3 and JavaScript cod
 It is nice to have experience in a remote SCRUM team involving daily meetings, grooming, planning.
 Experience with Git or similar version control."""
+
+LABELS_LIST = {"Programming Language", "Certification", "Seniority", "Tool/Framework", "IT Specialization",
+               "Programming Concept"}
