@@ -6,6 +6,67 @@ import train_custom_ner
 from os.path import isfile, join
 from os import path, listdir
 from constants import CONCEPTS_SCORES, LABELS_LIST
+from business_rules import run_all
+from business_rules.actions import BaseActions, rule_action
+from business_rules.fields import FIELD_NUMERIC
+from business_rules.variables import BaseVariables, select_rule_variable, string_rule_variable, numeric_rule_variable
+
+
+class RequiredLabelInfo:
+    def __init__(self, label_name, required_values, max_seniority, max_required_values=9999):
+        self.name = label_name
+        self.values = required_values
+        self.max_seniority = max_seniority
+        self.loss_value = CONCEPTS_SCORES[max_seniority]['Full ' + label_name]
+        self.max_required_values = max_required_values
+        self.actual_loss_values = 0
+
+
+class RequiredLabelInfoVariables(BaseVariables):
+
+    def __init__(self, label_info):
+        self.label_info = label_info
+
+    @numeric_rule_variable(label='Maximum number of words with a specific label before being penalized')
+    def get_max_required_value_for_label(self):
+        label_info = self.label_info
+        label_info.max_required_values = max(2 * len(label_info.values),
+                                             CONCEPTS_SCORES[label_info.max_seniority]['Max ' + label_info.name])
+        return label_info.max_required_values
+
+
+class RequiredLabelInfoActions(BaseActions):
+
+    def __init__(self, label_info):
+        self.label_info = label_info
+
+    @rule_action(params={"given_values_length": FIELD_NUMERIC})
+    def penalize(self, given_values_length):
+        self.label_info.actual_loss_values = (self.label_info.max_required_values - given_values_length) * self.label_info.loss_value
+
+
+def apply_business_rules(max_absolute_seniority, label_name, required_label_values,
+                         given_label_values):
+    given_label_values_length = len(given_label_values)
+    rules = [
+        # expiration_days < 5 AND current_inventory > 20
+        {"conditions":
+             {"name": "get_max_required_value_for_label",
+              "operator": "less_than",
+              "value": given_label_values_length,
+              },
+         "actions": [
+             {"name": "penalize",
+              "params": {"given_values_length": given_label_values_length},
+              }
+         ]}]
+    required_label_info = RequiredLabelInfo(label_name, required_label_values, max_absolute_seniority)
+    print(run_all(rule_list=rules,
+                  defined_variables=RequiredLabelInfoVariables(required_label_info),
+                  defined_actions=RequiredLabelInfoActions(required_label_info),
+                  stop_on_first_trigger=True
+                  ))
+    return required_label_info.actual_loss_values
 
 
 def get_max_seniority(list_of_seniorities):
@@ -31,11 +92,15 @@ def get_cv_ranking_score(cv_entities_dictionary, job_description_entities_dictio
         if label != 'Seniority':
             required_label_values_list = job_description_entities_dictionary[label]
             given_label_values_list = cv_entities_dictionary[label]
-            max_values = max(2 * len(required_label_values_list),
-                             CONCEPTS_SCORES[max_absolute_seniority]['Max ' + label])
-            overflow = len(given_label_values_list) - max_values
-            if overflow > 0:
-                score -= overflow * CONCEPTS_SCORES[max_required_seniority]['Full ' + label]
+
+            score += apply_business_rules(max_absolute_seniority, label, required_label_values_list,
+                                          given_label_values_list)
+
+            # max_values = max(2 * len(required_label_values_list),
+            #                  CONCEPTS_SCORES[max_absolute_seniority]['Max ' + label])
+            # overflow = len(given_label_values_list) - max_values
+            # if overflow > 0:
+            #     score -= overflow * CONCEPTS_SCORES[max_required_seniority]['Full ' + label]
             for given_label_value in given_label_values_list:
                 if given_label_value in required_label_values_list:
                     score += CONCEPTS_SCORES[max_required_seniority]['Full ' + label]
@@ -81,20 +146,20 @@ def rank_cvs(job_description_text, cv_folder):
     score_list = []
     for cv_file in cv_files:
         _, file_extension = os.path.splitext(cv_file)
-        # if file_extension == ".pdf":
-        #     cv_entities_dictionary = read_cv_entities_from_pdf(cv_folder + '/' + cv_file, custom_nlp)
-        # else:
-        #     if file_extension == ".txt":
-        #         cv_entities_dictionary = read_cv_entities_from_txt(cv_folder + '/' + cv_file, custom_nlp)
-        #     else:
-        #         cv_entities_dictionary = {}
-        match file_extension:
-            case ".pdf":
-                cv_entities_dictionary = read_cv_entities_from_pdf(cv_folder + '/' + cv_file, custom_nlp)
-            case ".txt":
+        if file_extension == ".pdf":
+            cv_entities_dictionary = read_cv_entities_from_pdf(cv_folder + '/' + cv_file, custom_nlp)
+        else:
+            if file_extension == ".txt":
                 cv_entities_dictionary = read_cv_entities_from_txt(cv_folder + '/' + cv_file, custom_nlp)
-            case _:
-                cv_entities_dictionary = {}  # here would be better to throw exception, decide with David
+            else:
+                cv_entities_dictionary = {}
+        # match file_extension:
+        #     case ".pdf":
+        #         cv_entities_dictionary = read_cv_entities_from_pdf(cv_folder + '/' + cv_file, custom_nlp)
+        #     case ".txt":
+        #         cv_entities_dictionary = read_cv_entities_from_txt(cv_folder + '/' + cv_file, custom_nlp)
+        #     case _:
+        #         cv_entities_dictionary = {}  # here would be better to throw exception, decide with David
         cv_score = get_cv_ranking_score(cv_entities_dictionary, job_description_entities)
         score_list.append((cv_file, cv_score))
     return sorted(score_list, key=lambda cv: cv[1], reverse=True)
@@ -115,11 +180,11 @@ JOB_DESCRIPTION_EXAMPLE = """Skills
 Must have
 
 - Mandatory Computer Science Faculty / Cybernetics / Mathematics / Informatics graduated
-- Min 1 Year working hands on experience in Java
+- Min 1 Year working hands on experience
 - Java 8
 - Dependency Injection/ Inversion of Control (Spring or JBoss)
 - Unit and Mock Testing (JUnit, Mockito, Arquillian, Cucumber)
-- Java Message Service (JMS)
+- Message Service (JMS)
 - Web Services (JAX-RS, JAX-WS)
 - Strong understanding of Design and Architectural Patterns
 - Apache Maven
@@ -132,7 +197,7 @@ Nice to have
 
 - Apache Camel
 - Enterprise Integration Patterns
-- Java Architecture for XML Binding (JAXB)
+- Architecture for XML Binding (JAXB)
 - XML Transformations (XSLT, XSD, DTD)
 - FitNesse
 - Drools
@@ -151,3 +216,6 @@ Junior"""
 
 if __name__ == "__main__":
     print(rank_cvs(JOB_DESCRIPTION_EXAMPLE, 'D:/faculta/licenta/cv-directory'))
+# score = 5
+# print(apply_business_rules(score, "junior", "Programming Language", {'Java'},
+#                         {'Java', 'C', 'fasfa', 'asfasfa', 'fasfasfa'}))
