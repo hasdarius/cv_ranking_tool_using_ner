@@ -1,6 +1,7 @@
 import os
 import pdfplumber
 import spacy
+import re
 
 import train_custom_ner
 from os.path import isfile, join
@@ -47,12 +48,11 @@ def get_cv_ranking_score(cv_entities_dictionary, job_description_entities_dictio
 def generate_dictionary_of_concepts(doc):
     final_dictionary = {}
     for ent in doc.ents:
-        final_dictionary.setdefault(ent.label_, []).append(ent.text)
-
+        final_dictionary.setdefault(ent.label_, set()).add(ent.text)
     detected_keys = final_dictionary.keys()
     for label in LABELS_LIST:
         if label not in detected_keys:
-            final_dictionary[label] = []
+            final_dictionary[label] = set()
     print(final_dictionary)
     return final_dictionary
 
@@ -75,6 +75,8 @@ def read_cv_entities_from_txt(document_path, nlp):
 
 def rank_cvs(job_description_text, cv_folder):
     custom_nlp = spacy.load(train_custom_ner.CUSTOM_SPACY_MODEL)
+    job_description_text = re.sub(r"[^a-zA-Z0-9]", " ", job_description_text)
+    print(job_description_text)
     nlp_doc = custom_nlp(job_description_text)
     job_description_entities = generate_dictionary_of_concepts(nlp_doc)  # read job description entities in dictionary
     cv_files = [file for file in listdir(cv_folder) if isfile(join(cv_folder, file))]
@@ -107,7 +109,8 @@ def main(input_file):
         train_custom_ner.fine_tune_and_save_custom_model(training_data,
                                                          new_model_name='technology_it_model',
                                                          output_dir=train_custom_ner.CUSTOM_SPACY_MODEL)
-    train_custom_ner.test_model("Data/test.csv")
+        #train_custom_ner.test_model("Data/test.csv")
+    print(rank_cvs(JOB_DESCRIPTION_EXAMPLE, 'D:/faculta/licenta/cv-directory'))
 
 
 JOB_DESCRIPTION_EXAMPLE = """Skills
@@ -145,9 +148,11 @@ Romanian: C2 Proficient
 
 English: C1 Advanced
 
+OCA certificate
+
 Seniority
 
-Junior"""
+junior,senior,tech-lead,junior,junior,junior"""
 
 if __name__ == "__main__":
-    print(rank_cvs(JOB_DESCRIPTION_EXAMPLE, 'D:/faculta/licenta/cv-directory'))
+    main("Data/train.csv")
