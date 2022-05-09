@@ -139,7 +139,7 @@ def train_model(n_iter, train_data, model, learn_rate, nlp):
                     doc = nlp.make_doc(text)
                     example = Example.from_dict(doc, annotations)
                     # Update the model
-                    nlp.update([example], sgd=optimizer, drop=0.25, losses=losses)
+                    nlp.update([example], sgd=optimizer, drop=0.2, losses=losses)
             print('Losses', losses)
 
 
@@ -155,7 +155,7 @@ def save_model(output_dir, new_model_name, nlp):
 
 def fine_tune_and_save_custom_model(train_data, model=None, new_model_name=None, output_dir=None):
     learn_rates = [0.001]
-    n_iters = [50]
+    n_iters = [100]
     """Setting up the pipeline and entity recognizer, and training the new entity."""
     if model is not None:
         nlp = spacy.load(model)  # load existing spacy model

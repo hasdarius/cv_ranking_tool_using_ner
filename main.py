@@ -17,7 +17,7 @@ def get_max_seniority(list_of_seniorities):
             final_seniority_priority_list.remove(priority)
     if final_seniority_priority_list:
         return final_seniority_priority_list[0]
-    return None
+    return seniority_priority_list[1]
 
 
 def get_cv_ranking_score(cv_entities_dictionary, job_description_entities_dictionary):
@@ -62,6 +62,7 @@ def read_cv_entities_from_pdf(document_path, nlp):
     text = ""
     for page in pdf.pages:
         text = text + "\n" + page.extract_text()
+    text = re.sub(r"[^a-zA-Z0-9]", " ", text)
     doc = nlp(text)
     return generate_dictionary_of_concepts(doc)
 
@@ -69,6 +70,7 @@ def read_cv_entities_from_pdf(document_path, nlp):
 def read_cv_entities_from_txt(document_path, nlp):
     text_file = open(document_path, "r")
     text = text_file.read()
+    text = re.sub(r"[^a-zA-Z0-9]", " ", text)
     doc = nlp(text)
     return generate_dictionary_of_concepts(doc)
 
@@ -76,8 +78,8 @@ def read_cv_entities_from_txt(document_path, nlp):
 def rank_cvs(job_description_text, cv_folder):
     custom_nlp = spacy.load(train_custom_ner.CUSTOM_SPACY_MODEL)
     job_description_text = re.sub(r"[^a-zA-Z0-9]", " ", job_description_text)
-    print(job_description_text)
     nlp_doc = custom_nlp(job_description_text)
+    train_custom_ner.validate_model(custom_nlp,'Data/validate.csv')
     job_description_entities = generate_dictionary_of_concepts(nlp_doc)  # read job description entities in dictionary
     cv_files = [file for file in listdir(cv_folder) if isfile(join(cv_folder, file))]
     score_list = []
@@ -110,7 +112,7 @@ def main(input_file):
                                                          new_model_name='technology_it_model',
                                                          output_dir=train_custom_ner.CUSTOM_SPACY_MODEL)
         #train_custom_ner.test_model("Data/test.csv")
-    print(rank_cvs(JOB_DESCRIPTION_EXAMPLE, 'D:/faculta/licenta/cv-directory'))
+    print(rank_cvs(JOB_DESCRIPTION_EXAMPLE, 'cv-directory'))
 
 
 JOB_DESCRIPTION_EXAMPLE = """Skills
@@ -118,7 +120,7 @@ JOB_DESCRIPTION_EXAMPLE = """Skills
 Must have
 
 - Mandatory Computer Science Faculty / Cybernetics / Mathematics / Informatics graduated
-- Min 1 Year working hands on experience in Java
+- Min 1 Year working hands on experience in Java Python Scala Ruby
 - Java 8
 - Dependency Injection/ Inversion of Control (Spring or JBoss)
 - Unit and Mock Testing (JUnit, Mockito, Arquillian, Cucumber)
@@ -152,7 +154,7 @@ OCA certificate
 
 Seniority
 
-junior,senior,tech-lead,junior,junior,junior"""
+junior,senior,tech-lead,junior,junior,junior David Bogdan recursion"""
 
 if __name__ == "__main__":
     main("Data/train.csv")
