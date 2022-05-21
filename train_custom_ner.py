@@ -126,8 +126,16 @@ def train_model(n_iter, train_data, model, learn_rate, nlp):
         optimizer = nlp.create_optimizer()
 
     optimizer.learn_rate = learn_rate
+    optimizer.L2_is_weight_decay = True
+    optimizer.L2 = 0.01
+    optimizer.b1 = 0.9
+    optimizer.b2 = 0.999
+    optimizer.grad_clip = 1.0
+    optimizer.eps = 1e-8
+    optimizer.use_radam = False
+
     other_pipes = [pipe for pipe in nlp.pipe_names if pipe != 'ner']
-    print(n_iter)
+    print('Nr iters: ' + str(n_iter) + ' with learning_rate:' + str(learn_rate))
     with nlp.disable_pipes(*other_pipes):  # only train NER
         for itn in range(n_iter):
             random.shuffle(train_data)
@@ -140,7 +148,7 @@ def train_model(n_iter, train_data, model, learn_rate, nlp):
                     example = Example.from_dict(doc, annotations)
                     # Update the model
                     nlp.update([example], sgd=optimizer, drop=0.2, losses=losses)
-            print('Losses', losses)
+            #print('Losses', losses)
 
 
 def save_model(output_dir, new_model_name, nlp):
@@ -154,8 +162,8 @@ def save_model(output_dir, new_model_name, nlp):
 
 
 def fine_tune_and_save_custom_model(train_data, model=None, new_model_name=None, output_dir=None):
-    learn_rates = [0.001]
-    n_iters = [100]
+    learn_rates = [0.001, 0.005]
+    n_iters = [20, 40, 50, 100]
     """Setting up the pipeline and entity recognizer, and training the new entity."""
     if model is not None:
         nlp = spacy.load(model)  # load existing spacy model
@@ -194,15 +202,14 @@ def get_model_accuracy(input_file, doc2):
     csv_file = open(input_file, 'r')
     csv_file_reader = csv.reader(csv_file)
     rows = list(filter(lambda row: row[1] != 'O', list(csv_file_reader)))
-    print(rows)
     nr_of_entities = len(rows)
     nr_of_matches = 0
     for ent in doc2.ents:
         if [ent.text, ent.label_] in rows:
-            print(ent.label_, ent.text)
             nr_of_matches += 1
     accuracy = nr_of_matches / nr_of_entities
-    print(accuracy)
+    print('The accuracy is:' + str(accuracy))
+
     return accuracy
 
 
