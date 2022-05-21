@@ -148,7 +148,7 @@ def train_model(n_iter, train_data, model, learn_rate, nlp):
                     example = Example.from_dict(doc, annotations)
                     # Update the model
                     nlp.update([example], sgd=optimizer, drop=0.2, losses=losses)
-            #print('Losses', losses)
+            print('Losses', losses)
 
 
 def save_model(output_dir, new_model_name, nlp):
@@ -203,10 +203,12 @@ def get_model_accuracy(input_file, doc2):
     csv_file_reader = csv.reader(csv_file)
     rows = list(filter(lambda row: row[1] != 'O', list(csv_file_reader)))
     nr_of_entities = len(rows)
+    print(rows)
     nr_of_matches = 0
     for ent in doc2.ents:
         if [ent.text, ent.label_] in rows:
             nr_of_matches += 1
+
     accuracy = nr_of_matches / nr_of_entities
     print('The accuracy is:' + str(accuracy))
 

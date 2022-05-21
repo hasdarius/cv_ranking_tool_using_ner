@@ -73,57 +73,33 @@ CONCEPTS_SCORES = {
     }
 }
 
-VALIDATE_TEXT = """Wanted: Java Engineer with experience in building high-performing, scalable, enterprise-grade applications.
-You need to have proven knowledge in Web applications with JEE / Spring, DevOps experience with high focus on cloud based operating-systems (particularly AWS), Jenkins, Docker and Kubernetes are a plus.
-Looking for people with experience in Kafka, Big-Data and Python.
-Must have experience with build tools (Maven, Gradle) and a Object-Oriented Analysis and design using common design patterns.
-Hiring people with good knowledge of Relational Databases, PostgreSQL and ORM technologies (JPA, Hibernate)."
-Orientation towards test-driven development and clean-code is a plus
-Requirements: experience with version control systems (Git) and a Bachelor-degree-in-computer-science/ Master-degree-in-computer-science, Engineering, or a related subject.
-You need to have development experience in Java and Java frameworks and SQL / Relational-Databases skills.
-One requirement is having practical skills in CI/CD - some of Git, Maven, Gradle, Docker, Jenkins, Jira.
-Skills description: 4+ years’ experience with Java (developing backend / web-applications, Java 8+), 3+ years’ experience with Spring-Boot (Spring Data, Spring Cloud), good unit/integration testing experience.
-Nice-to-Have Skills: experience with software provisioning/configuration (example: Puppet, Ansible), with Oracle  and Angular 2+."
-We are looking for: experience in Apache Camel, experience with MSSQL, PostgreSQL, experience with Unit and integration testing with JUnit and Mockito, CI/CD tools: Git, Jenkins, Maven, SonarQube, Artifactory and Microservices, Docker, and Kubernetes.
-Nice to have: exposure to NoSQL databases (MongoDB), exposure to Python, Jupyter-Hub, Jupyter-Notebook.
-Requirements: strong knowledge of Java Fundamentals and OOP principles and good understanding of design patterns.
-At the moment we're using a mix of Python and Javascript.
-We know you want to know so here is the stack: Python, Django, React, Redux, Express.
-Other buzzwords: Universal Web Apps, Machine-Learning, Heroku, AWS, Algolia.
-Have already used at least one of these technologies amongst JavaScript, TypeScript, React, Vue.js, Kafka, ElasticSearch, MongoDB, and Python.
-The general tech stack of the project is: iOS (Swift), Android (Kotlin), Modern Web-Apps (Angular, React), Microservice-architecture with OpenAPI contracts.
-Basic qualifications: experience with web-application development (.NET / JavaScript or equivalent)."
-Open to work with other programming languages (Python, Scala)."
-Qualifications and Experience: Knowledge of Spring (Boot, Data, Security)."
-University-degree in a technical subject (Computer Science, Mathematics, or similar) or equivalent experience in the industry.
-Qualifications: FPGA Digital Design experience, C++, Qt framework experience
-The purpose of this career summary is to explain your qualifications for the job in 3-5 sentences and convince the manager to read the whole resume document.
-The requirements are the following: knowledge of .Net, .Net Core, WebAPI, ASP.Net MVC, Razor Views or equivalent single page application framework, C#, JavaScript, CSS, HTML5 & Azure Cloud services or AWS, Active Directory.
-You need to have experience with the ASP.NET framework and ideally SQL Server.
-Capability to design complex SQL queries.
-You know the ins and outs of several cloud providers like AWS, Azure, Heroku and profound experience in Terraform, Google Cloud.
-Here are the technologies you must have experience with: Django, Node.js, Nginx, React, React Native, Redis, RabbitMQ.
-The following are a must: Selenium, Grafana.
-Works with the customer to further define requirements and to resolve issues in case of need.
-We strive for excellence and we aim to win as a team.
-You can expect a career full of brilliant possibilities.
-Looking to built the most amazing Data Academy, having 5 open Intern positions with the possibility of hiring afterwards.
-Our office is located in central Timisoara with lots of shops and restaurants just around the corner.
-I think playing sports when you are young is essential as it builds the team spirit.
-At Stack Intellect, implemented demand forecasting models improving forecast accuracy by 34%."
-Developed customer segmentation algorithm in R leading to 22% increase in market share.
-Cut customer complaints by 50% for an SaaS application.
-At Shellnac Inc., used Jenkins and AWS tools to slash release times by 20%."
-Freed up 50 hrs/mo at PinkSky Tech through backend automation.
-Designed a restaurant inventory application that saved the company $400/month in labor costs.
-SQL Developer Skills: Oracle, Database Architecture, SSIS, PL/SQL, Security, Common Table Expressions, Creating Reports, Interpersonal Skills, Collaboration, Communication.
-Developed software components in JavaScript based on functional requirements and specifications.
-Wrote technical documentation to support the maintenance team.
-Adapted front-end technologies to follow back end development using Angular.
-Key achievement: Performed debug on a critical error that saved the company over $54,000 of potential lost revenue in downtime.
-Skills: Data-Structures, Open Source Software, Cloud-Computing-Services (AWS), Ruby-on-Rails, Git Version Control, Teamwork Skills.
-Active contributor to over 10 GitHub libraries.
-Developed a marketing lead MySQL database, collecting, categorizing, and filtering leads from various stakeholders, i.e., www, social media channels, or newsletters."""
+VALIDATE_TEXT = """Open to work with other programming languages (Python, Scala). Qualifications and Experience: 
+Knowledge of Spring (Boot, Data, Security). University-degree in a technical subject (Computer Science, Mathematics, 
+or similar) or equivalent experience in the industry. Qualifications: FPGA Digital Design experience, C++, 
+Qt framework experience The purpose of this career summary is to explain your qualifications for the job in 3-5 
+sentences and convince the manager to read the whole resume document. The requirements are the following: knowledge 
+of .Net, .Net Core, WebAPI, ASP.Net MVC, Razor Views or equivalent single page application framework, C#, JavaScript, 
+CSS, HTML5 & Azure Cloud services or AWS, Active Directory. You need to have experience with the ASP.NET framework 
+and ideally SQL Server. Capability to design complex SQL queries. You know the ins and outs of several cloud 
+providers like AWS, Azure, Heroku and profound experience in Terraform, Google Cloud. Here are the technologies you 
+must have experience with: Django, Node.js, Nginx, React, React Native, Redis, RabbitMQ. The following are a must: 
+Selenium, Grafana. Works with the customer to further define requirements and to resolve issues in case of need. We 
+strive for excellence and we aim to win as a team. You can expect a career full of brilliant possibilities. Looking 
+to built the most amazing Data Academy, having 5 open Intern positions with the possibility of hiring afterwards. Our 
+office is located in central Timisoara with lots of shops and restaurants just around the corner. I think playing 
+sports when you are young is essential as it builds the team spirit. At Stack Intellect, implemented demand 
+forecasting models improving forecast accuracy by 34%. Developed customer segmentation algorithm in R leading to 22% 
+increase in market share. Cut customer complaints by 50% for an SaaS application. At Shellnac Inc., used Jenkins and 
+AWS tools to slash release times by 20%. Freed up 50 hrs/mo at PinkSky Tech through backend automation. Designed a 
+restaurant inventory application that saved the company $400/month in labor costs. SQL Developer Skills: Oracle, 
+Database Architecture, SSIS, PL/SQL, Security, Common Table Expressions, Creating Reports, Interpersonal Skills, 
+Collaboration, Communication. Developed software components in JavaScript based on functional requirements and 
+specifications. Wrote technical documentation to support the maintenance team. Adapted front-end technologies to 
+follow back end development using Angular. Key achievement: Performed debug on a critical error that saved the 
+company over $54,000 of potential lost revenue in downtime. Skills: Data-Structures, Open Source Software, 
+Cloud-Computing-Services (AWS), Ruby-on-Rails, Git Version Control, Teamwork Skills. Active contributor to over 10 
+GitHub libraries. Developed a marketing lead MySQL database, collecting, categorizing, and filtering leads from 
+various stakeholders, i.e., www, social media channels, or newsletters. """
 
 TEST_TEXT = """Nice to have: Cloud certifications(Azure or AWS or GCP).
 Experience with Jenkins pipelines and groovy scripting.

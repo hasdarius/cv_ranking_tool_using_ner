@@ -112,6 +112,37 @@ Python,Programming Language
 and,O
 React,Tool/Framework
 .,O
+Hiring,O
+people,O
+with,O
+good,O
+knowledge,O
+of,O
+Relational,O
+Databases,Programming Concept
+",",O
+PostgreSQL,Tool/Framework
+and,O
+ORM,Programming Concept
+technologies,O
+(,O
+JPA,Tool/Framework
+",",O
+Hibernate,Tool/Framework
+),O
+.,O
+At,Tool/Framework
+the,O
+moment,O
+we're,O
+using,O
+a,O
+mix,Tool/Framework
+of,O
+Python,Programming Language
+and,O
+Javascript,Programming Language
+.,O
 Driven,O
 by,O
 passion,O
@@ -305,6 +336,25 @@ development,Programming Concept
 using,O
 Swift,Tool/Framework
 .,O
+Nice,O
+to,O
+have:,O
+exposure,O
+to,O
+NoSQL,Programming Concept
+databases,Programming Concept
+(,O
+MongoDB,Tool/Framework
+),O
+",",O
+exposure,O
+to,O
+Python,Programming Language
+",",O
+Jupyter Hub,Tool/Framework
+",",O
+Jupyter Notebook,Tool/Framework
+.,O
 Used,O
 Spring JPA,Tool/Framework
 module,Programming Concept
@@ -371,6 +421,23 @@ C++,Tool/Framework
 and,O
 SQL,Programming Language
 .,O
+You,O
+need,O
+to,O
+have,O
+development,Programming Concept
+experience,O
+in,O
+Java,Programming Language
+and,O
+Java,Programming Language
+frameworks,Programming Concept
+and,O
+SQL,Programming Language
+/,O
+Relational Databases,Programming Concept
+skills,O
+.,O
 I,O
 have,O
 experience,O
@@ -389,6 +456,22 @@ I,O
 also,O
 know,O
 Django,Tool/Framework
+.,O
+Requirements:,O
+strong,O
+knowledge,O
+of,O
+Java,Programming Language
+Fundamentals,O
+and,O
+OOP,Programming Concept
+principles,O
+and,O
+good,O
+understanding,O
+of,O
+design,O
+patterns,O
 .,O
 This,O
 is,O
@@ -416,6 +499,33 @@ a,O
 new,O
 Job,O
 .,O
+Have,O
+already,O
+used,O
+at,Tool/Framework
+least,O
+one,O
+of,O
+these,O
+technologies,O
+amongst,O
+JavaScript,Programming Language
+",",O
+TypeScript,Tool/Framework
+",",O
+React,Tool/Framework
+",",O
+Vue.js,Tool/Framework
+",",O
+Kafka,Tool/Framework
+",",O
+ElasticSearch,Tool/Framework
+",",O
+MongoDB,Tool/Framework
+",",O
+and,O
+Python,Programming Language
+.,O
 Our,O
 mission,O
 is,O
@@ -439,6 +549,41 @@ personal,O
 initiative,O
 into,O
 success,O
+.,O
+Skills,O
+description:,O
+4+,O
+years’,O
+experience,O
+with,O
+Java,Programming Language
+(,O
+developing,O
+backend,Programming Concept
+/,O
+web applications,Programming Concept
+",",O
+Java,Programming Language
+8+,O
+),O
+",",O
+3+,O
+years’,O
+experience,O
+with,O
+Spring Boot,Tool/Framework
+(,O
+Spring,Tool/Framework
+Data,O
+",",O
+Spring,Tool/Framework
+Cloud,Tool/Framework
+),O
+",",O
+good,O
+unit/integration,O
+testing,Programming Concept
+experience,O
 .,O
 Receptionist,O
 with,O
@@ -522,6 +667,26 @@ functions,Programming Concept
 triggers,O
 and,O
 stored procedures,Programming Concept
+.,O
+Nice to Have,O
+Skills:,O
+experience,O
+with,O
+software,Programming Concept
+provisioning/configuration,O
+(,O
+example:,O
+Puppet,Tool/Framework
+",",O
+Ansible,Tool/Framework
+),O
+",",O
+with,O
+Oracle,Tool/Framework
+,O
+and,O
+Angular,Tool/Framework
+2+,O
 .,O
 I,O
 know,O
@@ -637,6 +802,37 @@ servlet,O
 SpringMVC,Tool/Framework
 Technologies,O
 The,O
+general,O
+tech,O
+stack,Tool/Framework
+of,O
+the,O
+project,O
+is:,O
+iOS,Tool/Framework
+(,O
+Swift,Tool/Framework
+),O
+",",O
+Android,Tool/Framework
+(,O
+Kotlin,Programming Language
+),O
+",",O
+Modern,O
+Web Apps,Programming Concept
+(,O
+Angular,Tool/Framework
+",",O
+React,Tool/Framework
+),O
+",",O
+Microservice architecture,Programming Concept
+with,O
+OpenAPI,Tool/Framework
+contracts,O
+.,O
+The,O
 city,O
 I,O
 was,O
@@ -727,6 +923,20 @@ services,O
 such,O
 as:,O
 Airflow,Tool/Framework
+.,O
+Other,O
+buzzwords:,O
+Universal,O
+Web,Programming Concept
+Apps,O
+",",O
+Machine Learning,Programming Concept
+",",O
+Heroku,Tool/Framework
+",",O
+AWS,Tool/Framework
+",",O
+Algolia,O
 .,O
 Boosted,O
 customer,O
@@ -1841,6 +2051,27 @@ strong,O
 teamwork,O
 skills,O
 .,O
+Requirements:,O
+experience,O
+with,O
+version,O
+control,O
+systems,O
+(,O
+Git,Tool/Framework
+),O
+and,O
+a,O
+Bachelor degree in computer science/,O
+Master degree in computer science,Certification
+",",O
+Engineering,O
+",",O
+or,O
+a,O
+related,O
+subject,O
+.,O
 Senior,Seniority
 Tech Lead,Seniority
 with,O
@@ -2040,6 +2271,20 @@ Posgresql,Tool/Framework
 and,O
 MongoDB,Tool/Framework
 .,O
+Wanted:,O
+Java,Programming Language
+Engineer,IT Specialization
+with,O
+experience,O
+in,O
+building,O
+high performing,O
+",",O
+scalable,O
+",",O
+enterprise grade,O
+applications,O
+.,O
 I,O
 am,O
 a,O
@@ -2073,6 +2318,28 @@ Docker,Tool/Framework
 Kubernetes,Tool/Framework
 ",",O
 Jenkins,Tool/Framework
+.,O
+Must,O
+have,O
+experience,O
+with,O
+build,O
+tools,O
+(,O
+Maven,Tool/Framework
+",",O
+Gradle,Tool/Framework
+),O
+and,O
+a,O
+Object Oriented,Programming Concept
+Analysis,O
+and,O
+design,O
+using,O
+common,O
+design,O
+patterns,O
 .,O
 Passionate,O
 machine learning,Programming Concept
@@ -2864,6 +3131,43 @@ job,O
 is,O
 for,O
 you!,O
+You,O
+need,O
+to,O
+have,O
+proven,O
+knowledge,O
+in,O
+Web,Programming Concept
+applications,O
+with,O
+JEE,Tool/Framework
+/,O
+Spring,Tool/Framework
+",",O
+DevOps,IT Specialization
+experience,O
+with,O
+high,O
+focus,O
+on,O
+cloud,Tool/Framework
+based,O
+operating systems,Programming Concept
+(,O
+particularly,O
+AWS,Tool/Framework
+),O
+",",O
+Jenkins,Tool/Framework
+",",O
+Docker,Tool/Framework
+and,O
+Kubernetes,Tool/Framework
+are,O
+a,O
+plus,Programming Language
+.,O
 Frontend developer,IT Specialization
 using,O
 HTML,Programming Language
@@ -3489,6 +3793,51 @@ to,O
 java,Programming Language
 1,O
 8,O
+We,O
+are,O
+looking,O
+for:,O
+experience,O
+in,O
+Apache,Tool/Framework
+Camel,O
+",",O
+experience,O
+with,O
+MSSQL,Tool/Framework
+",",O
+PostgreSQL,Tool/Framework
+",",O
+experience,O
+with,O
+Unit,O
+and,O
+integration,Programming Concept
+testing,Programming Concept
+with,O
+JUnit,Tool/Framework
+and,O
+Mockito,Tool/Framework
+",",O
+CI/CD,Programming Concept
+tools:,O
+Git,Tool/Framework
+",",O
+Jenkins,Tool/Framework
+",",O
+Maven,Tool/Framework
+",",O
+SonarQube,Tool/Framework
+",",O
+Artifactory,O
+and,O
+Microservices,Programming Concept
+",",O
+Docker,Tool/Framework
+",",O
+and,O
+Kubernetes,Tool/Framework
+.,O
 In,O
 need,O
 of,O
@@ -3638,6 +3987,20 @@ code reviews,Programming Concept
 ",",O
 TDD,Programming Concept
 .,O
+Basic,O
+qualifications:,O
+experience,O
+with,O
+web application,Programming Concept
+development,Programming Concept
+(,O
+.NET,Tool/Framework
+/,O
+JavaScript,Programming Language
+or,O
+equivalent,O
+),O
+.,O
 Wanted:,O
 Mid,Seniority
 Software developer,IT Specialization
@@ -3692,6 +4055,29 @@ R,Programming Language
 Haskell,Programming Language
 and,O
 Python,Programming Language
+.,O
+One,O
+requirement,O
+is,O
+having,O
+practical,O
+skills,O
+in,O
+CI/CD,Programming Concept
+ ,O
+some,O
+of,O
+Git,Tool/Framework
+",",O
+Maven,Tool/Framework
+",",O
+Gradle,Tool/Framework
+",",O
+Docker,Tool/Framework
+",",O
+Jenkins,Tool/Framework
+",",O
+Jira,Tool/Framework
 .,O
 Strong,O
 OOP,Programming Concept
@@ -3868,6 +4254,15 @@ years,O
 of,O
 experience,O
 .,O
+Orientation,O
+towards,O
+test driven,Programming Concept
+development,Programming Concept
+and,O
+clean code,Programming Concept
+is,O
+a,O
+plus,Programming Language
 Highly,O
 organized,O
 ",",O
@@ -4267,6 +4662,27 @@ mocking,O
 framework,Tool/Framework
 Mockito,Tool/Framework
 .,O
+We,O
+know,O
+you,O
+want,O
+to,O
+know,O
+so,O
+here,O
+is,O
+the,O
+stack:,O
+Python,Programming Language
+",",O
+Django,Tool/Framework
+",",O
+React,Tool/Framework
+",",O
+Redux,Tool/Framework
+",",O
+Express,O
+.,O
 Education,O
 Details,O
 January,O
@@ -4600,6 +5016,18 @@ search,O
 optimized,O
 store,O
 elastic search,Tool/Framework
+.,O
+Looking,O
+for,O
+people,O
+with,O
+experience,O
+in,O
+Kafka,Tool/Framework
+",",O
+Big Data,Programming Concept
+and,O
+Python,Programming Language
 .,O
 Technical,O
 Skills,O

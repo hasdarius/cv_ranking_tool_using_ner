@@ -53,7 +53,7 @@ def generate_dictionary_of_concepts(doc):
     for label in LABELS_LIST:
         if label not in detected_keys:
             final_dictionary[label] = set()
-    print('This is the dictionary of concepts-------------------')
+    print('This is the dictionary of concepts:')
     print(final_dictionary)
     print('-----------------------------------------------------')
 
@@ -66,7 +66,7 @@ def read_cv_entities_from_pdf(document_path, nlp):
     for page in pdf.pages:
         text = text + "\n" + page.extract_text()
     text = re.sub(r"[^a-zA-Z0-9]", " ", text)
-    doc = nlp(text.strip())
+    doc = nlp(text)
     return generate_dictionary_of_concepts(doc)
 
 
