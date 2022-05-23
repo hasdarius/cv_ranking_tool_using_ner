@@ -62,6 +62,9 @@ def read_cv_entities_from_pdf(document_path, nlp):
     text = ""
     for page in pdf.pages:
         text = text + "\n" + page.extract_text()
+    print("-------PDF---TEXT----START")
+    print(text)
+    print("-------PDF---TEXT----END")
     doc = nlp(text)
     return generate_dictionary_of_concepts(doc)
 
@@ -79,22 +82,23 @@ def rank_cvs(job_description_text, cv_folder):
     job_description_entities = generate_dictionary_of_concepts(nlp_doc)  # read job description entities in dictionary
     cv_files = [file for file in listdir(cv_folder) if isfile(join(cv_folder, file))]
     score_list = []
+    score_list_gremlin_match = []
     for cv_file in cv_files:
         _, file_extension = os.path.splitext(cv_file)
-        # if file_extension == ".pdf":
-        #     cv_entities_dictionary = read_cv_entities_from_pdf(cv_folder + '/' + cv_file, custom_nlp)
-        # else:
-        #     if file_extension == ".txt":
-        #         cv_entities_dictionary = read_cv_entities_from_txt(cv_folder + '/' + cv_file, custom_nlp)
-        #     else:
-        #         cv_entities_dictionary = {}
-        match file_extension:
-            case ".pdf":
-                cv_entities_dictionary = read_cv_entities_from_pdf(cv_folder + '/' + cv_file, custom_nlp)
-            case ".txt":
+        if file_extension == ".pdf":
+            cv_entities_dictionary = read_cv_entities_from_pdf(cv_folder + '/' + cv_file, custom_nlp)
+        else:
+            if file_extension == ".txt":
                 cv_entities_dictionary = read_cv_entities_from_txt(cv_folder + '/' + cv_file, custom_nlp)
-            case _:
-                cv_entities_dictionary = {}  # here would be better to throw exception, decide with David
+            else:
+                cv_entities_dictionary = {}
+        # match file_extension:
+        #     case ".pdf":
+        #         cv_entities_dictionary = read_cv_entities_from_pdf(cv_folder + '/' + cv_file, custom_nlp)
+        #     case ".txt":
+        #         cv_entities_dictionary = read_cv_entities_from_txt(cv_folder + '/' + cv_file, custom_nlp)
+        #     case _:
+        #         cv_entities_dictionary = {}  # here would be better to throw exception, decide with David
         cv_score = get_cv_ranking_score(cv_entities_dictionary, job_description_entities)
         score_list.append((cv_file, cv_score))
     return sorted(score_list, key=lambda cv: cv[1], reverse=True)

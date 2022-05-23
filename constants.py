@@ -120,3 +120,7 @@ Experience with Git or similar version control."""
 
 LABELS_LIST = {"Programming Language", "Certification", "Seniority", "Tool/Framework", "IT Specialization",
                "Programming Concept"}
+
+TXT_FILES_DIRECTORY = "./utils/txt-amr-files"
+
+TTL_FILES_DIRECTORY = "./utils/ttl-rdf-files"
