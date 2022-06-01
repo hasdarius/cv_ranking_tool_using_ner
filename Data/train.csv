@@ -45,6 +45,12 @@ tools,O
 like,O
 Jenkins,Tool/Framework
 .,O
+I,O
+am,O
+a,O
+Java,Programming Language
+Software Engineer,IT Specialization
+.,O
 Skilled,O
 in,O
 Oracle,Tool/Framework
@@ -55,21 +61,27 @@ and,O
 database,Programming Concept
 security,Programming Concept
 .,O
-I,O
-am,O
-a,O
-Oracle Certified Associate,Certification
-software developer,IT Specialization
-",",O
-having,O
-worked,O
+Needed:,O
+Data Scientist,IT Specialization
+which,O
+is,O
+familiar,O
 with,O
-Azure Cloud Service,Tool/Framework
-provider,O
-for,O
-10,O
-years,O
-now,O
+common,O
+machine learning,Programming Concept
+libraries,O
+like,O
+keras,Tool/Framework
+",",O
+pandas,Tool/Framework
+.,O
+Experience:,O
+2018 03,O
+ ,O
+2018 10,O
+:,O
+Entry Level,O
+Software Developer,IT Specialization
 .,O
 Looking,O
 for,O
@@ -93,6 +105,50 @@ Git,Tool/Framework
 ",",O
 Amazon Web Services,Tool/Framework
 .,O
+I'm,O
+going,O
+to,O
+be,O
+doing,O
+some,O
+coding,O
+during,O
+the,O
+presentation,O
+to,O
+show,O
+some,O
+side by side,O
+Java,Programming Language
+/,O
+Groovy,Programming Language
+.,O
+My,O
+previous,Tool/Framework
+experience,O
+during,O
+the,O
+period,O
+of,O
+July,O
+2017,O
+to,O
+August,O
+2018,O
+as,O
+a,O
+DevOps,IT Specialization
+Manager,O
+and,O
+before,O
+from,O
+2013 05,O
+to,O
+2015 06,O
+as,O
+a,O
+DevOps Engineer,IT Specialization
+.,O
 I,O
 worked,O
 with,O
@@ -113,35 +169,138 @@ and,O
 React,Tool/Framework
 .,O
 Hiring,O
-people,O
-with,O
-good,O
-knowledge,O
-of,O
-Relational,O
-Databases,Programming Concept
+senior,Seniority
+full stack developer,IT Specialization
 ",",O
+requirements:,O
+vuejs,Tool/Framework
+",",O
+nginx,Tool/Framework
+and,O
+microsoft azure,Tool/Framework
+.,O
+Skills,O
+in,O
+SQL,Programming Language
+using,O
 PostgreSQL,Tool/Framework
 and,O
-ORM,Programming Concept
-technologies,O
-(,O
-JPA,Tool/Framework
-",",O
-Hibernate,Tool/Framework
-),O
+Oracle,Tool/Framework
 .,O
-At,Tool/Framework
-the,O
-moment,O
-we're,O
-using,O
-a,O
-mix,Tool/Framework
+Looking,O
+for,O
+software engineers,IT Specialization
+with,O
+experience,O
+in,O
+technologies,O
+like,O
+Kafka,Tool/Framework
+",",O
+Google,Tool/Framework
+Cloud,Tool/Framework
+.,O
+As,O
+part,O
 of,O
-Python,Programming Language
+an,O
+banking,O
+application,Programming Concept
+I,O
+used,O
+GCP,Tool/Framework
+services,O
+such,O
+as:,O
+Airflow,Tool/Framework
+.,O
+Skills:,O
+teamwork,O
+",",O
+analytical,O
+thinking,O
+",",O
+operating systems,Programming Concept
+software,Programming Concept
+",",O
+database,Programming Concept
+administration,O
+",",O
+CRM,O
+.,O
+I,O
+have,O
+focused,O
+on,O
+developing,O
+scalable,O
 and,O
-Javascript,Programming Language
+well documented,O
+code,O
+.,O
+2019,O
+ ,O
+2020,O
+Mid,Seniority
+Software Developer,IT Specialization
+with,O
+responsibilities,O
+such,O
+as,O
+build,O
+queries,O
+using,O
+Elasticsearch,Tool/Framework
+to,O
+find,Tool/Framework
+data,O
+faster,O
+.,O
+Deploying,Programming Concept
+SQL,Programming Language
+Server,Programming Concept
+Databases,Programming Concept
+from,O
+Test,O
+to,O
+Live,O
+As,O
+a,O
+DevOps Engineer,IT Specialization
+I,O
+used,O
+Jenkins,Tool/Framework
+and,O
+AWS,Tool/Framework
+tools,O
+to,O
+cut,O
+release,Programming Concept
+times,O
+by,O
+20%,O
+.,O
+Building,O
+an,O
+online,O
+shop,O
+website,O
+and,O
+searching,O
+developers,IT Specialization
+with,O
+prior,O
+work,O
+experience,O
+in,O
+frameworks,Programming Concept
+like,O
+Spring,Tool/Framework
+and,O
+deploying,Programming Concept
+tools,O
+like,O
+Docker,Tool/Framework
 .,O
 Driven,O
 by,O
@@ -162,6 +321,41 @@ the,O
 MailSent,O
 tool,O
 .,O
+Delivered,O
+10,O
+DB,Tool/Framework
+projects,O
+at,Tool/Framework
+Gamma,O
+Nexus,O
+Group,O
+on,O
+time,O
+and,O
+15%,O
+under,O
+budget,O
+.,O
+Adding,O
+scripting,Programming Concept
+functionality,O
+to,O
+.NET,Tool/Framework
+applications,O
+.,O
+Highly,O
+skilled,O
+in,O
+Python,Programming Language
+coding,O
+and,O
+scripting,Programming Concept
+.,O
+Languages:,O
+Spanish,O
+",",O
+Hungarian,O
+.,O
 Designed,O
 the,O
 application,Programming Concept
@@ -180,6 +374,50 @@ Agile,Programming Concept
 and,O
 Scrum,Programming Concept
 methodologies,O
+.,O
+I,O
+connect,O
+to,O
+a,O
+database,Programming Concept
+and,O
+loop,O
+over,O
+a,O
+recordset,O
+in,O
+C#,Programming Language
+.,O
+As,O
+a,O
+mid,Seniority
+software engineer,IT Specialization
+I,O
+worked,O
+on,O
+security,Programming Concept
+features,O
+like,O
+authentication,Programming Concept
+.,O
+Hiring:,O
+Data Engineer,IT Specialization
+eager,O
+to,O
+learn,O
+and,O
+work,O
+with,O
+Big Data,Programming Concept
+.,O
+My,O
+main,O
+interest,O
+is,O
+in,O
+the,O
+Artificial Intelligence,Programming Concept
+field,O
 .,O
 Looking,O
 for,O
@@ -205,6 +443,56 @@ and,O
 authorization,O
 .,O
 Experience,O
+during,O
+2015,O
+ ,O
+present,O
+as,O
+a,O
+Senior,Seniority
+Software Engineer,IT Specialization
+.,O
+Courses,O
+and,O
+Certification:,O
+Online,O
+course,O
+on,O
+Jasmine,Tool/Framework
+and,O
+Udemy,O
+.,O
+I,O
+am,O
+a,O
+data scientist,IT Specialization
+with,O
+vast,O
+experience,O
+in,O
+SQL,Programming Language
+and,O
+noSQL,Programming Concept
+databases,Programming Concept
+such,O
+as,O
+Cassandra,Tool/Framework
+",",O
+Posgres,Tool/Framework
+and,O
+MongoDB,Tool/Framework
+.,O
+Strong,O
+OOP,Programming Concept
+programming,Programming Concept
+knowledge,O
+as,O
+I've,O
+worked,O
+with,O
+Javascript,Programming Language
+.,O
+Experience,O
 in,O
 building,O
 Cross,O
@@ -223,6 +511,33 @@ Bootstrap,Tool/Framework
 CSS,Programming Language
 preprocessor,O
 Less,Tool/Framework
+.,O
+DevOps,IT Specialization
+engineer,IT Specialization
+who,O
+has,O
+used,O
+Kubernetes,Tool/Framework
+",",O
+Jenkins,Tool/Framework
+in,O
+delopying,O
+and,O
+scaling,O
+a,O
+lot,O
+of,O
+applications,O
+.,O
+I,O
+am,O
+building,O
+a,O
+Datalake,Programming Concept
+using,O
+Scala,Programming Language
+and,O
+Spark,Tool/Framework
 .,O
 We,O
 proudly,O
@@ -248,6 +563,28 @@ and,O
 everywhere,O
 in,O
 between,O
+.,O
+Computer,O
+Science,O
+Projects:,O
+e commerce,O
+site,O
+to,O
+sell,O
+walking,O
+sticks,O
+.,O
+Used,O
+PHP,Programming Language
+and,O
+MySQL,Tool/Framework
+.,O
+Interests:,O
+Playing,O
+Video,O
+Games,O
+",",O
+biking,O
 .,O
 I,O
 am,O
@@ -336,25 +673,6 @@ development,Programming Concept
 using,O
 Swift,Tool/Framework
 .,O
-Nice,O
-to,O
-have:,O
-exposure,O
-to,O
-NoSQL,Programming Concept
-databases,Programming Concept
-(,O
-MongoDB,Tool/Framework
-),O
-",",O
-exposure,O
-to,O
-Python,Programming Language
-",",O
-Jupyter Hub,Tool/Framework
-",",O
-Jupyter Notebook,Tool/Framework
-.,O
 Used,O
 Spring JPA,Tool/Framework
 module,Programming Concept
@@ -401,78 +719,6 @@ management,O
 at,Tool/Framework
 CyrusOne,O
 .,O
-Designed,O
-",",O
-developed,O
-",",O
-and,O
-troubleshot,O
-software,Programming Concept
-programs,O
-for,O
-databases,Programming Concept
-and,O
-applications,O
-in,O
-Java,Programming Language
-",",O
-C++,Tool/Framework
-",",O
-and,O
-SQL,Programming Language
-.,O
-You,O
-need,O
-to,O
-have,O
-development,Programming Concept
-experience,O
-in,O
-Java,Programming Language
-and,O
-Java,Programming Language
-frameworks,Programming Concept
-and,O
-SQL,Programming Language
-/,O
-Relational Databases,Programming Concept
-skills,O
-.,O
-I,O
-have,O
-experience,O
-in,O
-Python,Programming Language
-and,O
-Flask,Tool/Framework
-",",O
-Matlab,Programming Language
-",",O
-Go,Programming Language
-",",O
-R,Programming Language
-but,O
-I,O
-also,O
-know,O
-Django,Tool/Framework
-.,O
-Requirements:,O
-strong,O
-knowledge,O
-of,O
-Java,Programming Language
-Fundamentals,O
-and,O
-OOP,Programming Concept
-principles,O
-and,O
-good,O
-understanding,O
-of,O
-design,O
-patterns,O
-.,O
 This,O
 is,O
 my,O
@@ -487,6 +733,16 @@ an,O
 Internship,O
 program,O
 .,O
+You,O
+need,O
+to,O
+have,O
+experience,O
+in,O
+typescript,Tool/Framework
+with,O
+Angular,Tool/Framework
+.,O
 Strong,O
 Scala,Programming Language
 background,O
@@ -499,32 +755,76 @@ a,O
 new,O
 Job,O
 .,O
-Have,O
-already,O
-used,O
-at,Tool/Framework
-least,O
-one,O
+As,O
+an,O
+intern,Seniority
+I,O
+build,O
+an,O
+authorization,O
+feature,O
+for,O
+a,O
+web application,Programming Concept
+using,O
+Spring Security,Tool/Framework
+.,O
+Requirements:,O
+strong,O
+understanding,O
 of,O
-these,O
-technologies,O
-amongst,O
-JavaScript,Programming Language
+relational databases,Programming Concept
 ",",O
-TypeScript,Tool/Framework
-",",O
-React,Tool/Framework
-",",O
-Vue.js,Tool/Framework
-",",O
-Kafka,Tool/Framework
-",",O
-ElasticSearch,Tool/Framework
-",",O
-MongoDB,Tool/Framework
-",",O
+rest services,Programming Concept
+.,O
+I,O
+use,O
+sonarqube,Tool/Framework
+as,O
+code,O
+analysis,O
+for,O
+my,O
+Java,Programming Language
+projects,O
+.,O
+Must,O
+have,O
+projects,O
+written,O
+in,O
+Javascript,Programming Language
+.,O
+I,O
+was,O
+a,O
+Junior,Seniority
+Software Developer,IT Specialization
+during,O
+November,O
+2019,O
+ ,O
+December,O
+2020,O
 and,O
-Python,Programming Language
+developed,O
+7,O
+new,O
+user facing,O
+features,O
+using,O
+Vue.js,Tool/Framework
+.,O
+I,O
+Algorithms,Programming Concept
+and,O
+complexity,O
+and,O
+automata,O
+theory,O
+classes,O
+in,O
+college,O
 .,O
 Our,O
 mission,O
@@ -550,40 +850,73 @@ initiative,O
 into,O
 success,O
 .,O
-Skills,O
-description:,O
-4+,O
-years’,O
-experience,O
+I,O
+worked,O
+5,O
+years,O
 with,O
-Java,Programming Language
-(,O
-developing,O
-backend,Programming Concept
-/,O
-web applications,Programming Concept
+SpringBoot,Tool/Framework
+and,O
+Hibernate,Tool/Framework
+.,O
+Organizing,O
+an,O
+internship,O
 ",",O
-Java,Programming Language
-8+,O
-),O
-",",O
-3+,O
-years’,O
-experience,O
-with,O
-Spring Boot,Tool/Framework
-(,O
-Spring,Tool/Framework
-Data,O
-",",O
-Spring,Tool/Framework
-Cloud,Tool/Framework
-),O
-",",O
+the,O
+main,O
+requirements,O
+being:,O
 good,O
-unit/integration,O
-testing,Programming Concept
+grasp,O
+of,O
+Object Oriented Programming,Programming Concept
+and,O
+Design Patterns,O
+using,O
+Java,Programming Language
+.,O
+I,O
+am,O
+a,O
+certified,Certification
+Azure,Tool/Framework
+developer,IT Specialization
+",",O
+having,O
+worked,O
+with,O
+Azure Cloud Service,Tool/Framework
+provider,O
+for,O
+10,O
+years,O
+now,O
+.,O
+Looking,O
+for,O
+a,O
+senior,Seniority
+Software Developer,IT Specialization
+with,O
+lots,O
+of,O
 experience,O
+in,O
+Django,Tool/Framework
+.,O
+It,O
+is,O
+nice,O
+to,O
+see,O
+that,O
+Scala,Programming Language
+supports,O
+both,O
+object oriented programming,Programming Concept
+and,O
+functional programming,Programming Concept
 .,O
 Receptionist,O
 with,O
@@ -599,28 +932,6 @@ public,O
 and,O
 private,O
 sectors,O
-.,O
-Senior,Seniority
-programmer,IT Specialization
-",",O
-I,O
-have,O
-been,O
-writing,O
-C++,Tool/Framework
-code,O
-for,O
-more,Tool/Framework
-than,O
-a,O
-decade,O
-now,O
-and,O
-I,O
-like,O
-Java,Programming Language
-and,O
-Python,Programming Language
 .,O
 Looking,O
 for,O
@@ -644,49 +955,22 @@ Git,Tool/Framework
 ",",O
 Amazon Web Services,Tool/Framework
 .,O
-Experience,O
+Additional,O
+activities,O
+:,O
+DevOps,IT Specialization
+Agile,Programming Concept
+Skills,O
+Association,O
+member,O
+",",O
+run,O
+half,O
+marathons,O
+to,O
+stay,O
 in,O
-working,O
-with,O
-various,O
-Relational Databases,Programming Concept
-like,O
-Oracle,Tool/Framework
-",",O
-DB2,Tool/Framework
-",",O
-MySQL,Tool/Framework
-and,O
-Terradata,Tool/Framework
-building,O
-complex,O
-queries,O
-",",O
-functions,Programming Concept
-",",O
-triggers,O
-and,O
-stored procedures,Programming Concept
-.,O
-Nice to Have,O
-Skills:,O
-experience,O
-with,O
-software,Programming Concept
-provisioning/configuration,O
-(,O
-example:,O
-Puppet,Tool/Framework
-",",O
-Ansible,Tool/Framework
-),O
-",",O
-with,O
-Oracle,Tool/Framework
-,O
-and,O
-Angular,Tool/Framework
-2+,O
+shape,O
 .,O
 I,O
 know,O
@@ -714,123 +998,65 @@ multiple,O
 programming,Programming Concept
 languages,O
 .,O
-SKILLS,O
-1,O
-Team,O
-leading,O
-2,O
-Self,Programming Language
-motivated,O
-3,O
-Hard,O
+I'm,O
+giving,O
+a,O
+presentation,O
+to,O
+a,O
+Java,Programming Language
+User's,O
+Group,O
+on,O
+Groovy,Programming Language
+.,O
+Experience,O
+in,O
 working,O
-Strengths,O
-Ready,O
-to,O
-learn,O
-new,O
-Programming,Programming Concept
-Languages,O
-Punctual,O
-Discipline,O
-Respectfulness,O
-DECLARATION,O
-I,O
-hereby,O
-inform,O
-you,O
-that,O
-all,O
-the,O
-statement,O
-made,O
-above,O
-are,O
-true,O
 with,O
-the,O
-best,O
-of,O
-my,O
-knowledge,O
+NoSQL databases,Programming Concept
+(,O
+schema,O
+on,O
+read,O
+),O
+databases,Programming Concept
+mongoDB,Tool/Framework
 and,O
-belief,O
-Education,O
-Details,O
-August,O
-2014,O
-to,O
-July,O
-2017,O
-MCA,O
-Computer,O
-Sciene,O
-Amravati,O
-Maharashtra,O
-SGBAU,O
-Amaravti,O
-Java,Programming Language
-Web,Programming Concept
-Developer,IT Specialization
-Skill,O
-Details,O
-Core,O
-Java,Programming Language
-JSP,Tool/Framework
-Servlet,O
-Spring,Tool/Framework
-Hibernate,Tool/Framework
-Struts,O
-Javascript,Programming Language
-Exprience,O
-6,O
-monthsCompany,O
-Details,O
-company,O
-Salcluster,O
-Technologies,O
-description,O
-1,O
-I,O
-am,O
-Java,Programming Language
-web,Programming Concept
-developer,IT Specialization
-2,O
-Jsp,Tool/Framework
-servlet,O
-SpringMVC,Tool/Framework
-Technologies,O
-The,O
-general,O
-tech,O
-stack,Tool/Framework
-of,O
-the,O
-project,O
-is:,O
-iOS,Tool/Framework
-(,O
-Swift,Tool/Framework
-),O
-",",O
-Android,Tool/Framework
-(,O
-Kotlin,Programming Language
-),O
-",",O
-Modern,O
-Web Apps,Programming Concept
-(,O
-Angular,Tool/Framework
-",",O
-React,Tool/Framework
-),O
-",",O
-Microservice architecture,Programming Concept
+Cassandra,Tool/Framework
+and,O
+search,O
+optimized,O
+store,O
+elastic search,Tool/Framework
+.,O
+Building,O
+web apps,Programming Concept
 with,O
-OpenAPI,Tool/Framework
-contracts,O
+ASP.NET,Tool/Framework
+4,O
+.0,O
+frameworks,Programming Concept
+is,O
+easy,O
+.,O
+Work,O
+History,O
+as,O
+a,O
+Junior,Seniority
+AngularJS,Tool/Framework
+Expert,O
+.,O
+Developed,O
+over,O
+120,O
+application,Programming Concept
+pages,O
+using,O
+javascript,Programming Language
+and,O
+jQuery,Tool/Framework
 .,O
 The,O
 city,O
@@ -884,6 +1110,61 @@ and,O
 jQuery,Tool/Framework
 .,O
 I,O
+also,O
+built,O
+some,O
+web applications,Programming Concept
+for,O
+fun,O
+using,O
+Ruby,Programming Language
+on,O
+Rails,O
+.,O
+Skills:,O
+effective,O
+communication,O
+",",O
+team,O
+spirit,O
+.,O
+Also,O
+worked,O
+on,O
+backend,Programming Concept
+building,O
+algorithm,O
+for,O
+credit,O
+card,O
+encryption,O
+in,O
+.NET,Tool/Framework
+,O
+.,O
+Education:,O
+wrote,O
+an,O
+Article,O
+about,O
+why,O
+Android,Tool/Framework
+is,O
+better,O
+than,O
+you,O
+think,O
+",",O
+published,O
+in,O
+the,O
+newsletter,O
+.,O
+Proficient,O
+with,O
+React,Tool/Framework
+.,O
+I,O
 am,O
 working,O
 on,O
@@ -906,43 +1187,21 @@ system,O
 using,O
 Kotlin,Programming Language
 .,O
-I,O
-am,O
-building,O
-a,O
-Datalake,Programming Concept
-using,O
-Scala,Programming Language
-and,O
-Spark,Tool/Framework
-",",O
-but,O
-also,O
-GCP,Tool/Framework
-services,O
-such,O
-as:,O
-Airflow,Tool/Framework
-.,O
-Other,O
-buzzwords:,O
-Universal,O
-Web,Programming Concept
-Apps,O
-",",O
-Machine Learning,Programming Concept
-",",O
-Heroku,Tool/Framework
-",",O
-AWS,Tool/Framework
-",",O
-Algolia,O
-.,O
 Boosted,O
 customer,O
 satisfaction,O
 by,O
 25%,O
+.,O
+I,O
+can,O
+easily,O
+consume,O
+a,O
+web,Programming Concept
+service,O
+from,O
+PHP,Programming Language
 .,O
 Looking,O
 for,O
@@ -997,240 +1256,40 @@ a,O
 project,O
 team,O
 .,O
-Skills,O
-Language,O
-Java,Programming Language
-operating system,Programming Concept
-Windows,Tool/Framework
-Linux,Tool/Framework
-CentOS,Tool/Framework
-6,O
-6,O
-Databases,Programming Concept
-Oracle,Tool/Framework
-mySql,Tool/Framework
+Hiring,O
+Frontend developer,IT Specialization
+using,O
+HTML,Programming Language
+",",O
+CSS,Programming Language
 and,O
-Derby,O
-Embedded,Programming Concept
-DB,Tool/Framework
-IDE,Programming Concept
-Eclipse,Tool/Framework
-Oxygen,O
-Tools,O
-SonarQube,Tool/Framework
-Putty,Tool/Framework
-Responsibilities,O
-Participated,O
-in,O
-requirements,O
-gathering,O
-and,O
-design,O
-development,Programming Concept
-meetings,O
-Reviewed,O
-code,O
-to,O
-improve,O
-performance,O
-Coordinated,O
-with,O
-systems,O
-partners,O
-to,O
-finalize,O
-designs,O
-and,O
-confirm,O
-requirements,O
-Consistently,O
-met,O
-deadlines,O
-and,O
-requirements,O
-for,O
-all,O
-production,O
-work,O
-orders,O
-Collaborated,O
-with,O
-other,O
-developers,IT Specialization
-to,O
-identify,O
-and,O
-alleviate,O
-the,O
-number,O
-of,O
-bugs,Programming Concept
-in,O
-the,O
+JavaScript,Programming Language
+.,O
+I,O
+oversaw,O
 software,Programming Concept
-and,O
-provided,O
-maintenance,O
-and,O
 development,Programming Concept
-of,O
-bug,Programming Concept
-fixes,O
 and,O
-patch,O
-sets,O
-for,O
-existing,O
-applications,O
-Education,O
-Details,O
-Bachelor of Engineering,Certification
-Computer,O
-Savitribai,O
-Phule,O
-Pune,O
-University,O
-Java,Programming Language
-Developer,IT Specialization
-Java,Programming Language
-Developer,IT Specialization
-Aurus,O
-Tech,O
-Pvt,O
-Ltd,O
-Skill,O
-Details,O
-JAVA,Programming Language
-Exprience,O
-32,O
-months,O
-LINUX,Tool/Framework
-Exprience,O
-6,O
-months,O
-Adavance,O
-Java,Programming Language
-Exprience,O
-Less,Tool/Framework
-than,O
-1,O
-year,O
-months,O
-Derby,O
-Exprience,O
-Less,Tool/Framework
-than,O
-1,O
-year,O
-months,O
-Oracle,Tool/Framework
-Exprience,O
-Less,Tool/Framework
-than,O
-1,O
-year,O
-monthsCompany,O
-Details,O
-company,O
-Aurus,O
-Tech,O
-Pvt,O
-Ltd,O
-description,O
-Having,O
-2,O
-years,O
-of,O
-experience,O
-in,O
-working,O
-with,O
-a,O
-Payment,O
-Gateway,O
-Solutions,O
-provider,O
-with,O
-Core,O
-Java,Programming Language
-Hardworking,O
-Java,Programming Language
-Developer,IT Specialization
-enthusiastic,O
-about,O
-working,O
-with,O
-multicultural,O
-teams,O
-company,O
-Aurus,O
-Tech,O
-Pvt,O
-Ltd,O
-description,O
-Participated,O
-in,O
-requirements,O
-gathering,O
+coded,O
+profitable,O
+apps,O
+using,O
+,O
+C++,Tool/Framework
 and,O
-design,O
-development,Programming Concept
-meetings,O
-Reviewed,O
-code,O
+Java,Programming Language
+.,O
+Excited,O
 to,O
-improve,O
-performance,O
-Coordinated,O
-with,O
-systems,O
-partners,O
-to,O
-finalize,O
-designs,O
-and,O
-confirm,O
-requirements,O
-Consistently,O
-met,O
-deadlines,O
-and,O
-requirements,O
+implement,O
+statistical,O
+machine,O
+learning,O
+solutions,O
 for,O
-all,O
-production,O
-work,O
-orders,O
-Collaborated,O
-with,O
-other,O
-developers,IT Specialization
-to,O
-identify,O
-and,O
-alleviate,O
-the,O
-number,O
-of,O
-bugs,Programming Concept
-in,O
-the,O
-software,Programming Concept
-and,O
-provided,O
-continued,O
-maintenance,O
-and,O
-development,Programming Concept
-of,O
-bug,Programming Concept
-fixes,O
-and,O
-patch,O
-sets,O
-for,O
-existing,O
-applications,O
+Macro,O
+Globe,O
+.,O
 I,O
 am,O
 from,O
@@ -1246,730 +1305,6 @@ Switzerland,O
 and,O
 Italy,O
 .,O
-TECHNICAL,O
-SKILLS,O
-Programming,Programming Concept
-Languages,O
-Java,Programming Language
-Servlet,O
-JSP,Tool/Framework
-Spring Boot,Tool/Framework
-Web,Programming Concept
-Technology,O
-HTML5,Programming Language
-CSS3,Programming Language
-Bootstrap,Tool/Framework
-JavaScript,Programming Language
-JQuery,Tool/Framework
-Ajax,Tool/Framework
-AngularJs,Tool/Framework
-Database,Programming Concept
-MySQL,Tool/Framework
-IDE,Programming Concept
-and,O
-Tool,O
-Eclipse,Tool/Framework
-spring,Tool/Framework
-tool,O
-Suit,O
-Net,O
-beans,O
-Sublime,O
-Text,O
-Atom,Programming Language
-operating system,Programming Concept
-Windows,Tool/Framework
-XP,O
-7,O
-8,O
-10,O
-ACHIEVEMENT,O
-Java Developer Certificate,Certification
-from,O
-Unanth,O
-Technical,O
-Institute,O
-Java,Programming Language
-Certificate,Certification
-from,O
-solo,O
-Learn,O
-Command,O
-line,O
-crash,O
-Course,O
-certificate,Certification
-from,O
-Udemy,O
-JOB,O
-DETAILS,O
-Education,O
-Details,O
-January,O
-2018,O
-M,O
-C,Programming Language
-A,O
-Pune,O
-Maharashtra,O
-Pune,O
-University,O
-January,O
-2015,O
-B,O
-C,Programming Language
-A,O
-Amravati,O
-Maharashtra,O
-Amravati,O
-University,O
-January,O
-2012,O
-H,O
-S,O
-C,Programming Language
-Amravati,O
-Maharashtra,O
-Amravati,O
-University,O
-January,O
-2010,O
-S,O
-S,O
-C,Programming Language
-Amravati,O
-Maharashtra,O
-Amravati,O
-University,O
-Java,Programming Language
-developer,IT Specialization
-Full Stack,Programming Concept
-Java,Programming Language
-Developer,IT Specialization
-Skill,O
-Details,O
-Css,Programming Language
-Exprience,O
-Less,Tool/Framework
-than,O
-1,O
-year,O
-months,O
-Ajax,Tool/Framework
-Exprience,O
-Less,Tool/Framework
-than,O
-1,O
-year,O
-months,O
-Servlet,O
-Exprience,O
-Less,Tool/Framework
-than,O
-1,O
-year,O
-months,O
-Html5,Programming Language
-Exprience,O
-Less,Tool/Framework
-than,O
-1,O
-year,O
-months,O
-Spring,Tool/Framework
-Exprience,O
-Less,Tool/Framework
-than,O
-1,O
-year,O
-months,O
-Java,Programming Language
-Exprience,O
-Less,Tool/Framework
-than,O
-1,O
-year,O
-months,O
-Jquery,Tool/Framework
-Exprience,O
-Less,Tool/Framework
-than,O
-1,O
-year,O
-months,O
-Jsp,Tool/Framework
-Exprience,O
-Less,Tool/Framework
-than,O
-1,O
-year,O
-months,O
-Javascript,Programming Language
-Exprience,O
-Less,Tool/Framework
-than,O
-1,O
-year,O
-months,O
-Bootstrap,Tool/Framework
-Exprience,O
-Less,Tool/Framework
-than,O
-1,O
-year,O
-months,O
-Spring Boot,Tool/Framework
-Exprience,O
-Less,Tool/Framework
-than,O
-1,O
-year,O
-monthsCompany,O
-Details,O
-company,O
-Salcluster,O
-technologies,O
-description,O
-Worked,O
-as,O
-java,Programming Language
-developer,IT Specialization
-Developed,O
-3,O
-projects,O
-using,O
-java,Programming Language
-servlet,O
-jsp,Tool/Framework
-ajax,Tool/Framework
-and,O
-web,Programming Concept
-technologies,O
-company,O
-Salcluster,O
-Technologies,O
-LLP,O
-description,O
-Technology,O
-Core,O
-Java,Programming Language
-Servlet,O
-and,O
-JSP,Tool/Framework
-HTML5,Programming Language
-CSS3,Programming Language
-Bootstrap,Tool/Framework
-Javascript,Programming Language
-Jquery,Tool/Framework
-Ajax,Tool/Framework
-and,O
-Bootstrap,Tool/Framework
-PROJECT,O
-DETAILS,O
-Title,O
-GST,O
-And,O
-Sales,O
-Billing,O
-Software,Programming Concept
-Status,O
-Completed,O
-Duration,O
-1,O
-5,O
-Months,O
-Abstract,O
-This,O
-is,O
-a,O
-web application,Programming Concept
-made,O
-by,O
-using,O
-Java,Programming Language
-Servlet,O
-and,O
-JSP,Tool/Framework
-JavaScript,Programming Language
-Jquery,Tool/Framework
-Ajax,Tool/Framework
-and,O
-MySQL,Tool/Framework
-on,O
-back,O
-end,O
-It,O
-is,O
-a,O
-client,O
-s,O
-website,O
-which,O
-is,O
-used,O
-for,O
-Billing,O
-It,O
-includes,O
-GST,O
-Billing,O
-Generate,O
-and,O
-print,O
-invoice,O
-It,O
-has,O
-five,O
-master,Certification
-pages,O
-and,O
-four,O
-common,O
-pages,O
-Masters,Certification
-include,O
-customer,O
-master,Certification
-item,O
-master,Certification
-uom,O
-master,Certification
-setup,O
-master,Certification
-reason,Programming Language
-master,Certification
-and,O
-common,O
-pages,O
-like,O
-sales,O
-order,O
-payments,O
-sales,O
-return,O
-and,O
-invoice,O
-Title,O
-Dinman,O
-News,O
-website,O
-Status,O
-Completed,O
-Duration,O
-1,O
-Months,O
-Abstract,O
-This,O
-is,O
-a,O
-Website,O
-project,O
-by,O
-using,O
-Java,Programming Language
-Servlet,O
-and,O
-JSP,Tool/Framework
-JavaScript,Programming Language
-Jquery,Tool/Framework
-Ajax,Tool/Framework
-and,O
-MySQL,Tool/Framework
-on,O
-back,O
-end,O
-It,O
-is,O
-a,O
-clients,O
-website,O
-It,O
-is,O
-used,O
-for,O
-displaying,O
-online,O
-video,O
-and,O
-text,O
-news,O
-Title,O
-Agri,O
-Management,O
-Website,O
-Status,O
-Completed,O
-Duration,O
-1,O
-5,O
-Months,O
-Abstract,O
-This,O
-is,O
-a,O
-Website,O
-project,O
-by,O
-using,O
-Java,Programming Language
-Servlet,O
-and,O
-JSP,Tool/Framework
-JavaScript,Programming Language
-Jquery,Tool/Framework
-Ajax,Tool/Framework
-and,O
-MySQL,Tool/Framework
-on,O
-back,O
-end,O
-It,O
-is,O
-used,O
-for,O
-purchasing,O
-and,O
-selling,O
-vegetables,O
-all,O
-over,O
-india,O
-company,O
-OmegaSoft,O
-Technologies,O
-pvt,O
-ltd,O
-description,O
-Company,O
-Name,O
-OmegaSoft,O
-Technologies,O
-pvt,O
-ltd,O
-An,O
-ISO,O
-certified,Certification
-Company,O
-Duration,O
-5,O
-months,O
-Technology,O
-Java,Programming Language
-Spring,Tool/Framework
-Hibernate,Tool/Framework
-AngularJs,Tool/Framework
-Ajax,Tool/Framework
-KendoUI,O
-and,O
-BootStrap,Tool/Framework
-Architecture,O
-MVC,Programming Concept
-Architecture,O
-and,O
-Service,O
-based,O
-Programming,Programming Concept
-Project,O
-Module,Programming Concept
-Login,O
-Registration,O
-and,O
-Role,O
-Assignment,O
-Payments,O
-INTERNSHIP,O
-PROJECT,O
-DETAILS,O
-Title,O
-Employment,O
-Times,O
-Status,O
-Completed,O
-Duration,O
-4,O
-Months,O
-Abstract,O
-This,O
-is,O
-a,O
-Website,O
-project,O
-using,O
-Java,Programming Language
-Spring,Tool/Framework
-Hibernate,Tool/Framework
-Angular,Tool/Framework
-Js,Programming Language
-Ajax,Tool/Framework
-and,O
-MySQL,Tool/Framework
-on,O
-back,O
-end,O
-It,O
-is,O
-a,O
-client,O
-s,O
-website,O
-which,O
-is,O
-used,O
-for,O
-posting,O
-of,O
-newspapers,O
-all,O
-over,O
-India,O
-It,O
-has,O
-12,O
-Modules,Programming Concept
-In,O
-which,O
-it,O
-has,O
-Admin,O
-Panel,O
-E,O
-paper,O
-Posting,O
-Subscriptions,O
-and,O
-many,O
-more,Tool/Framework
-It,O
-is,O
-a,O
-very,O
-light,O
-weight,O
-website,O
-built,O
-by,O
-using,O
-MVC,Programming Concept
-Architecture,O
-and,O
-Service,O
-based,O
-Architecture,O
-We,O
-can,O
-also,O
-post,O
-advertisements,O
-on,O
-website,O
-and,O
-share,O
-the,O
-news,O
-on,O
-Facebook,O
-or,O
-any,O
-other,O
-social,O
-media,O
-directly,O
-It,O
-has,O
-Payment,O
-module,Programming Concept
-and,O
-users,O
-are,O
-able,O
-to,O
-make,O
-payments,O
-online,O
-through,O
-debit,O
-or,O
-credit,O
-card,O
-or,O
-E,O
-Wallet,O
-Highly,O
-skilled,O
-in,O
-Python,Programming Language
-",",O
-writing,O
-code,O
-and,O
-scripts,Programming Concept
-",",O
-Django,Tool/Framework
-framework,Tool/Framework
-",",O
-and,O
-communication,O
-.,O
-TECHNICALSKILLS,O
-SpringMVC,Tool/Framework
-Hibernate,Tool/Framework
-JDBC,Tool/Framework
-Java,Programming Language
-J2EE,Tool/Framework
-AzureWeb,Tool/Framework
-SunTechnologies,O
-Services,O
-JSP,Tool/Framework
-Struts,O
-Servlet,O
-RestApi,O
-Scripting,Programming Concept
-JavaScript,Programming Language
-AJAX,Tool/Framework
-HTML,Programming Language
-JSON,Programming Concept
-OpenSourceTechnologies,O
-PHP,Programming Language
-Database,Programming Concept
-MsSQL,Tool/Framework
-MySQL,Tool/Framework
-Oracle,Tool/Framework
-Web Servers,Programming Concept
-Apache Tomcat,Tool/Framework
-Server,Programming Concept
-Internettechnologiesand,O
-OnesignalWebPushNotifications,O
-AzurewebServices,Tool/Framework
-frameworks,Programming Concept
-IONIC,Tool/Framework
-HTML,Programming Language
-JSON,Programming Concept
-OperatingSystem,O
-WindowsServer2012R2,O
-WinXP,Tool/Framework
-7,O
-8,O
-1,O
-10,O
-Linux,Tool/Framework
-Mac,O
-OS,Tool/Framework
-Education,O
-Details,O
-August,O
-2013,O
-to,O
-July,O
-2016,O
-BE,O
-Computer,O
-Engineering,O
-Nashik,O
-Maharashtra,O
-Late,O
-G,O
-N,O
-Sapkal,O
-COE,O
-Nashik,O
-July,O
-2009,O
-to,O
-June,O
-2013,O
-Diploma,Certification
-Computer,O
-technology,O
-Nashik,O
-Maharashtra,O
-K,O
-K,O
-Wagh,O
-Polytechnic,O
-Nashik,O
-Java,Programming Language
-developer,IT Specialization
-Java,Programming Language
-Developer,IT Specialization
-Skill,O
-Details,O
-AJAX,Tool/Framework
-Exprience,O
-12,O
-months,O
-DATABASE,Programming Concept
-Exprience,O
-24,O
-months,O
-HTML,Programming Language
-Exprience,O
-24,O
-months,O
-J2EE,Tool/Framework
-Exprience,O
-6,O
-months,O
-JAVA,Programming Language
-Exprience,O
-24,O
-months,O
-Spring,Tool/Framework
-MVC,Programming Concept
-Exprience,O
-12,O
-months,O
-Ionic,Tool/Framework
-3,O
-Exprience,O
-6,O
-months,O
-Angular,Tool/Framework
-JS,Programming Language
-Exprience,O
-6,O
-months,O
-Spring,Tool/Framework
-Exprience,O
-Less,Tool/Framework
-than,O
-1,O
-year,O
-months,O
-Java,Programming Language
-Exprience,O
-Less,Tool/Framework
-than,O
-1,O
-year,O
-monthsCompany,O
-Details,O
-company,O
-Replete,O
-business,O
-solutions,O
-pvt,O
-ltd,O
-description,O
-Working,O
-as,O
-Java,Programming Language
-developer,IT Specialization
-in,O
-spring,Tool/Framework
-MVC,Programming Concept
-MySQL,Tool/Framework
-MsSql,Tool/Framework
-Java,Programming Language
-J2EE,Tool/Framework
-Ajax,Tool/Framework
-Javascript,Programming Language
-ionic,Tool/Framework
-3,O
-framework,Tool/Framework
-angular,Tool/Framework
-js,Programming Language
-etc,O
-Technologies,O
 Looking,O
 for,O
 a,O
@@ -1983,6 +1318,52 @@ Java,Programming Language
 Hibernate,Tool/Framework
 and,O
 TypeScript,Tool/Framework
+.,O
+I,O
+have,O
+built,O
+an,O
+algorithm,O
+based,O
+on,O
+knowledge graph,Programming Concept
+in,O
+Python,Programming Language
+.,O
+Freelance,O
+Web Developer,O
+who,O
+developed,O
+a,O
+launch,O
+website,O
+for,O
+the,O
+Indie,O
+Documentary,O
+Jogging,O
+the,O
+Amazon,O
+.,O
+Won,O
+Bluewoods,O
+High,O
+School,O
+Junior,Seniority
+Coder,O
+competitions,O
+in,O
+2016,O
+&,O
+2017,O
+.,O
+Skills:,O
+risk,O
+management,O
+",",O
+Python,Programming Language
+",",O
+leadership,O
 .,O
 devops engineer,IT Specialization
 with,O
@@ -2000,6 +1381,27 @@ J2EE,Tool/Framework
 ",",O
 Rest,Programming Concept
 API,Programming Concept
+.,O
+I,O
+learned,O
+testing,Programming Concept
+by,O
+using,O
+Cucumber,Tool/Framework
+and,O
+Selenium,Tool/Framework
+.,O
+I,O
+learned,O
+relational databases,Programming Concept
+by,O
+using,O
+and,O
+practicing,O
+with,O
+MongoDB,Tool/Framework
+and,O
+MySQL,Tool/Framework
 .,O
 Mentored,O
 organization,O
@@ -2021,19 +1423,23 @@ customer,O
 segmentation,O
 algorithm,O
 .,O
-Experience,O
-as,O
-Software,Programming Concept
-Engineer,IT Specialization
-at,Tool/Framework
-Digital,O
-Seas,O
+Free time,O
+projects:,O
+used,O
+swift (,O
+apple,O
+programming,Programming Concept
+language,O
+),O
+to,O
+developed,O
+an,O
+IOS,Tool/Framework
+mobile,Programming Concept
+application,Programming Concept
 for,O
-the,O
-following,O
-period:,O
-September,O
-2018–present,O
+trading,O
+.,O
 I,O
 enjoy,O
 doing,O
@@ -2051,189 +1457,39 @@ strong,O
 teamwork,O
 skills,O
 .,O
-Requirements:,O
-experience,O
+Mid,Seniority
+Data Engineer,IT Specialization
 with,O
-version,O
-control,O
-systems,O
-(,O
-Git,Tool/Framework
-),O
-and,O
-a,O
-Bachelor degree in computer science/,O
-Master degree in computer science,Certification
-",",O
-Engineering,O
-",",O
-or,O
-a,O
-related,O
-subject,O
-.,O
-Senior,Seniority
-Tech Lead,Seniority
-with,O
-Java,Programming Language
-",",O
-Kotlin,Programming Language
-",",O
-Groovy,Programming Language
-and,O
-SqlServer,Tool/Framework
-background,O
+good,O
+understanding,O
+of,O
+NoSQL databases,Programming Concept
+mostly,O
+using,O
+Cassandra,Tool/Framework
 .,O
 I,O
-am,O
-a,O
-Machine Learning,Programming Concept
-Engineer,IT Specialization
-specialized,O
-in,O
-Natural Language Generation,Programming Concept
-and,O
-Natural Language Processing,Programming Concept
-",",O
-also,O
-a,O
-little,O
-bit,Programming Concept
-familiar,O
-with,O
-Knowledge,O
-graph,Programming Concept
-theory,O
+have,O
+the,O
+Oracle OCA Certification,Certification
 .,O
-Education,O
-Details,O
-BE,O
-IT,O
-pjlce,O
-Java,Programming Language
-Developer,IT Specialization
-Java,Programming Language
-Developer,IT Specialization
-Skill,O
-Details,O
-c,Programming Language
-Exprience,O
-Less,Tool/Framework
-than,O
-1,O
-year,O
-months,O
-c,Programming Language
-Exprience,O
-Less,Tool/Framework
-than,O
-1,O
-year,O
-months,O
-JAVA,Programming Language
-Exprience,O
-Less,Tool/Framework
-than,O
-1,O
-year,O
-months,O
-DS,O
-Exprience,O
-Less,Tool/Framework
-than,O
-1,O
-year,O
-months,O
-Jdbc,Tool/Framework
-Exprience,O
-24,O
-months,O
-Hibernate,Tool/Framework
-Exprience,O
-Less,Tool/Framework
-than,O
-1,O
-year,O
-months,O
-Java,Programming Language
-J2Ee,Tool/Framework
-Exprience,O
-Less,Tool/Framework
-than,O
-1,O
-year,O
-months,O
-Javascript,Programming Language
-Exprience,O
-6,O
-months,O
-JQuery,Tool/Framework
-Exprience,O
-6,O
-months,O
-Ajax,Tool/Framework
-Exprience,O
-6,O
-monthsCompany,O
-Details,O
-company,O
-Almighty,O
-tech,O
-pvt,O
-ltd,O
-nagpur,O
-description,O
-1,O
-As,O
-a,O
-Java,Programming Language
-Developer,IT Specialization
-ORGANISATION,O
-Almighty,O
-tech,O
-pvt,O
-ltd,O
-Nagpur,O
-DESIGNATION,O
-Java,Programming Language
-Developer,IT Specialization
-DURATION,O
-From,O
-1st,O
-jan,O
-2018,O
-Notice,O
-Period,O
-15,O
-days,O
-JOB,O
-RESPONSIBILITIES,O
-Resolve,O
-Bugs,Programming Concept
-Develop,O
-project,O
-as,O
-per,O
-user,O
-requirement,O
-KNOWLEDGE,O
-ABOUT,O
-Programming,Programming Concept
-language,O
-C,Programming Language
-C,Programming Language
-DS,O
-Java,Programming Language
-Swing,Tool/Framework
-JDBC,Tool/Framework
-J2EE,Tool/Framework
-java,Programming Language
-script,Programming Concept
-jquery,Tool/Framework
-Ajax,Tool/Framework
-Ms,Tool/Framework
-office,O
-Excel,Tool/Framework
+I,O
+love,O
+travelling,O
+and,O
+meeting,O
+new,O
+open minded,O
+people,O
+.,O
+I,O
+have,O
+experience,O
+in,O
+Python,Programming Language
+and,O
+Flask,Tool/Framework
+.,O
 Hiring,O
 a,O
 Software Engineer,IT Specialization
@@ -2251,62 +1507,26 @@ and,O
 in,O
 Linux,Tool/Framework
 .,O
-I,O
-am,O
-a,O
-data scientist,IT Specialization
-with,O
-vast,O
-experience,O
-in,O
-SQL,Programming Language
-and,O
-noSQL,Programming Concept
-databases,Programming Concept
-such,O
-as,O
-Cassandra,Tool/Framework
-",",O
-Posgresql,Tool/Framework
-and,O
-MongoDB,Tool/Framework
-.,O
-Wanted:,O
-Java,Programming Language
-Engineer,IT Specialization
-with,O
-experience,O
-in,O
-building,O
-high performing,O
-",",O
-scalable,O
-",",O
-enterprise grade,O
-applications,O
-.,O
-I,O
-am,O
-a,O
-Java,Programming Language
-Software Engineer,IT Specialization
-",",O
-I,O
+It,O
+would,O
+be,O
+nice,O
+to,O
 have,O
-the,O
-Oracle OCA Certification,Certification
-",",O
-I,O
-worked,O
-5,O
-years,O
+experience,O
 with,O
-SpringBoot,Tool/Framework
-and,O
-Hibernate,Tool/Framework
-",",O
-along,O
+Cucumber,Tool/Framework
+.,O
+Looking,O
+for,O
+an,O
+experienced,O
+programmer,IT Specialization
 with,O
+good,O
+know,O
+how,O
+in,O
 Google Cloud,Tool/Framework
 and,O
 other,O
@@ -2314,754 +1534,68 @@ tools,O
 such,O
 as,O
 Docker,Tool/Framework
-",",O
-Kubernetes,Tool/Framework
-",",O
-Jenkins,Tool/Framework
 .,O
-Must,O
-have,O
-experience,O
+You,O
+must,O
+know,O
+the,O
+difference,O
+between,O
+data structures,Programming Concept
+and,O
+classes,O
+and,O
+exemplify,O
+that,O
+in,O
+C#,Programming Language
+.,O
+You,O
+need,O
+to,O
+be,O
+proficient,O
 with,O
-build,O
-tools,O
-(,O
-Maven,Tool/Framework
-",",O
-Gradle,Tool/Framework
-),O
+integration,Programming Concept
 and,O
-a,O
-Object Oriented,Programming Concept
-Analysis,O
-and,O
-design,O
-using,O
-common,O
-design,O
-patterns,O
+deployment,Programming Concept
+stages,O
 .,O
-Passionate,O
-machine learning,Programming Concept
+Hiring,O
+cloud,Tool/Framework
 engineer,IT Specialization
 with,O
-4+,O
-years,O
-of,O
 experience,O
 in,O
-predictive,O
-modeling,O
-and,O
-data,O
-mining,O
+AWS,Tool/Framework
 .,O
-CORE,O
-COMPETENCIES,O
-Ant,Tool/Framework
-Maven,Tool/Framework
-GIT,Tool/Framework
-Bitbucket,Tool/Framework
-Jenkins,Tool/Framework
+Bachelor Degree,O
+in,O
+Informatics,O
+at,Tool/Framework
+University,O
+of,O
+Bucharest,O
+.,O
+Managed,O
+continuous,O
+deployment,Programming Concept
+of,O
+a,O
+popular,O
+SaaS,Programming Concept
+stock tracking,O
+tool,O
+.,O
+Hard,O
+Skills:,O
 Linux,Tool/Framework
-Ansible,Tool/Framework
-shell scripting,Programming Concept
-Requirement,O
-Gathering,O
-Continuous Integration,Programming Concept
-and,O
-Continuous Deployment,Programming Concept
-Software,Programming Concept
-Development,Programming Concept
-Life,O
-Cycle,O
-Software,Programming Concept
-Testing,Programming Concept
-Life,O
-Cycle,O
-Documentation,O
-Reporting,O
-Test,O
-Reports,O
-IT,O
-SKILLS,O
-Primary,O
-Skills,O
-Dev ops,IT Specialization
-methodologies,O
-Programming,Programming Concept
-Languages,O
-C,Programming Language
-Core,O
-Java,Programming Language
-Version,O
-Controls,O
-GIT,Tool/Framework
-Bitbucket,Tool/Framework
-Build,O
-Tools,O
-ANT,Tool/Framework
-Maven,Tool/Framework
-CI,Programming Concept
-CD,Programming Concept
-Tools,O
-Jenkins,Tool/Framework
-Configuration,O
-management,O
-Ansible,Tool/Framework
-Scripting,Programming Concept
-shell script,Programming Concept
-Application,Programming Concept
-Servers,Programming Concept
-apache tomcat,Tool/Framework
-serverEducation,O
-Details,O
-June,O
-2015,O
-to,O
-June,O
-2017,O
-Masters,Certification
-of,O
-science,O
-information technology,Programming Concept
-Hyderabad,O
-Telangana,O
-JNTU,O
-devops engineer,IT Specialization
-devops engineer,IT Specialization
-Nendrasys,O
-Technologies,O
-Pvt,O
-Ltd,O
-Skill,O
-Details,O
-DEPLOYMENT,Programming Concept
-Exprience,O
-27,O
-months,O
-Git,Tool/Framework
-Exprience,O
-27,O
-months,O
-DOCUMENTATION,O
-Exprience,O
-26,O
-months,O
-CHANGE,O
-MANAGEMENT,O
-Exprience,O
-10,O
-months,O
-CONFIGURATION,O
-MANAGEMENT,O
-Exprience,O
-10,O
-monthsCompany,O
-Details,O
-company,O
-Nendrasys,O
-Technologies,O
-Pvt,O
-Ltd,O
-description,O
-Date,O
-Project,O
-Description,O
-The,O
-Scope,O
-of,O
-the,O
-project,O
-is,O
-to,O
-design,O
-develop,O
-e,O
-commerce,O
-product,O
-features,O
-for,O
-sloan,O
-project,O
-It,O
-s,O
-a,O
-basically,O
-B2B,O
-project,O
-where,O
-customer,O
-can,O
-buy,O
-all,O
-fixers,O
-sinks,O
-related,O
-product,O
-It,O
-focuses,O
-on,O
-the,O
-company,O
-the,O
-stakeholders,O
-and,O
-applications,O
-which,O
-allow,O
-for,O
-online,O
-sales,O
-distribution,O
-and,O
-marketing,O
-of,O
-product,O
-Responsibilities,O
-o,O
-Detailed,O
-technical,O
-Knowledge,O
-and,O
-hands,O
-on,O
-experience,O
-on,O
-DevOps,IT Specialization
-Automation,Programming Concept
-Build,O
-Engineering,O
-and,O
-Configura,O
-tion,O
-Management,O
-o,O
-Creating,O
-fully,O
-automated,O
-CI,Programming Concept
-build,O
-and,O
-deployment,Programming Concept
-infrastructure,O
-and,O
-processes,O
-for,O
-multiple,O
-projects,O
-o,O
-Developing,O
-scripts,Programming Concept
-for,O
-build,O
-deployment,Programming Concept
-maintenance,O
-and,O
-related,O
-tasks,O
-using,O
-Jenkins,Tool/Framework
-o,O
-Installing,O
-configuring,O
-and,O
-maintaining,O
+",",O
 Continuous,O
-Integration,Programming Concept
-Automation,Programming Concept
-and,O
-Configuration,O
-Management,O
-tools,O
-o,O
-Developing,O
-Ant,Tool/Framework
-Maven,Tool/Framework
-and,O
-shell scripts,Programming Concept
-to,O
-automatically,O
-compile,O
-package,O
-deploy,Programming Concept
-WAR,O
-EAR,O
-and,O
-JAR,O
-files,O
-of,O
-mul,O
-tiple,O
-applications,O
-to,O
-various,O
-platforms,O
-o,O
-Creating,O
-Repositories,Programming Concept
-branches,Programming Concept
-managing,O
-the,O
-permissions,O
-of,O
-users,O
-and,O
-maintaining,O
-GIT,Tool/Framework
-Bitbucket,Tool/Framework
-o,O
-Deploying,Programming Concept
-and,O
-maintaining,O
-the,O
-code,O
-and,O
-application,Programming Concept
-respectively,O
-and,O
-configuring,O
-the,O
-components,O
-which,O
-increase,O
-the,O
-re,O
-usability,O
-o,O
-Working,O
-closely,O
-with,O
-Architecture,O
-Development,Programming Concept
-Test,O
-Security,Programming Concept
-and,O
-IT,O
-Services,O
-teams,O
-o,O
-Supporting,O
-Business,O
-Analysts,O
-in,O
-getting,O
-used,O
-to,O
-the,O
-newly,O
-created,O
-jobs,O
-and,O
-Release,Programming Concept
-activities,O
-o,O
-Communicating,O
-daily,O
-with,O
-On,O
-Site,O
-Team,O
-o,O
-Analyzing,O
-the,O
-requirements,O
-and,O
-identifying,O
-gaps,O
-tracking,O
-logs,O
-issues,O
-PROJECT,O
-2,O
-Nendrasys,O
-Technologies,O
-Pvt,O
-Ltd,O
-Project,O
-Name,O
-Bangkok,O
-Bank,O
-Limited,O
-BBL,O
-Thaitrade,O
-Commercial,O
-E,O
-commerce,O
-Payment,O
-portal,O
-company,O
-Nendrasys,O
-Technologies,O
-Pvt,O
-Ltd,O
-description,O
-Role,O
-devops engineer,IT Specialization
-devops engineer,IT Specialization
-for,O
-a,O
-team,O
-that,O
-involved,O
-different,O
-development,Programming Concept
-teams,O
-and,O
-multiple,O
-simultaneous,O
-software,Programming Concept
-re,O
-leases,O
-Participated,O
-in,O
-weekly,O
-release,Programming Concept
-meetings,O
-with,O
-different,O
-teams,O
-to,O
-identify,O
-and,O
-mitigate,O
-potential,O
-risks,O
-associated,O
-with,O
-the,O
-releases,Programming Concept
-Responsible,O
-for,O
-Creating,O
-Repositories,Programming Concept
-branches,Programming Concept
-managing,O
-the,O
-permissions,O
-of,O
-users,O
-and,O
-maintaining,O
-GIT,Tool/Framework
-Creating,O
-fully,O
-automated,O
-CI,Programming Concept
-build,O
-and,O
-deployment,Programming Concept
-infrastructure,O
-and,O
-processes,O
-for,O
-multiple,O
-projects,O
-Analyze,O
-and,O
-resolve,O
-conflicts,O
-related,O
-to,O
-merging,Programming Concept
-of,O
-source,Programming Language
-code,O
-for,O
-GIT,Tool/Framework
-Responsible,O
-for,O
-creating,O
-Ant,Tool/Framework
-and,O
-Maven,Tool/Framework
-scripts,Programming Concept
-for,O
-build,O
-automation,Programming Concept
-Implemented,O
-the,O
-setup,O
-for,O
-Master,Certification
-slave,O
-architecture,O
-to,O
-improve,O
-the,O
-Performance,O
-of,O
+Deployment,Programming Concept
+",",O
 Jenkins,Tool/Framework
-Handled,O
-end,O
-to,O
-end,O
-deployments,Programming Concept
-and,O
-code,O
-propagation,O
-s,O
-across,O
-different,O
-environments,O
-DEV,IT Specialization
-to,O
-PROD,O
-Handled,O
-the,O
-tasks,O
-of,O
-developing,O
-and,O
-maintaining,O
-the,O
-Change,O
-Tasks,O
-Closely,O
-working,O
-with,O
-Developers,IT Specialization
-QA,O
-Performance,O
-UAT,O
-testers,O
-IT,O
-Team,O
-Created,O
-and,O
-maintained,O
-documentation,O
-of,O
-build,O
-and,O
-release,Programming Concept
-processes,O
-and,O
-application,Programming Concept
-configuration,O
-Coordinated,O
-with,O
-developers,IT Specialization
-Business,O
-Analyst,O
-and,O
-Mangers,O
-to,O
-make,O
-sure,O
-that,O
-code,O
-is,O
-deployed,O
-in,O
-the,O
-Production,O
-environment,O
-PROJECT,O
-1,O
-Nendrasys,O
-Technologies,O
-Pvt,O
-Ltd,O
-Project,O
-Name,O
-Sloan,O
-Global,O
-Holdings,O
-Sloan,O
-E,O
-commerce,O
-company,O
-Nendrasys,O
-Technologies,O
-Pvt,O
-Ltd,O
-description,O
-Project,O
-Description,O
-BBL,O
-is,O
-development,Programming Concept
-of,O
-an,O
-e,O
-commerce,O
-payment,O
-portal,O
-System,O
-As,O
-such,O
-BBL,O
-require,O
-a,O
-system,O
-which,O
-can,O
-support,O
-multiple,O
-merchants,O
-B2B,O
-B2C,O
-e,O
-commerce,O
-portal,O
-with,O
-various,O
-payment,O
-options,O
-via,O
-both,O
-online,O
-and,O
-offline,O
-To,O
-achieve,O
-this,O
-BBL,O
-had,O
-made,O
-an,O
-agreement,O
-with,O
-Thai,O
-Trade,O
-Thai,O
-Trade,O
-is,O
-one,O
-of,O
-the,O
-leading,O
-e,O
-commerce,O
-website,O
-recognized,O
-by,O
-Thai,O
-government,O
-In,O
-present,O
-Thai,O
-trade,O
-has,O
-a,O
-good,O
-base,O
-of,O
-users,O
-and,O
-sellers,O
-in,O
-several,O
-categories,O
-The,O
-scope,O
-of,O
-the,O
-project,O
-is,O
-to,O
-design,O
-and,O
-develop,O
-e,O
-commerce,O
-product,O
-features,O
-for,O
-BBLWTP,O
-project,O
-It,O
-focuses,O
-on,O
-the,O
-company,O
-the,O
-stakeholders,O
-and,O
-applications,O
-which,O
-allow,O
-for,O
-online,O
-sales,O
-distribution,O
-and,O
-marketing,O
-of,O
-electronics,O
-Responsibilities,O
-o,O
-Plan,O
-and,O
-track,O
-activities,O
-involved,O
-for,O
-build,O
-and,O
-deployment,Programming Concept
-o,O
-Resolving,O
-build,O
-issues,O
-o,O
-Developing,O
-scripts,Programming Concept
-for,O
-build,O
-deployment,Programming Concept
-maintenance,O
-and,O
-related,O
-tasks,O
-using,O
-Jenkins,Tool/Framework
-o,O
-Collaboration,O
-with,O
-Development,Programming Concept
-QA,O
-Product,O
-managements,O
-on,O
-build,O
-plans,O
-schedules,O
-o,O
-Send,O
-daily,O
-and,O
-weekly,O
-reports,O
-to,O
-the,O
-team,O
-o,O
-Involved,O
-in,O
-creating,O
-repositories,Programming Concept
-branches,Programming Concept
-merging,Programming Concept
-activities,O
-backup,Programming Concept
-and,O
-restore,O
-activities,O
-in,O
-subversion,O
-servers,Programming Concept
-o,O
-Maintenance,O
-of,O
-Maven,Tool/Framework
-shell scripts,Programming Concept
-for,O
-safe,Programming Concept
-builds,O
-and,O
-deploys,Programming Concept
+.,O
 I,O
 am,O
 a,O
@@ -3131,50 +1665,27 @@ job,O
 is,O
 for,O
 you!,O
-You,O
-need,O
-to,O
-have,O
-proven,O
-knowledge,O
-in,O
-Web,Programming Concept
-applications,O
-with,O
-JEE,Tool/Framework
-/,O
-Spring,Tool/Framework
-",",O
-DevOps,IT Specialization
-experience,O
-with,O
-high,O
-focus,O
+Senior,Seniority
+Software Engineer,IT Specialization
+during,O
+October,Tool/Framework
+2016,O
+ ,O
+current,O
+Focused,O
 on,O
-cloud,Tool/Framework
-based,O
-operating systems,Programming Concept
-(,O
-particularly,O
-AWS,Tool/Framework
-),O
-",",O
-Jenkins,Tool/Framework
-",",O
-Docker,Tool/Framework
-and,O
-Kubernetes,Tool/Framework
-are,O
-a,O
-plus,Programming Language
+frontend,Programming Concept
+development,Programming Concept
 .,O
-Frontend developer,IT Specialization
-using,O
-HTML,Programming Language
-",",O
-CSS,Programming Language
-and,O
-JavaScript,Programming Language
+Must,O
+be,O
+able,O
+to,O
+use,O
+advantages,O
+of,O
+test driven,Programming Concept
+development,Programming Concept
 .,O
 Hiring,O
 Blockchain,Tool/Framework
@@ -3186,240 +1697,6 @@ of,O
 Web3,Programming Concept
 protocol,O
 .,O
-Junior,Seniority
-Software Developer,IT Specialization
-specialized,O
-in,O
-Java,Programming Language
-and,O
-Scala,Programming Language
-",",O
-but,O
-also,O
-Go,Programming Language
-",",O
-R,Programming Language
-",",O
-Groovy,Programming Language
-",",O
-Matlab,Programming Language
-",",O
-Perl,Programming Language
-.,O
-Education,O
-Details,O
-January,O
-2013,O
-Master of Engineering,Certification
-information technology,Programming Concept
-Pune,O
-Maharashtra,O
-M,O
-I,O
-T,O
-January,O
-2005,O
-Bachelor of Engineering,Certification
-information technology,Programming Concept
-Pusad,O
-Maharashtra,O
-Amravati,O
-University,O
-January,O
-2001,O
-Pusad,O
-Maharashtra,O
-P,O
-N,O
-Junior,Seniority
-College,O
-January,O
-1999,O
-S,O
-S,O
-C,Programming Language
-Pusad,O
-Maharashtra,O
-K,O
-D,O
-High,O
-School,O
-Java,Programming Language
-Developer,IT Specialization
-Java,Programming Language
-Developer,IT Specialization
-Maxgen,O
-Technologies,O
-Skill,O
-Details,O
-Company,O
-Details,O
-company,O
-Maxgen,O
-Technologies,O
-description,O
-Currently,O
-working,O
-in,O
-Infrasoft,O
-Technologies,O
-Andheri,O
-as,O
-a,O
-Java,Programming Language
-Developer,IT Specialization
-company,O
-MIS,O
-Generation,O
-of,O
-Tata,O
-Sky,O
-and,O
-Tata,O
-Power,O
-description,O
-COURSES,O
-DONE,O
-Android,Tool/Framework
-Mobile,Programming Concept
-App,O
-Development,Programming Concept
-Technologies,O
-in,O
-Java,Programming Language
-Core,O
-Java,Programming Language
-Advance,O
-Java,Programming Language
-JSF,Tool/Framework
-Hibernate,Tool/Framework
-Spring,Tool/Framework
-at,Tool/Framework
-NIIT,O
-in,O
-2015,O
-16,O
-ANDROID,Tool/Framework
-PROJECT,O
-Location,O
-Detector,O
-of,O
-Computing,O
-and,O
-Mobile,Programming Concept
-Devices,O
-Android,Tool/Framework
-ME,O
-PROJECT,O
-Data,O
-Deduplication,O
-My,O
-projects,O
-works,O
-to,O
-reduce,Tool/Framework
-redundant,O
-data,O
-from,O
-the,O
-system,O
-and,O
-free,O
-up,O
-the,O
-memory,O
-It,O
-stores,O
-unique,O
-copy,O
-of,O
-data,O
-and,O
-for,O
-more,Tool/Framework
-location,O
-with,O
-same,O
-data,O
-with,O
-the,O
-help,O
-of,O
-pointers,O
-can,O
-a,O
-ess,O
-the,O
-data,O
-Java,Programming Language
-SUBJECTS,O
-TAUGHT,O
-C,Programming Language
-language,O
-Core,O
-Java,Programming Language
-Object,O
-Oriented,O
-Programming,Programming Concept
-OOT,O
-C,Programming Language
-Database,Programming Concept
-PPS,O
-Programming,Programming Concept
-and,O
-problem,O
-solving,O
-AD,O
-Advance,O
-Database,Programming Concept
-IAS,O
-Information,O
-Assurance,O
-and,O
-security,Programming Concept
-Android,Tool/Framework
-PROGRAMMING,Programming Concept
-SKILL,O
-C,Programming Language
-C,Programming Language
-Java,Programming Language
-Android,Tool/Framework
-DATABASE,Programming Concept
-HANDLED,O
-MS,Tool/Framework
-A,O
-ess,O
-SQL,Programming Language
-Oracle,Tool/Framework
-NATIONAL,O
-CONFERENCE,O
-1,O
-paper,O
-presented,O
-on,O
-A,O
-secure,O
-cipher,O
-index,O
-over,O
-encrypted,Programming Concept
-character,O
-data,O
-in,O
-database,Programming Concept
-On,O
-dated,O
-28,O
-29,O
-April,O
-2011,O
-at,Tool/Framework
-Pimpri,O
-chinchwad,O
-college,O
-of,O
-engineering,O
-Pune,O
 I,O
 was,O
 an,O
@@ -3429,6 +1706,26 @@ Bosch,O
 for,O
 6,O
 months,O
+.,O
+Vice,Tool/Framework
+President,O
+of,O
+the,O
+Computing,O
+Society,O
+student,O
+organization,O
+.,O
+Looking,O
+for,O
+juniors,Seniority
+with,O
+prior,O
+projects,O
+in,O
+C#,Programming Language
+using,O
+ASP.net,Tool/Framework
 .,O
 Organizing,O
 an,O
@@ -3453,406 +1750,39 @@ experience,O
 with,O
 Functional Programming,Programming Concept
 .,O
-TECHNICAL,O
-STRENGTHS,O
-Computer,O
-Language,O
-Java,Programming Language
-J2EE,Tool/Framework
-Swift,Tool/Framework
-HTML,Programming Language
-shell script,Programming Concept
-MySQL,Tool/Framework
-Databases,Programming Concept
-MySQL,Tool/Framework
-Tools,O
-SVN,O
-Jenkins,Tool/Framework
-Hudson,O
-Weblogic12c,O
-Software,Programming Concept
-Android,Tool/Framework
-Studio,O
-Eclipse,Tool/Framework
-Oracle,Tool/Framework
-Xcode,O
-operating systems,Programming Concept
-Win,Tool/Framework
-10,O
-Mac,O
-High,O
-Sierra,O
-Education,O
-Details,O
-June,O
-2016,O
-B,O
-E,O
-information technology,Programming Concept
-Goregaon,O
-MAHARASHTRA,O
-IN,O
-Vidyalankar,O
-Institute,O
-of,O
-Technology,O
-May,O
-2013,O
-Mumbai,O
-Maharashtra,O
-Thakur,O
-Polytechnic,O
-May,O
-2010,O
-Mumbai,O
-Maharashtra,O
-St,O
-John,O
-s,O
-Universal,O
-School,O
-Java,Programming Language
-developer,IT Specialization
-Java,Programming Language
-developer,IT Specialization
-Tech,O
-Mahindra,O
-Skill,O
-Details,O
-JAVA,Programming Language
-Exprience,O
-21,O
-months,O
-MYSQL,Tool/Framework
-Exprience,O
-21,O
-months,O
-DATABASES,Programming Concept
-Exprience,O
-17,O
-months,O
-J2EE,Tool/Framework
-Exprience,O
-17,O
-months,O
-ANDROID,Tool/Framework
-Exprience,O
-6,O
-monthsCompany,O
-Details,O
-company,O
-Tech,O
-Mahindra,O
-description,O
-Team,O
-Size,O
-5,O
-Environment,O
-Java,Programming Language
-Mysql,Tool/Framework
-shell script,Programming Concept
-Webserver,Programming Concept
-Jenkins,Tool/Framework
-Description,O
-OR,O
-Formatter,O
-is,O
-an,O
-application,Programming Concept
-which,O
-takes,O
-the,O
-input,O
-file,Tool/Framework
-as,O
-Geneva,O
-Modified,O
-File,Tool/Framework
-GMF,O
-from,O
-Geneva,O
-server,Programming Concept
-and,O
-reads,O
-the,O
-data,O
-to,O
-generate,O
-Bill,O
-backup,Programming Concept
-and,O
-Bill,O
-Invoices,O
-for,O
-Client,O
-customers,O
-of,O
-BT,O
-These,O
-invoices,O
-would,O
-be,O
-sent,O
-across,O
-to,O
-all,O
-the,O
-clients,O
-after,O
-billing,O
-Contribution,O
-Played,O
-the,O
-role,O
-of,O
-Java,Programming Language
-developer,IT Specialization
-involved,O
-in,O
-applying,O
-change,O
-request,O
-to,O
-current,O
-modules,Programming Concept
-Worked,O
-on,O
-requirement,O
-analysis,O
-and,O
-development,Programming Concept
-for,O
-the,O
+Analyzed,O
 user,O
-stories,O
+needs,O
 and,O
-also,O
-preformed,O
-dev,IT Specialization
-unit testing,Programming Concept
-for,O
-the,O
-user,O
-stories,O
-Handled,O
-E2E,O
-issues,O
-and,O
-fixing,O
-bugs,Programming Concept
-Prepare,O
-required,O
-program,O
-level,O
-and,O
-user,O
-level,O
-documentation,O
-company,O
-Tech,O
-Mahindra,O
-description,O
-Team,O
-Size,O
-5,O
-Environment,O
-Java,Programming Language
-EJB,Tool/Framework
-Mysql,Tool/Framework
-shell script,Programming Concept
-Webserver,Programming Concept
-Weblogic12c,O
-Server,Programming Concept
-Jenkins,Tool/Framework
-Description,O
-STAA,O
-is,O
-an,O
-encapsulation,Programming Concept
-middleware,Programming Concept
-layer,O
-acting,O
-as,O
-an,O
-interface,O
-between,O
-client,O
-s,O
-operational,O
-support,O
-systems,O
-and,O
-Legacy,O
-systems,O
-It,O
-transforms,O
-the,O
-legacy,O
-data,O
-into,O
-various,O
-formats,O
-such,O
-as,O
-TLV,O
-Input,O
-is,O
-in,O
-form,Tool/Framework
-xml,O
-http,O
+proposed,O
+design,O
+software,Programming Concept
+solutions,O
 to,O
-STAA,O
-where,O
-validations,O
-are,O
-done,O
-and,O
-the,O
-response,O
-is,O
-sent,O
-to,O
-the,O
-back,O
-end,O
-systems,O
-where,O
-back,O
-end,O
-systems,O
-are,O
-CSS,Programming Language
-and,O
-COSMOSS,O
-Databases,Programming Concept
-The,O
-business,O
-methods,O
-deployed,O
-as,O
-EJBs,Tool/Framework
-on,O
-WebLogic,Programming Concept
-Server,Programming Concept
-shared,O
-across,O
-various,O
-market,O
-facing,O
-units,O
-of,O
-client,O
-Contribution,O
-Played,O
-the,O
-role,O
-of,O
-Java,Programming Language
-developer,IT Specialization
-involved,O
-in,O
-creating,O
-services,O
-using,O
-Java,Programming Language
-J2EE,Tool/Framework
-Worked,O
-on,O
-requirement,O
-analysis,O
-and,O
-development,Programming Concept
-for,O
-the,O
-user,O
-stories,O
-and,O
-also,O
-preformed,O
-dev,IT Specialization
-unit testing,Programming Concept
-for,O
-the,O
-user,O
-stories,O
-Handled,O
-E2E,O
-issues,O
-and,O
-fixing,O
-bugs,Programming Concept
-Worked,O
-in,O
-Migration,O
-from,O
-java,Programming Language
-1,O
-6,O
-to,O
-java,Programming Language
-1,O
-8,O
-We,O
-are,O
-looking,O
-for:,O
-experience,O
-in,O
-Apache,Tool/Framework
-Camel,O
-",",O
-experience,O
-with,O
-MSSQL,Tool/Framework
-",",O
-PostgreSQL,Tool/Framework
-",",O
-experience,O
-with,O
-Unit,O
-and,O
-integration,Programming Concept
-testing,Programming Concept
-with,O
-JUnit,Tool/Framework
-and,O
-Mockito,Tool/Framework
-",",O
-CI/CD,Programming Concept
-tools:,O
-Git,Tool/Framework
-",",O
-Jenkins,Tool/Framework
-",",O
-Maven,Tool/Framework
-",",O
-SonarQube,Tool/Framework
-",",O
-Artifactory,O
-and,O
-Microservices,Programming Concept
-",",O
-Docker,Tool/Framework
-",",O
-and,O
-Kubernetes,Tool/Framework
+meet,O
+them,O
 .,O
-In,O
-need,O
-of,O
-Software Architect,Seniority
-with,O
-strong,O
-knowledge,O
+Eager,O
+to,O
+learn,O
+how,O
+to,O
+code,O
 in,O
-Blockchain,Tool/Framework
-technology,O
-",",O
-Client Server,Programming Concept
+Python,Programming Language
+.,O
+You,O
+must,O
+be,O
+able,O
+to,O
+identify,O
+test,O
+scenarios,O
 and,O
-peer to peer,Programming Concept
-applications,O
+estimate,O
+test,O
+effort,O
 .,O
 Looking,O
 for,O
@@ -3866,6 +1796,51 @@ Selenium,Tool/Framework
 and,O
 Nginx,Tool/Framework
 .,O
+Projects,O
+Poker,O
+Simulation,O
+full stack,Programming Concept
+web,Programming Concept
+app,O
+simulating,O
+the,O
+outcomes,O
+of,O
+poker,O
+hands,O
+using,O
+sci kit,O
+learn,O
+in,O
+Python,Programming Language
+.,O
+Throughout,O
+my,O
+career,O
+I,O
+gathered,O
+different,O
+best,O
+practices,O
+to,O
+write,O
+clean code,Programming Concept
+and,O
+good,O
+unit tests,Programming Concept
+.,O
+Experience,O
+as,O
+Software Engineer,IT Specialization
+at,Tool/Framework
+Digital,O
+Seas,O
+for,O
+the,O
+following,O
+period:,O
+September,O
+2018–present,O
 Vice president,O
 for,O
 the,O
@@ -3873,17 +1848,6 @@ campus,O
 game,O
 development,Programming Concept
 club,O
-.,O
-Won,O
-Bluewoods,O
-High,O
-School,O
-Junior,Seniority
-competitions,O
-in,O
-2016,O
-&,O
-2017,O
 .,O
 Experience,O
 working,O
@@ -3922,21 +1886,6 @@ Cucumber,Tool/Framework
 and,O
 selenium web driver,Tool/Framework
 .,O
-Working,O
-student,O
-with,O
-a,O
-lot,O
-of,O
-interest,O
-and,O
-passion,O
-in,O
-the,O
-Artificial,O
-Intelligence,O
-area,O
-.,O
 GoDaddy,O
 is,O
 empowering,O
@@ -3956,6 +1905,24 @@ tools,O
 to,O
 succeed,O
 online,O
+.,O
+Seeking,O
+to,O
+join,O
+BravDev,O
+to,O
+leverage,O
+experience,O
+in,O
+JavaScript,Programming Language
+to,O
+impress,O
+existing,O
+clients,O
+and,O
+attract,O
+new,O
+ones,O
 .,O
 Experience,O
 working,O
@@ -3987,19 +1954,32 @@ code reviews,Programming Concept
 ",",O
 TDD,Programming Concept
 .,O
-Basic,O
-qualifications:,O
-experience,O
+Created,O
+data,O
+visualization,O
+tools,O
+and,O
+used,O
+MongoDB,Tool/Framework
+to,O
+store,O
+data,O
+.,O
+Passionate,O
+machine,O
+learning,O
+engineer,IT Specialization
 with,O
-web application,Programming Concept
-development,Programming Concept
-(,O
-.NET,Tool/Framework
-/,O
-JavaScript,Programming Language
-or,O
-equivalent,O
-),O
+4+,O
+years,O
+of,O
+experience,O
+in,O
+predictive,O
+modeling,O
+and,O
+data,O
+mining,O
 .,O
 Wanted:,O
 Mid,Seniority
@@ -4013,6 +1993,25 @@ RabbitMq,Tool/Framework
 ",",O
 ElasticSearch,Tool/Framework
 .,O
+In,O
+college,O
+I,O
+learned,O
+natural language processing,Programming Concept
+using,O
+Python,Programming Language
+.,O
+What,O
+language,O
+do,O
+you,O
+use,O
+for,O
+PostgreSQL,Tool/Framework
+triggers,O
+and,O
+stored,O
+procedures?,O
 Innovative,O
 ideas,O
 are,O
@@ -4036,16 +2035,6 @@ own,O
 creative,O
 ideas,O
 .,O
-Excited,O
-to,O
-implement,O
-statistical,O
-machine learning,Programming Concept
-solutions,O
-for,O
-Macro,O
-Globe,O
-.,O
 I,O
 have,O
 knowledge,O
@@ -4056,75 +2045,30 @@ Haskell,Programming Language
 and,O
 Python,Programming Language
 .,O
-One,O
-requirement,O
-is,O
-having,O
-practical,O
-skills,O
+Experience,O
 in,O
-CI/CD,Programming Concept
- ,O
-some,O
-of,O
-Git,Tool/Framework
-",",O
-Maven,Tool/Framework
-",",O
-Gradle,Tool/Framework
-",",O
-Docker,Tool/Framework
-",",O
-Jenkins,Tool/Framework
-",",O
-Jira,Tool/Framework
-.,O
-Strong,O
-OOP,Programming Concept
-programming,Programming Concept
-knowledge,O
-",",O
-worked,O
+working,O
 with,O
-Javascript,Programming Language
+various,O
+Relational Databases,Programming Concept
+like,O
+Oracle,Tool/Framework
+",",O
+DB2,Tool/Framework
+",",O
+MySQL,Tool/Framework
+and,O
+Teradata,O
+building,O
+complex,O
+queries,O
+",",O
+functions,Programming Concept
+",",O
+triggers,O
+and,O
+stored procedures,Programming Concept
 .,O
-Education,O
-Details,O
-August,O
-2010,O
-to,O
-May,O
-2017,O
-BE,O
-Electronics,O
-Communication,O
-Jabalpur,O
-Madhya,O
-Pradesh,O
-Takshshila,O
-institute,O
-of,O
-technology,O
-Java,Programming Language
-developer,IT Specialization
-Skill,O
-Details,O
-Java,Programming Language
-Javascript,Programming Language
-Exprience,O
-6,O
-monthsCompany,O
-Details,O
-company,O
-Wab,O
-It,O
-Softwere,O
-Pvt,O
-Ltd,O
-description,O
-Jr,O
-Java,Programming Language
-Developer,IT Specialization
 I,O
 am,O
 very,O
@@ -4133,6 +2077,60 @@ at,Tool/Framework
 Mathematics,O
 and,O
 Chemistry,O
+.,O
+Must,O
+know:,O
+HTML,Programming Language
+",",O
+CSS,Programming Language
+.,O
+Working,O
+student,O
+with,O
+a,O
+lot,O
+of,O
+interest,O
+and,O
+passion,O
+in,O
+the,O
+Artificial Intelligence,Programming Concept
+area,O
+.,O
+I,O
+discovered,O
+some,O
+useful,O
+new,O
+ASP.NET,Tool/Framework
+features,O
+in,O
+the,O
+.NET,Tool/Framework
+Framework,Tool/Framework
+3,O
+.5,O
+.,O
+Driven,O
+young,O
+programmer,IT Specialization
+",",O
+looking,O
+for,O
+new,O
+opportunities,O
+to,O
+learn,O
+and,O
+grow,O
+",",O
+currently,O
+living,O
+in,O
+Cluj,O
+",",O
+Romania,O
 .,O
 Junior,Seniority
 Java,Programming Language
@@ -4254,15 +2252,6 @@ years,O
 of,O
 experience,O
 .,O
-Orientation,O
-towards,O
-test driven,Programming Concept
-development,Programming Concept
-and,O
-clean code,Programming Concept
-is,O
-a,O
-plus,Programming Language
 Highly,O
 organized,O
 ",",O
@@ -4288,6 +2277,37 @@ best selling,O
 software,Programming Concept
 product,O
 .,O
+IT,O
+Project Manager:,O
+used,O
+Whiteboard,O
+technologies,O
+and,O
+trained,O
+15+,O
+interns,O
+/,O
+juniors,Seniority
+Scrum,Programming Concept
+Masters,Certification
+by,O
+teaching,O
+them,O
+kanban,Tool/Framework
+.,O
+As,O
+an,O
+intern,Seniority
+you,O
+will,O
+learn,O
+how,O
+to,O
+use,O
+Git,Tool/Framework
+and,O
+Docker,Tool/Framework
+.,O
 Mid,Seniority
 Full Stack developer,IT Specialization
 with,O
@@ -4305,6 +2325,58 @@ C++,Tool/Framework
 and,O
 imperative programmming,Programming Concept
 .,O
+Used,O
+problem solving,O
+aptitude,Tool/Framework
+and,O
+design patterns,O
+to,O
+enhance,O
+application,Programming Concept
+performance,O
+by,O
+14%,O
+.,O
+In,O
+need,O
+of,O
+a,O
+software engineer,IT Specialization
+who,O
+has,O
+worked,O
+with,O
+lambda,O
+(,O
+Proc,O
+),O
+in,O
+Ruby,Programming Language
+.,O
+I,O
+am,O
+a,O
+Machine,O
+Learning,O
+Engineer,IT Specialization
+specialized,O
+in,O
+Natural Language Generation,Programming Concept
+and,O
+Natural,O
+Language,O
+Processing,Programming Language
+",",O
+also,O
+a,O
+little,O
+bit,Programming Concept
+familiar,O
+with,O
+Knowledge,O
+graph,Programming Concept
+theory,O
+.,O
 Seeking,O
 to,O
 leverage,O
@@ -4318,11 +2390,58 @@ quality,O
 at,Tool/Framework
 Google,Tool/Framework
 .,O
+University,O
+of,O
+Ohio,O
+",",O
+Bachelor,O
+of,O
+Science,O
+in,O
+Statistics,O
+.,O
+Language:,O
+German,O
+",",O
+English,Programming Language
+",",O
+French,O
+.,O
+Key,Tool/Framework
+Skills:,O
+HTML5,Programming Language
+",",O
+CSS,Programming Language
+",",O
+RESTful,O
+.,O
 I,O
 love,O
 mobile development,Programming Concept
 and,O
 Kotlin,Programming Language
+.,O
+Obtained,O
+my,O
+Bachelor,O
+degree,Certification
+in,O
+2022,O
+",",O
+building,O
+an,O
+app,O
+which,O
+connects,O
+to,O
+the,O
+blockchain,Tool/Framework
+as,O
+a,O
+license,O
+thesis,O
+using,O
+sockets,O
 .,O
 The,O
 successful,O
@@ -4354,262 +2473,6 @@ robust,O
 information,O
 solutions,O
 .,O
-operating systems,Programming Concept
-Windows,Tool/Framework
-XP,O
-7,O
-10,O
-Tools,O
-Packages,O
-Visual,O
-Basic,O
-6,O
-0,O
-UML,O
-Packet Tracer,Tool/Framework
-Web,Programming Concept
-technologies,O
-Core,O
-java,Programming Language
-Advance,O
-java,Programming Language
-JSP,Tool/Framework
-Hibernate,Tool/Framework
-Spring,Tool/Framework
-Languages,O
-known,Tool/Framework
-C,Programming Language
-C,Programming Language
-Databases,Programming Concept
-SQL,Programming Language
-AREAS,O
-OF,O
-INTEREST,O
-Software,Programming Concept
-Development,Programming Concept
-Programming,Programming Concept
-Academic,O
-Projects,O
-Details,O
-Diploma,Certification
-Title,O
-Banking,O
-Software,Programming Concept
-Description,O
-We,O
-used,O
-GSM,O
-technology,O
-for,O
-transaction,O
-of,O
-message,O
-for,O
-a,O
-security,Programming Concept
-purpose,O
-Environment,O
-OS,Tool/Framework
-Windows,Tool/Framework
-XP,O
-Technologies,O
-used,O
-frontend,Programming Concept
-visual,O
-basic,O
-6,O
-0,O
-Backend,Programming Concept
-oracle,Tool/Framework
-9i,O
-BE,O
-Title,O
-Single,O
-Sign,O
-On,O
-Description,O
-We,O
-have,O
-created,O
-single,O
-sign,O
-on,O
-mechanism,O
-for,O
-network,O
-security,Programming Concept
-Environment,O
-OS,Tool/Framework
-Windows,Tool/Framework
-7,O
-Technologies,O
-Used,O
-Frontend,Programming Concept
-java,Programming Language
-Backend,Programming Concept
-Oracle,Tool/Framework
-10g,O
-ME,O
-Title,O
-Text,O
-Based,O
-Graphical,O
-Password,O
-To,O
-Overcome,O
-Shoulder,O
-Surfing,O
-Attacks,O
-Description,O
-I,O
-have,O
-created,O
-a,O
-most,O
-secure,O
-password,O
-system,O
-using,O
-Random,O
-Printing,O
-Algo,O
-Environment,O
-OS,Tool/Framework
-Windows,Tool/Framework
-10,O
-Technologies,O
-used,O
-Frontend,Programming Concept
-Java,Programming Language
-Backend,Programming Concept
-MySQL,Tool/Framework
-Company,O
-Title,O
-Agriculture,O
-Management,O
-System,O
-Description,O
-Created,O
-web application,Programming Concept
-for,O
-Agriculture,O
-system,O
-and,O
-Farming,O
-Environment,O
-OS,Tool/Framework
-Windows,Tool/Framework
-10,O
-Technologies,O
-used,O
-Frontend,Programming Concept
-Hibernate,Tool/Framework
-Backend,Programming Concept
-MySQL,Tool/Framework
-Education,O
-Details,O
-June,O
-2015,O
-to,O
-February,O
-2018,O
-ME,O
-computers,O
-computer,O
-Pune,O
-Maharashtra,O
-Savitribai,O
-Phule,O
-Pune,O
-University,O
-June,O
-2007,O
-S,O
-S,O
-C,Programming Language
-Solapur,O
-Maharashtra,O
-Maharashtra,O
-Secondary,O
-Board,O
-Java,Programming Language
-Developer,IT Specialization
-Java,Programming Language
-Developer,IT Specialization
-Skill,O
-Details,O
-JAVA,Programming Language
-Exprience,O
-6,O
-months,O
-DATABASES,Programming Concept
-Exprience,O
-6,O
-months,O
-Hibernate,Tool/Framework
-Exprience,O
-Less,Tool/Framework
-than,O
-1,O
-year,O
-months,O
-Jsp,Tool/Framework
-Exprience,O
-Less,Tool/Framework
-than,O
-1,O
-year,O
-months,O
-Servlet,O
-Exprience,O
-Less,Tool/Framework
-than,O
-1,O
-year,O
-monthsCompany,O
-Details,O
-company,O
-Maxgen,O
-Technologies,O
-Pvt,O
-Ltd,O
-description,O
-1,O
-Working,O
-as,O
-a,O
-java,Programming Language
-developer,IT Specialization
-over,O
-Hibernate,Tool/Framework
-technology,O
-Developing,O
-web application,Programming Concept
-using,O
-JSP,Tool/Framework
-servlet,O
-and,O
-hibernate,Tool/Framework
-company,O
-Prakshal,O
-IT,O
-academy,O
-description,O
-I,O
-was,O
-working,O
-as,O
-a,O
-trainer,O
-I,O
-have,O
-taught,O
-A,O
-N,O
-CCNA,O
-routing,O
-and,O
-switching,O
 Diplomatic,O
 ",",O
 personable,O
@@ -4634,6 +2497,45 @@ am,O
 a,O
 mid,Seniority
 DevOps,IT Specialization
+.,O
+I,O
+have,O
+worked,O
+for,O
+7,O
+years,O
+on,O
+an,O
+e commerce,O
+project,O
+using,O
+technologies,O
+such,O
+as:,O
+Java,Programming Language
+",",O
+JavaEE,Tool/Framework
+",",O
+Hibernate,Tool/Framework
+.,O
+Looking,O
+to,O
+develop,O
+a,O
+responsive,O
+web,Programming Concept
+page,O
+using,O
+HTML5/CSS,O
+3,O
+.,O
+Hard,O
+Skills:,O
+Azure,Tool/Framework
+",",O
+docker,Tool/Framework
+",",O
+C#,Programming Language
 .,O
 Enthusiastic,O
 and,O
@@ -4662,1016 +2564,228 @@ mocking,O
 framework,Tool/Framework
 Mockito,Tool/Framework
 .,O
-We,O
-know,O
-you,O
-want,O
-to,O
-know,O
-so,O
-here,O
-is,O
-the,O
-stack:,O
-Python,Programming Language
-",",O
-Django,Tool/Framework
-",",O
-React,Tool/Framework
-",",O
-Redux,Tool/Framework
-",",O
-Express,O
+Eager,O
+junior,Seniority
+data engineer,IT Specialization
+passionate,O
+about,O
+nosql,Programming Concept
+and,O
+oop,Programming Concept
+concepts,O
 .,O
-Education,O
-Details,O
-January,O
-2016,O
-B,O
-E,O
-information technology,Programming Concept
-Pune,O
-Maharashtra,O
-Sawitribai,O
-Phule,O
-Pune,O
-University,O
-Java,Programming Language
-Developer,IT Specialization
-Java,Programming Language
-Developer,IT Specialization
-Vertical,O
-Software,Programming Concept
-Skill,O
-Details,O
-Company,O
-Details,O
-company,O
-Vertical,O
-Software,Programming Concept
-description,O
-Expertise,O
+My,O
+main,O
+programming,Programming Concept
+skills,O
+are,O
 in,O
-design,O
+Django,Tool/Framework
+framework,Tool/Framework
 and,O
-development,Programming Concept
-of,O
-web applications,Programming Concept
-using,O
-J2EE,Tool/Framework
-Servlets,O
-JSP,Tool/Framework
-JavaScript,Programming Language
-HTML,Programming Language
-CSS,Programming Language
-JQUERY,Tool/Framework
-AJAX,Tool/Framework
-JSON,Programming Concept
-Experienced,O
-in,O
-developing,O
-applications,O
-using,O
-MVC,Programming Concept
-architecture,O
-Good,O
-understanding,O
+my,O
+strongest,O
+soft,O
+skill,O
+is,O
+communication,O
+.,O
+Soft,O
+Skills:,O
+public,O
+speaking,O
+",",O
+time,O
+management,O
+",",O
+eye,O
+for,O
+details,O
+Senior,Seniority
+programmer,IT Specialization
+",",O
+I,O
+have,O
+been,O
+writing,O
+C++,Tool/Framework
+code,O
+for,O
+more,Tool/Framework
+than,O
+a,O
+decade,O
+now,O
+and,O
+I,O
+like,O
+Java,Programming Language
+.,O
+In,O
+need,O
 of,O
 Software,Programming Concept
-Development,Programming Concept
-Life,O
-Cycle,O
-Phases,O
-such,O
-as,O
-Requirement,O
-gathering,O
-analysis,O
-design,O
-development,Programming Concept
-and,O
-unit testing,Programming Concept
-Languages,O
-open,O
-Source,Programming Language
-Java,Programming Language
-J2EE,Tool/Framework
-Spring,Tool/Framework
-Hibernate,Tool/Framework
-Frame,O
-Work,O
-Scripting,Programming Concept
-Languages,O
-Server,Programming Concept
-Java,Programming Language
-JSP,Tool/Framework
-Servlets,O
-DB,Tool/Framework
-Connectivity,O
-s,O
-Side,O
-Program,O
-JDBC,Tool/Framework
-JavaScript,Programming Language
-jQuery,Tool/Framework
-Ajax,Tool/Framework
-JSON,Programming Concept
-Application,Programming Concept
-Server,Programming Concept
-TomCat,Tool/Framework
-Database,Programming Concept
-MongoDB,Tool/Framework
-MySql,Tool/Framework
-IDEs,O
-Eclipse,Tool/Framework
-1,O
-Project,O
-Title,O
-Expense,O
-Ledger,O
-Role,O
-Java,Programming Language
-Developer,IT Specialization
-Tools,O
-and,O
-Technologies,O
-Java,Programming Language
-Jsp,Tool/Framework
-Servlet,O
-MySql,Tool/Framework
-JavaScript,Programming Language
-Json,Programming Concept
-Jquery,Tool/Framework
-Ajax,Tool/Framework
-2,O
-Project,O
-Title,O
-Trimurti,O
-Developer,IT Specialization
-Realestate,O
-Role,O
-Java,Programming Language
-Developer,IT Specialization
-Tools,O
-and,O
-Technologies,O
-Java,Programming Language
-Jsp,Tool/Framework
-Servlet,O
-MySql,Tool/Framework
-JavaScript,Programming Language
-Json,Programming Concept
-Jquery,Tool/Framework
-Ajax,Tool/Framework
-3,O
-Project,O
-Title,O
-Vimay,O
-Enterprise,O
-Role,O
-Java,Programming Language
-Developer,IT Specialization
-Tools,O
-and,O
-Technologies,O
-Java,Programming Language
-Jsp,Tool/Framework
-Spring,Tool/Framework
-Hibernate,Tool/Framework
-Maven,Tool/Framework
-Jquery,Tool/Framework
-Ajax,Tool/Framework
-company,O
-Higher,O
-Secondary,O
-School,O
-description,O
-Pune,O
-58,O
-8,O
-Computer,O
-Skills,O
-Languages,O
-And,O
-Script,Programming Concept
-JSP,Tool/Framework
-Servlet,O
-HTML,Programming Language
-CSS,Programming Language
-Java,Programming Language
-Script,Programming Concept
-Jquery,Tool/Framework
-Ajax,Tool/Framework
-Spring,Tool/Framework
-Hibernate,Tool/Framework
-operating system,Programming Concept
-Microsoft Windows,Tool/Framework
-2003,O
-XP,O
-Vista,O
-7,O
-8,O
-Databases,Programming Concept
-mySql,Tool/Framework
-Concepts,O
-OOP,Programming Concept
-Core,O
-java,Programming Language
-Advance,O
-java,Programming Language
-Development,Programming Concept
-Tool,O
-Eclipse,Tool/Framework
-Net,O
-beans,O
-IDE,Programming Concept
-Web,Programming Concept
-Server,Programming Concept
-apache tomcat,Tool/Framework
-7,O
-0Education,O
-Details,O
-January,O
-2007,O
-H,O
-S,O
-C,Programming Language
-Amravati,O
-Maharashtra,O
-VidyaBharati,O
-college,O
-January,O
-2005,O
-S,O
-S,O
-C,Programming Language
-Amravati,O
-Maharashtra,O
-Holy,O
-Cross,O
-School,O
-Java,Programming Language
-Developer,IT Specialization
-Java,Programming Language
-Developer,IT Specialization
-Kunal,O
-IT,O
-Services,O
-Pvt,O
-Ltd,O
-Skill,O
-Details,O
-ECLIPSE,Tool/Framework
-Exprience,O
-Less,Tool/Framework
-than,O
-1,O
-year,O
-months,O
-JAVA,Programming Language
-Exprience,O
-14,O
-months,O
-HIBERNATE,Tool/Framework
-Exprience,O
-Less,Tool/Framework
-than,O
-1,O
-year,O
-months,O
-SPRING,Tool/Framework
-Exprience,O
-Less,Tool/Framework
-than,O
-1,O
-year,O
-months,O
-jQuery,Tool/Framework
-Exprience,O
-Less,Tool/Framework
-than,O
-1,O
-year,O
-monthsCompany,O
-Details,O
-company,O
-Kunal,O
-IT,O
-Services,O
-Pvt,O
-Ltd,O
-description,O
-Currently,O
-Working,O
-As,O
-Java,Programming Language
-Developer,IT Specialization
-In,O
-Winsol,Tool/Framework
-Solution,O
-Pvt,O
-Ltd,O
-From,O
-1,O
-July,O
-2017,O
-To,O
-Till,O
-Date,O
-Experience,O
-Of,O
-2,O
-Yrs,O
-As,O
-A,O
-Java,Programming Language
-Developer,IT Specialization
-In,O
-Kunal,O
-IT,O
-Services,O
-Pvt,O
-Ltd,O
-Experience,O
-in,O
-working,O
+Architect,Seniority
 with,O
-NoSQL databases,Programming Concept
-(,O
-schema,O
-on,O
-read,O
-),O
+strong,O
+knowledge,O
+in,O
+Blockchain,Tool/Framework
+technology,O
+",",O
+Client Server,Programming Concept
+and,O
+peer to peer,Programming Concept
+applications,O
+.,O
+Junior,Seniority
+Data Scientist:,O
+used,O
+matlab,Programming Language
+to,O
+build,O
+different,O
+Statistics,O
+and,O
+Data,O
+Visualization,O
+applications,O
+.,O
+Junior,Seniority
+Software Developer,IT Specialization
+specialized,O
+in,O
+Java,Programming Language
+and,O
+Scala,Programming Language
+.,O
+High,O
+School:,O
+Started,O
+with,O
+Pascal,Programming Language
+and,O
+then,O
+moved,O
+to,O
+C,Programming Language
+and,O
+C++,Tool/Framework
+.,O
+Java,Programming Language
+developer,IT Specialization
+with,O
+5,O
+years,O
+of,O
+experience,O
+with,O
+frameworks,Programming Concept
+and,O
+tools,O
+like,O
+Spring,Tool/Framework
+",",O
+Spring Jpa,Tool/Framework
+.,O
+Designed,O
+",",O
+developed,O
+",",O
+and,O
+troubleshot,O
+software,Programming Concept
+programs,O
+for,O
 databases,Programming Concept
-mongoDB,Tool/Framework
 and,O
-Cassandra,Tool/Framework
-or,O
-relational,O
-such,O
-as,O
-posgres,Tool/Framework
+applications,O
+in,O
+Java,Programming Language
 and,O
-search,O
-optimized,O
-store,O
-elastic search,Tool/Framework
+SQL,Programming Language
+.,O
+Data,O
+scientist,O
+having,O
+strong,O
+knowledge,O
+in,O
+Redis,Tool/Framework
+and,O
+TensorFlow,Tool/Framework
+.,O
+Wanted:,O
+junior,Seniority
+tester,O
+with,O
+experience,O
+using,O
+JUnit,Tool/Framework
+and,O
+Mockito,Tool/Framework
+in,O
+Java,Programming Language
 .,O
 Looking,O
 for,O
+open minded,O
 people,O
-with,O
-experience,O
-in,O
-Kafka,Tool/Framework
 ",",O
-Big Data,Programming Concept
-and,O
-Python,Programming Language
-.,O
-Technical,O
-Skills,O
-Trained,O
-Project,O
-Acquired,O
-Skills,O
-Languages,O
-Known,Tool/Framework
-C,Programming Language
-C,Programming Language
-J2EE,Tool/Framework
-Spring,Tool/Framework
-Hibernate,Tool/Framework
-Testing,Programming Concept
-Functional,Programming Concept
-Testing,Programming Concept
-Manual,O
-Testing,Programming Concept
-operating systems,Programming Concept
-Windows,Tool/Framework
-Linux,Tool/Framework
-Packages,O
-MS,Tool/Framework
-office,O
-Databases,Programming Concept
-mySql,Tool/Framework
-PostgreSQL,Tool/Framework
-Education,O
-Details,O
-January,O
-2013,O
+willing,O
 to,O
-January,O
-2017,O
-B,O
-E,O
-Computer,O
-Science,O
+grow,O
 and,O
-Engineering,O
-MNU,O
-University,O
-Jhulelal,O
-Institute,O
-of,O
-Technology,O
-January,O
-2011,O
-to,O
-January,O
-2013,O
-HSC,O
-Nagpur,O
-Maharashtra,O
-Maharashtra,O
-State,O
-Board,O
-Dayanand,O
-Arya,O
-Kanya,O
-Junior,Seniority
-College,O
-January,O
-2010,O
-to,O
-January,O
-2011,O
-SSC,O
-Nagpur,O
-Maharashtra,O
-Maharashtra,O
-State,O
-Board,O
-Java,Programming Language
-Developer,IT Specialization
-Java,Programming Language
-Developer,IT Specialization
-Inouvelle,O
-Ventures,O
-Private,O
-Limited,O
-Skill,O
-Details,O
-J2EE,Tool/Framework
-Exprience,O
-17,O
-months,O
-C,Programming Language
-Exprience,O
-6,O
-months,O
-DATABASES,Programming Concept
-Exprience,O
-6,O
-months,O
-FUNCTIONAL,Programming Concept
-TESTING,Programming Concept
-Exprience,O
-6,O
-months,O
-LINUX,Tool/Framework
-Exprience,O
-6,O
-monthsCompany,O
-Details,O
-company,O
-Inouvelle,O
-Ventures,O
-Private,O
-Limited,O
-description,O
-Nagpur,O
-1,O
-Project,O
-name,O
-Stock,O
-Management,O
-System,O
-December,O
-2017,O
-Till,O
-Date,O
-Language,O
-of,O
-implementation,O
-Angular,Tool/Framework
-Frontend,Programming Concept
-JAVA,Programming Language
-J2EE,Tool/Framework
-spring,Tool/Framework
-Hibernate,Tool/Framework
-Framework,Tool/Framework
-Backend,Programming Concept
-Postgresql,Tool/Framework
-Database,Programming Concept
-Role,O
-Java,Programming Language
-Developer,IT Specialization
-operating system,Programming Concept
-Windows,Tool/Framework
-XP,O
-07,O
-08,O
-Description,O
-Stock,O
-management,O
-System,O
-is,O
-Specially,O
-Developing,O
-for,O
-the,O
-Medicinal,O
-Market,O
-This,O
-software,Programming Concept
-is,O
-developing,O
-to,O
-keep,O
-the,O
-track,O
-of,O
-medicines,O
-ailments,O
-surgical,O
-Equipments,O
-also,O
-to,O
-keep,O
-the,O
-track,O
-of,O
-Wholesalers,O
-Retailers,O
-Employees,O
-Customers,O
-of,O
-the,O
-Company,O
-Stock,O
-management,O
-system,O
-is,O
-the,O
-practice,O
-of,O
-ordering,O
-storing,O
-tracking,O
-and,O
-controlling,O
-inventory,O
-Debtor,O
-invoicing,O
-software,Programming Concept
-helps,O
-small,O
-businesses,O
-and,O
-freelancers,IT Specialization
-keep,O
-track,O
-of,O
-company,O
-assets,O
-Stock,O
-management,O
-may,O
-also,O
-be,O
-called,O
-stock,O
-control,O
-inventory,O
-management,O
-or,O
-inventory,O
-control,O
-company,O
-Inouvelle,O
-Ventures,O
-Private,O
-Limited,O
-description,O
-Project,O
-Profile,O
-company,O
-Inouvelle,O
-Ventures,O
-Private,O
-Limited,O
-description,O
-Language,O
-of,O
-implementation,O
-Angular,Tool/Framework
-Frontend,Programming Concept
-JAVA,Programming Language
-J2EE,Tool/Framework
-spring,Tool/Framework
-Hibernate,Tool/Framework
-Framework,Tool/Framework
-Backend,Programming Concept
-Postgresql,Tool/Framework
-Database,Programming Concept
-Role,O
-Java,Programming Language
-Developer,IT Specialization
-Manual,O
-Testing,Programming Concept
-operating system,Programming Concept
-Windows,Tool/Framework
-XP,O
-07,O
-08,O
-Description,O
-This,O
-Project,O
-is,O
-done,O
-for,O
-the,O
-Oldest,O
-Printing,O
-Press,O
-in,O
-Nagpur,O
-The,O
-proposed,O
-web,Programming Concept
-based,O
-Printing,O
-Press,O
-Management,O
-System,O
-designed,O
-a,O
-ording,O
-to,O
-user,O
-and,O
-system,O
-requirement,O
-to,O
-fulfil,O
-the,O
-existing,O
-problems,O
-This,O
-system,O
-offers,O
-the,O
-products,O
-and,O
-services,O
-that,O
-enhance,O
-organization,O
-growth,O
-efficiency,O
-and,O
-profitability,O
-TECHNICAL,O
-SKILLS,O
-Skills,O
-Java,Programming Language
-SQL,Programming Language
-PL,O
-SQL,Programming Language
-C,Programming Language
-C++,Tool/Framework
-BootStrap,Tool/Framework
-JSP,Tool/Framework
-Ext,O
-JS,Programming Language
-operating systems,Programming Concept
-Windows,Tool/Framework
-Tools,O
-Toad,O
-Eclipse,Tool/Framework
-SoapBox,O
-Postman,Tool/Framework
-Databases,Programming Concept
-Oracle,Tool/Framework
-MS,Tool/Framework
-SQL,Programming Language
-MS,Tool/Framework
-A,O
-ess,O
-MS,Tool/Framework
-ExcelEducation,O
-Details,O
-January,O
-2017,O
-B,O
-E,O
-Computer,O
-Technology,O
-Gondia,O
-MAHARASHTRA,O
-IN,O
-Manoharbhai,O
-Patel,O
-Institute,O
-of,O
-Engineering,O
-and,O
-Technology,O
-HSC,O
-Gondia,O
-MAHARASHTRA,O
-IN,O
-S,O
-M,O
-P,O
-Science,O
-College,O
-Java,Programming Language
-Developer,IT Specialization
-Java,Programming Language
-Developer,IT Specialization
-Xoriant,O
-Solutions,O
-Pvt,O
-Ltd,O
-Skill,O
-Details,O
-Company,O
-Details,O
-company,O
-Xoriant,O
-Solutions,O
-Pvt,O
-Ltd,O
-description,O
-Pune,O
-Period,O
-Sept,O
-2017,O
-to,O
-till,O
-date,O
-Role,O
-Java,Programming Language
-Developer,IT Specialization
-Description,O
-ResRent,O
-is,O
-a,O
-team,O
-responsible,O
-for,O
-the,O
-development,Programming Concept
-of,O
-various,O
-modules,Programming Concept
-for,O
-Hertz,O
-They,O
-are,O
-responsible,O
-for,O
-the,O
-development,Programming Concept
-of,O
-screens,O
-in,O
-the,O
-portfolios,O
-they,O
-look,O
-after,O
-and,O
-act,O
-as,O
-a,O
-primary,O
-control,O
-function,Programming Concept
-developing,O
-webservices,Programming Concept
-to,O
-ensure,O
-it,O
-can,O
-be,O
-hit,O
-by,O
-XML,O
-and,O
-JSON,Programming Concept
-We,O
-build,O
-various,O
-modules,Programming Concept
-which,O
-are,O
-inbuilt,O
-in,O
-Hertz,O
-to,O
-provide,O
-interfaces,O
-for,O
-end,O
-users,O
-in,O
-their,O
-tasks,O
-Tools,O
-Eclipse,Tool/Framework
-TOAD,O
-SoapBox,O
-Postman,Tool/Framework
-Responsibilities,O
-Develop,O
-module,Programming Concept
-from,O
-Backend,Programming Concept
-to,O
-Middleware,Programming Concept
-to,O
-Frontend,Programming Concept
-Bugs,Programming Concept
-fixing,O
-and,O
-proactive,O
-developing,O
-of,O
-enhancements,O
-Resolve,O
-Application,Programming Concept
-incidents,O
-within,O
-defined,O
-UCs,O
-creating,O
-different,O
-Task,O
-ticket,O
-as,O
-well,O
-Debug,Programming Concept
-and,O
-provide,O
-solution,O
-for,O
-workflow,O
-Resolving,O
-DB,Tool/Framework
-issues,O
-and,O
-providing,O
-technical,O
-support,O
-to,O
-BAs,O
-Keeping,O
-track,O
-of,O
-deployments,Programming Concept
-and,O
-effect,O
-of,O
-same,O
-on,O
-ongoing,O
-jobs,O
-Contribution,O
-towards,O
-automation,Programming Concept
-of,O
-daily,O
-activities,O
-and,O
-process,O
-based,O
-organization,O
-On,O
-time,O
-within,O
-budget,O
-delivery,O
-meeting,O
-customers,O
-quality,O
-expectations,O
-Maintain,O
-knowledge,O
-base,O
-of,O
-domain,O
-known,Tool/Framework
-defects,O
-and,O
-issues,O
-processes,O
-and,O
-development,Programming Concept
-techniques,O
-company,O
-Xoriant,O
-Solutions,O
-Pvt,O
-Ltd,O
-description,O
-Strong,O
-communication,O
-collaboration,O
-team,O
-building,O
-skills,O
-with,O
-proficiency,O
-at,Tool/Framework
-grasping,O
+learn,O
 new,O
-technical,O
-concepts,O
-quickly,O
-and,O
-utilize,O
-the,O
-same,O
-in,O
-a,O
-productive,O
-manner,O
-Experience,O
-in,O
-development,Programming Concept
-in,O
-web application,Programming Concept
-Resolve,O
-project,O
-related,O
-issues,O
-in,O
-minimal,O
-time,O
-Able,O
-to,O
-communicate,O
-effectively,O
-with,O
-multifunctional,O
-teams,O
-programmers,IT Specialization
-and,O
-technical,O
-staff,O
-at,Tool/Framework
-all,O
-levels,O
-Good,O
-knowledge,O
-of,O
-Java,Programming Language
-Sql,Programming Language
-Ext,O
-JS,Programming Language
-JSP,Tool/Framework
-XML,O
-Web,Programming Concept
-services,O
-Good,O
-interpersonal,O
-analytical,O
-skills,O
-with,O
-proven,O
-abilities,O
-in,O
-resolving,O
-the,O
-complex,O
-software,Programming Concept
-issue,O
-I,O
-have,O
-worked,O
-for,O
-7,O
-years,O
-on,O
-an,O
-e commerce,O
-project,O
-using,O
 technologies,O
-such,O
-as:,O
+like,O
+Docker,Tool/Framework
+",",O
+Kubernetes,Tool/Framework
+.,O
+Senior,Seniority
+Tech Lead,Seniority
+with,O
 Java,Programming Language
 ",",O
-Spring,Tool/Framework
-",",O
-JavaEE,Tool/Framework
-",",O
-Hibernate,Tool/Framework
+Kotlin,Programming Language
 and,O
-Docker,Tool/Framework
+SqlServer,Tool/Framework
+background,O
+.,O
+In,O
+my,O
+spare,O
+time,O
+I,O
+like,O
+to,O
+contribute,O
+to,O
+GitHub,Tool/Framework
+community,O
+for,O
+Java,Programming Language
+programming,Programming Concept
+language,O
+.,O
+Key,Tool/Framework
+Responsibilities,O
+such,O
+as,O
+assisting,O
+in,O
+migrating,O
+HTML,Programming Language
+4,O
+.01,O
+table based,O
+ASP,O
+/,O
+ASP.NET,Tool/Framework
+2,O
+.0,O
 .,O
 I,O
 am,O
@@ -5700,15 +2814,6 @@ with,O
 Kubernetes,Tool/Framework
 and,O
 Terraform,Tool/Framework
-.,O
-Data scientist,IT Specialization
-having,O
-strong,O
-knowledge,O
-in,O
-Redis,Tool/Framework
-and,O
-TensorFlow,Tool/Framework
 .,O
 Graduated,O
 with,O
