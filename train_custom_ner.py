@@ -1,15 +1,15 @@
-import os
-from pprint import pprint
-
-import spacy
-from spacy.training.example import Example
-from spacy.util import minibatch, compounding
-import random
 import csv
 import json
 import logging
+import os
+import random
 from pathlib import Path
-from constants import VALIDATE_TEXT, TEST_TEXT
+from pprint import pprint
+
+import spacy
+from spacy.scorer import Scorer
+from spacy.training.example import Example
+from spacy.util import minibatch, compounding
 
 LABEL = ['Programming Language', 'Certification', 'Seniority', 'Tool/Framework', 'IT Specialization',
          'Programming Concept']
@@ -188,7 +188,7 @@ def fine_tune_and_save_custom_model(train_data, model=None, new_model_name=None,
         ner.add_label(i)  # Add new entity labels to entity recognizer
 
     best_nlp = nlp
-    best_accuracy = 0
+    f1_score = 0
     best_learn_rate = learn_rates[0]
     best_iter = n_iters[0]
 
@@ -196,43 +196,29 @@ def fine_tune_and_save_custom_model(train_data, model=None, new_model_name=None,
         for learn_rate in learn_rates:
             train_nlp = nlp
             train_model(n_iter, train_data, model=model, learn_rate=learn_rate, nlp=train_nlp)
-            accuracy = validate_model(train_nlp, 'Data/validate.csv')
-            if accuracy >= best_accuracy:
+            f1_score = evaluate_model(train_nlp, 'Data/validate.csv')
+            if f1_score >= f1_score:
                 best_iter = n_iter
                 best_learn_rate = learn_rate
-                best_accuracy = accuracy
+                f1_score = f1_score
                 best_nlp = train_nlp
     save_model(output_dir, new_model_name, nlp=best_nlp)
-    print('Iterations: ' + str(best_iter) + ' Learn rate:' + str(best_learn_rate) + ' Accuracy:' + str(best_accuracy))
+    print('Iterations: ' + str(best_iter) + ' Learn rate:' + str(best_learn_rate) + ' F1 Score:' + str(f1_score))
 
 
-def get_model_accuracy(input_file, doc2):
-    csv_file = open(input_file, 'r')
-    csv_file_reader = csv.reader(csv_file)
-    all_labeled_data = list(csv_file_reader)
-    positive_rows = list(filter(lambda row: row[1] != 'O', all_labeled_data))
-    nr_of_entities = len(positive_rows)
-    true_positive_matches = 0
-    true_negative_matches = len(all_labeled_data) - len(doc2.ents)
-    for ent in doc2.ents:
-        print([ent.text, ent.label_])
-        if [ent.text, ent.label_] in positive_rows:
-            true_positive_matches += 1
-
-    precision = true_positive_matches / len(doc2.ents)  # nr_of_entities
-
-    print("True negative matches number: " + str(true_negative_matches))
-
-    print('The precision is:' + str(precision))
-
-    return precision
-
-
-def validate_model(nlp, input_file):
-    doc2 = nlp(VALIDATE_TEXT)
-    return get_model_accuracy(input_file, doc2)
-
-
-def test_model(input_file):
-    nlp2 = spacy.load(CUSTOM_SPACY_MODEL)
-    validate_model(nlp2, input_file)
+def evaluate_model(nlp, input_file):
+    json_file_name = csv_to_json_with_labels(input_file, '-')
+    validate_data = json_to_spacy_format(json_file_name)
+    examples = []
+    scorer = Scorer()
+    for text, annotations in validate_data:
+        doc = nlp.make_doc(text)
+        example = Example.from_dict(doc, annotations)
+        example.predicted = nlp(str(example.predicted))
+        examples.append(example)
+    scores = scorer.score(examples)
+    print('Evaluation of model:')
+    pprint(scores)
+    print('---------------------')
+    f1_score = scores['ents_f']
+    return f1_score
