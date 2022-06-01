@@ -1,4 +1,5 @@
 import os
+from pprint import pprint
 
 import spacy
 from spacy.training.example import Example
@@ -144,6 +145,13 @@ def train_model(n_iter, train_data, model, learn_rate, nlp):
             for batch in batches:
                 for text, annotations in batch:
                     # create Example
+                    # texts, annotations = zip(*batch)
+                    # nlp.update(
+                    #     texts,  # batch of texts
+                    #     annotations,  # batch of annotations
+                    #     drop=0.2,  # dropout - make it harder to memorise data
+                    #     losses=losses,
+                    # )
                     doc = nlp.make_doc(text)
                     example = Example.from_dict(doc, annotations)
                     # Update the model
@@ -162,8 +170,8 @@ def save_model(output_dir, new_model_name, nlp):
 
 
 def fine_tune_and_save_custom_model(train_data, model=None, new_model_name=None, output_dir=None):
-    learn_rates = [0.001, 0.005]
-    n_iters = [20, 40, 50, 100]
+    learn_rates = [0.001]
+    n_iters = [30]
     """Setting up the pipeline and entity recognizer, and training the new entity."""
     if model is not None:
         nlp = spacy.load(model)  # load existing spacy model
@@ -201,18 +209,23 @@ def fine_tune_and_save_custom_model(train_data, model=None, new_model_name=None,
 def get_model_accuracy(input_file, doc2):
     csv_file = open(input_file, 'r')
     csv_file_reader = csv.reader(csv_file)
-    rows = list(filter(lambda row: row[1] != 'O', list(csv_file_reader)))
-    nr_of_entities = len(rows)
-    print(rows)
-    nr_of_matches = 0
+    all_labeled_data = list(csv_file_reader)
+    positive_rows = list(filter(lambda row: row[1] != 'O', all_labeled_data))
+    nr_of_entities = len(positive_rows)
+    true_positive_matches = 0
+    true_negative_matches = len(all_labeled_data) - len(doc2.ents)
     for ent in doc2.ents:
-        if [ent.text, ent.label_] in rows:
-            nr_of_matches += 1
+        print([ent.text, ent.label_])
+        if [ent.text, ent.label_] in positive_rows:
+            true_positive_matches += 1
 
-    accuracy = nr_of_matches / nr_of_entities
-    print('The accuracy is:' + str(accuracy))
+    precision = true_positive_matches / len(doc2.ents)  # nr_of_entities
 
-    return accuracy
+    print("True negative matches number: " + str(true_negative_matches))
+
+    print('The precision is:' + str(precision))
+
+    return precision
 
 
 def validate_model(nlp, input_file):
