@@ -119,7 +119,7 @@ Designed a restaurant inventory application that saved the company $400/month in
 SQL Developer Skills: Oracle, Database Architecture, SSIS, PL/SQL, Security, Common Table Expressions, Creating Reports, Interpersonal Skills, Collaboration, Communication.
 Developed software components in JavaScript based on functional requirements and specifications.
 Wrote technical documentation to support the maintenance team and wrote web applications using spring and spring security.
-Adapted front end technologies to follow back end development using Angular.
+Adapted frontend technologies to follow back end development using Angular.
 Key achievement: Performed debugging on a critical error that saved the company over $54,000 of potential lost revenue in downtime.
 Skills: Data Structures, Open Source Software, Cloud Computing Services (AWS), Ruby on Rails, Git Version Control, Teamwork Skills.
 Active contributor to over 10 GitHub libraries also possessing strong understanding of restful apis.
