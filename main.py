@@ -5,6 +5,8 @@ from os.path import isfile, join
 
 import pdfplumber
 import spacy
+from constants import CONCEPTS_SCORES, LABELS_LIST, REASONING_PERFECT_MATCH, REASONING_PERFECT_MATCH_TYPE, \
+    REASONING_PENALIZATION
 from business_rules import run_all
 from business_rules.actions import BaseActions, rule_action
 from business_rules.fields import FIELD_NUMERIC
@@ -13,7 +15,7 @@ from business_rules.variables import BaseVariables, numeric_rule_variable
 import train_custom_ner
 from constants import CONCEPTS_SCORES, LABELS_LIST
 from knowledge_graph import generate_knowledge_graph_components_from_files, get_shortest_path_between_concepts
-
+from pprint import pprint
 
 class RequiredLabelInfo:
     def __init__(self, label_name, required_values, max_required_seniority, max_absolute_seniority,
@@ -52,7 +54,7 @@ class RequiredLabelInfoActions(BaseActions):
 
 
 def apply_business_rules(max_absolute_seniority, max_required_seniority, label_name, required_label_values,
-                         given_label_values):
+                         given_label_values, feedback_list):
     given_label_values_length = len(given_label_values)
     rules = [
         # expiration_days < 5 AND current_inventory > 20
@@ -68,11 +70,12 @@ def apply_business_rules(max_absolute_seniority, max_required_seniority, label_n
          ]}]
     required_label_info = RequiredLabelInfo(label_name, required_label_values, max_required_seniority,
                                             max_absolute_seniority)
-    run_all(rule_list=rules,
-            defined_variables=RequiredLabelInfoVariables(required_label_info),
-            defined_actions=RequiredLabelInfoActions(required_label_info),
-            stop_on_first_trigger=True
-            )
+    if run_all(rule_list=rules,
+                  defined_variables=RequiredLabelInfoVariables(required_label_info),
+                  defined_actions=RequiredLabelInfoActions(required_label_info),
+                  stop_on_first_trigger=True
+                  ):
+        feedback_list.append(REASONING_PENALIZATION + "<<" + label_name + ">>.")
     return required_label_info.actual_loss_values
 
 
@@ -87,7 +90,7 @@ def get_max_seniority(list_of_seniorities):
     return seniority_priority_list[1]
 
 
-def get_cv_ranking_score(cv_entities_dictionary, job_description_entities_dictionary):
+def get_cv_ranking_score(cv_entities_dictionary, job_description_entities_dictionary, feedback_list):
     max_required_seniority = get_max_seniority(
         list(map(lambda x: x.lower(), job_description_entities_dictionary['Seniority'])))
     max_given_seniority = get_max_seniority(list(map(lambda x: x.lower(), cv_entities_dictionary['Seniority'])))
@@ -102,10 +105,11 @@ def get_cv_ranking_score(cv_entities_dictionary, job_description_entities_dictio
 
             score += apply_business_rules(max_absolute_seniority, max_required_seniority, label,
                                           required_label_values_list,
-                                          given_label_values_list)
+                                          given_label_values_list, feedback_list)
             for given_label_value in given_label_values_list:
                 if given_label_value in required_label_values_list:
                     score += CONCEPTS_SCORES[max_required_seniority]['Full ' + label]
+                    feedback_list.append(REASONING_PERFECT_MATCH + "<<" + given_label_value + ">>" + REASONING_PERFECT_MATCH_TYPE + label + ".")
                 else:
                     score += CONCEPTS_SCORES[max_required_seniority]['Partial ' + label]
     return score
@@ -114,7 +118,7 @@ def get_cv_ranking_score(cv_entities_dictionary, job_description_entities_dictio
 def generate_dictionary_of_concepts(doc):
     final_dictionary = {}
     for ent in doc.ents:
-        final_dictionary.setdefault(ent.label_, set()).add(ent.text)
+        final_dictionary.setdefault(ent.label_, set()).add(ent.text.lower())
     detected_keys = final_dictionary.keys()
     for label in LABELS_LIST:
         if label not in detected_keys:
@@ -172,7 +176,7 @@ def main(input_file):
         train_custom_ner.fine_tune_and_save_custom_model(training_data,
                                                          new_model_name='technology_it_model',
                                                          output_dir=train_custom_ner.CUSTOM_SPACY_MODEL)
-    print(rank_cvs(JOB_DESCRIPTION_EXAMPLE, 'cv-directory'))
+    pprint(rank_cvs(JOB_DESCRIPTION_EXAMPLE, 'D:/faculta/licenta/cv-directory'))
 
 
 JOB_DESCRIPTION_EXAMPLE = """Skills

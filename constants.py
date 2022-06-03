@@ -75,3 +75,8 @@ CONCEPTS_SCORES = {
 
 LABELS_LIST = ["Programming Language", "Certification", "Seniority", "Tool/Framework", "IT Specialization",
                "Programming Concept"]
+
+REASONING_PERFECT_MATCH = "The following word was identified in both the Job description text and in the CV text: "
+REASONING_PERFECT_MATCH_TYPE = " being labeled as "
+REASONING_PENALIZATION = "You were penalized because we detected too many terms, in relation to your seniority, " \
+                         "having the following label: "
