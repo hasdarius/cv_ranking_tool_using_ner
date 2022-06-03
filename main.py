@@ -11,6 +11,8 @@ from business_rules import run_all
 from business_rules.actions import BaseActions, rule_action
 from business_rules.fields import FIELD_NUMERIC
 from business_rules.variables import BaseVariables, select_rule_variable, string_rule_variable, numeric_rule_variable
+from knowledge_graph import generate_knowledge_graph_components_from_files, get_shortest_path_between_concepts
+from pprint import pprint
 
 
 class RequiredLabelInfo:
@@ -151,20 +153,13 @@ def rank_cvs(job_description_text, cv_folder):
     score_list = []
     for cv_file in cv_files:
         _, file_extension = os.path.splitext(cv_file)
-        # if file_extension == ".pdf":
-        #     cv_entities_dictionary = read_cv_entities_from_pdf(cv_folder + '/' + cv_file, custom_nlp)
-        # else:
-        #     if file_extension == ".txt":
-        #         cv_entities_dictionary = read_cv_entities_from_txt(cv_folder + '/' + cv_file, custom_nlp)
-        #     else:
-        #         cv_entities_dictionary = {}
-        match file_extension:
-            case ".pdf":
-                cv_entities_dictionary = read_cv_entities_from_pdf(cv_folder + '/' + cv_file, custom_nlp)
-            case ".txt":
+        if file_extension == ".pdf":
+            cv_entities_dictionary = read_cv_entities_from_pdf(cv_folder + '/' + cv_file, custom_nlp)
+        else:
+            if file_extension == ".txt":
                 cv_entities_dictionary = read_cv_entities_from_txt(cv_folder + '/' + cv_file, custom_nlp)
-            case _:
-                cv_entities_dictionary = {}  # here would be better to throw exception, decide with David
+            else:
+                cv_entities_dictionary = {}
         cv_score = get_cv_ranking_score(cv_entities_dictionary, job_description_entities)
         score_list.append((cv_file, cv_score))
     return sorted(score_list, key=lambda cv: cv[1], reverse=True)
@@ -223,3 +218,6 @@ Junior"""
 
 if __name__ == "__main__":
     main("Data/train.csv")
+    vertex_dataframe, graph = generate_knowledge_graph_components_from_files('Data/vertices.csv', 'Data/edges.csv')
+    listElem = get_shortest_path_between_concepts('java', 'python', graph, vertex_dataframe)
+    print(listElem)
