@@ -10,10 +10,7 @@ from constants import CONCEPTS_SCORES, LABELS_LIST, REASONING_PERFECT_MATCH, REA
 from business_rules import run_all
 from business_rules.actions import BaseActions, rule_action
 from business_rules.fields import FIELD_NUMERIC
-from business_rules.variables import BaseVariables, numeric_rule_variable
-
-import train_custom_ner
-from constants import CONCEPTS_SCORES, LABELS_LIST
+from business_rules.variables import BaseVariables, select_rule_variable, string_rule_variable, numeric_rule_variable
 from knowledge_graph import generate_knowledge_graph_components_from_files, get_shortest_path_between_concepts
 from pprint import pprint
 
@@ -90,7 +87,7 @@ def get_max_seniority(list_of_seniorities):
     return seniority_priority_list[1]
 
 
-def get_cv_ranking_score(cv_entities_dictionary, job_description_entities_dictionary, feedback_list):
+def get_cv_ranking_score(cv_entities_dictionary, job_description_entities_dictionary, feedback_list, graph, vertex_dataframe):
     max_required_seniority = get_max_seniority(
         list(map(lambda x: x.lower(), job_description_entities_dictionary['Seniority'])))
     max_given_seniority = get_max_seniority(list(map(lambda x: x.lower(), cv_entities_dictionary['Seniority'])))
@@ -149,6 +146,7 @@ def read_cv_entities_from_txt(document_path, nlp):
 
 
 def rank_cvs(job_description_text, cv_folder):
+    vertex_dataframe, graph = generate_knowledge_graph_components_from_files('Data/vertices.csv', 'Data/edges.csv')
     custom_nlp = spacy.load(train_custom_ner.CUSTOM_SPACY_MODEL)
     job_description_text = re.sub(r"[^a-zA-Z0-9]", " ", job_description_text)
     nlp_doc = custom_nlp(job_description_text)
@@ -164,7 +162,7 @@ def rank_cvs(job_description_text, cv_folder):
                 cv_entities_dictionary = read_cv_entities_from_txt(cv_folder + '/' + cv_file, custom_nlp)
             else:
                 cv_entities_dictionary = {}
-        cv_score = get_cv_ranking_score(cv_entities_dictionary, job_description_entities)
+        cv_score = get_cv_ranking_score(cv_entities_dictionary, job_description_entities, graph, vertex_dataframe)
         score_list.append((cv_file, cv_score))
     return sorted(score_list, key=lambda cv: cv[1], reverse=True)
 
@@ -222,6 +220,3 @@ Junior"""
 
 if __name__ == "__main__":
     main("Data/train.csv")
-    graph = generate_knowledge_graph_components_from_files('Data/edges.csv')
-    listElem, shortest_path = get_shortest_path_between_concepts('django', 'object oriented', graph)
-    print(listElem)
