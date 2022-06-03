@@ -41,8 +41,9 @@ def get_shortest_path_between_concepts(from_concept, to_concept, graph, vertex_d
     for path in results:
         name_label_list = []
         for node_id in path:
-            name = vertex_dataframe.at[node_id, 'Name']#.astype(str)
-            label = vertex_dataframe.at[node_id, 'Label']#.astype(str)
+            id_condition = (vertex_dataframe['Id'] == node_id)
+            name = vertex_dataframe[id_condition]['Name'].values[0]
+            label = vertex_dataframe[id_condition]['Label'].values[0]
             name_label_list.append((name, label))
         shortest_paths_list.append(name_label_list)
     return shortest_paths_list
