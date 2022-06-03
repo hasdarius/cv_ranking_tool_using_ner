@@ -13,7 +13,8 @@ from business_rules.variables import BaseVariables, select_rule_variable, string
 
 
 class RequiredLabelInfo:
-    def __init__(self, label_name, required_values, max_required_seniority, max_absolute_seniority, max_required_values=9999):
+    def __init__(self, label_name, required_values, max_required_seniority, max_absolute_seniority,
+                 max_required_values=9999):
         self.name = label_name
         self.values = required_values
         self.max_absolute_seniority = max_absolute_seniority
@@ -31,7 +32,8 @@ class RequiredLabelInfoVariables(BaseVariables):
     def get_max_required_value_for_label(self):
         label_info = self.label_info
         label_info.max_required_values = max(2 * len(label_info.values),
-                                             CONCEPTS_SCORES[label_info.max_absolute_seniority]['Max ' + label_info.name])
+                                             CONCEPTS_SCORES[label_info.max_absolute_seniority][
+                                                 'Max ' + label_info.name])
         return label_info.max_required_values
 
 
@@ -42,7 +44,8 @@ class RequiredLabelInfoActions(BaseActions):
 
     @rule_action(params={"given_values_length": FIELD_NUMERIC})
     def penalize(self, given_values_length):
-        self.label_info.actual_loss_values = (self.label_info.max_required_values - given_values_length) * self.label_info.loss_value
+        self.label_info.actual_loss_values = (
+                                                     self.label_info.max_required_values - given_values_length) * self.label_info.loss_value
 
 
 def apply_business_rules(max_absolute_seniority, max_required_seniority, label_name, required_label_values,
@@ -60,7 +63,8 @@ def apply_business_rules(max_absolute_seniority, max_required_seniority, label_n
               "params": {"given_values_length": given_label_values_length},
               }
          ]}]
-    required_label_info = RequiredLabelInfo(label_name, required_label_values, max_required_seniority, max_absolute_seniority)
+    required_label_info = RequiredLabelInfo(label_name, required_label_values, max_required_seniority,
+                                            max_absolute_seniority)
     print(run_all(rule_list=rules,
                   defined_variables=RequiredLabelInfoVariables(required_label_info),
                   defined_actions=RequiredLabelInfoActions(required_label_info),
@@ -93,15 +97,9 @@ def get_cv_ranking_score(cv_entities_dictionary, job_description_entities_dictio
             required_label_values_list = job_description_entities_dictionary[label]
             given_label_values_list = cv_entities_dictionary[label]
 
-            score += apply_business_rules(max_absolute_seniority, max_required_seniority, label, required_label_values_list,
-                                         given_label_values_list)
-
-            # max_values = max(2 * len(required_label_values_list),
-            #                  CONCEPTS_SCORES[max_absolute_seniority]['Max ' + label])
-            # overflow = len(given_label_values_list) - max_values
-            # if overflow > 0:
-            #     print("Pula")
-            #     score -= overflow * CONCEPTS_SCORES[max_required_seniority]['Full ' + label]
+            score += apply_business_rules(max_absolute_seniority, max_required_seniority, label,
+                                          required_label_values_list,
+                                          given_label_values_list)
             for given_label_value in given_label_values_list:
                 if given_label_value in required_label_values_list:
                     score += CONCEPTS_SCORES[max_required_seniority]['Full ' + label]
@@ -147,20 +145,20 @@ def rank_cvs(job_description_text, cv_folder):
     score_list = []
     for cv_file in cv_files:
         _, file_extension = os.path.splitext(cv_file)
-        if file_extension == ".pdf":
-            cv_entities_dictionary = read_cv_entities_from_pdf(cv_folder + '/' + cv_file, custom_nlp)
-        else:
-            if file_extension == ".txt":
-                cv_entities_dictionary = read_cv_entities_from_txt(cv_folder + '/' + cv_file, custom_nlp)
-            else:
-                cv_entities_dictionary = {}
-        # match file_extension:
-        #     case ".pdf":
-        #         cv_entities_dictionary = read_cv_entities_from_pdf(cv_folder + '/' + cv_file, custom_nlp)
-        #     case ".txt":
+        # if file_extension == ".pdf":
+        #     cv_entities_dictionary = read_cv_entities_from_pdf(cv_folder + '/' + cv_file, custom_nlp)
+        # else:
+        #     if file_extension == ".txt":
         #         cv_entities_dictionary = read_cv_entities_from_txt(cv_folder + '/' + cv_file, custom_nlp)
-        #     case _:
-        #         cv_entities_dictionary = {}  # here would be better to throw exception, decide with David
+        #     else:
+        #         cv_entities_dictionary = {}
+        match file_extension:
+            case ".pdf":
+                cv_entities_dictionary = read_cv_entities_from_pdf(cv_folder + '/' + cv_file, custom_nlp)
+            case ".txt":
+                cv_entities_dictionary = read_cv_entities_from_txt(cv_folder + '/' + cv_file, custom_nlp)
+            case _:
+                cv_entities_dictionary = {}  # here would be better to throw exception, decide with David
         cv_score = get_cv_ranking_score(cv_entities_dictionary, job_description_entities)
         score_list.append((cv_file, cv_score))
     return sorted(score_list, key=lambda cv: cv[1], reverse=True)
@@ -217,6 +215,3 @@ Junior"""
 
 if __name__ == "__main__":
     print(rank_cvs(JOB_DESCRIPTION_EXAMPLE, 'D:/faculta/licenta/cv-directory'))
-# score = 5
-# print(apply_business_rules(score, "junior", "Programming Language", {'Java'},
-#                         {'Java', 'C', 'fasfa', 'asfasfa', 'fasfasfa'}))
