@@ -7,6 +7,71 @@ import train_custom_ner
 from os.path import isfile, join
 from os import path, listdir
 from constants import CONCEPTS_SCORES, LABELS_LIST
+from business_rules import run_all
+from business_rules.actions import BaseActions, rule_action
+from business_rules.fields import FIELD_NUMERIC
+from business_rules.variables import BaseVariables, select_rule_variable, string_rule_variable, numeric_rule_variable
+
+
+class RequiredLabelInfo:
+    def __init__(self, label_name, required_values, max_required_seniority, max_absolute_seniority,
+                 max_required_values=9999):
+        self.name = label_name
+        self.values = required_values
+        self.max_absolute_seniority = max_absolute_seniority
+        self.loss_value = CONCEPTS_SCORES[max_required_seniority]['Full ' + label_name]
+        self.max_required_values = max_required_values
+        self.actual_loss_values = 0
+
+
+class RequiredLabelInfoVariables(BaseVariables):
+
+    def __init__(self, label_info):
+        self.label_info = label_info
+
+    @numeric_rule_variable(label='Maximum number of words with a specific label before being penalized')
+    def get_max_required_value_for_label(self):
+        label_info = self.label_info
+        label_info.max_required_values = max(2 * len(label_info.values),
+                                             CONCEPTS_SCORES[label_info.max_absolute_seniority][
+                                                 'Max ' + label_info.name])
+        return label_info.max_required_values
+
+
+class RequiredLabelInfoActions(BaseActions):
+
+    def __init__(self, label_info):
+        self.label_info = label_info
+
+    @rule_action(params={"given_values_length": FIELD_NUMERIC})
+    def penalize(self, given_values_length):
+        self.label_info.actual_loss_values = (
+                                                     self.label_info.max_required_values - given_values_length) * self.label_info.loss_value
+
+
+def apply_business_rules(max_absolute_seniority, max_required_seniority, label_name, required_label_values,
+                         given_label_values):
+    given_label_values_length = len(given_label_values)
+    rules = [
+        # expiration_days < 5 AND current_inventory > 20
+        {"conditions":
+             {"name": "get_max_required_value_for_label",
+              "operator": "less_than",
+              "value": given_label_values_length,
+              },
+         "actions": [
+             {"name": "penalize",
+              "params": {"given_values_length": given_label_values_length},
+              }
+         ]}]
+    required_label_info = RequiredLabelInfo(label_name, required_label_values, max_required_seniority,
+                                            max_absolute_seniority)
+    print(run_all(rule_list=rules,
+                  defined_variables=RequiredLabelInfoVariables(required_label_info),
+                  defined_actions=RequiredLabelInfoActions(required_label_info),
+                  stop_on_first_trigger=True
+                  ))
+    return required_label_info.actual_loss_values
 
 
 def get_max_seniority(list_of_seniorities):
@@ -17,7 +82,7 @@ def get_max_seniority(list_of_seniorities):
             final_seniority_priority_list.remove(priority)
     if final_seniority_priority_list:
         return final_seniority_priority_list[0]
-    return seniority_priority_list[1]
+    return seniority_priority_list[1] #None
 
 
 def get_cv_ranking_score(cv_entities_dictionary, job_description_entities_dictionary):
@@ -32,11 +97,10 @@ def get_cv_ranking_score(cv_entities_dictionary, job_description_entities_dictio
         if label != 'Seniority':
             required_label_values_list = job_description_entities_dictionary[label]
             given_label_values_list = cv_entities_dictionary[label]
-            max_values = max(2 * len(required_label_values_list),
-                             CONCEPTS_SCORES[max_absolute_seniority]['Max ' + label])
-            overflow = len(given_label_values_list) - max_values
-            if overflow > 0:
-                score -= overflow * CONCEPTS_SCORES[max_required_seniority]['Full ' + label]
+
+            score += apply_business_rules(max_absolute_seniority, max_required_seniority, label,
+                                          required_label_values_list,
+                                          given_label_values_list)
             for given_label_value in given_label_values_list:
                 if given_label_value in required_label_values_list:
                     score += CONCEPTS_SCORES[max_required_seniority]['Full ' + label]
@@ -55,8 +119,6 @@ def generate_dictionary_of_concepts(doc):
             final_dictionary[label] = set()
     print('This is the dictionary of concepts:')
     print(final_dictionary)
-    print('-----------------------------------------------------')
-
     return final_dictionary
 
 
@@ -82,7 +144,6 @@ def rank_cvs(job_description_text, cv_folder):
     custom_nlp = spacy.load(train_custom_ner.CUSTOM_SPACY_MODEL)
     job_description_text = re.sub(r"[^a-zA-Z0-9]", " ", job_description_text)
     nlp_doc = custom_nlp(job_description_text)
-    train_custom_ner.validate_model(custom_nlp,'Data/validate.csv')
     job_description_entities = generate_dictionary_of_concepts(nlp_doc)  # read job description entities in dictionary
     cv_files = [file for file in listdir(cv_folder) if isfile(join(cv_folder, file))]
     score_list = []
@@ -127,7 +188,7 @@ Must have
 - Java 8
 - Dependency Injection/ Inversion of Control (Spring or JBoss)
 - Unit and Mock Testing (JUnit, Mockito, Arquillian, Cucumber)
-- Java Message Service (JMS)
+- Message Service (JMS)
 - Web Services (JAX-RS, JAX-WS)
 - Strong understanding of Design and Architectural Patterns
 - Apache Maven
@@ -140,7 +201,7 @@ Nice to have
 
 - Apache Camel
 - Enterprise Integration Patterns
-- Java Architecture for XML Binding (JAXB)
+- Architecture for XML Binding (JAXB)
 - XML Transformations (XSLT, XSD, DTD)
 - FitNesse
 - Drools
@@ -157,7 +218,7 @@ OCA certificate
 
 Seniority
 
-junior,senior,tech-lead,junior,junior,junior David Bogdan recursion"""
+Junior"""
 
 if __name__ == "__main__":
     main("Data/train.csv")
