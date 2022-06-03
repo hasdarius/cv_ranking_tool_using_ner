@@ -73,5 +73,5 @@ CONCEPTS_SCORES = {
     }
 }
 
-LABELS_LIST = {"Programming Language", "Certification", "Seniority", "Tool/Framework", "IT Specialization",
-               "Programming Concept"}
+LABELS_LIST = ["Programming Language", "Certification", "Seniority", "Tool/Framework", "IT Specialization",
+               "Programming Concept"]

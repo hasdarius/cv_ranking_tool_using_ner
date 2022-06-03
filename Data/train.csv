@@ -149,6 +149,23 @@ as,O
 a,O
 DevOps Engineer,IT Specialization
 .,O
+DevOps,IT Specialization
+engineer,IT Specialization
+who,O
+has,O
+used,O
+Kubernetes,Tool/Framework
+",",O
+Jenkins,Tool/Framework
+in,O
+deploying,Programming Concept
+and,O
+scaling,O
+a,O
+lot,O
+of,O
+applications,O
+.,O
 I,O
 worked,O
 with,O
@@ -462,26 +479,6 @@ Jasmine,Tool/Framework
 and,O
 Udemy,O
 .,O
-I,O
-am,O
-a,O
-data scientist,IT Specialization
-with,O
-vast,O
-experience,O
-in,O
-SQL,Programming Language
-and,O
-noSQL,Programming Concept
-databases,Programming Concept
-such,O
-as,O
-Cassandra,Tool/Framework
-",",O
-Posgres,Tool/Framework
-and,O
-MongoDB,Tool/Framework
-.,O
 Strong,O
 OOP,Programming Concept
 programming,Programming Concept
@@ -511,23 +508,6 @@ Bootstrap,Tool/Framework
 CSS,Programming Language
 preprocessor,O
 Less,Tool/Framework
-.,O
-DevOps,IT Specialization
-engineer,IT Specialization
-who,O
-has,O
-used,O
-Kubernetes,Tool/Framework
-",",O
-Jenkins,Tool/Framework
-in,O
-delopying,O
-and,O
-scaling,O
-a,O
-lot,O
-of,O
-applications,O
 .,O
 I,O
 am,O
@@ -998,6 +978,13 @@ multiple,O
 programming,Programming Concept
 languages,O
 .,O
+I,O
+only,O
+know,O
+C++,Tool/Framework
+and,O
+imperative programming,O
+.,O
 I'm,O
 giving,O
 a,O
@@ -1187,6 +1174,26 @@ system,O
 using,O
 Kotlin,Programming Language
 .,O
+I,O
+am,O
+a,O
+data scientist,IT Specialization
+with,O
+vast,O
+experience,O
+in,O
+SQL,Programming Language
+and,O
+noSQL,Programming Concept
+databases,Programming Concept
+such,O
+as,O
+Cassandra,Tool/Framework
+",",O
+Postgres,Tool/Framework
+and,O
+MongoDB,Tool/Framework
+.,O
 Boosted,O
 customer,O
 satisfaction,O
@@ -1202,16 +1209,6 @@ web,Programming Concept
 service,O
 from,O
 PHP,Programming Language
-.,O
-Looking,O
-for,O
-new,O
-Mid,Seniority
-Software Engineers,IT Specialization
-with,O
-strong,O
-Object Oriented Programming,Programming Concept
-backgroud,O
 .,O
 GoDaddy,O
 is,O
@@ -2139,6 +2136,16 @@ having,O
 a,O
 Google Cloud Certification,Certification
 .,O
+Looking,O
+for,O
+new,O
+Mid,Seniority
+Software Engineers,IT Specialization
+with,O
+strong,O
+Object Oriented Programming,Programming Concept
+background,O
+.,O
 Proficient,O
 in,O
 C,Programming Language
@@ -2318,13 +2325,6 @@ Angular,Tool/Framework
 and,O
 VueJs,Tool/Framework
 .,O
-I,O
-only,O
-know,O
-C++,Tool/Framework
-and,O
-imperative programmming,Programming Concept
-.,O
 Used,O
 problem solving,O
 aptitude,Tool/Framework
@@ -2394,7 +2394,7 @@ University,O
 of,O
 Ohio,O
 ",",O
-Bachelor,O
+Bachelor,Certification
 of,O
 Science,O
 in,O
@@ -2423,7 +2423,7 @@ Kotlin,Programming Language
 .,O
 Obtained,O
 my,O
-Bachelor,O
+Bachelor,Certification
 degree,Certification
 in,O
 2022,O

@@ -66,11 +66,11 @@ def apply_business_rules(max_absolute_seniority, max_required_seniority, label_n
          ]}]
     required_label_info = RequiredLabelInfo(label_name, required_label_values, max_required_seniority,
                                             max_absolute_seniority)
-    print(run_all(rule_list=rules,
+    run_all(rule_list=rules,
                   defined_variables=RequiredLabelInfoVariables(required_label_info),
                   defined_actions=RequiredLabelInfoActions(required_label_info),
                   stop_on_first_trigger=True
-                  ))
+                  )
     return required_label_info.actual_loss_values
 
 
@@ -119,6 +119,8 @@ def generate_dictionary_of_concepts(doc):
             final_dictionary[label] = set()
     print('This is the dictionary of concepts:')
     print(final_dictionary)
+    print('-----------------------------------------------------')
+
     return final_dictionary
 
 
@@ -175,7 +177,6 @@ def main(input_file):
         train_custom_ner.fine_tune_and_save_custom_model(training_data,
                                                          new_model_name='technology_it_model',
                                                          output_dir=train_custom_ner.CUSTOM_SPACY_MODEL)
-        #train_custom_ner.test_model("Data/test.csv")
     print(rank_cvs(JOB_DESCRIPTION_EXAMPLE, 'cv-directory'))
 
 
