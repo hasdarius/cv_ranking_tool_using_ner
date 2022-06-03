@@ -11,6 +11,7 @@ from business_rules import run_all
 from business_rules.actions import BaseActions, rule_action
 from business_rules.fields import FIELD_NUMERIC
 from business_rules.variables import BaseVariables, select_rule_variable, string_rule_variable, numeric_rule_variable
+from knowledge_graph import generate_knowledge_graph_components_from_files
 
 
 class RequiredLabelInfo:
@@ -222,4 +223,5 @@ Seniority
 Junior"""
 
 if __name__ == "__main__":
-    main("Data/train.csv")
+    #main("Data/train.csv")
+    generate_knowledge_graph_components_from_files('Data/vertices.csv', 'Data/edges.csv')
