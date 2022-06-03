@@ -1,17 +1,18 @@
-import os
-
-import spacy
-from spacy.training.example import Example
-from spacy.util import minibatch, compounding
-import random
 import csv
 import json
 import logging
+import os
+import random
 from pathlib import Path
-from constants import VALIDATE_TEXT, TEST_TEXT
+from pprint import pprint
 
-LABEL = ['Programming Language', 'Certification', 'Seniority', 'Tool/Framework', 'IT Specialization',
-         'Programming Concept']
+import spacy
+from spacy.scorer import Scorer
+from spacy.training.example import Example
+from spacy.util import minibatch, compounding
+
+from constants import LABELS_LIST
+
 CUSTOM_SPACY_MODEL = 'Model'
 
 
@@ -92,7 +93,6 @@ def csv_to_json_with_labels(input_path, unknown_label):
 def json_to_spacy_format(input_file):
     try:
         training_data = []
-        lines = []
         output_file, _ = os.path.splitext(input_file)
         with open(input_file, 'r') as f:
             lines = f.readlines()
@@ -125,9 +125,8 @@ def train_model(n_iter, train_data, model, learn_rate, nlp):
     else:
         optimizer = nlp.create_optimizer()
 
-    optimizer.learn_rate = learn_rate
     other_pipes = [pipe for pipe in nlp.pipe_names if pipe != 'ner']
-    print(n_iter)
+    print('Nr iters: ' + str(n_iter) + ' with learning_rate:' + str(learn_rate))
     with nlp.disable_pipes(*other_pipes):  # only train NER
         for itn in range(n_iter):
             random.shuffle(train_data)
@@ -135,12 +134,11 @@ def train_model(n_iter, train_data, model, learn_rate, nlp):
             batches = minibatch(train_data, size=compounding(4., 32., 1.001))
             for batch in batches:
                 for text, annotations in batch:
-                    # create Example
                     doc = nlp.make_doc(text)
                     example = Example.from_dict(doc, annotations)
                     # Update the model
-                    nlp.update([example], sgd=optimizer, drop=0.35, losses=losses)
-            # print('Losses', losses)
+                    nlp.update([example], sgd=optimizer, drop=0.2, losses=losses)
+            print('Losses', losses)
 
 
 def save_model(output_dir, new_model_name, nlp):
@@ -154,8 +152,8 @@ def save_model(output_dir, new_model_name, nlp):
 
 
 def fine_tune_and_save_custom_model(train_data, model=None, new_model_name=None, output_dir=None):
-    learn_rates = [0.1, 0.05, 0.01, 0.005, 0.001]
-    n_iters = [10, 20, 50, 100, 150, 200, 250, 300]
+    learn_rates = [0.001, 0.005, 0.0001]
+    n_iters = [20, 30, 40, 50]
     """Setting up the pipeline and entity recognizer, and training the new entity."""
     if model is not None:
         nlp = spacy.load(model)  # load existing spacy model
@@ -168,11 +166,11 @@ def fine_tune_and_save_custom_model(train_data, model=None, new_model_name=None,
         nlp.add_pipe('ner')
     ner = nlp.get_pipe('ner')
 
-    for i in LABEL:
+    for i in LABELS_LIST:
         ner.add_label(i)  # Add new entity labels to entity recognizer
 
     best_nlp = nlp
-    best_accuracy = 0
+    f1_score = 0
     best_learn_rate = learn_rates[0]
     best_iter = n_iters[0]
 
@@ -180,37 +178,29 @@ def fine_tune_and_save_custom_model(train_data, model=None, new_model_name=None,
         for learn_rate in learn_rates:
             train_nlp = nlp
             train_model(n_iter, train_data, model=model, learn_rate=learn_rate, nlp=train_nlp)
-            accuracy = validate_model(train_nlp, 'Data/validate.csv')
-            if accuracy >= best_accuracy:
+            f1_score = evaluate_model(train_nlp, 'Data/validate.csv')
+            if f1_score >= f1_score:
                 best_iter = n_iter
                 best_learn_rate = learn_rate
-                best_accuracy = accuracy
+                f1_score = f1_score
                 best_nlp = train_nlp
     save_model(output_dir, new_model_name, nlp=best_nlp)
-    print('Iterations: ' + str(best_iter) + ' Learn rate:' + str(best_learn_rate) + ' Accuracy:' + str(best_accuracy))
+    print('Iterations: ' + str(best_iter) + ' Learn rate:' + str(best_learn_rate) + ' F1 Score:' + str(f1_score))
 
 
-def get_model_accuracy(input_file, doc2):
-    csv_file = open(input_file, 'r')
-    csv_file_reader = csv.reader(csv_file)
-    rows = list(filter(lambda row: row[1] != 'O', list(csv_file_reader)))
-    print(rows)
-    nr_of_entities = len(rows)
-    nr_of_matches = 0
-    for ent in doc2.ents:
-        if [ent.text, ent.label_] in rows:
-            print(ent.label_, ent.text)
-            nr_of_matches += 1
-    accuracy = nr_of_matches / nr_of_entities
-    print(accuracy)
-    return accuracy
-
-
-def validate_model(nlp, input_file):
-    doc2 = nlp(VALIDATE_TEXT)
-    return get_model_accuracy(input_file, doc2)
-
-
-def test_model(input_file):
-    nlp2 = spacy.load(CUSTOM_SPACY_MODEL)
-    validate_model(nlp2, input_file)
+def evaluate_model(nlp, input_file):
+    json_file_name = csv_to_json_with_labels(input_file, '-')
+    validate_data = json_to_spacy_format(json_file_name)
+    examples = []
+    scorer = Scorer()
+    for text, annotations in validate_data:
+        doc = nlp.make_doc(text)
+        example = Example.from_dict(doc, annotations)
+        example.predicted = nlp(str(example.predicted))
+        examples.append(example)
+    scores = scorer.score(examples)
+    print('Evaluation of model:')
+    pprint(scores)
+    print('---------------------')
+    f1_score = scores['ents_f']
+    return f1_score

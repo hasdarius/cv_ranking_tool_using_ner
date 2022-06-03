@@ -1,6 +1,7 @@
 import os
 import pdfplumber
 import spacy
+import re
 
 import train_custom_ner
 from os.path import isfile, join
@@ -65,11 +66,11 @@ def apply_business_rules(max_absolute_seniority, max_required_seniority, label_n
          ]}]
     required_label_info = RequiredLabelInfo(label_name, required_label_values, max_required_seniority,
                                             max_absolute_seniority)
-    print(run_all(rule_list=rules,
+    run_all(rule_list=rules,
                   defined_variables=RequiredLabelInfoVariables(required_label_info),
                   defined_actions=RequiredLabelInfoActions(required_label_info),
                   stop_on_first_trigger=True
-                  ))
+                  )
     return required_label_info.actual_loss_values
 
 
@@ -81,7 +82,7 @@ def get_max_seniority(list_of_seniorities):
             final_seniority_priority_list.remove(priority)
     if final_seniority_priority_list:
         return final_seniority_priority_list[0]
-    return None
+    return seniority_priority_list[1] #None
 
 
 def get_cv_ranking_score(cv_entities_dictionary, job_description_entities_dictionary):
@@ -111,13 +112,15 @@ def get_cv_ranking_score(cv_entities_dictionary, job_description_entities_dictio
 def generate_dictionary_of_concepts(doc):
     final_dictionary = {}
     for ent in doc.ents:
-        final_dictionary.setdefault(ent.label_, []).append(ent.text)
-
+        final_dictionary.setdefault(ent.label_, set()).add(ent.text)
     detected_keys = final_dictionary.keys()
     for label in LABELS_LIST:
         if label not in detected_keys:
-            final_dictionary[label] = []
+            final_dictionary[label] = set()
+    print('This is the dictionary of concepts:')
     print(final_dictionary)
+    print('-----------------------------------------------------')
+
     return final_dictionary
 
 
@@ -126,6 +129,7 @@ def read_cv_entities_from_pdf(document_path, nlp):
     text = ""
     for page in pdf.pages:
         text = text + "\n" + page.extract_text()
+    text = re.sub(r"[^a-zA-Z0-9]", " ", text)
     doc = nlp(text)
     return generate_dictionary_of_concepts(doc)
 
@@ -133,12 +137,14 @@ def read_cv_entities_from_pdf(document_path, nlp):
 def read_cv_entities_from_txt(document_path, nlp):
     text_file = open(document_path, "r")
     text = text_file.read()
+    text = re.sub(r"[^a-zA-Z0-9]", " ", text)
     doc = nlp(text)
     return generate_dictionary_of_concepts(doc)
 
 
 def rank_cvs(job_description_text, cv_folder):
     custom_nlp = spacy.load(train_custom_ner.CUSTOM_SPACY_MODEL)
+    job_description_text = re.sub(r"[^a-zA-Z0-9]", " ", job_description_text)
     nlp_doc = custom_nlp(job_description_text)
     job_description_entities = generate_dictionary_of_concepts(nlp_doc)  # read job description entities in dictionary
     cv_files = [file for file in listdir(cv_folder) if isfile(join(cv_folder, file))]
@@ -171,7 +177,7 @@ def main(input_file):
         train_custom_ner.fine_tune_and_save_custom_model(training_data,
                                                          new_model_name='technology_it_model',
                                                          output_dir=train_custom_ner.CUSTOM_SPACY_MODEL)
-    train_custom_ner.test_model("Data/test.csv")
+    print(rank_cvs(JOB_DESCRIPTION_EXAMPLE, 'cv-directory'))
 
 
 JOB_DESCRIPTION_EXAMPLE = """Skills
@@ -179,7 +185,7 @@ JOB_DESCRIPTION_EXAMPLE = """Skills
 Must have
 
 - Mandatory Computer Science Faculty / Cybernetics / Mathematics / Informatics graduated
-- Min 1 Year working hands on experience
+- Min 1 Year working hands on experience in Java Python Scala Ruby
 - Java 8
 - Dependency Injection/ Inversion of Control (Spring or JBoss)
 - Unit and Mock Testing (JUnit, Mockito, Arquillian, Cucumber)
@@ -209,9 +215,11 @@ Romanian: C2 Proficient
 
 English: C1 Advanced
 
+OCA certificate
+
 Seniority
 
 Junior"""
 
 if __name__ == "__main__":
-    print(rank_cvs(JOB_DESCRIPTION_EXAMPLE, 'D:/faculta/licenta/cv-directory'))
+    main("Data/train.csv")
