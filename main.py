@@ -1,12 +1,15 @@
 import os
-import re
-from os import path, listdir
-from os.path import isfile, join
+from pprint import pprint
 
 import pdfplumber
 import spacy
+import re
+
+import train_custom_ner
+from os.path import isfile, join
+from os import path, listdir
 from constants import CONCEPTS_SCORES, LABELS_LIST, REASONING_PERFECT_MATCH, REASONING_PERFECT_MATCH_TYPE, \
-    REASONING_PENALIZATION
+    REASONING_PENALIZATION, REASONING_GRAPH_CONNECTION_P1, REASONING_GRAPH_CONNECTION_P2
 from business_rules import run_all
 from business_rules.actions import BaseActions, rule_action
 from business_rules.fields import FIELD_NUMERIC
@@ -95,6 +98,7 @@ def get_cv_ranking_score(cv_entities_dictionary, job_description_entities_dictio
     if max_given_seniority is not None:
         score = CONCEPTS_SCORES[max_given_seniority]['Seniority']
     max_absolute_seniority = get_max_seniority([max_required_seniority, max_given_seniority])
+    not_matched_labeled_words = []
     for label in job_description_entities_dictionary:
         if label != 'Seniority':
             required_label_values_list = job_description_entities_dictionary[label]
@@ -108,7 +112,18 @@ def get_cv_ranking_score(cv_entities_dictionary, job_description_entities_dictio
                     score += CONCEPTS_SCORES[max_required_seniority]['Full ' + label]
                     feedback_list.append(REASONING_PERFECT_MATCH + "<<" + given_label_value + ">>" + REASONING_PERFECT_MATCH_TYPE + label + ".")
                 else:
-                    score += CONCEPTS_SCORES[max_required_seniority]['Partial ' + label]
+                    # not_matched_labeled_words.append((given_label_value, label))
+                    for required_label_value in required_label_values_list:
+                        shortest_paths_list = get_shortest_path_between_concepts(given_label_value.lower(), required_label_value.lower(), graph, vertex_dataframe)
+                        if shortest_paths_list:
+                            score += CONCEPTS_SCORES[max_required_seniority]['Partial ' + label]
+                            first_path = shortest_paths_list[0]
+                            reasoning = REASONING_GRAPH_CONNECTION_P1 + "<<" + required_label_value + ">>, <<" + given_label_value + ">>" + REASONING_GRAPH_CONNECTION_P2
+                            for connection_value_label in first_path:
+                                reasoning = reasoning + "<<" + connection_value_label[0] + ">>, with type: <<" + connection_value_label[1] + ">>, "
+                            feedback_list.append(reasoning)
+                            break
+
     return score
 
 
@@ -155,6 +170,7 @@ def rank_cvs(job_description_text, cv_folder):
     score_list = []
     for cv_file in cv_files:
         _, file_extension = os.path.splitext(cv_file)
+        feedback_list = []
         if file_extension == ".pdf":
             cv_entities_dictionary = read_cv_entities_from_pdf(cv_folder + '/' + cv_file, custom_nlp)
         else:
@@ -162,8 +178,8 @@ def rank_cvs(job_description_text, cv_folder):
                 cv_entities_dictionary = read_cv_entities_from_txt(cv_folder + '/' + cv_file, custom_nlp)
             else:
                 cv_entities_dictionary = {}
-        cv_score = get_cv_ranking_score(cv_entities_dictionary, job_description_entities, graph, vertex_dataframe)
-        score_list.append((cv_file, cv_score))
+        cv_score = get_cv_ranking_score(cv_entities_dictionary, job_description_entities, feedback_list, graph, vertex_dataframe)
+        score_list.append((cv_file, cv_score, feedback_list))
     return sorted(score_list, key=lambda cv: cv[1], reverse=True)
 
 
