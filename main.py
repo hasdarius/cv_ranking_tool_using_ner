@@ -219,5 +219,5 @@ Junior"""
 if __name__ == "__main__":
     main("Data/train.csv")
     graph = generate_knowledge_graph_components_from_files('Data/edges.csv')
-    listElem = get_shortest_path_between_concepts('django', 'functional', graph)
+    listElem, shortest_path = get_shortest_path_between_concepts('django', 'object oriented', graph)
     print(listElem)
