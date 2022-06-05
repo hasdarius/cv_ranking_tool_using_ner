@@ -3,6 +3,7 @@ from pprint import pprint
 
 import train_custom_ner
 from cv_scorer import rank_cvs
+from knowledge_graph import generate_knowledge_graph_components_from_files, get_shortest_path_between_concepts
 
 
 def main(input_file):
@@ -20,8 +21,7 @@ JOB_DESCRIPTION_EXAMPLE = """Skills
 Must have
 
 - Mandatory Computer Science Faculty / Cybernetics / Mathematics / Informatics graduated
-- Min 1 Year working hands on experience in Java Python Scala Ruby
-- Java 8
+- Min 1 Year working hands on experience in Object oriented, Scala, Ruby
 - Dependency Injection/ Inversion of Control (Spring or JBoss)
 - Unit and Mock Testing (JUnit, Mockito, Arquillian, Cucumber)
 - Message Service (JMS)

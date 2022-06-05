@@ -2,6 +2,7 @@ import os
 import re
 from os import listdir
 from os.path import isfile, join
+from pprint import pprint
 
 import pdfplumber
 import spacy
@@ -12,7 +13,8 @@ from business_rules.variables import BaseVariables, numeric_rule_variable
 
 import train_custom_ner
 from constants import CONCEPTS_SCORES, REASONING_PERFECT_MATCH, REASONING_PERFECT_MATCH_TYPE, \
-    REASONING_GRAPH_CONNECTION_P1, REASONING_GRAPH_CONNECTION_P2, LABELS_LIST, REASONING_PENALIZATION
+    REASONING_GRAPH_CONNECTION_P1, REASONING_GRAPH_CONNECTION_P2, LABELS_LIST, REASONING_PENALIZATION, \
+    REASONING_GRAPH_CONNECTION_P3
 from knowledge_graph import get_shortest_path_between_concepts, generate_knowledge_graph_components_from_files
 
 
@@ -22,7 +24,7 @@ class RequiredLabelInfo:
         self.name = label_name
         self.values = required_values
         self.max_absolute_seniority = max_absolute_seniority
-        self.loss_value = CONCEPTS_SCORES[max_required_seniority]['Full ' + label_name]
+        self.loss_value = 0.25
         self.max_required_values = max_required_values
         self.actual_loss_values = 0
 
@@ -89,8 +91,7 @@ def get_max_seniority(list_of_seniorities):
     return seniority_priority_list[1]  # None
 
 
-def get_cv_ranking_score(cv_entities_dictionary, job_description_entities_dictionary, feedback_list, graph,
-                         vertex_dataframe):
+def get_cv_ranking_score(cv_entities_dictionary, job_description_entities_dictionary, feedback_list, graph):
     max_required_seniority = get_max_seniority(
         list(map(lambda x: x.lower(), job_description_entities_dictionary['Seniority'])))
     max_given_seniority = get_max_seniority(list(map(lambda x: x.lower(), cv_entities_dictionary['Seniority'])))
@@ -98,7 +99,9 @@ def get_cv_ranking_score(cv_entities_dictionary, job_description_entities_dictio
     if max_given_seniority is not None:
         score = CONCEPTS_SCORES[max_given_seniority]['Seniority']
     max_absolute_seniority = get_max_seniority([max_required_seniority, max_given_seniority])
-    not_matched_labeled_words = []
+    required_relevant_keys = ['Programming Language', 'Programming Concept', 'Tool/Framework']
+    knowledge_graph_required_labels = [x for key in required_relevant_keys for x in
+                                       job_description_entities_dictionary.get(key)]
     for label in job_description_entities_dictionary:
         if label != 'Seniority':
             required_label_values_list = job_description_entities_dictionary[label]
@@ -113,27 +116,34 @@ def get_cv_ranking_score(cv_entities_dictionary, job_description_entities_dictio
                     feedback_list.append(
                         REASONING_PERFECT_MATCH + "<<" + given_label_value + ">>" + REASONING_PERFECT_MATCH_TYPE + label + ".")
                 else:
-                    for required_label_value in required_label_values_list:
-                        shortest_paths_list = get_shortest_path_between_concepts(given_label_value.lower(),
-                                                                                 required_label_value.lower(), graph,
-                                                                                 vertex_dataframe)
-                        if shortest_paths_list:
-                            score += CONCEPTS_SCORES[max_required_seniority]['Partial ' + label]
-                            first_path = shortest_paths_list[0]
-                            reasoning = REASONING_GRAPH_CONNECTION_P1 + "<<" + required_label_value + ">>, <<" + given_label_value + ">>" + REASONING_GRAPH_CONNECTION_P2
-                            for connection_value_label in first_path:
-                                reasoning = reasoning + "<<" + connection_value_label[0] + ">>, with type: <<" + \
-                                            connection_value_label[1] + ">>, "
-                            feedback_list.append(reasoning)
-                            break
+                    score += score_partial_matches(feedback_list, given_label_value, graph,
+                                                   knowledge_graph_required_labels, label, max_required_seniority)
 
     return score
+
+
+def score_partial_matches(feedback_list, given_label_value, graph, knowledge_graph_required_labels, label,
+                          max_required_seniority):
+    for required_label_value in knowledge_graph_required_labels:
+        shortest_path, nr_of_shortest_paths = get_shortest_path_between_concepts(
+            given_label_value.lower(),
+            required_label_value.lower(), graph)
+        if shortest_path:
+            reasoning = REASONING_GRAPH_CONNECTION_P1 + "<<" + required_label_value + ">>, <<" + given_label_value + ">>" + REASONING_GRAPH_CONNECTION_P2 + str(
+                nr_of_shortest_paths) + REASONING_GRAPH_CONNECTION_P3
+            for connection_tuple in shortest_path:
+                reasoning = reasoning + "<<" + connection_tuple[0][0] + ">> which <<" + connection_tuple[1][
+                    'relationship'] + ">> with <<" + connection_tuple[0][1] + ">>, "
+
+            feedback_list.append(reasoning)
+            return CONCEPTS_SCORES[max_required_seniority]['Partial ' + label]
+    return 0
 
 
 def generate_dictionary_of_concepts(doc):
     final_dictionary = {}
     for ent in doc.ents:
-        final_dictionary.setdefault(ent.label_, set()).add(ent.text.lower())
+        final_dictionary.setdefault(ent.label_, set()).add(ent.text.lower().strip())
     detected_keys = final_dictionary.keys()
     for label in LABELS_LIST:
         if label not in detected_keys:
@@ -164,7 +174,7 @@ def read_cv_entities_from_txt(document_path, nlp):
 
 
 def rank_cvs(job_description_text, cv_folder):
-    vertex_dataframe, graph = generate_knowledge_graph_components_from_files('Data/vertices.csv', 'Data/edges.csv')
+    graph = generate_knowledge_graph_components_from_files('Data/edges.csv')
     custom_nlp = spacy.load(train_custom_ner.CUSTOM_SPACY_MODEL)
     job_description_text = re.sub(r"[^a-zA-Z0-9]", " ", job_description_text)
     nlp_doc = custom_nlp(job_description_text)
@@ -181,7 +191,6 @@ def rank_cvs(job_description_text, cv_folder):
                 cv_entities_dictionary = read_cv_entities_from_txt(cv_folder + '/' + cv_file, custom_nlp)
             else:
                 cv_entities_dictionary = {}
-        cv_score = get_cv_ranking_score(cv_entities_dictionary, job_description_entities, feedback_list, graph,
-                                        vertex_dataframe)
+        cv_score = get_cv_ranking_score(cv_entities_dictionary, job_description_entities, feedback_list, graph)
         score_list.append((cv_file, cv_score, feedback_list))
     return sorted(score_list, key=lambda cv: cv[1], reverse=True)

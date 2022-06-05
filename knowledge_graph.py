@@ -1,3 +1,5 @@
+from pprint import pprint
+
 import pandas as pd
 import networkx as nx
 from matplotlib import pyplot as plt
@@ -10,24 +12,29 @@ def generate_knowledge_graph_components_from_files(edges_file):
 
     graph = nx.from_pandas_edgelist(edges, 'from', 'to', 'relationship', create_using=nx.DiGraph)
 
-    programming_languages = [(fromVertex, toVertex, relationship) for fromVertex, toVertex, relationship in graph.edges(data=True) if
+    programming_languages = [(fromVertex, toVertex, relationship) for fromVertex, toVertex, relationship in
+                             graph.edges(data=True) if
                              relationship['relationship'] == 'isA' and toVertex == 'Programming Language']
     # get all programming languages from knowledge graph
     return graph
 
 
 def get_shortest_path_between_concepts(from_concept, to_concept, graph):
-    if not nx.has_path(graph, from_concept, to_concept):
-        return []
-    results = list(nx.shortest_path(graph, from_concept, to_concept))
-    shortest_path_length = len(results) - 1
+    if not graph.has_node(from_concept) or not graph.has_node(to_concept) or not nx.has_path(graph, from_concept,
+                                                                                             to_concept):
+        return [], 0
+    results = list(nx.all_shortest_paths(graph, from_concept, to_concept))
+    nr_of_shortest_paths = len(results)
 
-    if shortest_path_length > 0:
+    if nr_of_shortest_paths > 0:
         # The distance is the number of vertices in the shortest path minus one.
-        print("Shortest distance is: ", shortest_path_length)
+        print("Vertex is reachable in the following nr of ways: ", nr_of_shortest_paths)
     else:
         print("End node could not be reached!")
-    return results, shortest_path_length
+    shortest_path = nx.path_graph(results[0])
+    result = list(map(lambda edge: (edge, graph.edges[edge[0], edge[1]]), shortest_path.edges()))
+    pprint(result)
+    return result, nr_of_shortest_paths
 
 
 def print_graph(graph):

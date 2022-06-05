@@ -3,6 +3,7 @@ family.show,uses,c sharp
 opensis,uses,php
 cheetahtemplate,uses,python
 theano,uses,python
+joule,influencedBy,dataflow
 apache kafka,isA,Tool/Framework
 apache samza,uses,scala
 multitran,uses,c++
@@ -23,6 +24,7 @@ interplanetary file system,uses,python
 koffice,uses,c++
 sqlbuddy,uses,css
 ruby plsql spec,uses,ruby
+conversational programming,isA,Programming Concept
 dingoo a320 sdk,isA,Tool/Framework
 poedit,isA,Tool/Framework
 voreen,isA,Tool/Framework
@@ -30,23 +32,20 @@ py2exe,uses,c
 öppna skolplattformen,isA,Tool/Framework
 nagare,isA,Tool/Framework
 gmx multi messenger,uses,javascript
-conversational programming,isA,Programming Concept
-atom,influences,functional programming
+glscene,isA,Tool/Framework
 amsynth,uses,c++
-pizza,influences,algebraic data type
 chatsecure,isA,Tool/Framework
 covidsim,isA,Tool/Framework
 wix,isA,Tool/Framework
 topcat,uses,java
 glftpd,isA,Tool/Framework
 netxms,uses,c++
+orbada,uses,java
 intime,uses,c
-glscene,isA,Tool/Framework
-alice,influences,imperative programming
 ultraesb,isA,Tool/Framework
 gconf,uses,c
-p4,influences,compiled language
-orbada,uses,java
+c sharp,influencedBy,object oriented programming
+unicon,influencedBy,procedural programming
 scan2cad,isA,Tool/Framework
 opal,isA,Programming Language
 pkgsrc,uses,c
@@ -55,6 +54,7 @@ android team awareness kit,uses,c++
 release,isA,Programming Concept
 suricata,uses,c
 geneweb,isA,Tool/Framework
+c sharp,influencedBy,programming paradigm
 go continuous delivery,isA,Tool/Framework
 homebrew,isA,Tool/Framework
 lxde,isA,Tool/Framework
@@ -70,15 +70,17 @@ genesis,isA,Tool/Framework
 phpmailer,isA,Tool/Framework
 kaffe,uses,c
 pyxplot,isA,Tool/Framework
-ejbca,uses,java
 keepassxc,isA,Tool/Framework
 flood modeller,uses,delphi
 klettres,isA,Tool/Framework
 leafchat,uses,java
 lightspark,isA,Tool/Framework
+ejbca,uses,java
+flix,influencedBy,logic programming
 endeavour software project management,isA,Tool/Framework
 apache batik,uses,java
 verilator,uses,c++
+curry,influencedBy,logic
 ultradefrag,isA,Tool/Framework
 nepomuk,uses,java
 firefox 4,uses,javascript
@@ -87,27 +89,28 @@ packageforge,uses,c++
 bluespice mediawiki,isA,Tool/Framework
 kiwi,isA,Tool/Framework
 mysensors,uses,c
-xl,influences,imperative
 functions,isA,Programming Concept
 ubiart framework,uses,c++
 gtkpod,isA,Tool/Framework
-infobot,isA,Tool/Framework
 pungi,uses,python
 simpleitk,uses,c sharp
 planta project,uses,c
+spark,influencedBy,programming paradigm
+infobot,isA,Tool/Framework
 icub,uses,c++
 openqwaq,isA,Tool/Framework
 heurist,isA,Tool/Framework
 tera term,uses,c++
 qbittorrent,uses,c++
 camino,isA,Tool/Framework
-lapack,isA,Tool/Framework
 ambivu 3d workstation,isA,Tool/Framework
 gconf,isA,Tool/Framework
 ingenias,isA,Tool/Framework
 mod qos,isA,Tool/Framework
 hunspell,isA,Tool/Framework
 1 second everyday,isA,Tool/Framework
+eiffel,influencedBy,class based programming
+lapack,isA,Tool/Framework
 cannon.js,isA,Tool/Framework
 adobe flash builder,uses,java
 friendcaller,isA,Tool/Framework
@@ -118,16 +121,17 @@ minimo,isA,Tool/Framework
 xetex,uses,c++
 speed dreams,uses,c++
 funcjs,uses,javascript
-ec,influences,procedural programming
 f*,isA,Programming Language
 osmocom,uses,c++
 apache ambari,uses,javascript
 commander one,uses,swift
-xblock,isA,Tool/Framework
 jabref,isA,Tool/Framework
 libvisual,uses,c
 gnome games collection,uses,python
+escher,influencedBy,logic programming
+xblock,isA,Tool/Framework
 quasar framework,isA,Tool/Framework
+unbound,uses,c
 erpnext,isA,Tool/Framework
 pycbc,uses,python
 protocol buffers,uses,java
@@ -135,10 +139,9 @@ kalgebra,uses,c++
 dokan library,uses,javascript
 systemd boot,uses,c
 ceylon,isA,Programming Language
+claire,influencedBy,reflective
 htmldoc,isA,Tool/Framework
 lha,isA,Tool/Framework
-unbound,uses,c
-qore,influences,functional
 genexus,isA,Tool/Framework
 scratch,isA,Programming Language
 bids helper,uses,c sharp
@@ -149,11 +152,12 @@ findbugs,isA,Tool/Framework
 gnu nano,uses,c
 jts topology suite,isA,Tool/Framework
 dpkg,uses,c++
-quickcheck,uses,haskell
 clam,isA,Tool/Framework
 xine,uses,c
 firefox 2,uses,c++
 django,isA,Tool/Framework
+quickcheck,uses,haskell
+atom,influencedBy,reactive programming
 chntpw,isA,Tool/Framework
 gnome disks,uses,c
 heekscad,isA,Tool/Framework
@@ -171,9 +175,11 @@ visual understanding environment,isA,Tool/Framework
 hibari,isA,Tool/Framework
 apexkb,uses,php
 davical,uses,php
+etoys,influencedBy,list of educational programming languages
 seamonkey,uses,c++
 nonvisual desktop access,uses,python
 javac,isA,Tool/Framework
+python,influencedBy,structured
 adobe character animator,uses,c++
 gnu core utilities,uses,c
 podofo,uses,c++
@@ -184,8 +190,8 @@ rox desktop,uses,c
 gnumed,isA,Tool/Framework
 qfusion,isA,Tool/Framework
 photomath,uses,java
-plex,influences,procedural
 syncthing,isA,Tool/Framework
+cool,influencedBy,object oriented programming
 gargoyle,isA,Tool/Framework
 mambo,uses,php
 wwiv,uses,c
@@ -195,6 +201,7 @@ theano,isA,Tool/Framework
 google kythe,uses,javascript
 metronome im,uses,lua
 simple cloud api,isA,Tool/Framework
+parasail,influencedBy,structured programming
 netsurf,isA,Tool/Framework
 ganglia,uses,python
 spring integration,isA,Tool/Framework
@@ -203,14 +210,14 @@ firefox 4,uses,c++
 roslyn,uses,c sharp
 android debug bridge,isA,Tool/Framework
 nuke,isA,Tool/Framework
-shogun,uses,c++
 python tools for visual studio,uses,c sharp
 gputils,isA,Tool/Framework
+xl,influencedBy,imperative
+shogun,uses,c++
 concurrent versions system,isA,Tool/Framework
 kate,uses,c++
 apache pivot,uses,java
 udp based data transfer protocol,isA,Tool/Framework
-apache mxnet,uses,julia
 openboard,uses,c++
 data analytics acceleration library,uses,c++
 thebrain,uses,c sharp
@@ -218,6 +225,8 @@ vbulletin,uses,php
 retro engine,uses,c++
 kdevelop,uses,c
 eset nod32,isA,Tool/Framework
+f*,influencedBy,programming paradigm
+apache mxnet,uses,julia
 xynth,isA,Tool/Framework
 sap erp,uses,c
 searchlight bbs,isA,Tool/Framework
@@ -229,6 +238,7 @@ msquic,uses,c
 shark 3d,uses,python
 linphone,uses,python
 anjuta,isA,Tool/Framework
+sasl,influencedBy,functional programming
 kgb archiver,isA,Tool/Framework
 pluma,uses,c
 android runtime,uses,c++
@@ -244,7 +254,6 @@ wireshare,isA,Tool/Framework
 samtools,uses,c
 wayland,isA,Tool/Framework
 elan software,isA,Tool/Framework
-tcl,influences,imperative programming
 heroengine,uses,c++
 hp ux,isA,Tool/Framework
 zopfli,uses,c
@@ -317,11 +326,12 @@ eric,isA,Tool/Framework
 geeqie,uses,c
 event driven programming,isA,Programming Concept
 peertracker,uses,php
+curry,influencedBy,non strict
 pointbase,uses,java
 vtk,isA,Tool/Framework
 chronozoom,uses,c sharp
+xl,influencedBy,functional
 visual understanding environment,uses,java
-dylan,influences,programming paradigm
 qtext,isA,Tool/Framework
 dvbviewer,isA,Tool/Framework
 f spot,uses,c++
@@ -330,11 +340,13 @@ climm,isA,Tool/Framework
 smartmontools,uses,c
 eggdrop,uses,tcl
 popcorn time,uses,html
+f script,influencedBy,programming paradigm
 percona server for mysql,uses,c
 byobu,isA,Tool/Framework
 cc pdf converter,uses,c++
 nemiver,isA,Tool/Framework
 rdock,uses,c++
+beta,influencedBy,object oriented programming
 featherpad,isA,Tool/Framework
 amazon lumberyard,uses,c++
 dryad,uses,c sharp
@@ -344,14 +356,12 @@ mirc,isA,Tool/Framework
 apache kudu,uses,c++
 dat,isA,Tool/Framework
 test & performance tools platform,uses,java
-frink,influences,programming paradigm
 celery,uses,python
 alluxio,isA,Tool/Framework
 dita open toolkit,isA,Tool/Framework
 rillsoft project,isA,Tool/Framework
 u prove,uses,c sharp
 swellrt,isA,Tool/Framework
-lfe,influences,programming paradigm
 microsoft visual c,isA,Tool/Framework
 direct rendering infrastructure,isA,Tool/Framework
 praat,uses,c
@@ -362,8 +372,6 @@ kopete,uses,c++
 bitkeeper,isA,Tool/Framework
 sun java system communications suite,uses,java
 dnf,uses,c
-c,influences,imperative
-labplot,uses,c++
 spree commerce,isA,Tool/Framework
 framework,uses,c
 gnucash,uses,scheme
@@ -372,14 +380,18 @@ freearc,uses,haskell
 pegasus,uses,c
 system security services daemon,uses,c
 worldedit,uses,java
+scratch,influencedBy,block based programming language
+labplot,uses,c++
+atom,influencedBy,synchronous programming language
 hxd,isA,Tool/Framework
 gforth,uses,c
 ipv4,uses,c
-ddrescue,uses,c++
 websphere,isA,Programming Concept
 openautonomy,isA,Tool/Framework
 spidermonkey,uses,c
 rekonq,isA,Tool/Framework
+crystal,influencedBy,object oriented programming
+ddrescue,uses,c++
 cryengine,uses,c sharp
 dconf,uses,c
 libdca,isA,Tool/Framework
@@ -402,6 +414,7 @@ marklogic server,uses,javascript
 hxd,uses,delphi
 feedly,uses,css
 project darkstar,isA,Tool/Framework
+squirrel,influencedBy,scripting language
 mosync,uses,c++
 quiterss,uses,c++
 molecular modelling toolkit,isA,Tool/Framework
@@ -413,7 +426,6 @@ vnstat,isA,Tool/Framework
 rest api,isA,Programming Concept
 safari,isA,Tool/Framework
 phylogenetic assignment of named global outbreak lineages,isA,Tool/Framework
-c sharp,influences,generic programming
 vistrails,uses,python
 ibm lotus web content management,isA,Tool/Framework
 polymake,uses,c++
@@ -423,7 +435,6 @@ libxslt,isA,Tool/Framework
 nunit,uses,c sharp
 ambivu 3d workstation,uses,c++
 eclipse,uses,javascript
-self,influences,object oriented
 jooq object oriented querying,isA,Tool/Framework
 greasemonkey,isA,Tool/Framework
 gizzard,uses,scala
@@ -434,6 +445,7 @@ steinberg cubase,isA,Tool/Framework
 appserver.io,isA,Tool/Framework
 reprise license manager,uses,c++
 texmaker,isA,Tool/Framework
+factor,influencedBy,functional programming
 alphard,isA,Programming Language
 tkhtml,uses,c
 xed,isA,Tool/Framework
@@ -452,6 +464,7 @@ moonlight,isA,Tool/Framework
 salt,isA,Tool/Framework
 komodo edit,isA,Tool/Framework
 qemu,uses,c
+snap!,influencedBy,list of educational programming languages
 ibm websphere application server,isA,Tool/Framework
 project64,uses,c++
 radiance,uses,c
@@ -510,24 +523,21 @@ taskwarrior,uses,c++
 vagrant,isA,Tool/Framework
 it++,isA,Tool/Framework
 apache wink,uses,java
-php,influences,object oriented programming
 metasfresh,uses,java
 nouveau,isA,Tool/Framework
 serif photoplus,uses,c++
 apache arrow,uses,java
 project darkstar,uses,java
-go!,influences,functional
 newpipe,uses,kotlin
 gnome,uses,python
 tesseract,isA,Tool/Framework
 audiokinetic wwise,uses,c++
-matlab,influences,imperative programming
 gnome calculator,uses,vala
 moses,uses,c++
 netperf,uses,c
 navit,uses,c
 chainer,uses,python
-raptor,influences,imperative programming
+more,isA,Tool/Framework
 xos webtop,uses,javascript
 opencv,uses,c
 laplacesdemon,uses,c++
@@ -537,13 +547,12 @@ hiphop for php,uses,c++
 vips,uses,c
 vino,isA,Tool/Framework
 sonic pi,uses,ruby
-more,isA,Tool/Framework
-beatnik,influences,stack oriented programming
 apt rpm,uses,python
 open build service,isA,Tool/Framework
 icinga,uses,php
 clickhouse,uses,c++
 clean,isA,Programming Language
+directfb,isA,Tool/Framework
 internet download manager,isA,Tool/Framework
 numina application framework,uses,c sharp
 generic mapping tools,uses,c++
@@ -553,8 +562,6 @@ opencards,uses,java
 gdata,uses,javascript
 shadertoy,uses,php
 openoffice.org,isA,Tool/Framework
-directfb,isA,Tool/Framework
-cpl,influences,programming paradigm
 gnavi,isA,Tool/Framework
 fontforge,uses,c
 peeringdb,isA,Tool/Framework
@@ -580,7 +587,6 @@ crystallography and nmr system,isA,Tool/Framework
 squawk virtual machine,isA,Tool/Framework
 mindtouch,uses,php
 ezmlm,uses,c
-factor,influences,programming paradigm
 cốc cốc,uses,python
 genesis,uses,c
 montagejs,uses,html
@@ -591,20 +597,20 @@ woocommerce,isA,Tool/Framework
 computer vision annotation tool,uses,python
 dock,uses,c++
 bitflu,isA,Tool/Framework
+oz,influencedBy,concurrent computing
 transana,uses,python
-network security services,isA,Tool/Framework
 avro keyboard,isA,Tool/Framework
 netwide assembler,uses,c
+network security services,isA,Tool/Framework
+dylan,influencedBy,programming paradigm
 graphhopper,isA,Tool/Framework
 modx,uses,php
 hierarchical cluster engine project,uses,c++
 paraview,uses,c
 ssh keygen,isA,Tool/Framework
-openqrm,uses,php
 openautonomy,uses,php
 orange,uses,c
 rocksdb,uses,c++
-go,influences,programming paradigm
 flightgear,uses,c++
 c.a.r.,isA,Tool/Framework
 hercules,isA,Tool/Framework
@@ -612,6 +618,8 @@ angle,isA,Tool/Framework
 sally project,isA,Tool/Framework
 gson,isA,Tool/Framework
 spring engine,isA,Tool/Framework
+kotlin,influencedBy,concurrent computing
+openqrm,uses,php
 sawfish,uses,lisp
 antlr,isA,Tool/Framework
 odoo,isA,Tool/Framework
@@ -629,7 +637,6 @@ n world,isA,Tool/Framework
 ow2 orchestra,isA,Tool/Framework
 adobe character animator,isA,Tool/Framework
 multiotp,uses,php
-factor,influences,stack oriented programming
 plesk,isA,Tool/Framework
 genenetwork,uses,python
 openjpeg,uses,c
@@ -643,7 +650,6 @@ client server,isA,Programming Concept
 tokio,uses,rust
 apbs,isA,Tool/Framework
 mpqc,uses,c++
-citrine,influences,prototype based programming
 mflow,uses,html5
 vmware workstation,uses,c
 conemu,isA,Tool/Framework
@@ -667,7 +673,6 @@ deluge,uses,python
 goanna,isA,Tool/Framework
 uzbl,uses,python
 launchbar,isA,Tool/Framework
-miranda,influences,functional programming
 lambdanative,uses,scheme
 takatuka,isA,Tool/Framework
 ocrfeeder,uses,python
@@ -691,7 +696,6 @@ gnome games collection,uses,c++
 quassel irc,isA,Tool/Framework
 pizza,isA,Programming Language
 dcraw,isA,Tool/Framework
-ruby,influences,imperative programming
 distcc,uses,c
 hiawatha,isA,Tool/Framework
 apache poi,uses,java
@@ -710,7 +714,6 @@ griffon,uses,java
 pablodraw,isA,Tool/Framework
 limesurvey,isA,Tool/Framework
 interactive ruby shell,uses,ruby
-fermat,isA,Tool/Framework
 grass gis,uses,python
 iotivity,isA,Tool/Framework
 ntopng,isA,Tool/Framework
@@ -720,26 +723,29 @@ solarized,isA,Tool/Framework
 ruby mri,isA,Tool/Framework
 lejos,uses,c
 root,isA,Tool/Framework
+fermat,isA,Tool/Framework
+lasso,influencedBy,procedural
 mongodb,uses,javascript
 nearly pure functional,isA,Programming Concept
 javassist,uses,java
 colwiz,uses,c++
-medialib,uses,c
 gnumeric,isA,Tool/Framework
 clam antivirus,uses,c
 knitr,isA,Tool/Framework
 humhub,uses,javascript
+swift,influencedBy,imperative programming
+medialib,uses,c
 python tools for visual studio,uses,python
 spark,isA,Programming Language
 showcase workshop,uses,c++
 apache avalon,isA,Tool/Framework
-futhark,influences,array programming
 confidential consortium framework,isA,Tool/Framework
 kfrlib,uses,c++
 mozart the music processor,isA,Tool/Framework
 jqt,isA,Tool/Framework
 μtorrent,uses,c++
 scummvm,isA,Tool/Framework
+babbage,influencedBy,structured programming
 apache flume,uses,java
 flowcode,uses,c++
 asynchronous many tasking,isA,Programming Concept
@@ -749,10 +755,10 @@ opencog,uses,python
 glow,uses,javascript
 object capability model,isA,Programming Concept
 jubatus,uses,c++
-luciddb,uses,c++
-mausezahn,uses,c
-c,influences,structured programming
 asio c++ library,isA,Tool/Framework
+luciddb,uses,c++
+scala,influencedBy,imperative programming
+mausezahn,uses,c
 mysql,uses,c
 debian installer,isA,Tool/Framework
 qvwm,uses,c++
@@ -795,7 +801,6 @@ liblas,isA,Tool/Framework
 imprint,uses,c sharp
 tikz,isA,Tool/Framework
 evergreen,uses,perl
-c sharp,influences,structured programming
 freeradius,uses,c
 jubatus,isA,Tool/Framework
 ledgersmb,uses,javascript
@@ -811,17 +816,14 @@ seed,isA,Tool/Framework
 critter,isA,Tool/Framework
 procedural,isA,Programming Concept
 f droid,uses,java
-eli,influences,array programming
 heaan,uses,c++
-source,influences,programming paradigm
+mikumikudance,uses,c++
 kodi,uses,c++
 fluent design system,uses,javascript
 konsole,uses,c++
 foobar2000,uses,c++
 comdb2,isA,Tool/Framework
 openvnet,uses,ruby
-javascript,influences,event driven programming
-mikumikudance,uses,c++
 sails.js,uses,javascript
 slf4j,isA,Tool/Framework
 sawmill,uses,c
@@ -837,17 +839,16 @@ alpine,isA,Tool/Framework
 gvsig,isA,Tool/Framework
 frostwire,uses,java
 lex,isA,Tool/Framework
-parallel virtual machine,uses,c
 gdata,uses,python
 object windows library,uses,c++
 koffice,isA,Tool/Framework
-squirrel,influences,scripting language
 ipv4,isA,Tool/Framework
 apache shale,isA,Tool/Framework
+parallel virtual machine,uses,c
+cobra,influencedBy,programming paradigm
 pyjs,uses,python
 fp,isA,Programming Language
 prometheus,uses,go
-lisp,influences,procedural programming
 microemacs,isA,Tool/Framework
 windows,isA,Tool/Framework
 libsigc++,uses,c++
@@ -861,10 +862,10 @@ velocity,isA,Tool/Framework
 rife,isA,Tool/Framework
 microsoft office,isA,Tool/Framework
 bitblinder,isA,Tool/Framework
+c sharp,influencedBy,event driven programming
 magicplot,uses,java
 dooble,isA,Tool/Framework
 b step sequencer,uses,c++
-ciao,influences,modular programming
 chocolatey,uses,c sharp
 gnu fortran,uses,c++
 fesom,isA,Tool/Framework
@@ -879,14 +880,14 @@ web3,isA,Programming Concept
 pencil2d,isA,Tool/Framework
 openfoam,isA,Tool/Framework
 appstream,isA,Tool/Framework
-xmms,uses,c
 jpedal,uses,java
+dev pascal,uses,delphi
 apache subversion,isA,Tool/Framework
 simulation open framework architecture,uses,c++
 mapnik,uses,c++
 tangerine,uses,c
-orc,influences,nondeterministic programming
-dev pascal,uses,delphi
+oz,influencedBy,object oriented programming
+xmms,uses,c
 underscore.js,uses,javascript
 qdevelop,isA,Tool/Framework
 tidb,uses,rust
@@ -896,9 +897,8 @@ synchronous programming language,isA,Programming Concept
 ganeti web manager,uses,python
 discord,uses,javascript
 rocket,isA,Tool/Framework
-sourcepuller,isA,Tool/Framework
-euclid,influences,imperative programming
 ikvm.net,uses,c sharp
+sourcepuller,isA,Tool/Framework
 free download manager,isA,Tool/Framework
 opticks,isA,Tool/Framework
 nitro,uses,javascript
@@ -918,18 +918,19 @@ gnu compiler collection,uses,c++
 qvd,uses,javascript
 goanna,uses,c++
 sabredav,isA,Tool/Framework
-bitcask,uses,erlang
-asynchronous multi body framework,uses,python
 apache cayenne,uses,java
 minimo,uses,c
 multiotp,isA,Tool/Framework
 maxdb,uses,c++
+bitcask,uses,erlang
+go,influencedBy,programming paradigm
+asynchronous multi body framework,uses,python
+perl,influencedBy,reflective
 sound credit,uses,dart
 fbreader,uses,c++
 pylint,isA,Tool/Framework
 firebug,isA,Tool/Framework
 ikonboard,uses,php
-squirrel,influences,object oriented programming
 subtile,isA,Tool/Framework
 golaem crowd,uses,python
 qutebrowser,isA,Tool/Framework
@@ -971,13 +972,13 @@ chematica,uses,c++
 gummi,isA,Tool/Framework
 sound credit,isA,Tool/Framework
 crucible,isA,Tool/Framework
-sql server express,uses,c
 ovn,isA,Tool/Framework
+sql server express,uses,c
+cpl,influencedBy,programming paradigm
 apache heron,isA,Tool/Framework
 castor,isA,Tool/Framework
 linux virtual server,isA,Tool/Framework
 gtkmm,uses,c++
-ada,influences,imperative programming
 firefox 4,uses,css
 vufind,uses,php
 remote application platform,isA,Tool/Framework
@@ -990,7 +991,6 @@ casadi,uses,c++
 ghidra,isA,Tool/Framework
 surf,isA,Tool/Framework
 ninjo,isA,Tool/Framework
-frenetic,influences,reactive
 spinnaker,uses,java
 opendronemap,uses,javascript
 nextcloud,uses,php
@@ -998,6 +998,7 @@ cryptocat,uses,javascript
 thousand parsec,uses,c++
 gnustep,isA,Tool/Framework
 fish fillets ng,uses,lua
+mad,influencedBy,imperative programming
 csunit,uses,c sharp
 zerovm,isA,Tool/Framework
 apache flex,isA,Tool/Framework
@@ -1007,10 +1008,9 @@ svelte,isA,Tool/Framework
 branch,isA,Programming Concept
 cpanel,isA,Tool/Framework
 gearman,isA,Tool/Framework
+bbc sounds,uses,javascript
 frameworks,isA,Programming Concept
 enterprise dynamics,uses,delphi
-bbc sounds,uses,javascript
-racket,influences,reflective programming
 openmpt,isA,Tool/Framework
 gitit,uses,haskell
 em client,uses,c sharp
@@ -1021,6 +1021,7 @@ gnome applications,uses,c++
 visual molecular dynamics,isA,Tool/Framework
 checkstyle,uses,java
 pyside,uses,python
+swift,influencedBy,functional programming
 gforth,isA,Tool/Framework
 apache ignite,uses,c++
 gyroscope,isA,Tool/Framework
@@ -1031,6 +1032,7 @@ atatool,isA,Tool/Framework
 delphi,isA,Programming Language
 aweb,uses,c
 bootstrap,uses,html
+seed,uses,c
 txl,isA,Programming Language
 opendnssec,uses,c
 meadow,isA,Tool/Framework
@@ -1040,9 +1042,6 @@ weka,uses,java
 anuga hydro,uses,c
 qt jambi,isA,Tool/Framework
 pophealth,uses,ruby
-ml,influences,imperative programming
-seed,uses,c
-ada,influences,structured programming
 x264,isA,Tool/Framework
 nullsoft scriptable install system,isA,Tool/Framework
 opendataplane,isA,Tool/Framework
@@ -1051,7 +1050,6 @@ wolfram mathematica,uses,c++
 orbot,isA,Tool/Framework
 puddletag,isA,Tool/Framework
 glasgow haskell compiler,isA,Tool/Framework
-flix,influences,imperative programming
 anaconda,uses,python
 vulkan,isA,Tool/Framework
 privoxy,uses,c
@@ -1068,13 +1066,12 @@ windows system resource manager,uses,c++
 wordperfect,uses,c++
 phyre,uses,perl
 praat,isA,Tool/Framework
+easytag,uses,c
 emacspeak,uses,c
 simple directmedia layer,uses,c
 labplot,isA,Tool/Framework
 stockfish,isA,Tool/Framework
 soldat,isA,Tool/Framework
-swift,influences,imperative programming
-easytag,uses,c
 mlpy,isA,Tool/Framework
 data build tool,isA,Tool/Framework
 process monitor,isA,Tool/Framework
@@ -1095,7 +1092,6 @@ selenium web driver,isA,Tool/Framework
 mirah,isA,Programming Language
 geoserver,uses,java
 enlight cloud,uses,c++
-scala,influences,concurrent computing
 revive adserver,isA,Tool/Framework
 389 directory server,uses,c
 phylip,isA,Tool/Framework
@@ -1112,7 +1108,6 @@ curry,isA,Programming Language
 gd graphics library,isA,Tool/Framework
 hemospat,uses,c++
 sally project,uses,c
-pico,influences,reflective programming
 watir,isA,Tool/Framework
 gnu social,uses,php
 phpunit,isA,Tool/Framework
@@ -1125,12 +1120,12 @@ codesynthesis xsd,isA,Tool/Framework
 owasp zap,uses,java
 apache heron,uses,c++
 faust,uses,c++
+bitpim,uses,c
+etoys,influencedBy,prototype based programming
 maple,uses,java
 polymer,uses,html
 tikz,uses,lua
 xmms,isA,Tool/Framework
-bitpim,uses,c
-kotlin,influences,concurrent computing
 rethinkdb,uses,javascript
 orleans,uses,c sharp
 webobjects,uses,java
@@ -1141,7 +1136,6 @@ lxc,isA,Tool/Framework
 tortoisesvn,isA,Tool/Framework
 re2,uses,c++
 grapple,isA,Tool/Framework
-joyce,influences,concurrent computing
 android team awareness kit,isA,Tool/Framework
 carrot2,isA,Tool/Framework
 agda,isA,Programming Language
@@ -1158,7 +1152,6 @@ webos,uses,c++
 odoo,uses,python
 scrumedge,isA,Tool/Framework
 vidalia,isA,Tool/Framework
-euclid,influences,programming paradigm
 apache accumulo,uses,java
 python imaging library,uses,c
 google native client,uses,c
@@ -1175,12 +1168,12 @@ k desktop environment 1,isA,Tool/Framework
 little cms,uses,c
 apache hadoop,isA,Tool/Framework
 witty,isA,Tool/Framework
-protocol buffers,uses,c++
 simantics system dynamics,isA,Tool/Framework
-ada,influences,programming paradigm
+protocol buffers,uses,c++
 conductor,uses,java
 unicorn,uses,ruby
 sajax,uses,lua
+oz,influencedBy,constraint programming
 staden package,isA,Tool/Framework
 orfeo toolbox,uses,c++
 oracle business intelligence suite enterprise edition,uses,c++
@@ -1200,12 +1193,12 @@ pstoedit,uses,c++
 dhammin,uses,javascript
 apache xalan,uses,java
 moneydance,isA,Tool/Framework
+lasso,influencedBy,structured object oriented
 listaller,uses,c++
 macruby,uses,c++
 polyworld,uses,c++
 bb flashback,uses,c++
 gnu multiple precision arithmetic library,uses,c
-chapel,influences,object oriented programming
 jhove,isA,Tool/Framework
 nektar++,uses,c++
 wordpress,uses,php
@@ -1220,7 +1213,6 @@ apache click,isA,Tool/Framework
 scilab,isA,Tool/Framework
 analytica,isA,Tool/Framework
 simutrans,isA,Tool/Framework
-clean,influences,functional programming
 gwyddion,uses,c
 pymol,isA,Tool/Framework
 mobile web server,uses,java
@@ -1267,7 +1259,6 @@ google docs editors,uses,java
 open source tripwire,isA,Tool/Framework
 x265,isA,Tool/Framework
 xenu's link sleuth,isA,Tool/Framework
-citrine,influences,object oriented programming
 shelxle,isA,Tool/Framework
 modula 2,isA,Tool/Framework
 nitrosbase,uses,c++
@@ -1296,7 +1287,6 @@ command.com,isA,Tool/Framework
 plasma mobile,isA,Tool/Framework
 corelcad,uses,c sharp
 rescarta toolkit,uses,java
-fl,influences,function level programming
 copperlicht,uses,javascript
 simple object database access,isA,Tool/Framework
 apache gump,isA,Tool/Framework
@@ -1307,6 +1297,7 @@ gnome videos,uses,vala
 magnolia,isA,Tool/Framework
 firemonkey,isA,Tool/Framework
 pop php framework,isA,Tool/Framework
+rainway,uses,c sharp
 mpg123,uses,c
 id tech 3,uses,c
 anduril,isA,Tool/Framework
@@ -1314,26 +1305,25 @@ easyrec,uses,java
 calendar and contacts server,uses,python
 osmocom,uses,c
 opentimestamps,uses,javascript
-rainway,uses,c sharp
-krl,influences, reasoning
 open 3d engine,uses,lua
 aerospike,isA,Tool/Framework
 jwpce,uses,c++
 scilab image processing,uses,c
-ohrrpgce,uses,c
 gsoap,uses,c++
+extromatica network monitor,isA,Tool/Framework
 confidential consortium framework,uses,c++
 emule,isA,Tool/Framework
 quuxplayer,uses,c sharp
 openresty,isA,Tool/Framework
 https everywhere,isA,Tool/Framework
 bitbake,isA,Tool/Framework
-cameleon,influences,functional programming
-extromatica network monitor,isA,Tool/Framework
+ohrrpgce,uses,c
+lfe,influencedBy,functional programming
 flashdevelop,uses,c sharp
 mega,uses,javascript
 mapwindow gis,isA,Tool/Framework
 gtk,uses,c
+elgg,isA,Tool/Framework
 box2d,isA,Tool/Framework
 ddrescue,isA,Tool/Framework
 linux screen reader,isA,Tool/Framework
@@ -1344,8 +1334,6 @@ win,isA,Tool/Framework
 frontend,isA,Programming Concept
 courier mail server,uses,perl
 mpmc,uses,c++
-elgg,isA,Tool/Framework
-flow,influences,non structured programming
 montagejs,isA,Tool/Framework
 generic eclipse modeling system,isA,Tool/Framework
 robotfindskitten,uses,java
@@ -1355,12 +1343,14 @@ fpga,isA,Tool/Framework
 libvpx,isA,Tool/Framework
 cdnjs,isA,Tool/Framework
 openlayers,isA,Tool/Framework
+racket,influencedBy,programming paradigm
 cloud front,isA,Tool/Framework
 leaflet,uses,javascript
 lightdm,uses,c
-echo,isA,Tool/Framework
 litespeed web server,isA,Tool/Framework
 perlbal,isA,Tool/Framework
+draco,influencedBy,structured
+echo,isA,Tool/Framework
 dpkg,uses,perl
 phoronix test suite,isA,Tool/Framework
 packagekit,uses,c++
@@ -1370,12 +1360,13 @@ magmafs,uses,c
 colwiz,isA,Tool/Framework
 marmalade,isA,Tool/Framework
 web apps,isA,Programming Concept
-hosxp,uses,delphi
 weka,isA,Tool/Framework
 visual studio code,isA,Tool/Framework
 bci2000,isA,Tool/Framework
 flood modeller,uses,c++
 anacron,isA,Tool/Framework
+hosxp,uses,delphi
+ats,influencedBy,programming paradigm
 playonlinux,uses,javascript
 tux paint,isA,Tool/Framework
 txt2tags,uses,python
@@ -1391,12 +1382,10 @@ marlin,isA,Tool/Framework
 onefuzz,isA,Tool/Framework
 harfbuzz,isA,Tool/Framework
 mapbender,uses,php
-parasail,influences,compiled language
 ikobb,uses,php
 löve,isA,Tool/Framework
 site recorder,uses,c++
 noc,uses,python
-io,influences,prototype based programming
 berkeley open infrastructure for network computing,uses,c++
 inoreader,uses,php
 muine,uses,c sharp
@@ -1414,7 +1403,6 @@ paint tool sai,isA,Tool/Framework
 php,isA,Programming Language
 apache mxnet,uses,perl
 android team awareness kit,uses,c
-emerald,influences,object oriented programming
 hermes,isA,Programming Language
 haven,uses,javascript
 swfmill,uses,c++
@@ -1423,7 +1411,6 @@ ella,isA,Tool/Framework
 fast library for number theory,isA,Tool/Framework
 blockchain,isA,Tool/Framework
 flowblade,isA,Tool/Framework
-c sharp,influences,object oriented programming
 freenet,uses,java
 apache cordova,uses,java
 payara server,isA,Tool/Framework
@@ -1434,15 +1421,13 @@ kuma,uses,python
 openthinclient,uses,java
 openmrs,isA,Tool/Framework
 antennapod,isA,Tool/Framework
+msx dos,isA,Tool/Framework
 tig,isA,Tool/Framework
-racket,influences,functional programming
 piwigo,isA,Tool/Framework
 java anon proxy,uses,java
 react,isA,Tool/Framework
 outlook on the web,isA,Tool/Framework
 chamilo,isA,Tool/Framework
-msx dos,isA,Tool/Framework
-cpl,influences,functional programming
 graphlab,isA,Tool/Framework
 ember.js,isA,Tool/Framework
 studierfenster,uses,c++
@@ -1453,14 +1438,16 @@ jbuilder,uses,java
 software updater,uses,python
 flatbuffers,isA,Tool/Framework
 openbroadcaster,isA,Tool/Framework
-eiffel,influences,class based programming
 back in time,uses,python
 cgroups,uses,c
 librepilot,isA,Tool/Framework
 jamaicavm,uses,java
 hyperscore,isA,Tool/Framework
+alef,influencedBy,compiled language
 paperpile,uses,html5
+elm,influencedBy,functional programming
 labkey server,uses,java
+julia,influencedBy,multi stage programming
 vcv rack,isA,Tool/Framework
 tightvnc,uses,c
 winmostar,uses,c++
@@ -1471,6 +1458,7 @@ la vortaro,isA,Tool/Framework
 identity connectors,isA,Tool/Framework
 esyn,uses,javascript
 word lens,isA,Tool/Framework
+frenetic,influencedBy,modular
 ham radio deluxe,isA,Tool/Framework
 croquet project,isA,Tool/Framework
 sbase,uses,c
@@ -1484,6 +1472,7 @@ kodu game lab,uses,c sharp
 cegui,uses,c++
 chatzilla,uses,javascript
 jbuilder,isA,Tool/Framework
+source,influencedBy,scripting language
 stormenginec,uses,javascript
 losslesscut,uses,javascript
 jasmine,isA,Tool/Framework
@@ -1527,6 +1516,7 @@ vlc media player,uses,java
 git,uses,c
 spinnaker,uses,javascript
 hike messenger,uses,java
+racket,influencedBy,logic programming
 analytic transformations,isA,Programming Concept
 apache hama,uses,java
 xplico,uses,c
@@ -1552,7 +1542,7 @@ merge,isA,Programming Concept
 plumed,uses,python
 hyperrogue,isA,Tool/Framework
 lantern,uses,go
-julia,influences,metaprogramming
+draco,influencedBy,imperative
 ame accounting software,isA,Tool/Framework
 sketch engine,uses,python
 sim.js,uses,javascript
@@ -1560,7 +1550,6 @@ minipanzer and megapanzer,uses,c++
 glassfish,uses,java
 brackets,uses,html
 synkron,uses,c++
-fantom,influences,programming paradigm
 mybatis,isA,Tool/Framework
 discord,uses,rust
 ttcp,uses,c
@@ -1569,44 +1558,41 @@ knowledge engineering environment,isA,Tool/Framework
 strand,isA,Programming Language
 lilypond,uses,c++
 geary,isA,Tool/Framework
+retroshare,uses,c++
 mobile,isA,Programming Concept
 newton x,isA,Tool/Framework
 lzfse,isA,Tool/Framework
-red,influences,symbolic programming
 atariwriter,isA,Tool/Framework
 json,isA,Programming Concept
 hibari,uses,erlang
 dspace,isA,Tool/Framework
 shiira,isA,Tool/Framework
 nuitka,uses,c
-retroshare,uses,c++
-flix,influences,programming paradigm
 html5 boilerplate,uses,javascript
 re mix,uses,c sharp
-google quick search box,isA,Tool/Framework
 xcat,isA,Tool/Framework
 spmd,isA,Programming Concept
 nu,isA,Programming Language
 seaside,isA,Tool/Framework
+ezhil,influencedBy,interpreter
+google quick search box,isA,Tool/Framework
 wing ide,isA,Tool/Framework
 nmap,uses,lua
 mydlp,uses,c sharp
 activepresenter,uses,c++
 nextcloud,isA,Tool/Framework
-joule,influences,object oriented programming
 mtr,uses,c
-c sharp,influences,programming paradigm
 aegisub,uses,c++
 fuse esb,uses,java
+openlte,uses,c++
 limewire,isA,Tool/Framework
 mflow,isA,Tool/Framework
 monotone,isA,Tool/Framework
 windowlab,uses,c
-python,influences,functional
-openlte,uses,c++
 updatestar,uses,c++
 mingw w64,uses,c
 altium designer,isA,Tool/Framework
+rawtherapee,isA,Tool/Framework
 fyne,uses,go
 lina,uses,python
 supermemo,isA,Tool/Framework
@@ -1614,15 +1600,13 @@ kannel,isA,Tool/Framework
 jump gis,uses,java
 cloudike,uses,python
 gerrit,uses,java
-rawtherapee,isA,Tool/Framework
-scratch,influences,event driven
 waterfall,isA,Programming Concept
 enlight cloud,uses,php
 hiphop for php,isA,Tool/Framework
+opa,influencedBy,imperative programming
 swi prolog,uses,c
 sk8,isA,Programming Language
 scidavis,isA,Tool/Framework
-ml,influences,programming paradigm
 wps office,uses,c
 openrefine,isA,Tool/Framework
 quake ii engine,isA,Tool/Framework
@@ -1633,20 +1617,20 @@ onsen ui,uses,javascript
 cppunit,isA,Tool/Framework
 site recorder,isA,Tool/Framework
 frozen bubble,uses,perl
-tiki wiki cms groupware,isA,Tool/Framework
 dataflow programming,isA,Programming Concept
 editra,uses,python
 ejbs,isA,Tool/Framework
 nasa worldwind,isA,Tool/Framework
 apfel,uses,c++
 quantcast file system,uses,c++
+tiki wiki cms groupware,isA,Tool/Framework
+turing,influencedBy,object oriented programming
 spring engine,uses,lua
 staffpad,isA,Tool/Framework
 standards of fundamental astronomy,uses,c
 diffpack,uses,perl
 people oriented programming,isA,Programming Concept
 labview,uses,c++
-requests,isA,Tool/Framework
 gizzard,uses,java
 nimbus,uses,java
 microweber,isA,Tool/Framework
@@ -1654,6 +1638,9 @@ blisk,uses,c++
 mangoo microfinance management,isA,Tool/Framework
 zypp,uses,c++
 newpipe,isA,Tool/Framework
+requests,isA,Tool/Framework
+limbo,influencedBy,concurrent computing
+fjölnir,influencedBy,procedural
 phpgedview,isA,Tool/Framework
 lex,uses,c
 veusz,uses,c
@@ -1662,10 +1649,10 @@ ical,uses,tcl
 x road,isA,Tool/Framework
 thebrain,isA,Tool/Framework
 mobile web server,uses,c
+txl,influencedBy,term rewriting
 osg.js,isA,Tool/Framework
 openpdf,isA,Tool/Framework
 erlang,isA,Programming Language
-perl,influences,functional
 qtiplot,uses,python
 yaml,uses,html
 aphelion,isA,Tool/Framework
@@ -1676,24 +1663,24 @@ knowledge representation ,isA,Programming Concept
 reduce,isA,Tool/Framework
 buildroot,isA,Tool/Framework
 pointbase,isA,Tool/Framework
+yarv,isA,Tool/Framework
 arduino ide,uses,java
 pipelight,isA,Tool/Framework
 stormcrawler,isA,Tool/Framework
 rstudio,isA,Tool/Framework
-yarv,isA,Tool/Framework
-opa,influences,functional programming
 xdm,isA,Tool/Framework
 ganymede,isA,Tool/Framework
 fsc2,uses,c
 beonex communicator,uses,javascript
 mlpack,uses,julia
+oz,influencedBy,functional programming
 terraamazon,isA,Tool/Framework
 rohr2,isA,Tool/Framework
-alef,influences,concurrent computing
-mtpaint,isA,Tool/Framework
 gyp,isA,Tool/Framework
 rasdaman,isA,Tool/Framework
 sourcemeter,isA,Tool/Framework
+mtpaint,isA,Tool/Framework
+racket,influencedBy,metaprogramming
 gensim,isA,Tool/Framework
 madagascar,uses,python
 jrockit,uses,c
@@ -1744,6 +1731,7 @@ qutecom,isA,Tool/Framework
 robotfindskitten,uses,scratch
 katapult,uses,c++
 windows calculator,isA,Tool/Framework
+orc,influencedBy,concurrent computing
 cowsay,isA,Tool/Framework
 brl cad,uses,tcl
 internet speech audio codec,isA,Tool/Framework
@@ -1758,15 +1746,17 @@ joule,isA,Programming Language
 egroupware,isA,Tool/Framework
 se,isA,Tool/Framework
 list of educational programming languages,isA,Programming Concept
+lasso,influencedBy,meta
 evince,uses,c
 plasma mobile,uses,c++
 esyn,isA,Tool/Framework
 parallel,isA,Programming Concept
 opera mini,uses,c++
+vala,influencedBy,structured programming
 simthyr,isA,Tool/Framework
 astronomical image processing system,uses,c
 firefox 3.6,uses,css
-focal,influences,imperative programming
+lasso,influencedBy,reflective
 perfect dark,isA,Tool/Framework
 cốc cốc,isA,Tool/Framework
 sqlalchemy,uses,python
@@ -1791,6 +1781,7 @@ tomahawk,isA,Tool/Framework
 libguestfs,isA,Tool/Framework
 upower,uses,c
 handbook emission factors for road transport,isA,Tool/Framework
+ciao,influencedBy,logic programming
 pipewire,uses,c
 airtime,uses,python
 x cd roast,isA,Tool/Framework
@@ -1815,15 +1806,14 @@ stackless python,uses,c
 updatestar,isA,Tool/Framework
 far play,uses,php
 anki,uses,rust
-darwin,influences,structured programming
 samba,uses,python
-swift,influences,object oriented programming
 midletpascal,uses,java
 natron,isA,Tool/Framework
 netwide assembler,isA,Tool/Framework
 geogebra,uses,java
 kugar,isA,Tool/Framework
 gzip,uses,c
+vala,influencedBy,programming paradigm
 uno,isA,Tool/Framework
 verge3d,uses,javascript
 stepmania,isA,Tool/Framework
@@ -1840,7 +1830,7 @@ ppsspp,isA,Tool/Framework
 portable c compiler,uses,c
 tacpol,isA,Programming Language
 c++,isA,Programming Language
-go!,influences,concurrent
+cpl,influencedBy,functional programming
 etcher,isA,Tool/Framework
 igstk,uses,c++
 conky,uses,c
@@ -1848,12 +1838,11 @@ rattle gui,uses,r
 easychair,uses,perl
 key,uses,java
 mynigma,uses,c sharp
-c sharp,influences,asynchronous method invocation
+pico,influencedBy,reflective programming
 mysms,uses,c++
 carbon design system,isA,Tool/Framework
 lesstif,uses,c
 advanced visualization studio,uses,c
-boo,influences, design
 dart,isA,Programming Language
 koha,isA,Tool/Framework
 apt rpm,uses,c
@@ -1887,10 +1876,10 @@ express data path,uses,c
 nmap,isA,Tool/Framework
 glipper,uses,python
 tsung,isA,Tool/Framework
-dexterity,influences,procedural programming
 flask,uses,python
 standards of fundamental astronomy,isA,Tool/Framework
 playn,uses,java
+plus,influencedBy,structured programming
 easytag,isA,Tool/Framework
 scigress,uses,java
 phpgedview,uses,php
@@ -1903,7 +1892,6 @@ msbuild,uses,c sharp
 security administrator tool for analyzing networks,isA,Tool/Framework
 avro keyboard,uses,javascript
 oracle nosql database,isA,Tool/Framework
-go,influences,imperative programming
 duplicity,isA,Tool/Framework
 modx,isA,Tool/Framework
 shade sandbox,uses,c++
@@ -1930,7 +1918,6 @@ egroupware,uses,php
 csound,uses,c
 safari,uses,swift
 numba,uses,c
-php,influences,programming paradigm
 f9 financial reporting,uses,c
 kde projects,isA,Tool/Framework
 blink,uses,python
@@ -1972,11 +1959,11 @@ camstudio,isA,Tool/Framework
 jpc,isA,Tool/Framework
 adobe illustrator,isA,Tool/Framework
 anduril,uses,java
+pascal,influencedBy,structured programming
 gameswf,isA,Tool/Framework
 nintendo switch system software,uses,html
 hike messenger,uses,c++
 fast library for number theory,uses,c
-jmonkeyengine,uses,java
 niaflow,isA,Tool/Framework
 gnuplot,isA,Tool/Framework
 cafu engine,uses,c++
@@ -1984,25 +1971,25 @@ wxpython,uses,python
 wwiv,uses,c++
 adventure game studio,uses,c
 acarm,uses,java
+jmonkeyengine,uses,java
+kotlin,influencedBy,functional programming
 caddy,isA,Tool/Framework
 fldigi,uses,c
 wolfram mathematica,uses,c
 stratagus,uses,c++
-dart,influences,object oriented programming
 cinnamon,uses,python
 galaxy,isA,Tool/Framework
-genie,influences,object oriented programming
 uima,isA,Tool/Framework
+google desktop,isA,Tool/Framework
 openms,uses,c++
 csipsimple,isA,Tool/Framework
 fdm,isA,Tool/Framework
-cuneiform,influences,functional programming
-google desktop,isA,Tool/Framework
 freeseer,uses,python
 robotfindskitten,uses,python
 pforth,isA,Tool/Framework
 project looking glass,uses,java
 monit,uses,c
+f*,influencedBy,functional programming
 morpheus,uses,c++
 marklogic server,uses,c++
 syndie,isA,Tool/Framework
@@ -2022,6 +2009,7 @@ iperf,uses,c
 dasher,uses,java
 opentracker,isA,Tool/Framework
 linux,isA,Tool/Framework
+harbour,influencedBy,reflective programming
 portaudio,uses,c
 apache druid,isA,Tool/Framework
 mpmc,uses,c
@@ -2052,7 +2040,6 @@ soya3d,uses,python
 apache myfaces trinidad,uses,java
 planta project,uses,c sharp
 vlc media player,uses,c
-idris,influences,functional programming
 swfmill,isA,Tool/Framework
 lxqt,isA,Tool/Framework
 opencaster,uses,c
@@ -2078,7 +2065,6 @@ angle,uses,c++
 psi,isA,Tool/Framework
 cascading,uses,java
 taskwarrior,isA,Tool/Framework
-crystal,influences,programming paradigm
 framewave,uses,c
 studierfenster,uses,javascript
 x265,uses,c++
@@ -2090,10 +2076,11 @@ drync,isA,Tool/Framework
 meta.numerics,uses,c sharp
 okapi framework,isA,Tool/Framework
 linux pam,uses,c
-karel,influences,procedural programming
+c sharp,influencedBy,functional programming
 debugged,isA,Programming Concept
 interactive scenario builder,isA,Tool/Framework
 java pathfinder,uses,java
+ripit,uses,perl
 openconf,isA,Tool/Framework
 web,isA,Programming Concept
 xetex,isA,Tool/Framework
@@ -2101,10 +2088,9 @@ eprints,uses,perl
 signalr,isA,Tool/Framework
 kontact,uses,c++
 statmetrics,uses,java
-ripit,uses,perl
-s3,influences,imperative programming
 lon capa,isA,Tool/Framework
 profanity,isA,Tool/Framework
+rhomobile suite,uses,html5
 eraser,isA,Tool/Framework
 eclipse paho,uses,go
 dotproject,isA,Tool/Framework
@@ -2113,8 +2099,6 @@ montage,uses,c
 objective vision,uses,delphi
 spartan,uses,c
 computer vision annotation tool,isA,Tool/Framework
-java,influences,concurrent
-rhomobile suite,uses,html5
 stackless python,uses,python
 pretty easy privacy,uses,javascript
 shotgrid,uses,javascript
@@ -2146,7 +2130,7 @@ k3b,uses,c++
 microsoft dynamics gp,uses,dexterity
 mail in a box,isA,Tool/Framework
 nim,isA,Programming Language
-spark,influences,programming paradigm
+alice,influencedBy,programming paradigm
 konsole,isA,Tool/Framework
 rcirc,isA,Tool/Framework
 xos webtop,uses,php
@@ -2167,7 +2151,6 @@ adobe illustrator,uses,c++
 identity connectors,uses,java
 microsoft cognitive toolkit,uses,c++
 iaik jce,uses,java
-coldfusion on wheels,isA,Tool/Framework
 squirrelmail,isA,Tool/Framework
 ipython,isA,Tool/Framework
 timberwolf,uses,c
@@ -2179,30 +2162,32 @@ moho,isA,Tool/Framework
 script,isA,Programming Concept
 shark 3d,uses,c++
 oj,isA,Tool/Framework
+coldfusion on wheels,isA,Tool/Framework
+fl,influencedBy,functional programming
 quantlib,isA,Tool/Framework
 perltidy,uses,perl
 pcap,isA,Tool/Framework
 apache struts 2,uses,java
 scapy,isA,Tool/Framework
 ibm websphere application server community edition,isA,Tool/Framework
-studierfenster,uses,python
 hpx,isA,Tool/Framework
+studierfenster,uses,python
+babbage,influencedBy,procedural programming
 apache arrow,uses,ruby
 pycsw,uses,python
 takatuka,uses,c
 clutter,uses,c
 mlpy,uses,c++
-a+,influences,array programming
 apache cayenne,isA,Tool/Framework
 jibx,isA,Tool/Framework
-oracle,isA,Tool/Framework
 sparse,isA,Tool/Framework
 sibelius,uses,c++
-alice,influences,distributed computing
 bitchx,uses,c
 quantcast file system,isA,Tool/Framework
 flowblade,uses,python
 webservices,isA,Programming Concept
+oracle,isA,Tool/Framework
+ml,influencedBy,functional programming
 unigine,isA,Tool/Framework
 evercam,isA,Tool/Framework
 gnu classpath,isA,Tool/Framework
@@ -2216,6 +2201,7 @@ gaia sky,uses,java
 dryad,uses,ruby
 zxid,uses,perl
 refit,isA,Tool/Framework
+kotlin,influencedBy,imperative programming
 debbugs,isA,Tool/Framework
 fvwm,uses,perl
 cherokee,isA,Tool/Framework
@@ -2236,7 +2222,6 @@ lm sensors,uses,c
 blobby volley,uses,delphi
 ffado,isA,Tool/Framework
 playonlinux,isA,Tool/Framework
-eiffel,influences,concurrent object oriented programming
 microsoft visual c++,isA,Tool/Framework
 tropy,isA,Tool/Framework
 gunicorn,uses,python
@@ -2250,6 +2235,7 @@ qbs,uses,c++
 sox,uses,c
 origyn web browser,isA,Tool/Framework
 open telecom platform,isA,Tool/Framework
+go!,influencedBy,functional
 apache cassandra,uses,java
 konversation,uses,c++
 kolibrios,uses,pascal
@@ -2310,7 +2296,6 @@ aolserver,uses,tcl
 lapack++,uses,c++
 android runtime,isA,Tool/Framework
 stormenginec,isA,Tool/Framework
-eiffel,influences,generic programming
 netpipe,uses,c
 strigi,isA,Tool/Framework
 geotrellis,uses,scala
@@ -2321,12 +2306,11 @@ google docs,uses,javascript
 aweb,isA,Tool/Framework
 frostbite,uses,c sharp
 koneki,isA,Tool/Framework
+id tech 4,uses,c++
 lightning,uses,javascript
 watir,uses,ruby
 linux ha,isA,Tool/Framework
 tamarin,uses,c++
-id tech 4,uses,c++
-babbage,influences,procedural programming
 libxml2,isA,Tool/Framework
 universal media server,isA,Tool/Framework
 miktex,uses,c++
@@ -2343,7 +2327,6 @@ netscape mail & newsgroups,uses,c++
 dadisp,uses,c
 luatex,uses,lua
 tigase,uses,java
-etoys,influences,list of educational programming languages
 apache axis2,uses,c
 phonon,isA,Tool/Framework
 avif,uses,c
@@ -2392,7 +2375,6 @@ sp forth,uses,forth
 xrdb,uses,c
 authbind,isA,Tool/Framework
 voltdb,uses,java
-curry,influences,modular
 java gnome,uses,java
 feature selection toolbox,isA,Tool/Framework
 magic,isA,Tool/Framework
@@ -2405,9 +2387,11 @@ phpedit,uses,delphi
 muine,isA,Tool/Framework
 sails.js,isA,Tool/Framework
 newsbeuter,isA,Tool/Framework
+forth,influencedBy,stack oriented programming
 ranavision,isA,Tool/Framework
 apache qpid,uses,c++
 openvpn,uses,c
+kotlin,influencedBy,generic programming
 amigatex,isA,Tool/Framework
 graphical network simulator 3,isA,Tool/Framework
 mpir,isA,Tool/Framework
@@ -2424,7 +2408,6 @@ id,isA,Programming Language
 egl,isA,Programming Language
 wt,isA,Tool/Framework
 crystal,isA,Programming Language
-bosque,influences,programming paradigm
 photoscape,isA,Tool/Framework
 generic mapping tools,uses,c
 lucid,isA,Programming Language
@@ -2441,7 +2424,6 @@ xmms,uses,c++
 jmol,isA,Tool/Framework
 openoffice.org,uses,c++
 abas erp,uses,sql
-p4,influences,domain specific language
 gitorious,uses,ruby
 laminas,uses,php
 microsoft powertoys,isA,Tool/Framework
@@ -2465,7 +2447,6 @@ yaws,isA,Tool/Framework
 yast,isA,Tool/Framework
 salt,uses,python
 spartan,uses,c++
-xfe,isA,Tool/Framework
 moose,isA,Tool/Framework
 bup,uses,c
 mcabber,isA,Tool/Framework
@@ -2473,6 +2454,8 @@ apache bloodhound,isA,Tool/Framework
 jspx bay,isA,Tool/Framework
 extensible programming,isA,Programming Concept
 deep learning studio,uses,python
+frink,influencedBy,programming paradigm
+xfe,isA,Tool/Framework
 cyc,uses,lisp
 dc,isA,Tool/Framework
 cyberduck,uses,c sharp
@@ -2481,12 +2464,12 @@ astra,isA,Tool/Framework
 samtools,isA,Tool/Framework
 boxee,uses,c++
 xnview,isA,Tool/Framework
+scala,influencedBy,programming paradigm
 tamarin,isA,Tool/Framework
 matrix toolkit java,uses,java
 z3 theorem prover,uses,c++
 microsip,isA,Tool/Framework
 mega,uses,php
-nu,influences,object oriented programming
 visual molecular dynamics,uses,c
 apt,isA,Tool/Framework
 vmware fusion,uses,c++
@@ -2499,26 +2482,31 @@ openshift,isA,Tool/Framework
 deploy,isA,Programming Concept
 luarocks,isA,Tool/Framework
 eclipse modeling framework,isA,Tool/Framework
-mapserver,isA,Tool/Framework
 flash mp3 player,uses,php
 hotjava,isA,Tool/Framework
 offlineimap,uses,python
 gnu assembler,uses,c
 velocity,uses,javascript
+scala,influencedBy,object oriented programming
+mapserver,isA,Tool/Framework
 panoweaver,uses,c++
 igstk,isA,Tool/Framework
+gödel,influencedBy,declarative programming
 apache mxnet,uses,python
 tryton,uses,python
 distributed r,uses,c++
 open semantic framework,uses,php
+dart,influencedBy,imperative programming
+joule,influencedBy,distributed computing
 skell,isA,Tool/Framework
 neatx,uses,c
+java,influencedBy,object oriented
+joyce,influencedBy,structured programming
 puma,uses,c
 rt thread,uses,c
 compendium,isA,Tool/Framework
 firefox 3.6,isA,Tool/Framework
 pytorch,uses,c++
-txl,influences,term rewriting
 gpac project on advanced content,isA,Tool/Framework
 apache axis,uses,c++
 apache kafka,uses,java
@@ -2585,17 +2573,16 @@ madagascar,uses,c
 sinatra,isA,Tool/Framework
 app inventor for android,uses,scheme
 classic shell,isA,Tool/Framework
-kotlin,influences,imperative programming
 safe,isA,Programming Concept
 komodo edit,uses,c
 freecol,uses,java
 aptitude,isA,Tool/Framework
 bzflag,uses,c++
 lua,isA,Programming Language
+haskell,influencedBy,purely functional programming
 universal media server,uses,java
 vbulletin,isA,Tool/Framework
 opendnssec,isA,Tool/Framework
-harbour,influences,reflective programming
 sablecc,uses,java
 dos wedge,isA,Tool/Framework
 xdelta,uses,c
@@ -2621,7 +2608,6 @@ retrievalware,isA,Tool/Framework
 organic groups mailing list,isA,Tool/Framework
 javascriptmvc,isA,Tool/Framework
 tendra compiler,isA,Tool/Framework
-stella,influences,simulation language
 nana,uses,c++
 opensocial,uses,html
 wallpaper engine,isA,Tool/Framework
@@ -2643,7 +2629,8 @@ k desktop environment 2,uses,c++
 protégé,uses,java
 hotspot,isA,Tool/Framework
 gnome videos,uses,c
-frink,influences,functional programming
+dolittle,influencedBy,object oriented programming
+libt2n,uses,c++
 multi stage programming,isA,Programming Concept
 rpm package manager,isA,Tool/Framework
 xinetd,isA,Tool/Framework
@@ -2654,18 +2641,16 @@ root,uses,c++
 anthillpro,uses,java
 apache hbase,isA,Tool/Framework
 squeezelite,isA,Tool/Framework
-libt2n,uses,c++
-ec,influences,generic programming
 beautiful soup,uses,python
 tent,isA,Tool/Framework
 autopackage,uses,python
+apache camel,uses,java
 declarative with few imperative features,isA,Programming Concept
+parasail,influencedBy,object oriented programming
 opengrok,uses,java
 light table,isA,Tool/Framework
 pretty easy privacy,isA,Tool/Framework
 lightstreamer,isA,Tool/Framework
-ezhil,influences,imperative programming
-apache camel,uses,java
 declarative,isA,Programming Concept
 cyclos,uses,java
 tables,uses,javascript
@@ -2701,7 +2686,6 @@ tightvnc,uses,java
 rubymotion,uses,ruby
 mumble,uses,c++
 remmina,isA,Tool/Framework
-matlab,influences,object oriented programming
 worldwide telescope,isA,Tool/Framework
 laplacesdemon,isA,Tool/Framework
 gt.m,uses,c
@@ -2710,6 +2694,7 @@ tianocore edk ii,isA,Tool/Framework
 cuneiform,isA,Programming Language
 qtruby,isA,Tool/Framework
 escher,isA,Programming Language
+agda,influencedBy,functional programming
 esoteric,isA,Programming Concept
 epanet,isA,Tool/Framework
 mupen64plus,uses,c++
@@ -2735,7 +2720,6 @@ berkeley yacc,isA,Tool/Framework
 imesh,uses,c++
 discord,uses,elixir
 ilias,isA,Tool/Framework
-elixir,influences,distributed computing
 eclipse,uses,c
 rubinius,uses,ruby
 bash,uses,c
@@ -2743,12 +2727,14 @@ stevie,uses,c
 puma,isA,Tool/Framework
 gnome screenshot,isA,Tool/Framework
 blink,isA,Tool/Framework
+planner,influencedBy,logic programming
 jboss operations network,uses,java
 ansible,uses,ruby
 gbrainy,isA,Tool/Framework
 movim,uses,php
 imesh,isA,Tool/Framework
 evergreen,uses,javascript
+ezhil,influencedBy,imperative programming
 cu writer,uses,c
 exelearning,uses,python
 inkscape,uses,c++
@@ -2763,6 +2749,7 @@ lon capa,uses,perl
 photomath,isA,Tool/Framework
 verinice,uses,java
 texniccenter,uses,c++
+ruby,influencedBy,object oriented programming
 boost,uses,c++
 database management library,uses,c++
 openwire,uses,delphi
@@ -2772,10 +2759,8 @@ dspace,uses,java
 gradle,uses,java
 libfixmath,uses,c
 postgresql,isA,Tool/Framework
-elm,influences,functional programming
 jakarta server faces,uses,java
 hopsan,isA,Tool/Framework
-harbour,influences,imperative programming
 phpmyadmin,uses,php
 deap,uses,python
 fvwm,isA,Tool/Framework
@@ -2824,6 +2809,7 @@ value level,isA,Programming Concept
 infrakit,isA,Tool/Framework
 anthillpro,isA,Tool/Framework
 ibm opendx,uses,c
+p4,influencedBy,imperative programming
 balsa,isA,Tool/Framework
 augur,isA,Tool/Framework
 nosql,isA,Programming Concept
@@ -2844,7 +2830,6 @@ jahia,isA,Tool/Framework
 calibre,uses,c
 micropython,isA,Tool/Framework
 webscarab,uses,java
-claire,influences,object oriented
 jdeveloper,isA,Tool/Framework
 fet,uses,c++
 vision,isA,Tool/Framework
@@ -2856,17 +2841,16 @@ glade interface designer,isA,Tool/Framework
 darwin,isA,Programming Language
 dataviva,uses,python
 pydio,uses,go
-raptor,influences,structured programming
 u prove,uses,javascript
-1 second everyday,uses,swift
 xsupplicant,uses,c
-tea,influences,functional
 simgrid,uses,lua
 batavi,uses,php
 hp linux imaging and printing,uses,python
 linphone,uses,c sharp
 preesm,uses,java
 rainmeter,isA,Tool/Framework
+1 second everyday,uses,swift
+curry,influencedBy,functional
 call.center,uses,java
 glow,isA,Tool/Framework
 amigaos 4,uses,c++
@@ -2885,11 +2869,10 @@ geonetwork opensource,isA,Tool/Framework
 feh,isA,Tool/Framework
 blackberry world,uses,java
 outline vpn,isA,Tool/Framework
-lua,influences,imperative
 mullvad,uses,rust
-stella,influences,visual programming language
 isis,isA,Tool/Framework
 knitr,uses,r
+alice,influencedBy,functional programming
 crystaldiskmark,uses,c++
 librelogo,isA,Tool/Framework
 microsoft visual c++,uses,c++
@@ -2899,7 +2882,6 @@ apache http server,isA,Tool/Framework
 red5,uses,java
 vpython,uses,c++
 psi,uses,python
-lasso,influences,concurrent
 moinmoin,uses,python
 service oriented architecture,isA,Programming Concept
 monte carlo n particle transport code,isA,Tool/Framework
@@ -2910,6 +2892,7 @@ wordgrinder,uses,c
 geotrellis,isA,Tool/Framework
 rkhunter,isA,Tool/Framework
 tao framework,isA,Tool/Framework
+joy,influencedBy,programming paradigm
 webalizer,uses,c
 mdadm,uses,c
 clsql,isA,Tool/Framework
@@ -2921,6 +2904,7 @@ bean scripting framework,isA,Tool/Framework
 semaphore,uses,elixir
 apache velocity,uses,java
 partclone,uses,c
+bosque,influencedBy,programming paradigm
 leap,isA,Programming Language
 yasara,uses,c
 apache jmeter,isA,Tool/Framework
@@ -2945,7 +2929,6 @@ inssider,isA,Tool/Framework
 periscope,isA,Tool/Framework
 apache wicket,isA,Tool/Framework
 gamebryo,uses,c++
-s2,influences,object oriented programming
 krename,isA,Tool/Framework
 advanced intrusion detection environment,isA,Tool/Framework
 oversim,isA,Tool/Framework
@@ -2964,7 +2947,6 @@ diskspd,uses,c++
 corosync cluster engine,isA,Tool/Framework
 firefox,isA,Tool/Framework
 drqueue,isA,Tool/Framework
-joyce,influences,imperative programming
 juice,isA,Tool/Framework
 roundup,isA,Tool/Framework
 open cascade technology,isA,Tool/Framework
@@ -2978,6 +2960,7 @@ reprise license manager,uses,java
 dsplayer,uses,delphi
 mpv,uses,c
 ipkg,uses,c
+dolittle,influencedBy,programming paradigm
 cgal,isA,Tool/Framework
 tulip,isA,Tool/Framework
 glftpd,uses,c
@@ -2991,15 +2974,12 @@ mahara,uses,php
 redux,isA,Tool/Framework
 limesurvey,uses,php
 filetopia,isA,Tool/Framework
-xl,influences,concept oriented
-snap!,influences,list of educational programming languages
 darwiinremote,isA,Tool/Framework
 peertube,uses,css
 spring boot,isA,Tool/Framework
 subtitle edit,isA,Tool/Framework
 skyline,isA,Tool/Framework
 neoload,isA,Tool/Framework
-claire,influences,rule processing
 rhino,isA,Tool/Framework
 sharpdevelop,isA,Tool/Framework
 rio,uses,c
@@ -3009,28 +2989,29 @@ loadui,uses,java
 torque,uses,c++
 byobu,uses,python
 uzbl,uses,c
-openafs,uses,c
 saas,isA,Programming Concept
-bliss,influences,structured
+factor,influencedBy,stack oriented programming
 firefox lockwise,uses,swift
 sudo,isA,Tool/Framework
-amos,influences,procedural programming
+sk8,influencedBy,object oriented programming
+openafs,uses,c
 bigcouch,isA,Tool/Framework
 easybcd,isA,Tool/Framework
 linux test project,isA,Tool/Framework
 nmap,uses,c++
 berkeley db,isA,Tool/Framework
+ruby,influencedBy,reflective programming
 ifolder,uses,c sharp
 elastic load balancer,isA,Tool/Framework
-firefox,uses,css
 db4o,uses,c sharp
 adobe framemaker,uses,c
+frenetic,influencedBy,reactive
+firefox,uses,css
 genenetwork,uses,javascript
 glpi,isA,Tool/Framework
 terragen,uses,c++
 file system visualizer,uses,c
 milk,isA,Programming Language
-bosque,influences,functional programming
 spacewalk,uses,java
 mofem joseph,uses,c++
 mediaportal,isA,Tool/Framework
@@ -3072,9 +3053,10 @@ ifolder,isA,Tool/Framework
 gnu scientific library,uses,c
 gnu mpfr,isA,Tool/Framework
 edgex foundry,uses,go
-java agent development framework,uses,java
 vips,isA,Tool/Framework
 catboost,isA,Tool/Framework
+frink,influencedBy,functional programming
+java agent development framework,uses,java
 pyrex,isA,Tool/Framework
 nats messaging,uses,go
 grav,uses,php
@@ -3091,11 +3073,12 @@ data usa,uses,javascript
 plucker,isA,Tool/Framework
 monogame,isA,Tool/Framework
 jedit,isA,Tool/Framework
-boxee,isA,Tool/Framework
 intrinsic noise analyzer,isA,Tool/Framework
 qemu,isA,Tool/Framework
 pkgsrc,isA,Tool/Framework
 interplanetary file system,isA,Tool/Framework
+julia,influencedBy,procedural programming
+boxee,isA,Tool/Framework
 meta,isA,Programming Concept
 galen framework,isA,Tool/Framework
 apache avro,uses,perl
@@ -3106,17 +3089,17 @@ miarmy,isA,Tool/Framework
 potrace,isA,Tool/Framework
 frontis archive publishing system,isA,Tool/Framework
 wireshark,uses,c
-rclone,isA,Tool/Framework
 mplayer,isA,Tool/Framework
 botan,uses,c++
 high orbit ion cannon,uses,c sharp
-scala,influences,object oriented programming
 mochikit,uses,javascript
 immuni,uses,swift
 info zip,uses,c
 general purpose programming language,isA,Programming Concept
 avidemux,uses,c++
 whatsapp,uses,erlang
+rclone,isA,Tool/Framework
+julia,influencedBy,functional programming
 intellij idea,isA,Tool/Framework
 grail,uses,python
 rosegarden,uses,c++
@@ -3142,7 +3125,7 @@ tarantool,isA,Tool/Framework
 linux namespaces,isA,Tool/Framework
 cm browser,isA,Tool/Framework
 freeswitch,isA,Tool/Framework
-oz,influences,programming paradigm
+whiley,influencedBy,imperative programming
 lzfse,uses,c
 apache struts 1,isA,Tool/Framework
 twine,uses,javascript
@@ -3153,12 +3136,10 @@ rapidsvn,uses,c
 natural language toolkit,uses,python
 xps annotator,isA,Tool/Framework
 mpqc,uses,c
-swift,influences,declarative programming
+composr cms,uses,php
 node.js,uses,c
 university of michigan executive system,isA,Tool/Framework
 zram,isA,Tool/Framework
-frenetic,influences,domain specific
-composr cms,uses,php
 bigbluebutton,uses,java
 boehm garbage collector,isA,Tool/Framework
 ceiton,uses,javascript
@@ -3189,9 +3170,10 @@ networkx,isA,Tool/Framework
 foremost,isA,Tool/Framework
 logicaldoc,uses,java
 synfig,isA,Tool/Framework
-icinga,uses,c++
 pixie,isA,Tool/Framework
 lxr cross referencer,uses,perl
+flow,influencedBy,imperative programming
+icinga,uses,c++
 hiarcs,uses,c
 windows console,uses,c++
 open vswitch,isA,Tool/Framework
@@ -3205,7 +3187,6 @@ linux virtual server,uses,c
 dhammin,isA,Tool/Framework
 msu lossless video codec,isA,Tool/Framework
 nativescript,uses,javascript
-oz,influences,logic programming
 jakarta xml web services,uses,java
 bouml,isA,Tool/Framework
 mosaic,uses,c
@@ -3215,23 +3196,21 @@ apache allura,isA,Tool/Framework
 perfect dark,uses,c++
 parallel virtual file system,isA,Tool/Framework
 blender game engine,uses,python
-plex,influences,concurrent
 sunvox,isA,Tool/Framework
 uwsgi,isA,Tool/Framework
 librsvg,uses,c
 pophealth,uses,javascript
 jetpack,isA,Tool/Framework
 internet information services,isA,Tool/Framework
-java,influences,imperative
 rudder,uses,rust
 alpine,uses,c
 wps office,uses,c++
 minigl,uses,c++
 wing ide,uses,c++
 ntfsprogs,uses,c
+dylan,influencedBy,object oriented programming
 kitodo,isA,Tool/Framework
 ipe,uses,c++
-lisp,influences,programming paradigm
 call.center,uses,swift
 three.js,isA,Tool/Framework
 peopletools,uses,java
@@ -3241,7 +3220,6 @@ halon,isA,Tool/Framework
 pngcrush,uses,c
 commander one,isA,Tool/Framework
 internet information services,uses,c++
-curry,influences,non strict
 maps.me,isA,Tool/Framework
 automation studio,isA,Tool/Framework
 urpmi,uses,perl
@@ -3253,11 +3231,9 @@ pcap,uses,c
 dom4j,isA,Tool/Framework
 whatpulse,uses,c++
 toybox,uses,c
-ttm,influences,general purpose macro processor
 vaadin,isA,Tool/Framework
 freemarker,isA,Tool/Framework
 asprise ocr,uses,c
-pict,influences,concurrent computing
 eclipse modeling framework,uses,java
 gollum,isA,Tool/Framework
 lightdm,isA,Tool/Framework
@@ -3282,22 +3258,20 @@ ti dnos,isA,Tool/Framework
 cdex,uses,python
 tao exdos,isA,Tool/Framework
 mcstas,isA,Tool/Framework
+mariadb,uses,perl
 wikibhasha,uses,php
 gnome applications,isA,Tool/Framework
 orbx.js,uses,javascript
 netscape navigator 9,isA,Tool/Framework
-mariadb,uses,perl
-opa,influences,programming paradigm
 bleachbit,isA,Tool/Framework
-eff,influences,programming paradigm
 f script,isA,Programming Language
 bonnie++,isA,Tool/Framework
 ow2 orchestra,uses,java
+vala,influencedBy,imperative programming
 kdbg,isA,Tool/Framework
 opensearch,isA,Tool/Framework
 mwrank,uses,c++
 kyoto common lisp,isA,Tool/Framework
-kotlin,influences,programming paradigm
 silk,uses,c++
 bigtable,uses,java
 presto,uses,java
@@ -3325,26 +3299,27 @@ apache brooklyn,uses,java
 kde plasma 5,isA,Tool/Framework
 openwga,isA,Tool/Framework
 wintermute engine,isA,Tool/Framework
-chakra,uses,c++
 spark nlp,uses,scala
+qore,influencedBy,imperative
+chakra,uses,c++
 fresco,isA,Tool/Framework
 headerdoc,uses,c
 orbiter,isA,Tool/Framework
-apache openejb,isA,Tool/Framework
 vegas pro,uses,c sharp
 simdis,isA,Tool/Framework
 flwm,uses,c++
 jfire,uses,java
+citrine,influencedBy,object oriented programming
 typo3,uses,javascript
 apache nifi,uses,java
+ceylon,influencedBy,object oriented programming
+apache openejb,isA,Tool/Framework
 cubrid,isA,Tool/Framework
 apache kafka,uses,scala
 newton game dynamics,uses,c++
-charm,influences,structured programming
 mixxx,isA,Tool/Framework
 fityk,isA,Tool/Framework
 smart common input method,isA,Tool/Framework
-turing,influences,programming paradigm
 graphical modeling framework,isA,Tool/Framework
 oracle iplanet web server,isA,Tool/Framework
 mynotex,isA,Tool/Framework
@@ -3358,10 +3333,9 @@ shark 3d,isA,Tool/Framework
 devpartner,isA,Tool/Framework
 gpac project on advanced content,uses,c
 snowdrop,uses,c++
+joelib,uses,java
 msquic,isA,Tool/Framework
 icq,uses,swift
-planner,influences,procedural programming
-joelib,uses,java
 bitpim,uses,python
 moho,uses,lua
 edusim,isA,Tool/Framework
@@ -3391,8 +3365,8 @@ ranger,uses,python
 sakai,uses,java
 jakarta xml web services,isA,Tool/Framework
 jetpag,isA,Tool/Framework
-tcl,influences,functional programming
 dx10,uses,pascal
+genie,influencedBy,structured programming
 secure copy protocol,uses,c
 apache couchdb,uses,c
 process monitor,uses,c++
@@ -3406,13 +3380,13 @@ josso,isA,Tool/Framework
 data analytics acceleration library,uses,java
 apache ant,isA,Tool/Framework
 source,isA,Programming Language
+lasso,influencedBy,concurrent
 apache zookeeper,isA,Tool/Framework
 festival speech synthesis system,isA,Tool/Framework
 influxdb,isA,Tool/Framework
 genenetwork,uses,html
 nnn,isA,Tool/Framework
 voldemort,uses,java
-parser,influences,multiparadigm   macro
 fdm,uses,c
 samhain,isA,Tool/Framework
 zinf,uses,c++
@@ -3442,6 +3416,7 @@ nuget,isA,Tool/Framework
 elgg,uses,php
 kino,uses,c++
 joelib,isA,Tool/Framework
+flix,influencedBy,programming paradigm
 gigamesh software framework,isA,Tool/Framework
 statmetrics,isA,Tool/Framework
 commons daemon,uses,java
@@ -3461,17 +3436,19 @@ ninja,uses,c++
 kmldonkey,isA,Tool/Framework
 multitran,isA,Tool/Framework
 autoq3d community,uses,c++
-biskit,uses,python
 openj9,isA,Tool/Framework
 perkeep,uses,go
 makehuman,uses,python
+biskit,uses,python
+parasail,influencedBy,imperative programming
 ibm unica netinsight,uses,css
 khangman,isA,Tool/Framework
 sirannon,uses,c++
+ciao,influencedBy,modular programming
 parsec,isA,Tool/Framework
 tarsnap,isA,Tool/Framework
-julia,influences,multiple dispatch
 berkeley open infrastructure for network computing,uses,php
+go,influencedBy,object oriented programming
 octoprint,isA,Tool/Framework
 duracloud,isA,Tool/Framework
 zfs,uses,c
@@ -3500,6 +3477,7 @@ openfl,isA,Tool/Framework
 strongswan,isA,Tool/Framework
 concierge osgi,isA,Tool/Framework
 py2exe,uses,python
+elixir,influencedBy,distributed computing
 base one foundation component library,uses,c sharp
 apache ofbiz,uses,java
 openfx,isA,Tool/Framework
@@ -3517,7 +3495,6 @@ sa c,isA,Programming Language
 aiki framework,isA,Tool/Framework
 gnu screen,isA,Tool/Framework
 miktex,uses,c
-cowsay,uses,perl
 kid3,isA,Tool/Framework
 midori,uses,c
 gnumed,uses,python
@@ -3525,6 +3502,8 @@ mutt,isA,Tool/Framework
 putty,isA,Tool/Framework
 app inventor for android,uses,java
 studierfenster,uses,c
+cowsay,uses,perl
+halide,influencedBy,functional programming
 opensocial,uses,c sharp
 babel,uses,javascript
 foundationdb,uses,c++
@@ -3558,7 +3537,6 @@ enonic xp,isA,Tool/Framework
 twisted,isA,Tool/Framework
 ecryptfs,isA,Tool/Framework
 testng,uses,java
-forth,influences,procedural programming
 j2k codec,isA,Tool/Framework
 archivemount,uses,c
 gamess,uses,c
@@ -3621,13 +3599,14 @@ ubiquity,uses,javascript
 apache lenya,uses,java
 google guice,isA,Tool/Framework
 xynth,uses,c
-halide,influences,functional programming
 google chrome,uses,html
 neo4j,isA,Tool/Framework
 libvirt,isA,Tool/Framework
 mediawiki,isA,Tool/Framework
 flowable,uses,javascript
 pegasus mail,uses,c++
+harbour,influencedBy,imperative programming
+kotlin,influencedBy,object oriented programming
 unity,uses,c++
 rainway,isA,Tool/Framework
 wirecast,uses,c++
@@ -3658,7 +3637,6 @@ libjpeg,uses,c
 google guava,uses,java
 gorm,isA,Tool/Framework
 gpops ii,uses,matlab
-agda,influences,functional programming
 lzip,uses,c
 cygwin,uses,c
 postfix,uses,c
@@ -3668,45 +3646,42 @@ lumina,isA,Tool/Framework
 qvwm,isA,Tool/Framework
 lmctfy,uses,c++
 iw,uses,python
+frei0r,isA,Tool/Framework
 probis,uses,javascript
 gson,uses,java
 avogadro,isA,Tool/Framework
 yahoo sherpa,uses,c++
-frei0r,isA,Tool/Framework
-eff,influences,functional programming
 cygwin,isA,Tool/Framework
-raku,influences,programming paradigm
 visit,isA,Tool/Framework
 yaml,uses,javascript
 scribus,uses,c++
-swift,influences,protocol
+trip a tron,isA,Tool/Framework
 ac3filter,uses,c++
 suricata,uses,rust
 xad,isA,Tool/Framework
-trip a tron,isA,Tool/Framework
-python,influences,reflective
 xoops,uses,php
+racket,influencedBy,object oriented programming
 suhosin,uses,c
-gnu.free,isA,Tool/Framework
 clipper,isA,Programming Language
 panos,uses,lisp
 claws mail,isA,Tool/Framework
 fits liberator,uses,javascript
 lttng,uses,c
+crystal,influencedBy,concurrent computing
+gnu.free,isA,Tool/Framework
 rdf4j,isA,Tool/Framework
 mongodb,uses,python
 node.js,uses,c++
 blackbox component builder,isA,Tool/Framework
 abas erp,isA,Tool/Framework
 orange,uses,c++
+systemtap,isA,Tool/Framework
 c3d toolkit,uses,c++
 less,uses,c
 selenium,uses,python
 dplyr,isA,Tool/Framework
 detekt,uses,python
 pdf parser,uses,python
-systemtap,isA,Tool/Framework
-php,influences,reflective programming
 genenetwork,isA,Tool/Framework
 xlib,uses,c
 ontowiki,isA,Tool/Framework
@@ -3721,6 +3696,7 @@ orbexpress,uses,java
 c.a.r.,uses,java
 bleachbit,uses,python
 scribe,isA,Tool/Framework
+euclid,influencedBy,programming paradigm
 gnu bison,uses,c
 alien,uses,perl
 panoweaver,isA,Tool/Framework
@@ -3738,7 +3714,6 @@ supercollider,uses,c++
 concurrent computing,isA,Programming Concept
 micro saint sharp,isA,Tool/Framework
 ezmol,uses,perl
-mary,influences,imperative programming
 houdini,isA,Tool/Framework
 rabbitmq,isA,Tool/Framework
 zerynth,isA,Tool/Framework
@@ -3756,7 +3731,6 @@ ganeti,uses,haskell
 softether vpn,uses,c
 spidermonkey,uses,c++
 komodo edit,uses,perl
-libstick,uses,html
 gplates,isA,Tool/Framework
 openvrml,isA,Tool/Framework
 enigma,uses,python
@@ -3767,9 +3741,10 @@ drizzle,uses,c++
 collaborative computational project number 4,uses,tcl
 qpdf,uses,c++
 netbeans,isA,Tool/Framework
+flix,influencedBy,functional programming
+libstick,uses,html
 komodo ide,isA,Tool/Framework
 mootools,isA,Tool/Framework
-ruby,influences,object oriented programming
 synaptic,uses,python
 ply,uses,python
 cd,isA,Programming Concept
@@ -3785,6 +3760,7 @@ mutt,uses,c
 sdb,uses,c
 rocksdb,isA,Tool/Framework
 cubrid,uses,c++
+krl,influencedBy,knowledge representation 
 papyrus,uses,java
 showcase workshop,uses,python
 esper,uses,java
@@ -3793,16 +3769,16 @@ gnustepweb,isA,Tool/Framework
 fasttracker 2,uses,pascal
 logicaldoc,isA,Tool/Framework
 pycharm,isA,Tool/Framework
-nu,influences,structured programming
 tomopy,uses,python
 k desktop environment 3,uses,c++
 brave,uses,c++
-harbour,influences,programming paradigm
+cameleon,influencedBy,functional programming
 steinberg cubase,uses,c++
 scrollkeeper,isA,Tool/Framework
 mx4j,isA,Tool/Framework
 haiku depot,isA,Tool/Framework
 verilog to routing,uses,c
+pure,influencedBy,declarative programming
 os4000,uses,apl
 climate data operators,isA,Tool/Framework
 slapt get,uses,c
@@ -3812,7 +3788,7 @@ aperture,isA,Tool/Framework
 mono,uses,c
 media lovin' toolkit,uses,c
 openbroadcaster,uses,php
-haskell,influences,purely functional programming
+opa,influencedBy,programming paradigm
 pi hole,isA,Tool/Framework
 localwiki,uses,python
 sublime text,isA,Tool/Framework
@@ -3831,8 +3807,9 @@ gnu bison,isA,Tool/Framework
 haiku packageinstaller,uses,c
 gnome subtitles,isA,Tool/Framework
 majordomo,uses,perl
+planner,influencedBy,programming paradigm
 stellar,uses,java
-plus,influences,imperative programming
+ezhil,influencedBy,structured programming
 activex,uses,c
 alljoyn,uses,java
 opencaster,uses,python
@@ -3857,7 +3834,6 @@ mirai,uses,go
 alljoyn,uses,c
 sinespace,isA,Tool/Framework
 flightpath,uses,php
-parasail,influences,concurrent computing
 pdf.js,uses,css
 away3d,isA,Tool/Framework
 frei0r,uses,c
@@ -3905,7 +3881,7 @@ octopussy,uses,perl
 concatenative programming language,isA,Programming Concept
 arachnophilia,isA,Tool/Framework
 pngcrush,isA,Tool/Framework
-ruby,influences,programming paradigm
+lfe,influencedBy,programming paradigm
 tetgen,uses,c++
 kivy,isA,Tool/Framework
 renjin,isA,Tool/Framework
@@ -3916,6 +3892,7 @@ internet low bitrate codec,isA,Tool/Framework
 aristotle metadata registry,uses,python
 agilo for trac,uses,python
 telehash,uses,ruby
+racket,influencedBy,modular programming
 alice,isA,Programming Language
 windowlab,isA,Tool/Framework
 buildamation,isA,Tool/Framework
@@ -3981,13 +3958,17 @@ meteor,isA,Tool/Framework
 element,uses,kotlin
 priest,uses,java
 20 sim,uses,c
+curl,influencedBy,markup language
+apl,influencedBy,modular programming
 lisica,uses,python
 network security services,uses,c
 gecko,isA,Tool/Framework
 xenforo,uses,php
+citrine,influencedBy,prototype based programming
 microsoft comic chat,uses,c++
 pretty diff,isA,Tool/Framework
 stack,isA,Programming Concept
+modsecurity,uses,c++
 sap erp,isA,Tool/Framework
 cinnamon,uses,javascript
 niutrans,uses,c++
@@ -3996,8 +3977,6 @@ verilog to routing,isA,Tool/Framework
 stylecop,uses,c sharp
 tre,isA,Tool/Framework
 jython,uses,java
-perl,influences,object oriented
-modsecurity,uses,c++
 smartos,uses,c
 lmms,uses,c++
 quod libet,uses,python
@@ -4013,7 +3992,6 @@ montagejs,uses,javascript
 powerdevs,isA,Tool/Framework
 adacontrol,uses,ada
 mlpack,uses,python
-spread toolkit,isA,Tool/Framework
 blockly,isA,Tool/Framework
 eureka streams,uses,java
 unit testing,isA,Programming Concept
@@ -4023,12 +4001,12 @@ systemtap,uses,c++
 fedora media writer,isA,Tool/Framework
 lives,isA,Tool/Framework
 gdal,uses,c++
-aarogya setu,uses,kotlin
-icon,influences,text oriented
 gadm,isA,Tool/Framework
+aarogya setu,uses,kotlin
+spread toolkit,isA,Tool/Framework
+ec,influencedBy,generic programming
 nintendo switch system software,uses,c++
 rozofs,isA,Tool/Framework
-qore,influences,shared memory
 lilypond,uses,scheme
 pups p3,uses,c
 griffon,isA,Tool/Framework
@@ -4108,6 +4086,7 @@ apache beam,isA,Tool/Framework
 icecast,uses,c
 internet speech audio codec,uses,c
 shazam,isA,Tool/Framework
+dolphin,uses,c++
 phpweblog,uses,php
 httrack,uses,c
 oracle nosql database,uses,java
@@ -4119,8 +4098,6 @@ kolibrios,uses,c
 brain fuck scheduler,uses,c
 latencytop,isA,Tool/Framework
 pry,uses,ruby
-dolphin,uses,c++
-c sharp,influences,reflective programming
 marmalade,uses,c++
 anki,isA,Tool/Framework
 webrtc,isA,Tool/Framework
@@ -4147,6 +4124,7 @@ haiku applications,isA,Tool/Framework
 fotografix,uses,c sharp
 clam,uses,c++
 taskjuggler,isA,Tool/Framework
+emerald,influencedBy,object oriented programming
 humhub,uses,php
 groupserver,uses,c
 flyway,isA,Tool/Framework
@@ -4186,6 +4164,7 @@ graphics32,uses,delphi
 graphical network simulator 3,uses,python
 mycore,isA,Tool/Framework
 lector,uses,python
+php,influencedBy,procedural programming
 apache ojb,uses,java
 palm os,uses,c++
 ripple,uses,c++
@@ -4197,12 +4176,12 @@ retro engine,isA,Tool/Framework
 planeshift,isA,Tool/Framework
 mutter,uses,c
 jsmath,isA,Tool/Framework
-rpl,influences,structured
 astropy,uses,c
 facelets,uses,java
 redshift,uses,python
 turbocash,isA,Tool/Framework
 rex,uses,perl
+eiffel,influencedBy,concurrent object oriented programming
 one sided message passing,isA,Programming Concept
 colloquy,isA,Tool/Framework
 fugitive.vim,isA,Tool/Framework
@@ -4213,14 +4192,13 @@ heidisql,isA,Tool/Framework
 etherpad,uses,javascript
 recoll,isA,Tool/Framework
 network security toolkit,uses,html
+feed viewer,uses,c sharp
 yii,isA,Tool/Framework
 muse,isA,Tool/Framework
 gem5,isA,Tool/Framework
 frontis archive publishing system,uses,php
 branches,isA,Programming Concept
 foremost,uses,c
-tcl,influences,programming paradigm
-feed viewer,uses,c sharp
 risc ix,uses,c
 apertusvr,uses,c++
 red,isA,Programming Language
@@ -4238,10 +4216,11 @@ peazip,isA,Tool/Framework
 tinc,isA,Tool/Framework
 google plugin for eclipse,isA,Tool/Framework
 n2n,isA,Tool/Framework
-primefaces,uses,java
 galaxy,uses,javascript
 jquery ui,uses,javascript
 owl scientific computing,uses,c
+javascript,influencedBy,functional programming
+primefaces,uses,java
 apache openoffice,uses,java
 compiz,isA,Tool/Framework
 faststone image viewer,uses,delphi
@@ -4265,30 +4244,30 @@ guetzli,isA,Tool/Framework
 vcpkg,isA,Tool/Framework
 hipcrime,uses,java
 orx,uses,c
-supertux,uses,squirrel
 blobby volley,isA,Tool/Framework
 procedural programming,isA,Programming Concept
 mysql archive,uses,c
 ibm db2 family,uses,c
 xfast,uses,c
 prefuse,isA,Tool/Framework
-winxp,isA,Tool/Framework
 netdisco,uses,perl
-ats,influences,functional programming
+winxp,isA,Tool/Framework
+eli,influencedBy,array programming
+supertux,uses,squirrel
 activex,uses,c++
 ntop,uses,c
 open babel,isA,Tool/Framework
 apexkb,uses,javascript
 gpsim,uses,c++
+red,influencedBy,functional programming
 virtual cell,isA,Tool/Framework
 bisque,uses,c++
+playn,isA,Tool/Framework
 keras,uses,python
+pan,influencedBy,declarative programming
 xaos,uses,c
 cartodb,isA,Tool/Framework
 conky,uses,c++
-playn,isA,Tool/Framework
-lucid,influences,dataflow programming
-pico,influences,procedural programming
 gnats,uses,c
 apama,uses,java
 chocolatey,isA,Tool/Framework
@@ -4301,11 +4280,8 @@ openam,isA,Tool/Framework
 rapidsms,uses,python
 pisg,uses,perl
 adaptive server enterprise,isA,Tool/Framework
-joule,influences,distributed computing
 nuget,uses,c sharp
 nclass,uses,c sharp
-babbage,influences,high level assembler
-ec,influences,programming paradigm
 linux desktop testing project,uses,c sharp
 simgrid,isA,Tool/Framework
 master password,isA,Tool/Framework
@@ -4350,17 +4326,17 @@ firefox 3.5,uses,css
 clanlib,isA,Tool/Framework
 apache mxnet,uses,go
 network security toolkit,uses,python
+sco skunkware,uses,c++
 jigdo,isA,Tool/Framework
 algebraic data type,isA,Programming Concept
 merb,uses,ruby
-eiffel,influences,object oriented programming
-sco skunkware,uses,c++
 cheshift,uses,python
 freeotp,isA,Tool/Framework
 easybcd,uses,c++
 dolittle,isA,Programming Language
 xconfig,isA,Tool/Framework
 codemirror,isA,Tool/Framework
+java,influencedBy,reflective
 usemodwiki,isA,Tool/Framework
 raftlib,isA,Tool/Framework
 metronome im,isA,Tool/Framework
@@ -4398,25 +4374,21 @@ hippo cms,uses,java
 silex,isA,Tool/Framework
 bitcomet,uses,c++
 objectweb asm,isA,Tool/Framework
+wxphp,isA,Tool/Framework
 wxpython,isA,Tool/Framework
 maqetta,uses,html
 kaffeine,uses,c++
 puremvc,uses,python
-wxphp,isA,Tool/Framework
-c sharp,influences,functional programming
 isaac dynamics,isA,Tool/Framework
 phpedit,isA,Tool/Framework
 origyn web browser,uses,c++
 sumatra pdf,uses,c
 fluff busting purity,uses,javascript
-draco,influences,structured
-dart,influences,imperative programming
-racket,influences,imperative programming
-rpl,influences,concatenative
 nikto,uses,html
 ipython,uses,python
 staffpad,uses,c++
-racket,influences,modular programming
+snap,influencedBy,imperative programming
+firefox for ios,uses,c
 form,isA,Tool/Framework
 kitura,uses,swift
 surf,uses,c
@@ -4425,8 +4397,6 @@ taskfreak,uses,php
 metasfresh,uses,sql
 zbar,uses,c
 monotorrent,isA,Tool/Framework
-python,influences,object oriented
-firefox for ios,uses,c
 hildon,uses,c
 ippolit,uses,c
 dartmouth time sharing system,uses,lisp
@@ -4455,7 +4425,6 @@ twig,uses,php
 adhearsion,uses,ruby
 rubinius,uses,c++
 android studio,isA,Tool/Framework
-c,influences,procedural programming
 phpstorm,isA,Tool/Framework
 guvcview,uses,c
 robotfindskitten,isA,Tool/Framework
@@ -4468,6 +4437,7 @@ sodipodi,uses,c
 acornsoft lisp,isA,Tool/Framework
 duracloud,uses,java
 namd,uses,c++
+idris,influencedBy,functional programming
 cdburnerxp,uses,c sharp
 apache avro,isA,Tool/Framework
 visualap,uses,java
@@ -4482,12 +4452,10 @@ stacheldraht,uses,c
 xetex,uses,c
 preonvm,uses,java
 apache myfaces,uses,java
+linphone,uses,c
 apache tuscany,uses,java
-fp,influences,function level programming
 llvm,uses,c++
 railo,isA,Tool/Framework
-linphone,uses,c
-sasl,influences,functional programming
 google slides,uses,javascript
 bmon,uses,c
 altium designer,uses,delphi
@@ -4509,14 +4477,11 @@ qutecom,uses,c
 chandler,isA,Tool/Framework
 apache oodt,isA,Tool/Framework
 spring batch,isA,Tool/Framework
-swift,influences,functional programming
 scikit multiflow,isA,Tool/Framework
 orbada,isA,Tool/Framework
 patchwork,uses,python
 piwigo,uses,php
 netxms,uses,java
-forth,influences,concatenative programming language
-lfe,influences,concurrent computing
 joomla,uses,php
 drjava,uses,java
 autokey,uses,python
@@ -4525,7 +4490,6 @@ squirrelmail,uses,php
 geocoder,uses,ruby
 rescarta toolkit,isA,Tool/Framework
 olive,uses,c++
-c,influences,structured
 diptrace,uses,delphi
 cifsd,isA,Tool/Framework
 openrefine,uses,java
@@ -4545,11 +4509,11 @@ joose,uses,javascript
 iwork,isA,Tool/Framework
 plandora,uses,java
 vino,uses,c
-halide,influences,parallel programming model
 monecs,isA,Tool/Framework
 gnucobol,uses,c++
 electric,uses,java
 eidors,isA,Tool/Framework
+planner,influencedBy,procedural programming
 newton x,uses,perl
 lightweight java game library,uses,c
 expect,isA,Tool/Framework
@@ -4580,7 +4544,6 @@ immuni,isA,Tool/Framework
 josso,uses,java
 apache ignite,uses,sql
 multi paradigm,isA,Programming Concept
-flow,influences,imperative programming
 network security toolkit,uses,c
 putty,uses,c
 moonlight,uses,c
@@ -4592,10 +4555,11 @@ graphql,uses,java
 go!,isA,Programming Language
 bitmessage,isA,Tool/Framework
 oracle weblogic server,isA,Tool/Framework
-gnu mailman,uses,c
 ats,isA,Programming Language
 sagan,uses,c
 ejb,isA,Tool/Framework
+python,influencedBy,reflective
+gnu mailman,uses,c
 evercam,uses,ruby
 sound credit,uses,python
 ajax animator,uses,javascript
@@ -4618,6 +4582,7 @@ downthemall!,isA,Tool/Framework
 orca,uses,python
 customer account data engine,uses,java
 doas,isA,Tool/Framework
+ruby,influencedBy,imperative programming
 sodipodi,isA,Tool/Framework
 b2evolution,isA,Tool/Framework
 gd graphics library,uses,c
@@ -4633,9 +4598,10 @@ adobe flash builder,isA,Tool/Framework
 itext,uses,java
 cliqz,uses,rust
 mailplane,isA,Tool/Framework
-text oriented,isA,Programming Concept
 iw,uses,c++
 binary ninja,isA,Tool/Framework
+text oriented,isA,Programming Concept
+matlab,influencedBy,imperative programming
 pixel game maker mv,isA,Tool/Framework
 calf studio gear,uses,c++
 supertux,uses,c++
@@ -4646,11 +4612,13 @@ at,isA,Tool/Framework
 blast model checker,isA,Tool/Framework
 apache openoffice,uses,c++
 ilnumerics,uses,c sharp
+x10,influencedBy,object oriented programming
 jdk mission control,isA,Tool/Framework
 emscripten,uses,c
 kerberos,isA,Tool/Framework
 oniguruma,isA,Tool/Framework
 karel,isA,Programming Language
+mumble,isA,Tool/Framework
 simantics system dynamics,uses,java
 aarogya setu,isA,Tool/Framework
 multipurpose transaction protocol,isA,Tool/Framework
@@ -4658,8 +4626,6 @@ gpsd,isA,Tool/Framework
 kea,isA,Tool/Framework
 oracle discoverer,uses,java
 adobe framemaker,uses,c++
-mumble,isA,Tool/Framework
-pure,influences,declarative programming
 web application,isA,Programming Concept
 sap anywhere,isA,Tool/Framework
 mathjax,uses,javascript
@@ -4672,17 +4638,19 @@ odk,uses,javascript
 freeciv,uses,lua
 arcgis,isA,Tool/Framework
 egonet,isA,Tool/Framework
-eff,influences,imperative programming
 amarok,uses,c++
 postfix,isA,Tool/Framework
 netperf,isA,Tool/Framework
 vue.js,isA,Tool/Framework
 ntfs 3g,isA,Tool/Framework
+plex,influencedBy,imperative
 traccar,uses,java
 featherpad,uses,c++
+dart,influencedBy,functional programming
 sonic pi,uses,erlang
 pdftk,uses,c++
 topstyle,isA,Tool/Framework
+bliss,influencedBy,structured
 slack,isA,Tool/Framework
 midori,uses,vala
 modernizr,uses,javascript
@@ -4709,7 +4677,6 @@ biggantt,uses,java
 puremvc,isA,Tool/Framework
 mruby,isA,Tool/Framework
 apache shindig,uses,java
-joyce,influences,structured programming
 stackless python,isA,Tool/Framework
 qvd,uses,perl
 gnome terminal,isA,Tool/Framework
@@ -4736,19 +4703,21 @@ cog,isA,Tool/Framework
 porn time,uses,javascript
 gnome,uses,css
 spaceengine,isA,Tool/Framework
-tonido,uses,c++
 non structured programming,isA,Programming Concept
 pybliographer,isA,Tool/Framework
 qt,uses,c++
 fontforge,isA,Tool/Framework
-yuls,isA,Tool/Framework
 ganttproject,uses,java
 android privacy guard,isA,Tool/Framework
 apache empire db,isA,Tool/Framework
 apache systemds,uses,c
 viennarna package,uses,c
+tonido,uses,c++
+ruby,influencedBy,functional programming
 linux pam,isA,Tool/Framework
 leadwerks,uses,c++
+yuls,isA,Tool/Framework
+joy,influencedBy,functional programming
 apache shindig,isA,Tool/Framework
 plex,isA,Programming Language
 animatlab,isA,Tool/Framework
@@ -4776,12 +4745,14 @@ sawzall,isA,Programming Language
 google app runtime for chrome,uses,java
 mix,isA,Tool/Framework
 apache calcite,isA,Tool/Framework
+euclid,influencedBy,functional programming
 zeek,isA,Tool/Framework
 agora,uses,perl
 aptana,uses,java
 apache mxnet,uses,scala
 aim,isA,Tool/Framework
 dolibarr,uses,php
+racket,influencedBy,functional programming
 apache directory,isA,Tool/Framework
 rozofs,uses,python
 batoo jpa,isA,Tool/Framework
@@ -4842,6 +4813,7 @@ gpsim,isA,Tool/Framework
 frama c,isA,Tool/Framework
 rsyslog,uses,c
 teamforge,isA,Tool/Framework
+kotlin,influencedBy,reflective programming
 adobe scout,isA,Tool/Framework
 frostbite,uses,c++
 virtual cell,uses,c++
@@ -4874,7 +4846,6 @@ django cms,uses,python
 dropbear,uses,c
 openidm,uses,java
 ametys cms,isA,Tool/Framework
-harbour,influences,functional programming
 pcman file manager,uses,c
 zekr,uses,java
 ovn,uses,c
@@ -4883,6 +4854,7 @@ apache cordova,isA,Tool/Framework
 pdfcreator,isA,Tool/Framework
 skell,uses,go
 frostwire,isA,Tool/Framework
+zpl,influencedBy,array programming
 adobe framemaker,isA,Tool/Framework
 mpd,isA,Programming Language
 pcsx2,uses,c++
@@ -4905,12 +4877,12 @@ kolibrios,uses,lua
 hcl domino,uses,java
 gridgain systems,isA,Tool/Framework
 mozilla thunderbird,uses,javascript
-frenetic,influences,modular
 firefox,uses,rust
 qutemol,uses,c++
 international components for unicode,uses,java
 c sharp,isA,Programming Language
 minicom,isA,Tool/Framework
+python,influencedBy,procedural
 dapper orm,uses,c sharp
 parboiled,isA,Tool/Framework
 jpedal,isA,Tool/Framework
@@ -4919,7 +4891,9 @@ insight segmentation and registration toolkit,isA,Tool/Framework
 slowloris,isA,Tool/Framework
 rt 11,uses,apl
 samson,uses,c++
+oz,influencedBy,imperative programming
 nasa worldwind,uses,java
+icon,influencedBy,text oriented
 visual component framework,uses,c++
 gosling emacs,uses,c
 mate,uses,python
@@ -4937,6 +4911,7 @@ cocos2d,uses,python
 infrakit,uses,go
 quasar framework,uses,javascript
 prado,uses,php
+swift,influencedBy,declarative programming
 aris express,isA,Tool/Framework
 sheetster,isA,Tool/Framework
 gephi,isA,Tool/Framework
@@ -4961,15 +4936,17 @@ scripting,isA,Programming Concept
 rarian,isA,Tool/Framework
 marklogic server,uses,c
 s2,isA,Programming Language
-openstep,isA,Tool/Framework
 apache tika,uses,java
-gwrite,uses,python
 go continuous delivery,uses,ruby
 svnkit,uses,java
 mangoo microfinance management,uses,php
 lightscreen,isA,Tool/Framework
 asynchronous method invocation,isA,Programming Concept
 010 editor,isA,Tool/Framework
+raptor,influencedBy,structured programming
+openstep,isA,Tool/Framework
+lucid,influencedBy,dataflow programming
+gwrite,uses,python
 tgif,isA,Tool/Framework
 apache cxf,isA,Tool/Framework
 monit,isA,Tool/Framework
@@ -4979,6 +4956,7 @@ rocket,uses,rust
 zammad,uses,javascript
 feedbin,isA,Tool/Framework
 spree commerce,uses,ruby
+java,influencedBy,generic
 bbc sounds,uses,kotlin
 db,isA,Tool/Framework
 menuconfig,uses,c
@@ -5039,10 +5017,12 @@ clamwin free antivirus,uses,c++
 microsoft seal,isA,Tool/Framework
 expat,uses,c
 quicknet,uses,javascript
+python,influencedBy,functional
 fltk,isA,Tool/Framework
 continuous deployment,isA,Programming Concept
 yuzu,isA,Tool/Framework
 foma,uses,c
+firefox 2,isA,Tool/Framework
 mypaint,uses,c++
 component based scalable logical architecture,uses,c sharp
 apache cloudstack,isA,Tool/Framework
@@ -5052,12 +5032,9 @@ wiredtiger,isA,Tool/Framework
 exa,isA,Tool/Framework
 hackety hack,uses,ruby
 openvrml,uses,c++
-go!,influences,logic
-firefox 2,isA,Tool/Framework
 cryengine,uses,lua
 pretty easy privacy,uses,c sharp
 icewm,uses,c++
-dart,influences,functional programming
 firefly media server,isA,Tool/Framework
 lumina,uses,c++
 powerdns,uses,c++
@@ -5091,7 +5068,6 @@ ascend,isA,Tool/Framework
 python paste,uses,python
 simple desktop display manager,isA,Tool/Framework
 gvisor,isA,Tool/Framework
-java,influences,functional
 gamess,isA,Tool/Framework
 quickc,uses,c
 coherent,uses,c
@@ -5166,9 +5142,11 @@ sofa statistics,uses,python
 jshint,uses,javascript
 qpsmtpd,uses,perl
 scalasca,uses,c
+halide,influencedBy,parallel programming model
 zmailer,uses,c
 pound,uses,c
 dwsim,uses,c sharp
+elixir,influencedBy,concurrent computing
 zotero,uses,javascript
 natural docs,uses,c sharp
 libvncserver,uses,c
@@ -5176,20 +5154,19 @@ smartfrog,isA,Tool/Framework
 idealist,uses,c
 spaceengine,uses,c++
 ch,isA,Tool/Framework
-miranda,influences,lazy evaluation
 google kythe,uses,c++
 mflow,uses,javascript
 mpsolve,uses,c
 chatzilla,isA,Tool/Framework
 anylogic,isA,Tool/Framework
 logos bible software,uses,c++
-scratch,influences,block based programming language
+boo,influencedBy,object oriented analysis 
+genie,influencedBy,object oriented programming
 stylus studio,isA,Tool/Framework
 appserver.io,uses,c
 mod mono,isA,Tool/Framework
 spinrite,isA,Tool/Framework
 windows live writer,isA,Tool/Framework
-qalb,influences,functional programming
 fog project,uses,php
 ngrep,uses,c
 apache abdera,isA,Tool/Framework
@@ -5197,22 +5174,23 @@ pidgin,uses,python
 inoerp,isA,Tool/Framework
 userland technologies,uses,kotlin
 apache hivemind,isA,Tool/Framework
-ruffle,uses,rust
 sqlite,isA,Tool/Framework
 pysynth,uses,python
 heliumv,isA,Tool/Framework
 go,isA,Programming Language
-pascal,influences,structured programming
-mythtv,uses,c++
+dylan,influencedBy,functional programming
 p0f,uses,c
 erwise,uses,c
 tupitube,uses,c++
 icq,uses,java
+ruffle,uses,rust
+ec,influencedBy,programming paradigm
+elixir,influencedBy,programming paradigm
+mythtv,uses,c++
 electric,uses,scala
 perfect,isA,Tool/Framework
 bwping,uses,c
 cgal,uses,c++
-c sharp,influences,event driven programming
 phalcon,uses,c
 stella,isA,Programming Language
 csound,isA,Tool/Framework
@@ -5274,14 +5252,14 @@ fluctuat,uses,c++
 amule,isA,Tool/Framework
 strace,uses,c
 quicknet,uses,php
-flex,isA,Programming Language
+active agenda,isA,Tool/Framework
 lise++,uses,c++
 asterisk,uses,c
 mibbit,uses,html
 international components for unicode,isA,Tool/Framework
 cura,uses,c++
-active agenda,isA,Tool/Framework
-dylan,influences,functional programming
+clean,influencedBy,functional programming
+flex,isA,Programming Language
 natural language toolkit,isA,Tool/Framework
 apache yetus,uses,python
 move,isA,Tool/Framework
@@ -5321,6 +5299,7 @@ apache commons logging,uses,java
 mir,isA,Tool/Framework
 rake,isA,Tool/Framework
 qtiplot,isA,Tool/Framework
+pico,influencedBy,procedural programming
 preonvm,uses,c
 yacy,uses,java
 atatool,uses,c
@@ -5357,18 +5336,17 @@ pyqt,uses,c++
 arviz,isA,Tool/Framework
 panta rhei,isA,Tool/Framework
 suitecrm,isA,Tool/Framework
-gnome recipes,uses,c
 hyperscore,uses,c++
-sapwin,isA,Tool/Framework
-lisp,influences,functional programming
 joe's own editor,isA,Tool/Framework
+sapwin,isA,Tool/Framework
+f script,influencedBy,object oriented programming
+gnome recipes,uses,c
 centericq,isA,Tool/Framework
 puddletag,uses,python
 php fusion,isA,Tool/Framework
 advanced linux sound architecture,uses,c
 mplab,uses,java
 lively kernel,isA,Tool/Framework
-dolittle,influences,programming paradigm
 optix,isA,Tool/Framework
 tine 2.0,isA,Tool/Framework
 stencyl,isA,Tool/Framework
@@ -5387,6 +5365,7 @@ gnome mines,isA,Tool/Framework
 keepassxc,uses,c++
 bbc radio explorer,uses,php
 aptana,uses,javascript
+icon,influencedBy,structured
 onlyoffice,uses,html
 nclass,isA,Tool/Framework
 etherape,uses,c
@@ -5399,6 +5378,7 @@ wubi,uses,c++
 kubernetes,uses,go
 climate data operators,uses,c
 apache parquet,uses,java
+source,influencedBy,programming paradigm
 jee,isA,Tool/Framework
 udig,isA,Tool/Framework
 apache guacamole,uses,javascript
@@ -5414,7 +5394,6 @@ frhed,isA,Tool/Framework
 element,uses,javascript
 deltacloud,isA,Tool/Framework
 spartan,isA,Tool/Framework
-unicon,influences,procedural programming
 file compare,isA,Tool/Framework
 nemiver,uses,c++
 infinitegraph,uses,java
@@ -5439,7 +5418,6 @@ waste,isA,Tool/Framework
 fireftp,isA,Tool/Framework
 textpattern,isA,Tool/Framework
 mimalloc,uses,c
-gödel,influences,declarative programming
 drosera,uses,java
 amber smalltalk,uses,javascript
 firefly,uses,c
@@ -5449,14 +5427,14 @@ aptoncd,isA,Tool/Framework
 votca,uses,c++
 greasemonkey,uses,javascript
 xzgv,uses,c
-monetdb,isA,Tool/Framework
 apper,uses,c++
-parasail,influences,object oriented programming
+monetdb,isA,Tool/Framework
 fooya,uses,c sharp
 chematica,uses,python
 securedrop,isA,Tool/Framework
 keras,isA,Tool/Framework
 trans proteomic pipeline,uses,c++
+euclid,influencedBy,imperative programming
 cdist,isA,Tool/Framework
 xsnow,uses,c
 txt2tags,isA,Tool/Framework
@@ -5483,10 +5461,10 @@ f spot,isA,Tool/Framework
 iui,uses,javascript
 pearpc,isA,Tool/Framework
 jmodelica.org,uses,c
-pizza,influences,generic programming
 cpython,isA,Tool/Framework
 beta,isA,Programming Language
 gnusim8085,uses,c
+cobra,influencedBy,object oriented programming
 dasher,uses,c
 honeywell cp 6,isA,Tool/Framework
 cocaine,uses,c++
@@ -5500,16 +5478,17 @@ shredit,uses,c
 rkhunter,uses,perl
 packagekit,uses,c
 polkit,isA,Tool/Framework
-apl,influences,modular programming
+javascript,influencedBy,imperative programming
 castor,uses,java
 kde platform 4,uses,c++
 milestones professional,uses,c++
 photopea,isA,Tool/Framework
 drqueue,uses,c
 mobile development,isA,Programming Concept
-openrasta,uses,c sharp
 wxpython,uses,c++
 ripit,isA,Tool/Framework
+tcl,influencedBy,programming paradigm
+openrasta,uses,c sharp
 cello,isA,Tool/Framework
 optix,uses,c
 couchbase server,uses,c++
@@ -5528,6 +5507,7 @@ apache portable runtime,isA,Tool/Framework
 arduino ide,isA,Tool/Framework
 leveldb,uses,c++
 hexagon,uses,c++
+turing,influencedBy,concurrent computing
 adempiere,isA,Tool/Framework
 msx dos,uses,pascal
 grammatica,uses,c sharp
@@ -5546,6 +5526,7 @@ deno,uses,rust
 opensearchserver,uses,java
 forklift,uses,swift
 c shell,isA,Tool/Framework
+tcl,influencedBy,object oriented programming
 samba,uses,c
 ultradefrag,uses,c++
 ci/cd,isA,Programming Concept
@@ -5600,15 +5581,17 @@ drawplus,uses,c++
 mapbender,isA,Tool/Framework
 scp – containment breach,isA,Tool/Framework
 allegrograph,uses,python
+flow,influencedBy,non structured programming
 clutter,isA,Tool/Framework
 netpipe,isA,Tool/Framework
-flix,influences,logic programming
 embedded,isA,Programming Concept
-tiddlywiki,uses,javascript
 redis,uses,c
 libsvm,uses,c++
 nagios,isA,Tool/Framework
 starcounter,uses,c
+tiddlywiki,uses,javascript
+io,influencedBy,prototype based programming
+apl,influencedBy,functional programming
 master password,uses,javascript
 asp.net mvc,isA,Tool/Framework
 aptoncd,uses,python
@@ -5630,20 +5613,23 @@ apache solr,isA,Tool/Framework
 guitar pro,isA,Tool/Framework
 wordgrinder,isA,Tool/Framework
 rss guard,uses,c++
+krl,influencedBy, reasoning
 smarty,isA,Tool/Framework
 multi theft auto,isA,Tool/Framework
 mobile web server,isA,Tool/Framework
 database management library,isA,Tool/Framework
-kaleidoscope,isA,Programming Language
+frink,influencedBy,object oriented programming
 globaleaks,uses,python
 pm2,isA,Tool/Framework
 orfeo toolbox,uses,python
 em client,isA,Tool/Framework
+frink,influencedBy,imperative programming
+kaleidoscope,isA,Programming Language
 flow,isA,Programming Language
 alchemy cms,isA,Tool/Framework
 logo,isA,Programming Language
 collaborative computational project number 4,isA,Tool/Framework
-fjölnir,influences,procedural
+processing,influencedBy,object oriented programming
 noscript,uses,javascript
 simple api for grid applications,isA,Tool/Framework
 climate watch,uses,python
@@ -5655,7 +5641,6 @@ envsys,isA,Tool/Framework
 yarp,isA,Tool/Framework
 ledgersmb,isA,Tool/Framework
 neuron,uses,c++
-ceylon,influences,object oriented programming
 neural network intelligence,uses,python
 jibx,uses,java
 cobra,isA,Programming Language
@@ -5667,7 +5652,6 @@ chebfun,isA,Tool/Framework
 scylla,uses,c++
 brl cad,uses,c
 apache brooklyn,isA,Tool/Framework
-lua,influences,scripting
 autodesk arnold,isA,Tool/Framework
 loni pipeline,uses,java
 apache samza,isA,Tool/Framework
@@ -5702,6 +5686,7 @@ eulim,isA,Tool/Framework
 htmlunit,isA,Tool/Framework
 salstat,isA,Tool/Framework
 gnome games collection,uses,javascript
+foundation,uses,css
 teamforge,uses,java
 otter browser,isA,Tool/Framework
 eli,isA,Programming Language
@@ -5711,8 +5696,6 @@ askbot,isA,Tool/Framework
 apache celix,isA,Tool/Framework
 dnsmasq,isA,Tool/Framework
 apache hivemind,uses,java
-foundation,uses,css
-sql,influences,declarative programming
 kde connect,uses,c++
 a distinctive feature of the language are abstract data types,isA,Programming Concept
 runit,isA,Tool/Framework
@@ -5742,10 +5725,10 @@ apache james,isA,Tool/Framework
 mediahuman audio converter,uses,c++
 kde software compilation,isA,Tool/Framework
 skyline,uses,c sharp
-java,influences,object oriented
 neubot,uses,python
 optaplanner,isA,Tool/Framework
 osg.js,uses,javascript
+pict,influencedBy,concurrent computing
 zypp,isA,Tool/Framework
 css3,isA,Programming Language
 bouncy castle,uses,java
@@ -5758,7 +5741,6 @@ calamares,isA,Tool/Framework
 zlib,uses,c
 fink,uses,perl
 vkernel,uses,c
-newspeak,influences,functional programming
 openmw,uses,c++
 evince,isA,Tool/Framework
 gmsh,uses,c++
@@ -5797,7 +5779,6 @@ h2,uses,java
 tokamak,uses,c++
 mathomatic,isA,Tool/Framework
 hypertable,uses,c++
-kotlin,influences,declarative programming
 ux,isA,Tool/Framework
 jetpack,uses,css
 gnu solfege,isA,Tool/Framework
@@ -5811,13 +5792,12 @@ rietveld,isA,Tool/Framework
 project chrono,uses,c
 arora,uses,c++
 ktorrent,isA,Tool/Framework
+mytracks,uses,java
+newspeak,influencedBy,object oriented programming
 netcdf operators,isA,Tool/Framework
 terachem,uses,c
 ntopng,uses,lua
 okapi framework,uses,java
-ec,influences,object oriented programming
-mytracks,uses,java
-apl,influences,structured programming
 libredwg,isA,Tool/Framework
 project.net,isA,Tool/Framework
 pegasus mail,isA,Tool/Framework
@@ -5827,6 +5807,7 @@ qvd,uses,c++
 google earth,isA,Tool/Framework
 ssh keygen,uses,c
 laravel,uses,php
+lisp,influencedBy,programming paradigm
 alzip,uses,delphi
 mercurial,isA,Tool/Framework
 getmail,uses,python
@@ -5841,7 +5822,6 @@ rake,uses,ruby
 enlight cloud,uses,python
 kde telepathy,isA,Tool/Framework
 qutip,isA,Tool/Framework
-atom,influences,synchronous programming language
 sco skunkware,isA,Tool/Framework
 eucalyptus,isA,Tool/Framework
 libxslt,uses,c
@@ -5854,6 +5834,7 @@ scigress,uses,c++
 grammatica,uses,java
 unipept,uses,javascript
 mysql archive,uses,c++
+apl,influencedBy,structured programming
 gdcm,uses,c++
 javolution,uses,java
 xpra,uses,python
@@ -5861,6 +5842,7 @@ international components for unicode,uses,c
 qbittorrent,uses,python
 spice,isA,Tool/Framework
 asynchronous multi body framework,uses,c++
+cuneiform,influencedBy,scientific workflow system
 swellrt,uses,java
 simdis,uses,c++
 tamarin prover,isA,Tool/Framework
@@ -5877,7 +5859,6 @@ zotero,isA,Tool/Framework
 nyquist,isA,Programming Language
 fltk,uses,c++
 apache accumulo,isA,Tool/Framework
-swift,influences,programming paradigm
 eas3,isA,Tool/Framework
 tesseract,uses,c++
 aws route,isA,Tool/Framework
@@ -5894,6 +5875,7 @@ easybeans,isA,Tool/Framework
 robotfindskitten,uses,javascript
 fireftp,uses,javascript
 gecko,uses,javascript
+pascal,influencedBy,imperative programming
 meson,isA,Tool/Framework
 iyouit,uses,python
 samocad,uses,python
@@ -5919,12 +5901,13 @@ udp unicorn,isA,Tool/Framework
 tintin++,uses,c
 metasploit project,uses,ruby
 websphere smash,uses,java
-ocs inventory,uses,perl
 angularjs,isA,Tool/Framework
 pgpfone,uses,c
 steel,uses,java
 biopython,uses,python
 apache directory,uses,java
+ocs inventory,uses,perl
+epigram,influencedBy,functional programming
 db2 database,uses,c
 dasher,isA,Tool/Framework
 net snmp,uses,c
@@ -5932,7 +5915,6 @@ pgpfone,uses,c++
 tops 10,uses,apl
 ganeti,uses,python
 alef,isA,Programming Language
-lisp,influences,metaprogramming
 lightweight java game library,uses,java
 bazel,isA,Tool/Framework
 virtual pascal,isA,Tool/Framework
@@ -5942,6 +5924,7 @@ pp3,isA,Tool/Framework
 prototype javascript framework,isA,Tool/Framework
 neuron,uses,c
 apache cocoon,uses,java
+snap!,influencedBy,object oriented programming
 reactivex,uses,java
 slidewiki,uses,javascript
 apache empire db,uses,java
@@ -5979,6 +5962,7 @@ michigan terminal system,uses,lisp
 adobe character animator,uses,lua
 qore,isA,Programming Language
 edtftpj,isA,Tool/Framework
+java,influencedBy,functional
 liblzg,uses,pascal
 apache openoffice,isA,Tool/Framework
 javascript infovis toolkit,isA,Tool/Framework
@@ -5988,7 +5972,6 @@ enchant,isA,Tool/Framework
 quassel irc,uses,c++
 pysynth,isA,Tool/Framework
 cpplint,uses,python
-scala,influences,programming paradigm
 apache avro,uses,c
 uswsusp,isA,Tool/Framework
 covidsafe,isA,Tool/Framework
@@ -5997,6 +5980,7 @@ colectica,uses,c sharp
 filzip,uses,delphi
 sound juicer,uses,c
 cucumber,isA,Tool/Framework
+f script,influencedBy,array programming
 axiom,isA,Tool/Framework
 mame,uses,c++
 avida,uses,c++
@@ -6013,6 +5997,7 @@ bmon,isA,Tool/Framework
 ide,isA,Programming Concept
 stegoshare,uses,java
 bowtie,uses,c++
+factor,influencedBy,concatenative programming language
 finch,isA,Tool/Framework
 sajax,uses,python
 openprocurement,isA,Tool/Framework
@@ -6033,6 +6018,7 @@ mapwindow gis,uses,c sharp
 apache velocity,isA,Tool/Framework
 form,uses,c
 gnu radio,uses,c++
+beatnik,influencedBy,stack oriented programming
 farstream,isA,Tool/Framework
 reactivex,uses,c++
 picospan,isA,Tool/Framework
@@ -6060,15 +6046,14 @@ jetty,isA,Tool/Framework
 cdrdao,isA,Tool/Framework
 miro,uses,python
 xz utils,uses,c
-node red,uses,javascript
 scorched 3d,uses,c++
 spinnaker,isA,Tool/Framework
-whiley,influences,imperative programming
+php,influencedBy,functional programming
+node red,uses,javascript
+jetpack,uses,html
 spyder,uses,python
 stellar,uses,python
 plasm,isA,Tool/Framework
-jetpack,uses,html
-factor,influences,functional programming
 apache shiro,isA,Tool/Framework
 udiwww,uses,c++
 renjin,uses,r
@@ -6086,6 +6071,7 @@ dartmouth time sharing system,uses,dynamo
 circuitmaker,uses,c++
 bcache,uses,c
 ollydbg,uses,c
+pure,influencedBy,rewriting
 xdelta,isA,Tool/Framework
 jasp,isA,Tool/Framework
 proj,isA,Tool/Framework
@@ -6094,7 +6080,6 @@ gnu core utilities,isA,Tool/Framework
 haiku packageinstaller,uses,c++
 mibbit,uses,javascript
 listaller,isA,Tool/Framework
-source,influences,functional programming
 forklift,isA,Tool/Framework
 slf4j,uses,java
 mpxplay,isA,Tool/Framework
@@ -6114,6 +6099,7 @@ edgex foundry,uses,c
 leocad,isA,Tool/Framework
 winamp,isA,Tool/Framework
 dvdstyler,uses,c++
+euclid,influencedBy,structured programming
 small c,uses,c
 rasmol,uses,c
 verge3d,isA,Tool/Framework
@@ -6128,19 +6114,20 @@ reaper,isA,Tool/Framework
 u1db,uses,c
 geotools,uses,java
 phpldapadmin,isA,Tool/Framework
+faustino,uses,java
  design,isA,Programming Concept
 icofx,isA,Tool/Framework
+miranda,influencedBy,functional programming
 procdump,uses,c
-rpl,influences,stack
 pebl,isA,Tool/Framework
 ecasound,uses,c++
 udiwww,uses,c
 intellij idea,uses,kotlin
 os,isA,Tool/Framework
+claire,influencedBy,functional
 enigma,uses,c++
-parser,influences,object oriented
-faustino,uses,java
 microsoft teams,isA,Tool/Framework
+xl,influencedBy,concept oriented
 gnu octave,isA,Tool/Framework
 project64,uses,c
 pico,isA,Programming Language
@@ -6175,8 +6162,10 @@ libdvdcss,uses,c
 chaplin.js,uses,javascript
 musescore,isA,Tool/Framework
 stack oriented programming,isA,Programming Concept
+claire,influencedBy,rule processing
 51 forth,isA,Tool/Framework
 elmah,isA,Tool/Framework
+preonvm,isA,Tool/Framework
 maven,isA,Tool/Framework
 speedfan,uses,delphi
 brutos framework,uses,java
@@ -6189,17 +6178,15 @@ wakame vdc,uses,ruby
 apache qpid,isA,Tool/Framework
 openpam,isA,Tool/Framework
 intlab,isA,Tool/Framework
-lasso,influences,meta
-preonvm,isA,Tool/Framework
 apache apex,isA,Tool/Framework
-openalpr,uses,java
 sqlite,uses,c
 gnu screen,uses,c
 eye of gnome,isA,Tool/Framework
 foundationdb,isA,Tool/Framework
 fjölnir,isA,Programming Language
 dracut,uses,c
-aspect oriented programming,isA,Programming Concept
+openalpr,uses,java
+ada,influencedBy,structured programming
 chapel,isA,Programming Language
 elixir,isA,Programming Language
 scsh,isA,Tool/Framework
@@ -6207,6 +6194,8 @@ autoconf,isA,Tool/Framework
 nats messaging,isA,Tool/Framework
 openmodelica,isA,Tool/Framework
 dnanalytics,uses,c sharp
+aspect oriented programming,isA,Programming Concept
+s3,influencedBy,imperative programming
 gnu gnubik,uses,c
 cppcheck,isA,Tool/Framework
 sp forth,isA,Tool/Framework
@@ -6223,9 +6212,9 @@ cocoa,uses,c++
 zlib,isA,Tool/Framework
 f spot,uses,c sharp
 mayavi,uses,python
+fjölnir,influencedBy,object oriented
 integration,isA,Programming Concept
 smartmontools,isA,Tool/Framework
-gnucash,uses,c++
 moltenvk,uses,c
 neural network intelligence,isA,Tool/Framework
 therion,isA,Tool/Framework
@@ -6233,6 +6222,8 @@ migratable objects,isA,Programming Concept
 lightgbm,uses,c
 buck,uses,java
 gnu classpath,uses,java
+gnucash,uses,c++
+tcl,influencedBy,event driven programming
 avida,uses,javascript
 gnome boxes,uses,vala
 network caller id,uses,c
@@ -6260,7 +6251,6 @@ zxid,uses,java
 adventure game studio,uses,c sharp
 limbo,isA,Programming Language
 ganttproject,uses,kotlin
-gpops ii,isA,Tool/Framework
 opencog,isA,Tool/Framework
 bicom systems,isA,Tool/Framework
 freelang dictionary,isA,Tool/Framework
@@ -6269,6 +6259,8 @@ sidekiq,uses,ruby
 mojoportal,uses,c sharp
 mimedefang,isA,Tool/Framework
 smartmontools,uses,c++
+forth,influencedBy,procedural programming
+gpops ii,isA,Tool/Framework
 contentbox modular cms,isA,Tool/Framework
 query language,isA,Programming Concept
 macro,isA,Programming Concept
@@ -6287,7 +6279,6 @@ leafpad,isA,Tool/Framework
 sview,isA,Tool/Framework
 iina,isA,Tool/Framework
 db,uses,c
-mad,influences,imperative programming
 hyperrogue,uses,c++
 litespeed web server,uses,c
 customer account data engine,isA,Tool/Framework
@@ -6297,11 +6288,11 @@ coin3d,uses,c++
 ncftp,isA,Tool/Framework
 dask,isA,Tool/Framework
 xowa,isA,Tool/Framework
+infer.net,isA,Tool/Framework
 stepmania,uses,c++
  reasoning,isA,Programming Concept
 quickcheck,isA,Tool/Framework
-alice,influences,functional programming
-infer.net,isA,Tool/Framework
+python,influencedBy,object oriented
 ingenias,uses,java
 survex,isA,Tool/Framework
 avif,isA,Tool/Framework
@@ -6316,6 +6307,7 @@ dtrace,isA,Tool/Framework
 amphora,uses,perl
 webrick,isA,Tool/Framework
 cdex,isA,Tool/Framework
+c sharp,influencedBy,reflective programming
 psi,uses,c++
 berkeley open infrastructure for network computing,uses,kotlin
 skia graphics engine,uses,c++
@@ -6326,7 +6318,6 @@ nova,uses,c
 bliss,isA,Programming Language
 translate toolkit,isA,Tool/Framework
 datanucleus,isA,Tool/Framework
-dart,influences,reflective programming
 dropship,uses,python
 ecryptfs,uses,c
 dokuwiki,uses,php
@@ -6340,6 +6331,7 @@ bbc sounds,uses,scala
 visual studio code,uses,html
 solid,isA,Tool/Framework
 yudit,isA,Tool/Framework
+swift,influencedBy,protocol
 libraw,isA,Tool/Framework
 sage business cloud,uses,c sharp
 ngrep,isA,Tool/Framework
@@ -6359,7 +6351,6 @@ mflow,uses,c sharp
 foliate,uses,javascript
 orangefs,uses,c
 apache fop,isA,Tool/Framework
-ruby,influences,reflective programming
 osmand,uses,java
 foundationdb,uses,c
 dokan library,uses,c++
@@ -6391,6 +6382,7 @@ little snitch,isA,Tool/Framework
 colectica,uses,java
 uploadftp,isA,Tool/Framework
 tulip,uses,c++
+c sharp,influencedBy,asynchronous method invocation
 monitorix,uses,perl
 gosling emacs,isA,Tool/Framework
 apache jmeter,uses,java
@@ -6398,13 +6390,13 @@ kross,uses,c++
 vert.x,uses,scala
 microsoft detours,isA,Tool/Framework
 magmafs,isA,Tool/Framework
-vala,influences,object oriented programming
 revision control system,isA,Tool/Framework
 padre,isA,Tool/Framework
 warzone 2100,isA,Tool/Framework
 project unreality,uses,c
 review board,uses,python
 vim,uses,c
+c sharp,influencedBy,concurrent computing
 redis,isA,Tool/Framework
 offlineimap,isA,Tool/Framework
 eclipse metro,isA,Tool/Framework
@@ -6416,7 +6408,6 @@ jdownloader,uses,java
 remote component environment,isA,Tool/Framework
 otrs,uses,javascript
 open power template,uses,php
-txl,influences,pattern matching
 amsterdam compiler kit,isA,Tool/Framework
 openms,isA,Tool/Framework
 sjeng,isA,Tool/Framework
@@ -6433,9 +6424,10 @@ quake army knife,uses,delphi
 tixati,uses,c++
 apache nifi,isA,Tool/Framework
 circuitmaker,isA,Tool/Framework
-swarm,uses,java
 opera mini,isA,Tool/Framework
 shared source common language infrastructure,uses,c
+swarm,uses,java
+source,influencedBy,functional programming
 doom engine,uses,c
 collective knowledge,isA,Tool/Framework
 secure scuttlebutt,uses,javascript
@@ -6444,8 +6436,8 @@ oxygen xml editor,uses,java
 agavi,uses,php
 neural designer,uses,c++
 peertube,uses,sql
+nu,influencedBy,structured programming
 deepspeed,isA,Tool/Framework
-nu,influences,functional programming
 downthemall!,uses,javascript
 amigaos 4,uses,pascal
 eclipse buckminster,isA,Tool/Framework
@@ -6460,15 +6452,13 @@ jexcel,isA,Tool/Framework
 supertuxkart,uses,c++
 sndio,isA,Tool/Framework
 vpython,uses,python
+macs3,isA,Tool/Framework
 spring roo,uses,java
 portage,isA,Tool/Framework
 sam,isA,Tool/Framework
 yesod,uses,haskell
-macs3,isA,Tool/Framework
-python,influences,structured
 apache ibatis,isA,Tool/Framework
 probis,uses,c++
-orc,influences,concurrent computing
 systat,isA,Tool/Framework
 quadpack,isA,Tool/Framework
 interactive disassembler,isA,Tool/Framework
@@ -6479,7 +6469,6 @@ gnome,uses,c
 network caller id,uses,tcl
 spring framework,uses,java
 lwip,isA,Tool/Framework
-squirrel,influences,functional programming
 openmdx,isA,Tool/Framework
 yasara,isA,Tool/Framework
 firebird,isA,Tool/Framework
@@ -6517,13 +6506,10 @@ studierfenster,isA,Tool/Framework
 openfire,uses,java
 cryengine,uses,c++
 ctpp,uses,c++
-turing,influences,concurrent computing
-lasso,influences,structured object oriented
 amarok,isA,Tool/Framework
 flask,isA,Tool/Framework
 spark,uses,java
 pax,isA,Tool/Framework
-oz,influences,distributed computing
 naviserver,uses,c
 rdf4j,uses,java
 plymouth,isA,Tool/Framework
@@ -6533,7 +6519,6 @@ openprocurement,uses,python
 kanban,isA,Tool/Framework
 avant window navigator,uses,python
 xtreemfs,uses,java
-harbour,influences,object oriented programming
 sim.js,isA,Tool/Framework
 pbxnsip,uses,c++
 objectdb,isA,Tool/Framework
@@ -6549,7 +6534,6 @@ shimmercat,isA,Tool/Framework
 buildroot,uses,c
 grunt,uses,javascript
 bugsxla,isA,Tool/Framework
-matlab,influences,array programming
 ultraesb,uses,java
 score,isA,Tool/Framework
 websphere smash,isA,Tool/Framework
@@ -6558,6 +6542,7 @@ eclipse neoscada,uses,java
 batoo jpa,uses,java
 irony,uses,c sharp
 travian,uses,php
+crystal,influencedBy,programming paradigm
 openscad,isA,Tool/Framework
 roadrunner,isA,Tool/Framework
 f droid,isA,Tool/Framework
@@ -6579,13 +6564,12 @@ freelan,uses,c++
 gtk,uses,css
 techwriter,isA,Tool/Framework
 pcb rnd,isA,Tool/Framework
+bosque,influencedBy,functional programming
 tropy,uses,javascript
 frhed,uses,c++
 goldsrc,isA,Tool/Framework
 puma.net,isA,Tool/Framework
 swellrt,uses,javascript
-elan,influences,?
-ciao,influences,functional programming
 apache axis2,isA,Tool/Framework
 aseprite,isA,Tool/Framework
 sound object library,isA,Tool/Framework
@@ -6608,6 +6592,7 @@ tachyon,uses,c
 glade interface designer,uses,c
 geogebra,uses,html5
 openpdf,uses,java
+lua,influencedBy,imperative
 pyspread,uses,python
 fasttracker 2,isA,Tool/Framework
 rainway,uses,dart
@@ -6615,13 +6600,14 @@ gnome software,isA,Tool/Framework
 raspcontrol,uses,php
 amdgpu,isA,Tool/Framework
 internetnews,uses,c
+rpl,influencedBy,stack
+alice,influencedBy,concurrent computing
 flix,isA,Programming Language
 kid3,uses,c++
 fcron,isA,Tool/Framework
 rudder,isA,Tool/Framework
 yasca,isA,Tool/Framework
 red moon,uses,kotlin
-oz,influences,concurrent computing
 rainway,uses,javascript
 elan,isA,Programming Language
 gerris,uses,c
@@ -6650,6 +6636,7 @@ speed dreams,uses,c
 primefaces,isA,Tool/Framework
 scintilla,uses,c++
 phprojekt,uses,php
+jamroom,isA,Tool/Framework
 chebfun,uses,matlab
 hamilton c shell,isA,Tool/Framework
 gnote,uses,c++
@@ -6659,8 +6646,6 @@ luminance hdr,isA,Tool/Framework
 sql database studio,isA,Tool/Framework
 opendronemap,uses,python
 xunit.net,isA,Tool/Framework
-jamroom,isA,Tool/Framework
-orwell,influences,functional programming
 hypercard,isA,Tool/Framework
 cryptomatte,uses,lua
 jmule,uses,java
@@ -6679,6 +6664,7 @@ profanity,uses,c
 jnaerator,isA,Tool/Framework
 cdnjs,uses,javascript
 vice,uses,c
+chapel,influencedBy,partitioned global address space
 shared source common language infrastructure,uses,javascript
 dartmouth time sharing system,uses,apl
 apache sling,isA,Tool/Framework
@@ -6690,15 +6676,14 @@ ruby version manager,uses,ruby
 tab mix plus,isA,Tool/Framework
 simpleitk,uses,c++
 packet sender,isA,Tool/Framework
-lasso,influences,reflective
 openbts,isA,Tool/Framework
 microsoft sql server,isA,Tool/Framework
-crystal,influences,concurrent computing
 apache mxnet,isA,Tool/Framework
 libtiff,isA,Tool/Framework
-is4c,isA,Tool/Framework
 genealone,isA,Tool/Framework
 freearc,isA,Tool/Framework
+is4c,isA,Tool/Framework
+squirrel,influencedBy,functional programming
 wayland,uses,c
 rubymotion,uses,c++
 firebug,uses,css
@@ -6708,7 +6693,6 @@ mpv,uses,lua
 winamp,uses,c++
 framework,isA,Tool/Framework
 gforge,uses,php
-tagsistant,uses,c
 dynamic languages toolkit,isA,Tool/Framework
 mongoose,uses,c
 gnu arch,uses,c
@@ -6717,6 +6701,8 @@ id tech 5,uses,python
 pango,uses,c
 charm,isA,Programming Language
 reactivex,isA,Tool/Framework
+ada,influencedBy,object oriented programming
+tagsistant,uses,c
 harmor,uses,delphi
 opensees,uses,c++
 389 directory server,uses,perl
@@ -6735,12 +6721,9 @@ scream tracker,uses,c
 schoonschip,isA,Tool/Framework
 quarkus,uses,java
 cliqz,uses,c
-joy,influences,programming paradigm
 scalasca,uses,c++
 rietveld,uses,python
 loomio,isA,Tool/Framework
-tcl,influences,event driven programming
-ciao,influences,object oriented programming
 torch,uses,c++
 id tech 3,isA,Tool/Framework
 juk,isA,Tool/Framework
@@ -6764,7 +6747,6 @@ inspectit,isA,Tool/Framework
 gnu mailman,isA,Tool/Framework
 gnu fortran,isA,Tool/Framework
 completely fair scheduler,isA,Tool/Framework
-dolittle,influences,object oriented programming
 cdburnerxp,isA,Tool/Framework
 segreg,isA,Tool/Framework
 babel,isA,Tool/Framework
@@ -6809,7 +6791,6 @@ geogebra,isA,Tool/Framework
 paint tool sai,uses,c++
 percona server for mysql,uses,c++
 nuclino,isA,Tool/Framework
-perl,influences,imperative
 miranda,isA,Programming Language
 algol 68 r,isA,Tool/Framework
 lz4,uses,c
@@ -6821,17 +6802,16 @@ ambient,uses,c
 kwallet,uses,c++
 breezy,isA,Tool/Framework
 pan,isA,Programming Language
+amos,influencedBy,procedural programming
 protocol buffers,uses,c sharp
 minicom,uses,c
 salamweb,uses,c++
 qmake,uses,c++
-parasail,influences,structured programming
+mongodb,uses,c++
 rasmol,isA,Tool/Framework
 bitpit,isA,Tool/Framework
 backup,isA,Programming Concept
 panda3d,uses,c++
-forth,influences,reflective programming
-mongodb,uses,c++
 panos,uses,pascal
 peopletools,uses,c++
 orion live ink,isA,Tool/Framework
@@ -6859,8 +6839,6 @@ terradata,isA,Tool/Framework
 magnolia,uses,java
 shinken,uses,python
 joyce,isA,Programming Language
-f*,influences,functional programming
-source,influences,procedural programming
 flightgear,uses,c
 b.a.t.m.a.n.,uses,c
 processwire,uses,php
@@ -6876,7 +6854,6 @@ bugzilla,uses,perl
 zeromq,isA,Tool/Framework
 u prove,isA,Tool/Framework
 ironpython,isA,Tool/Framework
-vkernel,isA,Tool/Framework
 gnunet,uses,c
 digital scrapbook artist,isA,Tool/Framework
 concurrent object oriented programming,isA,Programming Concept
@@ -6887,6 +6864,8 @@ write!,isA,Tool/Framework
 grpc,isA,Tool/Framework
 xbill,isA,Tool/Framework
 su2 code,isA,Tool/Framework
+vkernel,isA,Tool/Framework
+karel,influencedBy,procedural programming
 react native,uses,python
 semantic mediawiki,uses,php
 elastic search,isA,Tool/Framework
@@ -6894,6 +6873,7 @@ lightgbm,uses,c++
 jssip,uses,javascript
 salamweb,uses,javascript
 onlinehpc,uses,java
+moses,isA,Tool/Framework
 clip studio paint,isA,Tool/Framework
 xulrunner,isA,Tool/Framework
 jakarta servlet,isA,Tool/Framework
@@ -6902,9 +6882,9 @@ apache ctakes,uses,scala
 apache drill,isA,Tool/Framework
 apache phoenix,uses,sql
 opera,uses,c++
-moses,isA,Tool/Framework
-oz,influences,imperative programming
+go,influencedBy,concurrent computing
 scrot,uses,c
+euphoria,influencedBy,imperative programming
 onlinehpc,isA,Tool/Framework
 uefitool,isA,Tool/Framework
 payara server,uses,java
@@ -6942,7 +6922,6 @@ lfe,isA,Programming Language
 mongrel2,isA,Tool/Framework
 home assistant,uses,python
 yui library,isA,Tool/Framework
-c sharp,influences,concurrent computing
 noredink,uses,ruby
 eslint,isA,Tool/Framework
 pacemaker,uses,c
@@ -6955,6 +6934,7 @@ link grammar,uses,c
 u1db,isA,Tool/Framework
 apache ivy,uses,java
 winjs,uses,javascript
+bliss,influencedBy,imperative
 stratis,uses,rust
 mdl,isA,Programming Language
 rose,isA,Tool/Framework
@@ -6962,6 +6942,7 @@ macports,uses,c
 nosql databases,isA,Programming Concept
 church,isA,Programming Language
 ognl,uses,java
+oz,influencedBy,logic programming
 mailvelope,uses,javascript
 dependent typed,isA,Programming Concept
 openbox,isA,Tool/Framework
@@ -6971,12 +6952,14 @@ irony,isA,Tool/Framework
 airtime,uses,javascript
 cppcms,uses,c++
 parrot virtual machine,isA,Tool/Framework
+matlab,influencedBy,array programming
 edinburgh compatible context editor,uses,c
 memoranda,isA,Tool/Framework
 litestep,uses,c
 xulrunner,uses,c++
 cheshift,uses,html
 okular,uses,c++
+curl,influencedBy,object oriented programming
 yed,isA,Tool/Framework
 clockworkmod,uses,c
 goobi,isA,Tool/Framework
@@ -6989,7 +6972,6 @@ freeipa,uses,python
 tortoisehg,isA,Tool/Framework
 komodo ide,uses,c
 codeigniter,uses,php
-newspeak,influences,object oriented programming
 netsniff ng,isA,Tool/Framework
 deeplearning4j,isA,Tool/Framework
 damon middleware,isA,Tool/Framework
@@ -7015,22 +6997,24 @@ processwire,isA,Tool/Framework
 sogo,isA,Tool/Framework
 dataflow,isA,Programming Concept
 google chrome,uses,javascript
-apl,influences,array programming
 blast,uses,c++
 hw.sensors,uses,c
 firefox 3.0,uses,c++
 librsvg,uses,rust
 gitter,uses,javascript
 easywriter,isA,Tool/Framework
-heirloom project,uses,c
 snopt,isA,Tool/Framework
 gpuopen,uses,c
 mysql workbench,uses,c sharp
+joule,influencedBy,programming paradigm
 hiphop for php,uses,php
 openkm,uses,java
+ada,influencedBy,imperative programming
+heirloom project,uses,c
 tcpdf,isA,Tool/Framework
 jed,uses,c
 cryptomatte,uses,python
+elixir,influencedBy,functional programming
 chromium embedded framework,uses,c++
 w3af,uses,python
 phalanger,isA,Tool/Framework
@@ -7046,13 +7030,12 @@ gforge,isA,Tool/Framework
 internet messaging program,uses,php
 gio,isA,Tool/Framework
 apache helix,isA,Tool/Framework
+dlib,uses,c++
 rubymotion,isA,Tool/Framework
 couchbase server,uses,erlang
 sqlyog,isA,Tool/Framework
 apl,isA,Programming Language
 denyhosts,uses,python
-dlib,uses,c++
-c,influences,imperative programming
 generic,isA,Programming Concept
 qdevelop,uses,c++
 apcupsd,uses,c++
@@ -7075,15 +7058,16 @@ yeoman,isA,Tool/Framework
 ruby,isA,Programming Language
 demetra+,isA,Tool/Framework
 slrn,isA,Tool/Framework
-base one foundation component library,uses,c++
 quilt,isA,Tool/Framework
 c evo,isA,Tool/Framework
 apache flink,uses,java
-ml,influences,functional programming
+red,influencedBy,imperative programming
 freeradius,uses,perl
 chematica,uses,java
 ecocities,uses,java
 microservices,isA,Programming Concept
+base one foundation component library,uses,c++
+c,influencedBy,structured
 simple object database access,uses,java
 razor qt,isA,Tool/Framework
 embroidermodder,uses,javascript
@@ -7098,24 +7082,24 @@ zero install,isA,Tool/Framework
 rubygems,uses,ruby
 janusgraph,isA,Tool/Framework
 apache ofbiz,isA,Tool/Framework
-etoys,influences,object oriented programming
 wasabi,uses,c++
-dylan,influences,object oriented programming
 gnaural,uses,java
 opus,uses,javascript
 wireshark,isA,Tool/Framework
 wirecast,uses,c
 edi,uses,c
 zoneminder,uses,perl
-connectbot,isA,Tool/Framework
 class library for numbers,isA,Tool/Framework
 aspectc++,uses,c++
 google chrome frame,isA,Tool/Framework
+connectbot,isA,Tool/Framework
+eff,influencedBy,imperative programming
 tkabber,isA,Tool/Framework
 hierarchical cluster engine project,uses,php
 qgis,isA,Tool/Framework
 mame,isA,Tool/Framework
 bnetd,uses,c
+fantom,influencedBy,programming paradigm
 phex,uses,java
 winny,isA,Tool/Framework
 clearhealth,uses,php
@@ -7126,8 +7110,6 @@ open neural network exchange,uses,c++
 rzip,isA,Tool/Framework
 ctpp,isA,Tool/Framework
 linpack,isA,Tool/Framework
-amos,influences,imperative programming
-the sleuth kit,uses,perl
 torch,isA,Tool/Framework
 cloudike,isA,Tool/Framework
 scan2cad,uses,c++
@@ -7136,6 +7118,8 @@ next.js,isA,Tool/Framework
 vegas pro,isA,Tool/Framework
 rnn,uses,r
 highly available storage,isA,Tool/Framework
+bosque,influencedBy,type system
+the sleuth kit,uses,perl
 newgenlib,isA,Tool/Framework
 apache guacamole,uses,java
 jchempaint,isA,Tool/Framework
@@ -7170,6 +7154,7 @@ amber,uses,c++
 workbench,isA,Tool/Framework
 flexaid,uses,c++
 structured,isA,Programming Concept
+dart,influencedBy,programming paradigm
 citra,isA,Tool/Framework
 denyhosts,isA,Tool/Framework
 cakewalk sonar,isA,Tool/Framework
@@ -7180,6 +7165,7 @@ znc,isA,Tool/Framework
 getsimple cms,uses,php
 lynxos,uses,c
 treapdb,isA,Tool/Framework
+eff,influencedBy,programming paradigm
 gnu social,isA,Tool/Framework
 enonic xp,uses,java
 browserify,isA,Tool/Framework
@@ -7226,10 +7212,11 @@ etherpad,isA,Tool/Framework
 kde software compilation 4,isA,Tool/Framework
 wildmidi,uses,c
 leadwerks,isA,Tool/Framework
+c sharp,influencedBy,structured programming
 staffpad,uses,swift
 enterprise dynamics,isA,Tool/Framework
 apache geronimo,uses,java
-matlab,influences,programming paradigm
+qore,influencedBy,object oriented
 diodon,isA,Tool/Framework
 remote application platform,uses,java
 textadept,uses,c
@@ -7237,6 +7224,7 @@ automation studio,uses,c++
 net snmp,uses,perl
 hadoop,isA,Tool/Framework
 freeipa,uses,c
+swift,influencedBy,block
 arora,isA,Tool/Framework
 gnu parallel,isA,Tool/Framework
 lttng,isA,Tool/Framework
@@ -7278,13 +7266,11 @@ scrapy,uses,python
 moltenvk,uses,c++
 sigrok,uses,python
 yaml,isA,Tool/Framework
-lisp,influences,reflective programming
 math kernel library,isA,Tool/Framework
 vktrace,uses,c++
 dbg,isA,Tool/Framework
 synergy,isA,Tool/Framework
 ikobb,isA,Tool/Framework
-alice,influences,concurrent computing
 google assistant,isA,Tool/Framework
 tribler,isA,Tool/Framework
 bigpicture,uses,java
@@ -7298,6 +7284,7 @@ stan,isA,Tool/Framework
 kaldi,isA,Tool/Framework
 little cms,isA,Tool/Framework
 allegrograph,uses,java
+darwin,influencedBy,structured programming
 icq,isA,Tool/Framework
 ophcrack,isA,Tool/Framework
 message driven parallel programming,isA,Programming Concept
@@ -7325,9 +7312,12 @@ graalvm,isA,Tool/Framework
 nimbus,isA,Tool/Framework
 flowgrind,uses,c
 scst,isA,Tool/Framework
-internetnews,uses,perl
+oz,influencedBy,distributed computing
 wireguard,uses,go
+c sharp,influencedBy,imperative programming
 xvidcap,isA,Tool/Framework
+internetnews,uses,perl
+turing,influencedBy,procedural programming
 yafaray,uses,python
 webkit,isA,Tool/Framework
 openldap,isA,Tool/Framework
@@ -7338,7 +7328,6 @@ lcd smartie,uses,delphi
 polyworld,isA,Tool/Framework
 pcem,uses,c++
 pdp 8 4k disk monitor system,isA,Tool/Framework
-f script,influences,array programming
 mecab,uses,ruby
 freenet,isA,Tool/Framework
 n2n,uses,c
@@ -7396,10 +7385,11 @@ grok,uses,python
 rt 11,isA,Tool/Framework
 design by contract,isA,Programming Concept
 bouncy castle,uses,c sharp
+rpl,influencedBy,concatenative
 trojitá,uses,c++
 e aksharayan,uses,c++
-genie,influences,programming paradigm
 sqoop,isA,Tool/Framework
+source,influencedBy,imperative programming
 python tools for visual studio,isA,Tool/Framework
 ffdshow,uses,c
 collective knowledge,uses,python
@@ -7424,6 +7414,7 @@ web2py,isA,Tool/Framework
 formengine,uses,java
 tactic,isA,Tool/Framework
 partitioned global address space,isA,Programming Concept
+joy,influencedBy,concatenative programming language
 inoreader,isA,Tool/Framework
 jboss tools,isA,Tool/Framework
 ical,uses,c++
@@ -7443,17 +7434,20 @@ jrockit,uses,java
 mathomatic,uses,c
 kmymoney,uses,c++
 microsoft editor,uses,javascript
-86 dos,isA,Tool/Framework
 contrail,isA,Tool/Framework
+ciao,influencedBy,object oriented programming
 jriver media center,uses,c++
 cryptoverif,isA,Tool/Framework
 tritium,isA,Programming Language
 microservice architecture,isA,Programming Concept
+fp,influencedBy,function level programming
 tiddlywiki,isA,Tool/Framework
 web server,isA,Programming Concept
 kile,uses,c++
 apache apex,uses,java
 qunit,uses,javascript
+babbage,influencedBy,high level assembler
+86 dos,isA,Tool/Framework
 gnulib,uses,c
 mediathekview,uses,java
 autodesk maya,uses,c sharp
@@ -7475,9 +7469,11 @@ adobe indesign,isA,Tool/Framework
 musicbee,isA,Tool/Framework
 springboot,isA,Tool/Framework
 apache camel,isA,Tool/Framework
+boo,influencedBy, design
 cocos2d,isA,Tool/Framework
 mb lab,isA,Tool/Framework
 tomato,isA,Tool/Framework
+go!,influencedBy,imperative
 openrtm aist,uses,java
 bigcouch,uses,erlang
 test::more,isA,Tool/Framework
@@ -7504,6 +7500,7 @@ ci,isA,Programming Concept
 risc ix,isA,Tool/Framework
 gyp,uses,python
 refit,uses,c
+squirrel,influencedBy,object oriented programming
 style sheet language,isA,Programming Concept
 security administrator tool for analyzing networks,uses,perl
 bigbluebutton,uses,javascript
@@ -7511,25 +7508,24 @@ snap,isA,Programming Language
 pi hole,uses,css
 mumps,uses,c
 swi prolog,isA,Tool/Framework
-openrtm aist,uses,python
 daemontools,isA,Tool/Framework
 xenforo,isA,Tool/Framework
 cpplint,isA,Tool/Framework
 sympa,uses,perl
 pipelight,uses,c
+miranda,influencedBy,declarative programming
+openrtm aist,uses,python
+mosync,uses,c sharp
 atom,isA,Programming Language
 term rewriting,isA,Programming Concept
-mosync,uses,c sharp
-kotlin,influences,object oriented programming
 enlightenment,uses,c
 gnu prolog,uses,c
 vagrant,uses,ruby
-trac,influences,general purpose macro processor
 lustre,isA,Tool/Framework
-extromatica network monitor,uses,c++
-genie,influences,structured programming
 afterstep,isA,Tool/Framework
 astrolog,uses,c++
+extromatica network monitor,uses,c++
+a+,influencedBy,array programming
 mkvtoolnix,isA,Tool/Framework
 mod openpgp,uses,c
 oracle sql developer,isA,Tool/Framework
@@ -7563,6 +7559,7 @@ apache arrow,uses,javascript
 cumfreq,isA,Tool/Framework
 gnu prolog,isA,Tool/Framework
 kwin,uses,c++
+scala,influencedBy,functional programming
 luatex,isA,Tool/Framework
 ufraw,isA,Tool/Framework
 scwm,isA,Tool/Framework
@@ -7572,6 +7569,7 @@ balsa,uses,c
 htmldoc,uses,c
 heirloom project,isA,Tool/Framework
 zerobrane studio,isA,Tool/Framework
+swift,influencedBy,programming paradigm
 fluent design system,uses,swift
 proj,uses,c++
 xad,uses,c
@@ -7590,10 +7588,10 @@ mpv,isA,Tool/Framework
 hcl domino,isA,Tool/Framework
 conemu,uses,c++
 apache druid,uses,java
+etoys,influencedBy,object oriented programming
 terminusdb,uses,rust
 fasttext,uses,c++
 netpbm,uses,perl
-f script,influences,object oriented programming
 directfb,uses,c
 expect,uses,c
 mpsolve,isA,Tool/Framework
@@ -7615,13 +7613,13 @@ semantic mediawiki,isA,Tool/Framework
 winrt,uses,c++
 luxcorerender,uses,python
 gp,uses,c
-escher,influences,functional programming
 openbox,uses,c
 ckeditor,isA,Tool/Framework
 appfuse,uses,java
 dexterity,isA,Programming Language
 objective vision,uses,c++
 pentadactyl,isA,Tool/Framework
+elan,influencedBy,?
 freecol,isA,Tool/Framework
 galeon,uses,c
 moonlight,uses,c++
@@ -7658,12 +7656,12 @@ automation,isA,Programming Concept
 jello framework,isA,Tool/Framework
 apache rampart module,isA,Tool/Framework
 booktype,isA,Tool/Framework
-lasso,influences,imperative
 dadisp,uses,c++
 stellar,uses,javascript
 adobe fresco,isA,Tool/Framework
 geany,isA,Tool/Framework
 htop,uses,c
+charm,influencedBy,structured programming
 kmplot,isA,Tool/Framework
 ehcache,isA,Tool/Framework
 vtk,uses,python
@@ -7696,14 +7694,12 @@ spacewalk,uses,perl
 autodock,isA,Tool/Framework
 macwww,isA,Tool/Framework
 litespeed web server,uses,c++
-snap!,influences,object oriented programming
 travian,isA,Tool/Framework
 speakeasy,isA,Tool/Framework
 knowledge graph,isA,Programming Concept
 ldap account manager,isA,Tool/Framework
 httpunit,uses,java
 termux,isA,Tool/Framework
-factor,influences,concatenative programming language
 orbot,uses,java
 hatari,uses,c
 mldonkey,uses,c
@@ -7727,6 +7723,7 @@ red5,isA,Tool/Framework
 lantern,isA,Tool/Framework
 slim,uses,c++
 detekt,isA,Tool/Framework
+matlab,influencedBy,functional programming
 grace,uses,c
 jqt,uses,html
 giant virus finder,uses,perl
@@ -7743,11 +7740,12 @@ yarn,isA,Tool/Framework
 gradle,isA,Tool/Framework
 apache poi,isA,Tool/Framework
 su2 code,uses,c++
-corelcad,isA,Tool/Framework
 elm,isA,Programming Language
 file,uses,c
 message passing,isA,Programming Concept
 shyster,uses,c
+cuneiform,influencedBy,functional programming
+corelcad,isA,Tool/Framework
 kadu,isA,Tool/Framework
 lina,uses,c
 retrievalware,uses,java
@@ -7756,7 +7754,6 @@ filezilla,isA,Tool/Framework
 objectstore,isA,Tool/Framework
 mynigma,uses,java
 turbo vision,uses,c++
-futhark,influences,functional programming
 android ndk,uses,c
 newt,uses,c
 erable,isA,Tool/Framework
@@ -7788,7 +7785,6 @@ ruby version manager,isA,Tool/Framework
 interplanetary file system,uses,go
 ffdshow,isA,Tool/Framework
 digikam,uses,c++
-dansguardian,uses,c++
 tab mix plus,uses,javascript
 aolserver,uses,c
 tixati,isA,Tool/Framework
@@ -7800,18 +7796,20 @@ theora,uses,c
 dracut,isA,Tool/Framework
 pump.io,isA,Tool/Framework
 phpmyadmin,isA,Tool/Framework
+ttm,influencedBy,general purpose macro processor
+dansguardian,uses,c++
 munin,isA,Tool/Framework
 tribe flood network,uses,c
 muse,uses,c++
 ethosce,uses,php
 blazegraph,isA,Tool/Framework
 open dental,isA,Tool/Framework
+chapel,influencedBy,object oriented programming
 sguil,isA,Tool/Framework
 scipy,uses,c
 tonido,isA,Tool/Framework
 pitivi,uses,python
 moarvm,uses,c
-limbo,influences,concurrent computing
 sajax,isA,Tool/Framework
 gnu assembler,isA,Tool/Framework
 rsx 11,isA,Tool/Framework
@@ -7819,15 +7817,15 @@ automated testing framework,uses,c
 telix,uses,c
 apache mina,isA,Tool/Framework
 xtreemfs,isA,Tool/Framework
-hping,uses,c
 jamvm,isA,Tool/Framework
-racket,influences,logic programming
+hping,uses,c
 zulip,isA,Tool/Framework
 mupen64plus,isA,Tool/Framework
 segreg,uses,delphi
 nedi,uses,perl
 crypto++,isA,Tool/Framework
 terraform,isA,Tool/Framework
+plantuml,isA,Tool/Framework
 markup language,isA,Programming Concept
 unity,uses,c sharp
 libffi,uses,c
@@ -7837,10 +7835,7 @@ proguard,isA,Tool/Framework
 airtime,uses,php
 after dark,isA,Tool/Framework
 freearc,uses,c
-plantuml,isA,Tool/Framework
-s3,influences,structured programming
 palisade,isA,Tool/Framework
-boo,influences,object oriented analysis 
 ganglia,uses,perl
 compiz,uses,c++
 mesquite,isA,Tool/Framework
@@ -7868,16 +7863,17 @@ clubhouse,uses,python
 vega and vega lite visualisation grammars,isA,Tool/Framework
 fluent design system,isA,Tool/Framework
 apache maven,isA,Tool/Framework
-rita,uses,javascript
 unikey,uses,c++
+orc,influencedBy,nondeterministic programming
+rita,uses,javascript
 swig,uses,c
 searx,isA,Tool/Framework
 nftables,isA,Tool/Framework
 ubuntu touch,uses,c
 workflowgen,uses,c sharp
 gprename,uses,perl
+spideroak,uses,python
 stata,uses,c
-signalr,uses,c sharp
 lapack++,isA,Tool/Framework
 flatpak,uses,c
 simple api for grid applications,uses,c++
@@ -7890,10 +7886,10 @@ gecko,uses,c++
 apache jackrabbit,uses,java
 diffpack,uses,python
 panta rhei,uses,c sharp
-spideroak,uses,python
-alef,influences,structured programming
 iptables,isA,Tool/Framework
 xcas,isA,Tool/Framework
+c,influencedBy,structured programming
+signalr,uses,c sharp
 padrino,uses,ruby
 freestyle,uses,c++
 pebl,uses,c
@@ -7925,7 +7921,6 @@ opentk,isA,Tool/Framework
 opera,isA,Tool/Framework
 google wave,uses,java
 slib,isA,Tool/Framework
-lua,influences,functional
 yahoo sherpa,uses,php
 linter sql rdbms,uses,c
 git,uses,perl
@@ -7953,19 +7948,19 @@ armadillo,isA,Tool/Framework
 koha,uses,html
 docfetcher,isA,Tool/Framework
 xine,isA,Tool/Framework
-monogame,uses,c sharp
 deal.ii,uses,c++
-p4,influences,imperative programming
+monogame,uses,c sharp
 bennugd,isA,Tool/Framework
 arpwatch,uses,c
-curl,influences,markup language
 axkit,isA,Tool/Framework
 sympa,uses,c
-userland technologies,uses,java
 veriflux,uses,java
+pure,influencedBy,functional programming
 numpy,isA,Tool/Framework
 tldr pages,isA,Tool/Framework
 beagle,uses,c sharp
+userland technologies,uses,java
+cpl,influencedBy,imperative programming
 distributed r,uses,r
 blend4web,uses,c
 tops 10,uses,bliss
@@ -7978,11 +7973,13 @@ meatspace chat,isA,Tool/Framework
 xdebug,isA,Tool/Framework
 jabberd2,uses,c
 isabelle,uses,scala
+self,influencedBy,object oriented
 java opengl,uses,java
 bible analyzer,isA,Tool/Framework
 kdevelop,isA,Tool/Framework
 jeb decompiler,isA,Tool/Framework
 nedi,isA,Tool/Framework
+sql,influencedBy,declarative programming
 telehash,isA,Tool/Framework
 javahelp,isA,Tool/Framework
 mysql,isA,Tool/Framework
@@ -7996,7 +7993,6 @@ hiawatha,uses,c
 urbi,isA,Tool/Framework
 processing.js,isA,Tool/Framework
 pyspread,isA,Tool/Framework
-clu,influences,object oriented programming
 anti grain geometry,uses,c++
 multics emacs,isA,Tool/Framework
 deeplearning4j,uses,c++
@@ -8011,7 +8007,6 @@ prorealtime,uses,java
 installjammer,uses,tcl
 effi,uses,c++
 gnu emacs,isA,Tool/Framework
-ezhil,influences,structured programming
 open neural network exchange,uses,python
 graphical modeling framework,uses,java
 oz,isA,Programming Language
@@ -8083,16 +8078,17 @@ osu!,isA,Tool/Framework
 the sword project,isA,Tool/Framework
 mautic,uses,javascript
 text template transformation toolkit,isA,Tool/Framework
+plex,influencedBy,procedural
 gosu,isA,Programming Language
 feed viewer,isA,Tool/Framework
 psipred,uses,c
 bitcask,isA,Tool/Framework
 gnome keyring,uses,c
 sage business cloud,isA,Tool/Framework
-julia,influences,functional programming
 pressurenet,isA,Tool/Framework
 alaveteli,isA,Tool/Framework
 bitblinder,uses,python
+bitkeeper,uses,c
 salome,uses,python
 joomla,isA,Tool/Framework
 everybit.js,isA,Tool/Framework
@@ -8101,8 +8097,6 @@ cryptomatte,isA,Tool/Framework
 menthor editor,isA,Tool/Framework
 noredink,isA,Tool/Framework
 sco skunkware,uses,ruby
-ada,influences,object oriented programming
-bitkeeper,uses,c
 cloudcompare,isA,Tool/Framework
 octopussy,isA,Tool/Framework
 msu lossless video codec,uses,c++
@@ -8119,15 +8113,16 @@ step,isA,Tool/Framework
 mcsim,isA,Tool/Framework
 kismet,isA,Tool/Framework
 opencards,isA,Tool/Framework
-vala,influences,programming paradigm
 scripting layer for android,isA,Tool/Framework
 acceleo,isA,Tool/Framework
 gdata,uses,php
+eiffel,influencedBy,object oriented programming
 coreldraw,uses,c++
 graphviz,isA,Tool/Framework
 cratedb,isA,Tool/Framework
 abermud,uses,c
 phalcon,uses,php
+racket,influencedBy,imperative programming
 musicbrainz picard,uses,python
 bids helper,isA,Tool/Framework
 mixxx,uses,c
@@ -8139,6 +8134,7 @@ freetts,isA,Tool/Framework
 kimchi,uses,python
 dbpedia,uses,scala
 heras af,isA,Tool/Framework
+racket,influencedBy,reflective programming
 lives,uses,c
 adium,isA,Tool/Framework
 dnf,uses,python
@@ -8152,6 +8148,7 @@ webpack,isA,Tool/Framework
 bash,isA,Tool/Framework
 grads,uses,c
 peerguardian,isA,Tool/Framework
+alice,influencedBy,distributed computing
 cecil,isA,Programming Language
 apache chemistry,uses,php
 phpldapadmin,uses,php
@@ -8165,14 +8162,13 @@ shimmercat,uses,haskell
 up2date,isA,Tool/Framework
 openframeworks,isA,Tool/Framework
 bootstrap,uses,javascript
+brl cad,isA,Tool/Framework
 eidors,uses,matlab
 apache qpid,uses,ruby
 fluidinfo,uses,python
 block,isA,Programming Concept
 yooreeka,isA,Tool/Framework
 openbgpd,isA,Tool/Framework
-joy,influences,stack oriented programming
-brl cad,isA,Tool/Framework
 os,uses,java
 tuleap,isA,Tool/Framework
 vert.x,uses,kotlin
@@ -8201,7 +8197,6 @@ adobe indesign,uses,c++
 advanced visualization studio,uses,c++
 firefox for android,isA,Tool/Framework
 format,isA,Tool/Framework
-julia,influences,programming paradigm
 webp,isA,Tool/Framework
 gnu parted,uses,c
 gnome fractal,isA,Tool/Framework
@@ -8209,6 +8204,7 @@ sitebar,isA,Tool/Framework
 prototype oriented,isA,Programming Concept
 scrot,isA,Tool/Framework
 apache systemds,isA,Tool/Framework
+joyce,influencedBy,imperative programming
 paizacloud cloud ide,uses,javascript
 mercurial,uses,python
 virtuawin,uses,c
@@ -8217,8 +8213,10 @@ votca,isA,Tool/Framework
 rubymotion,uses,java
 renderware,isA,Tool/Framework
 html5 boilerplate,uses,html
+miranda,influencedBy,lazy evaluation
 jhipster,isA,Tool/Framework
 bisque,isA,Tool/Framework
+claire,influencedBy,object oriented
 opendj,isA,Tool/Framework
 marabunta,uses,c++
 it++,uses,c++
@@ -8268,12 +8266,11 @@ standard widget toolkit,isA,Tool/Framework
 network security toolkit,uses,c++
 gwenview,uses,c++
 lina,isA,Tool/Framework
+parasail,isA,Programming Language
 firefox,uses,c
 quickc,isA,Tool/Framework
 eclipse paho,uses,java
 psychedelia,isA,Tool/Framework
-nu,influences,imperative programming
-parasail,isA,Programming Language
 yui rich text editor,isA,Tool/Framework
 arangodb,uses,javascript
 dm cache,isA,Tool/Framework
@@ -8295,6 +8292,7 @@ zammad,isA,Tool/Framework
 surface evolver,uses,c
 cubesat space protocol,uses,python
 yeoman,uses,javascript
+perl,influencedBy,object oriented
 sndio,uses,c
 ikonboard,isA,Tool/Framework
 gt.m,isA,Tool/Framework
@@ -8320,15 +8318,14 @@ compatible time sharing system,uses,lisp
 proteowizard,uses,c sharp
 yate,uses,c
 gnumail,isA,Tool/Framework
-php,influences,imperative programming
+bean,isA,Tool/Framework
+ml,influencedBy,programming paradigm
 phantomjs,uses,c
 lean,isA,Tool/Framework
 winplot,isA,Tool/Framework
 castep,isA,Tool/Framework
 textpattern,uses,php
 jboss messaging,uses,java
-bean,isA,Tool/Framework
-php,influences,procedural programming
 crosswalk project,isA,Tool/Framework
 drizzle,isA,Tool/Framework
 gregorio,isA,Tool/Framework
@@ -8337,6 +8334,7 @@ dosbox,isA,Tool/Framework
 fotografix,isA,Tool/Framework
 lammps,isA,Tool/Framework
 clr profiler,isA,Tool/Framework
+turing,influencedBy,programming paradigm
 jakarta server faces,isA,Tool/Framework
 iperf,isA,Tool/Framework
 networkmanager,isA,Tool/Framework
@@ -8352,13 +8350,13 @@ grails,isA,Tool/Framework
 apache geronimo,isA,Tool/Framework
 apache arrow,isA,Tool/Framework
 zig,isA,Programming Language
-kotlin,influences,generic programming
 delta3d,isA,Tool/Framework
 e aksharayan,isA,Tool/Framework
-saga gis,isA,Tool/Framework
 k3b,isA,Tool/Framework
 cpanel,uses,perl
 netpoint,isA,Tool/Framework
+saga gis,isA,Tool/Framework
+darwin,influencedBy,object oriented programming
 s3,isA,Programming Language
 azureweb,isA,Tool/Framework
 uima,uses,java
@@ -8379,7 +8377,6 @@ scst,uses,c
 apache pdfbox,isA,Tool/Framework
 maqetta,uses,javascript
 ganymede,uses,java
-io,influences,object oriented programming
 xdxf,uses,c++
 xrdb,isA,Tool/Framework
 ember.js,uses,javascript
@@ -8417,7 +8414,6 @@ openvino,uses,c++
 doctrine,isA,Tool/Framework
 ringdroid,uses,java
 secure file transfer program,isA,Tool/Framework
-squirrel,influences,programming paradigm
 mail in a box,uses,python
 jd decompiler,uses,java
 wenlin software for learning chinese,uses,c
@@ -8433,6 +8429,7 @@ orca,isA,Tool/Framework
 ragel,isA,Tool/Framework
 mbrola,isA,Tool/Framework
 creatio,uses,javascript
+p4,influencedBy,compiled language
 jsphp,uses,javascript
 dillo,uses,c
 vtk,uses,c++
@@ -8440,6 +8437,7 @@ robot framework,uses,python
 midori javascript framework,uses,javascript
 opentimestamps,isA,Tool/Framework
 vanilla forums,isA,Tool/Framework
+lisp,influencedBy,metaprogramming
 template numerical toolkit,uses,c++
 gnome,uses,c++
 backdrop cms,uses,php
@@ -8454,16 +8452,14 @@ openwebrtc,isA,Tool/Framework
 vmware fusion,uses,c
 tiki wiki cms groupware,uses,php
 mozilla thunderbird,uses,c++
+autorealm,uses,delphi
 cpu sim,isA,Tool/Framework
 open live writer,isA,Tool/Framework
 libwww,uses,c
 wing ide,uses,c
-racket,influences,programming paradigm
-autorealm,uses,delphi
 3dmlw,isA,Tool/Framework
 word lens,uses,java
 diptrace,isA,Tool/Framework
-gnome activity journal,uses,python
 mega,isA,Tool/Framework
 pvlib python,uses,python
 reflective,isA,Programming Concept
@@ -8473,6 +8469,8 @@ allegro,isA,Tool/Framework
 id tech 5,uses,clipper
 xenu's link sleuth,uses,c++
 catboost,uses,java
+gnome activity journal,uses,python
+eff,influencedBy,functional programming
 biskit,isA,Tool/Framework
 py2exe,isA,Tool/Framework
 opensmtpd,isA,Tool/Framework
@@ -8512,7 +8510,6 @@ charmm,isA,Tool/Framework
 baron,uses,c
 kpackage,uses,c++
 component based scalable logical architecture,isA,Tool/Framework
-qore,influences,object oriented
 pump.io,uses,javascript
 neoload,uses,java
 drupal,isA,Tool/Framework
@@ -8528,14 +8525,14 @@ asunder,isA,Tool/Framework
 beamer,isA,Tool/Framework
 mplab,uses,c++
 apache beehive,isA,Tool/Framework
+cpl,influencedBy,structured programming
+kde software compilation,uses,c
 sap business explorer,isA,Tool/Framework
 ispconfig,uses,php
 preesm,isA,Tool/Framework
 librecad,isA,Tool/Framework
 openhpi,isA,Tool/Framework
 phoronix test suite,uses,php
-kde software compilation,uses,c
-zpl,influences,array programming
 sb+,uses,c
 kiten,uses,c++
 simutrans,uses,squirrel
@@ -8544,6 +8541,7 @@ sonic pi,uses,c++
 simple api for grid applications,uses,java
 sayonara player,isA,Tool/Framework
 yarn,uses,javascript
+futhark,influencedBy,array programming
 dragon player,uses,c++
 infer.net,uses,c sharp
 araucaria,isA,Tool/Framework
@@ -8551,6 +8549,7 @@ pmview,isA,Tool/Framework
 sigrok,uses,c++
 steed,isA,Tool/Framework
 scilab,uses,java
+php,influencedBy,imperative programming
 .net,isA,Tool/Framework
 mpir,uses,c++
 sam broadcaster,uses,delphi
@@ -8563,37 +8562,34 @@ brian,isA,Tool/Framework
 jsbml,uses,java
 windows console,isA,Tool/Framework
 webfetch,isA,Tool/Framework
-iwork,uses,javascript
 cocoa,isA,Tool/Framework
 visit,uses,c++
 clockworkmod,isA,Tool/Framework
 firefox for ios,isA,Tool/Framework
+viber,uses,c++
 java opengl,uses,c
-fjölnir,influences,object oriented
+vlc media player,uses,swift
 linux color management,isA,Tool/Framework
 unrealircd,uses,c
 twrp,uses,c
 xfree86,isA,Tool/Framework
-vala,influences,structured programming
-viber,uses,c++
-vlc media player,uses,swift
-miranda,influences,declarative programming
+orwell,influencedBy,lazy evaluation
+iwork,uses,javascript
 arachne,uses,c
-cuneiform,influences,scientific workflow system
 graphhopper,uses,java
 pjirc,isA,Tool/Framework
 biojs,isA,Tool/Framework
-maxima,isA,Tool/Framework
 phantomjs,isA,Tool/Framework
+requests,uses,python
 jfire,isA,Tool/Framework
 apache lucene,uses,java
 tetgen,isA,Tool/Framework
+squirrel,influencedBy,imperative programming
+maxima,isA,Tool/Framework
 hp integrity virtual machines,uses,c
 xwax,isA,Tool/Framework
 dolibarr,isA,Tool/Framework
 charon,isA,Tool/Framework
-requests,uses,python
-draco,influences,imperative
 strace,isA,Tool/Framework
 privoxy,isA,Tool/Framework
 buck,isA,Tool/Framework
@@ -8601,7 +8597,6 @@ jboss enterprise soa platform,uses,java
 brotli,isA,Tool/Framework
 apache mahout,uses,java
 the battle for wesnoth,isA,Tool/Framework
-krl,influences,knowledge representation 
 leechftp,isA,Tool/Framework
 bibdesk,isA,Tool/Framework
 mcsim,uses,c
@@ -8647,6 +8642,7 @@ picogen,isA,Tool/Framework
 winjs,isA,Tool/Framework
 retroshare,isA,Tool/Framework
 libgdx,uses,c++
+java,influencedBy,imperative
 nullsoft scriptable install system,uses,c
 chart.js,uses,javascript
 enblend,uses,c++
@@ -8667,9 +8663,10 @@ dylan,isA,Programming Language
 exact audio copy,isA,Tool/Framework
 ubuntu one,uses,python
 help crafter,isA,Tool/Framework
+tcl,influencedBy,imperative programming
 airtime,isA,Tool/Framework
 topstyle,uses,delphi
-javascript,influences,imperative programming
+parser,influencedBy,multiparadigm   macro
 cloudike,uses,javascript
 icechat,isA,Tool/Framework
 home assistant,isA,Tool/Framework
@@ -8690,6 +8687,7 @@ xmlstarlet,isA,Tool/Framework
 gnome latex,uses,vala
 jinja,isA,Tool/Framework
 java agent development framework,isA,Tool/Framework
+c,influencedBy,imperative
 gprename,isA,Tool/Framework
 firefox 4,isA,Tool/Framework
 jboss enterprise application platform,uses,java
@@ -8698,15 +8696,14 @@ laravel,isA,Tool/Framework
 organic groups mailing list,uses,php
 mocha,isA,Tool/Framework
 zend server,uses,php
-cpl,influences,imperative programming
 blackberry os,isA,Tool/Framework
 data usa,uses,python
+matlab,influencedBy,procedural programming
 libsndfile,isA,Tool/Framework
 cgi:irc,uses,perl
 paintbrush,isA,Tool/Framework
 fcron,uses,c
 zoneminder,uses,php
-euclid,influences,structured programming
 giant virus finder,isA,Tool/Framework
 ply,isA,Tool/Framework
 icedtea,uses,c
@@ -8733,12 +8730,10 @@ gigamesh software framework,uses,c++
 premake,uses,lua
 fluentd,uses,c
 openapi,isA,Tool/Framework
-lasso,influences,exp oriented
 direct web remoting,isA,Tool/Framework
 itsnat,isA,Tool/Framework
 open movie editor,uses,c++
 climm,uses,c
-ezhil,influences,interpreter
 opensmtpd,uses,c
 xchm,uses,c++
 orientdb,uses,java
@@ -8756,16 +8751,16 @@ torch,uses,lua
 rule processing,isA,Programming Concept
 revoscalepy,uses,python
 apache roller,isA,Tool/Framework
+joy,influencedBy,stack oriented programming
 bluej,uses,java
 paperpile,uses,css
 multiplan,isA,Tool/Framework
 taiwan fellowship editor,uses,javascript
 mimedefang,uses,perl
 linux namespaces,uses,c
-joy,influences,functional programming
+tea,influencedBy,functional
 small c,isA,Tool/Framework
 lambdanative,isA,Tool/Framework
-unicon,influences,object oriented programming
 freearc,uses,c++
 kicad,uses,c++
 python,isA,Programming Language
@@ -8789,7 +8784,6 @@ sqream db,isA,Tool/Framework
 swad,isA,Tool/Framework
 chromium,uses,c++
 gretl,uses,c
-racket,influences,metaprogramming
 viber,uses,python
 mautic,uses,php
 jetpack,uses,javascript
@@ -8810,7 +8804,6 @@ msbuild,isA,Tool/Framework
 nmap,uses,c
 simple protocol for independent computing environments,uses,c
 xnview,uses,c++
-clu,influences,procedural programming
 macports,uses,tcl
 perforce jam,uses,c
 emscripten,uses,c++
@@ -8827,14 +8820,13 @@ fluid framework,uses,javascript
 nightshade,uses,c++
 pretty good privacy,uses,c
 polymer,isA,Tool/Framework
+sheetster,uses,javascript
 openmdx,uses,java
 windows task scheduler,uses,c++
 cwm,uses,c
 google native client,isA,Tool/Framework
 drqueue,uses,c++
 apache rocketmq,uses,java
-sheetster,uses,javascript
-forth,influences,stack oriented programming
 android team awareness kit,uses,java
 redmine,uses,ruby
 homepak,isA,Tool/Framework
@@ -8843,18 +8835,16 @@ khtml,uses,c++
 seamless3d,isA,Tool/Framework
 syndie,uses,java
 apper,isA,Tool/Framework
+typset and runoff,uses,mad
 cantor,uses,c++
 spyder,isA,Tool/Framework
 webwork,uses,perl
 wireguard,isA,Tool/Framework
 codename one,isA,Tool/Framework
-elixir,influences,programming paradigm
-typset and runoff,uses,mad
 lively kernel,uses,c++
 mothur,isA,Tool/Framework
 julius,isA,Tool/Framework
 simspark,uses,ruby
-curry,influences,functional
 nix package manager,uses,c++
 panda3d,uses,c
 internet messaging program,isA,Tool/Framework
@@ -8863,6 +8853,7 @@ tux typing,isA,Tool/Framework
 go continuous delivery,uses,java
 vistrails,isA,Tool/Framework
 veracrypt,uses,c++
+oz,influencedBy,programming paradigm
 ircii,isA,Tool/Framework
 google app runtime for chrome,uses,javascript
 number theory library,isA,Tool/Framework
@@ -8873,13 +8864,13 @@ ezmol,uses,javascript
 kbibtex,uses,c++
 gnu radio,isA,Tool/Framework
 mpeg audio decoder,uses,c
+elixir,influencedBy,process oriented programming
 grafx2,uses,c
 hugo,uses,go
 buildout,uses,python
 ext2fsd,isA,Tool/Framework
 audiomulch,isA,Tool/Framework
 playcanvas,isA,Tool/Framework
-elixir,influences,functional programming
 apama,uses,c++
 jqt,uses,javascript
 unit.js,uses,javascript
@@ -8923,8 +8914,10 @@ virtuoso universal server,isA,Tool/Framework
 neatx,isA,Tool/Framework
 teleport,isA,Tool/Framework
 hrhis,isA,Tool/Framework
+orwell,influencedBy,functional programming
 qbs,uses,javascript
 amsdos,isA,Tool/Framework
+qalb,influencedBy,functional programming
 memtest86,isA,Tool/Framework
 yast,uses,ruby
 miredo,isA,Tool/Framework
@@ -8980,6 +8973,9 @@ kwallet,isA,Tool/Framework
 qt jambi,uses,java
 wakanda,uses,c++
 dark engine,isA,Tool/Framework
+lfe,influencedBy,concurrent computing
+php,influencedBy,object oriented programming
+harbour,influencedBy,object oriented programming
 odoo,uses,javascript
 xito,isA,Tool/Framework
 webplus,uses,c++
@@ -8993,23 +8989,23 @@ bazel,uses,java
 astrolog,isA,Tool/Framework
 apache ignite,uses,c sharp
 nylas mail,uses,javascript
+dexterity,influencedBy,procedural programming
 uswsusp,uses,c
 baudline,uses,c
 kvirc,uses,c++
 free studio,uses,c sharp
 grsync,isA,Tool/Framework
-source,influences,imperative programming
 google docs editors,uses,javascript
 chandler,uses,python
+vala,influencedBy,object oriented programming
 opensocial,uses,javascript
 mysql archive,isA,Tool/Framework
 filesystem in userspace,uses,c
-euphoria,influences,imperative programming
 openbgpd,uses,c
 gherkin,isA,Tool/Framework
+julia,influencedBy,metaprogramming
 zinf,isA,Tool/Framework
 rstudio,uses,java
-elixir,influences,concurrent computing
 metapad,uses,c
 cuckoochess,isA,Tool/Framework
 d3.js,isA,Tool/Framework
@@ -9022,6 +9018,7 @@ meshlab,uses,javascript
 rwth fsa toolkit,uses,c++
 mix,uses,elixir
 brl cad,uses,c++
+dart,influencedBy,reflective programming
 java gnome,isA,Tool/Framework
 mfem,isA,Tool/Framework
 moonlight,uses,c sharp
@@ -9037,14 +9034,15 @@ helpndoc,uses,delphi
 kadu,uses,c++
 arpack,isA,Tool/Framework
 play framework,isA,Tool/Framework
-r tools for visual studio,uses,c sharp
 network ups tools,isA,Tool/Framework
 mambo,isA,Tool/Framework
 tnfox,isA,Tool/Framework
 javahelp,uses,java
-liferea,isA,Tool/Framework
-crystal,influences,object oriented programming
 ceiton,isA,Tool/Framework
+forth,influencedBy,concatenative programming language
+r tools for visual studio,uses,c sharp
+javascript,influencedBy,event driven programming
+liferea,isA,Tool/Framework
 genocad,isA,Tool/Framework
 word lens,uses,c++
 megan,isA,Tool/Framework
@@ -9102,7 +9100,6 @@ qbox,isA,Tool/Framework
 conference xp,uses,c sharp
 tux typing,uses,c
 freelan,isA,Tool/Framework
-php,influences,functional programming
 geocoder,isA,Tool/Framework
 automated testing framework,isA,Tool/Framework
 scorched 3d,isA,Tool/Framework
@@ -9127,11 +9124,11 @@ openjpeg,isA,Tool/Framework
 openkeychain,uses,java
 moneydance,uses,java
 corel photo paint,uses,c++
-apache systemds,uses,python
 kerberos,uses,c
 saltmod,uses,delphi
 veyon,uses,c++
 apache activemq,uses,java
+parasail,influencedBy,compiled language
 visual component framework,isA,Tool/Framework
 ethtool,uses,c
 sub7,uses,delphi
@@ -9139,6 +9136,8 @@ sharex,isA,Tool/Framework
 dovecot,isA,Tool/Framework
 kde projects,uses,c++
 brackets,uses,css
+php,influencedBy,programming paradigm
+apache systemds,uses,python
 shell,isA,Programming Concept
 bersirc,isA,Tool/Framework
 deap,isA,Tool/Framework
@@ -9151,6 +9150,7 @@ j pilot,isA,Tool/Framework
 ptgui,uses,c++
 nastran,isA,Tool/Framework
 ansible,uses,python
+qore,influencedBy,shared memory
 google docs editors,isA,Tool/Framework
 openmsx,uses,c++
 adventure game studio,isA,Tool/Framework
@@ -9171,7 +9171,6 @@ x.org server,isA,Tool/Framework
 featool multiphysics,uses,c
 gnu bazaar,uses,python
 texinfo,uses,perl
-ruby,influences,functional programming
 nodexl,isA,Tool/Framework
 portable c compiler,isA,Tool/Framework
 next.js,uses,rust
@@ -9199,32 +9198,31 @@ genenetwork,uses,php
 xrdp,uses,c
 virtuawin,isA,Tool/Framework
 qvd,isA,Tool/Framework
+red,influencedBy,symbolic programming
 doctrine,uses,php
 adobe scout,uses,c++
 cuppa,isA,Tool/Framework
 zipeg,uses,java
 apache cordova,uses,c sharp
+bvi,isA,Tool/Framework
 procdump,isA,Tool/Framework
 emms,isA,Tool/Framework
 web application distribution infrastructure,uses,java
 network caller id,isA,Tool/Framework
 lmms,isA,Tool/Framework
 wakanda,isA,Tool/Framework
-bvi,isA,Tool/Framework
-babbage,influences,structured programming
 thredded,isA,Tool/Framework
 apache arrow,uses,rust
 apache ode,isA,Tool/Framework
 ableton live,uses,c++
 numba,uses,python
+orchard project,isA,Tool/Framework
 apache cloudstack,uses,python
 amaya,isA,Tool/Framework
 mingw,uses,c++
 cura,uses,python
 quarkus,isA,Tool/Framework
 gnu multiple precision arithmetic library,isA,Tool/Framework
-qore,influences,procedural
-orchard project,isA,Tool/Framework
 hemospat,isA,Tool/Framework
 dbeaver,uses,java
 class based programming,isA,Programming Concept
@@ -9238,13 +9236,12 @@ linphone,isA,Tool/Framework
 resource hacker,isA,Tool/Framework
 shrdlu,uses,planner
 ibm unica netinsight,isA,Tool/Framework
+electron,uses,javascript
 zammad,uses,ruby
 apache allura,uses,python
 luckybackup,uses,c++
 wwiv,isA,Tool/Framework
 semaphore,uses,ruby
-electron,uses,javascript
-frink,influences,imperative programming
 audiveris,isA,Tool/Framework
 jupyter hub,isA,Tool/Framework
 olat,uses,java
@@ -9284,16 +9281,16 @@ ggpo,isA,Tool/Framework
 marabunta,isA,Tool/Framework
 seeks,uses,c++
 upstart,uses,c
-apl,influences,functional programming
 wyvern,isA,Tool/Framework
 tryton,isA,Tool/Framework
 komodo ide,uses,python
-eclipse,isA,Tool/Framework
 seafile,uses,python
 applewin,isA,Tool/Framework
 jexus,isA,Tool/Framework
 fluent design system,uses,kotlin
 matplotlib,isA,Tool/Framework
+eclipse,isA,Tool/Framework
+genie,influencedBy,programming paradigm
 mssql,isA,Tool/Framework
 mnesia,isA,Tool/Framework
 scribes,uses,python
@@ -9301,7 +9298,6 @@ state threads,uses,c
 ocrfeeder,isA,Tool/Framework
 pytorch,isA,Tool/Framework
 mwrank,isA,Tool/Framework
-clu,influences,programming paradigm
 hotot,uses,python
 komodo ide,uses,javascript
 windows forms,isA,Tool/Framework
@@ -9358,6 +9354,7 @@ ceph,uses,c++
 state threads,isA,Tool/Framework
 yandex browser,uses,javascript
 premake,isA,Tool/Framework
+darwin,influencedBy,imperative programming
 rhomobile suite,uses,css
 shelxle,uses,c++
 lldb,isA,Tool/Framework
@@ -9366,13 +9363,14 @@ whiley,isA,Programming Language
 nouveau,uses,c
 socket.io,uses,javascript
 mayan,isA,Tool/Framework
-deploying,isA,Programming Concept
 circuitpython,isA,Tool/Framework
 tuxguitar,uses,java
 memcached,uses,c
 ppsspp,uses,c
 mupdf,isA,Tool/Framework
 orleans,isA,Tool/Framework
+curry,influencedBy,modular
+deploying,isA,Programming Concept
 audiomulch,uses,c++
 ibm unica netinsight,uses,html
 aloha editor,isA,Tool/Framework
@@ -9398,19 +9396,20 @@ microsoft sql server,uses,c++
 transformation language,isA,Programming Concept
 known,isA,Tool/Framework
 otrs,uses,perl
-bbc sounds,isA,Tool/Framework
 capd library,uses,c++
 gromacs,isA,Tool/Framework
+jqwidgets,uses,javascript
 distcc,uses,c++
 spip,uses,php
 dvdisaster,uses,c
 rpcs3,uses,c++
+focal,influencedBy,imperative programming
+bbc sounds,isA,Tool/Framework
 antics 2 d animation,uses,c++
 cron,isA,Tool/Framework
-jqwidgets,uses,javascript
-vala,influences,imperative programming
 4hana,isA,Tool/Framework
 feedly,uses,java
+plus,influencedBy,imperative programming
 collabora online,uses,c++
 apache abdera,uses,java
 visone,isA,Tool/Framework
@@ -9423,6 +9422,8 @@ revoscaler,isA,Tool/Framework
 openbroadcaster,uses,javascript
 lise++,isA,Tool/Framework
 javolution,uses,c++
+qore,influencedBy,functional
+forth,influencedBy,reflective programming
 visualap,isA,Tool/Framework
 testdisk,uses,c
 earth clock,isA,Tool/Framework
@@ -9439,7 +9440,6 @@ libgcrypt,isA,Tool/Framework
 cuppa,uses,java
 ecocities,isA,Tool/Framework
 elasticsearch,isA,Tool/Framework
-dm crypt,isA,Tool/Framework
 google web toolkit,isA,Tool/Framework
 phabricator,isA,Tool/Framework
 gobject,uses,c
@@ -9448,12 +9448,16 @@ mydlp,uses,erlang
 relational databases,isA,Programming Concept
 rhomobile suite,isA,Tool/Framework
 meta.numerics,isA,Tool/Framework
+dm crypt,isA,Tool/Framework
+source,influencedBy,procedural programming
 sharc molecular dynamics software,uses,python
 x road,uses,java
-iina,uses,swift
+factor,influencedBy,programming paradigm
 rohr2,uses,c++
 omnitracker,isA,Tool/Framework
 ant,isA,Tool/Framework
+dart,influencedBy,object oriented programming
+iina,uses,swift
 slurm workload manager,uses,c
 rpcs3,isA,Tool/Framework
 jack intelligent agents,uses,java
@@ -9463,13 +9467,13 @@ gollum,uses,ruby
 outguess,uses,c
 hiri,uses,python
 echo,uses,java
-atom,influences,reactive programming
 sencha touch,isA,Tool/Framework
 tcl,isA,Programming Language
 ibm websphere service registry and repository,uses,java
 adept,uses,c++
 video reality,isA,Tool/Framework
 xcb,isA,Tool/Framework
+mary,influencedBy,imperative programming
 ldap admin,isA,Tool/Framework
 windows calculator,uses,c++
 opencv,uses,c++
@@ -9485,7 +9489,6 @@ punchscan,uses,java
 fitnesse,isA,Tool/Framework
 lightning,uses,c++
 mysms,uses,java
-pytorch,uses,python
 mypaint,uses,python
 pov ray,uses,c++
 bottle,isA,Tool/Framework
@@ -9495,11 +9498,15 @@ kmplayer,isA,Tool/Framework
 cwm,isA,Tool/Framework
 iotivity,uses,java
 singular,uses,c++
+clu,influencedBy,programming paradigm
+pytorch,uses,python
 amdgpu,uses,c
+newspeak,influencedBy,functional programming
 infobot,uses,perl
 sage 300,uses,c++
 invenio,isA,Tool/Framework
 blackberry world,isA,Tool/Framework
+harbour,influencedBy,programming paradigm
 apache qpid,uses,java
 roadrunner,uses,php
 carrot2,uses,java
@@ -9511,16 +9518,15 @@ geshi,uses,php
 lm sensors,isA,Tool/Framework
 apache mesos,isA,Tool/Framework
 padrino,isA,Tool/Framework
-escher,influences,logic programming
 guaraná dsl,isA,Tool/Framework
 discord,uses,c++
-planner,influences,programming paradigm
 cloudtran,isA,Tool/Framework
 distributed computing,isA,Programming Concept
 odk,isA,Tool/Framework
 off the record messaging,uses,c
 grsync,uses,c
 imagemagick,isA,Tool/Framework
+go!,influencedBy,logic
 periscope,uses,go
 gnome applications,uses,python
 bersirc,uses,c
@@ -9545,13 +9551,12 @@ safari,uses,c++
 amber,isA,Tool/Framework
 eclipse paho,uses,javascript
 torrentpier,uses,php
-pure,influences,rewriting
 paraview,uses,python
 zmailer,isA,Tool/Framework
-genie,influences,imperative programming
 arcgis,uses,c++
 winscp,isA,Tool/Framework
 grpc,uses,c sharp
+scratch,influencedBy,event driven
 liquid rhythm,uses,c++
 birt project,isA,Tool/Framework
 apache superset,isA,Tool/Framework
@@ -9570,7 +9575,6 @@ oracle weblogic server,uses,java
 google authenticator,isA,Tool/Framework
 la vortaro,uses,c++
 structured programming,isA,Programming Concept
-kotlin,influences,functional programming
 linuxmce,isA,Tool/Framework
 cryptocat,isA,Tool/Framework
 phantomjs,uses,c++
@@ -9590,7 +9594,6 @@ metakit,isA,Tool/Framework
 ofono,isA,Tool/Framework
 lighttpd,isA,Tool/Framework
 giant virus finder,uses,python
-sk8,influences,object oriented programming
 flare3d,isA,Tool/Framework
 jspx bay,uses,java
 revoscalepy,isA,Tool/Framework
@@ -9611,10 +9614,8 @@ mad,isA,Programming Language
 acc,isA,Programming Language
 knockout,uses,javascript
 fantom,isA,Programming Language
-whiley,influences,functional programming
 conversations,isA,Tool/Framework
 deno,uses,javascript
-argentum backup,uses,c++
 metasfresh,isA,Tool/Framework
 wii system software,uses,c++
 simpleitk,uses,tcl
@@ -9623,6 +9624,8 @@ alien,isA,Tool/Framework
 wifi explorer,isA,Tool/Framework
 xsnow,isA,Tool/Framework
 winbuilder,uses,delphi
+lasso,influencedBy,imperative
+argentum backup,uses,c++
 ultradefrag,uses,javascript
 cratedb,uses,java
 cascading,isA,Tool/Framework
@@ -9641,6 +9644,7 @@ less,isA,Tool/Framework
 bcache,isA,Tool/Framework
 computer vision annotation tool,uses,html
 pagespinner,uses,c
+c,influencedBy,procedural programming
 yasca,uses,php
 cascade,isA,Tool/Framework
 base one foundation component library,isA,Tool/Framework
@@ -9658,12 +9662,11 @@ jakarta xml binding,uses,java
 cipango,isA,Tool/Framework
 mpqc,isA,Tool/Framework
 coreldraw,uses,c sharp
+emojli,uses,php
 freedombox,isA,Tool/Framework
 helpndoc,isA,Tool/Framework
 project.net,uses,java
 tmux,uses,c
-emojli,uses,php
-gödel,influences,logic programming
 d3web,isA,Tool/Framework
 snns,uses,c
 codemonkey,isA,Tool/Framework
@@ -9683,6 +9686,7 @@ eraser,uses,c
 avro keyboard,uses,python
 normaliz,isA,Tool/Framework
 spring,isA,Tool/Framework
+f*,influencedBy,imperative programming
 yadics,uses,c++
 musescore,uses,c++
 p0f,isA,Tool/Framework
@@ -9694,8 +9698,10 @@ krusader,uses,c++
 cs blast,uses,c++
 hh suite,uses,c++
 natural docs,isA,Tool/Framework
+s3,influencedBy,structured programming
 geany,uses,c
 vert.x,uses,javascript
+alice,influencedBy,imperative programming
 cheetahtemplate,isA,Tool/Framework
 pvlib python,isA,Tool/Framework
 logos bible software,isA,Tool/Framework
@@ -9713,9 +9719,10 @@ jetuml,isA,Tool/Framework
 tux paint,uses,c
 endrain,uses,delphi
 xwiki,uses,java
+lisp,influencedBy,functional programming
 volatility,uses,python
 apache guacamole,isA,Tool/Framework
-curl,influences,object oriented programming
+ats,influencedBy,imperative programming
 d3web,uses,java
 cheese,isA,Tool/Framework
 math kernel library,uses,c
@@ -9726,7 +9733,6 @@ quantum programming,isA,Programming Concept
 jeb decompiler,uses,java
 internetnews,uses,python
 graphicsmagick,uses,c
-snap!,influences,event driven programming
 ikiwiki,isA,Tool/Framework
 llvm,isA,Tool/Framework
 apache fortress,uses,java
@@ -9773,15 +9779,13 @@ qcad,isA,Tool/Framework
 macdraw,isA,Tool/Framework
 brian,uses,python
 uploadftp,uses,c sharp
+clamwin free antivirus,isA,Tool/Framework
 apache oozie,isA,Tool/Framework
 ubiquity,isA,Tool/Framework
 artisteer,uses,c sharp
 webp,uses,c
 unipept,isA,Tool/Framework
 emacs,uses,c
-julia,influences,procedural programming
-clamwin free antivirus,isA,Tool/Framework
-python,influences,procedural
 freeradius,isA,Tool/Framework
 akonadi,uses,c++
 dalton,isA,Tool/Framework
@@ -9801,7 +9805,6 @@ drjava,isA,Tool/Framework
 mysensors,isA,Tool/Framework
 avahi,isA,Tool/Framework
 openkeychain,isA,Tool/Framework
-bliss,influences,imperative
 revive adserver,uses,php
 literate,isA,Programming Concept
 npl,isA,Programming Language
@@ -9814,7 +9817,7 @@ simh,isA,Tool/Framework
 zona,isA,Tool/Framework
 quake ii engine,uses,c
 concurrent constraint logic programming,isA,Programming Concept
-cobra,influences,programming paradigm
+perl,influencedBy,functional
 ec2,isA,Tool/Framework
 recover,isA,Tool/Framework
 macports,isA,Tool/Framework
@@ -9835,9 +9838,11 @@ thedraw,isA,Tool/Framework
 visualeditor,uses,javascript
 asio c++ library,uses,c++
 jam.py,isA,Tool/Framework
+little b,influencedBy,functional programming
 apache openejb,uses,java
 buildbot,isA,Tool/Framework
 svgalib,uses,c
+plex,influencedBy,concurrent
 sco skunkware,uses,c
 vz editor,isA,Tool/Framework
 xos webtop,isA,Tool/Framework
@@ -9854,14 +9859,11 @@ kaffeine,isA,Tool/Framework
 luatex,uses,c
 mx4j,uses,java
 radvd,uses,c
-beta,influences,object oriented programming
 jboss,isA,Tool/Framework
+remote shell,uses,c
 minibloq,isA,Tool/Framework
-epigram,influences,functional programming
 programmer's file editor,uses,c++
 esper,uses,c sharp
-matlab,influences,functional programming
-remote shell,uses,c
 fog project,isA,Tool/Framework
 windows presentation foundation,isA,Tool/Framework
 adobe dreamweaver,isA,Tool/Framework
@@ -9903,6 +9905,7 @@ mallet,isA,Tool/Framework
 id tech 7,isA,Tool/Framework
 gnu paint,uses,c
 goverlan systems management,isA,Tool/Framework
+harbour,influencedBy,functional programming
 rewriting,isA,Programming Concept
 metapad,isA,Tool/Framework
 web2py,uses,python
@@ -9916,17 +9919,17 @@ envsys,uses,c
 conductor,uses,python
 lemon,isA,Tool/Framework
 linux screen reader,uses,python
+flashfxp,uses,delphi
 gnome soundconverter,uses,python
 iotivity,uses,c++
 flightgear,isA,Tool/Framework
-flashfxp,uses,delphi
-lfe,influences,functional programming
 pspp,isA,Tool/Framework
 icy phoenix,isA,Tool/Framework
 apache nutch,uses,java
 meson,uses,python
 cdex,uses,c
 nunit,isA,Tool/Framework
+ec,influencedBy,object oriented programming
 appetizer,isA,Tool/Framework
 wine,isA,Tool/Framework
 impressive,isA,Tool/Framework
@@ -9955,10 +9958,12 @@ security enhanced linux,uses,c
 amoeba,uses,c
 fink,isA,Tool/Framework
 x.org server,uses,c
+ruby,influencedBy,programming paradigm
 idris,isA,Programming Language
 musikcube,isA,Tool/Framework
 spry framework,uses,javascript
 banshee,uses,c sharp
+io,influencedBy,object oriented programming
 caveman2,isA,Tool/Framework
 pistache,uses,c++
 babbage,isA,Programming Language
@@ -9966,7 +9971,6 @@ scream tracker,isA,Tool/Framework
 dbpedia,uses,java
 gnu oleo,uses,c
 apache pdfbox,uses,java
-opa,influences,imperative programming
 open jtag,isA,Tool/Framework
 biber,uses,perl
 graphcalc,uses,c++
@@ -9983,6 +9987,7 @@ ads ac,isA,Tool/Framework
 ibm db2 family,uses,c++
 nexusdb,uses,delphi
 ptgui,uses,c
+joule,influencedBy,object oriented programming
 decipher,uses,r
 linter sql rdbms,uses,c++
 jupyter notebook,isA,Tool/Framework
@@ -10008,11 +10013,12 @@ pidgin,isA,Tool/Framework
 noweb,uses,c
 transana,isA,Tool/Framework
 endeavour software project management,uses,java
-dart,influences,programming paradigm
+php,influencedBy,reflective programming
 gregorio,uses,lua
 lightzone,uses,java
 fontmatrix,uses,c++
 dovecot,uses,c
+txl,influencedBy,pattern matching
 orx,isA,Tool/Framework
 design pattern,isA,Programming Concept
 zfs,isA,Tool/Framework
@@ -10028,12 +10034,12 @@ apache guacamole,uses,c
 etherape,isA,Tool/Framework
 apache buildr,isA,Tool/Framework
 gnu oleo,isA,Tool/Framework
-frink,influences,object oriented programming
 telehash,uses,erlang
 pluma,isA,Tool/Framework
 ncdu,uses,c
 visual studio code,uses,css
 picospan,uses,c
+escher,influencedBy,declarative programming
 opennebula,isA,Tool/Framework
 dotnetbrowser,uses,c sharp
 os 9,uses,forth
@@ -10078,6 +10084,7 @@ programming,isA,Programming Concept
 goldsrc,uses,c
 gdal,uses,python
 xnview,uses,c
+kotlin,influencedBy,block
 megan,uses,java
 libsigc++,isA,Tool/Framework
 eclipse paho,uses,python
@@ -10085,15 +10092,13 @@ akka,isA,Tool/Framework
 latexml,isA,Tool/Framework
 integrated performance primitives,uses,c++
 texmaker,uses,c++
+wagtail,isA,Tool/Framework
+automation studio,uses,c sharp
 avast secure browser,uses,c++
 igraph,uses,c
 ezmol,isA,Tool/Framework
 arena,isA,Tool/Framework
 gnu multiple precision arithmetic library,uses,c++
-turing,influences,procedural programming
-wagtail,isA,Tool/Framework
-parasail,influences,imperative programming
-automation studio,uses,c sharp
 discord,isA,Tool/Framework
 ecasound,isA,Tool/Framework
 brave,uses,swift
@@ -10120,7 +10125,6 @@ chromium,isA,Tool/Framework
 udig,uses,java
 orbiter,uses,c++
 matplotlib,uses,python
-alef,influences,compiled language
 apache tomee,isA,Tool/Framework
 smart common input method,uses,c
 php nuke,isA,Tool/Framework
@@ -10169,6 +10173,7 @@ arts,isA,Tool/Framework
 gulp,isA,Tool/Framework
 openidm,isA,Tool/Framework
 dev pascal,isA,Tool/Framework
+scala,influencedBy,concurrent computing
 ipop,isA,Tool/Framework
 xito,uses,java
 bwping,isA,Tool/Framework
@@ -10178,14 +10183,14 @@ free avi video converter,uses,c++
 bigtable,uses,python
 vogl,uses,c++
 spectasia,isA,Tool/Framework
-cabal,isA,Tool/Framework
 gnome recipes,isA,Tool/Framework
 aws,isA,Tool/Framework
 vmware workstation,isA,Tool/Framework
 logitech media server,isA,Tool/Framework
 connotea,uses,perl
 python imaging library,uses,python
-natural language programming,isA,Programming Concept
+cabal,isA,Tool/Framework
+chapel,influencedBy,parallel programming
 pspad,uses,delphi
 jpc,uses,java
 orientdb,isA,Tool/Framework
@@ -10193,12 +10198,13 @@ gregorio,uses,python
 dotgnu,uses,c
 google guava,isA,Tool/Framework
 concatenative,isA,Programming Concept
+natural language programming,isA,Programming Concept
+trac,influencedBy,general purpose macro processor
 infinispan,isA,Tool/Framework
 cs blast,isA,Tool/Framework
 smplayer,isA,Tool/Framework
 juk,uses,c++
-julia,influences,multi stage programming
-java,influences,generic
+escher,influencedBy,functional programming
 hcl domino,uses,c++
 oak3d,isA,Tool/Framework
 echo,uses,javascript
@@ -10210,13 +10216,15 @@ apache mesos,uses,c++
 archivemount,isA,Tool/Framework
 liferea,uses,c
 sytrus,uses,delphi
-pascal,influences,imperative programming
 stormcrawler,uses,java
 jsmath,uses,javascript
 gnopernicus,isA,Tool/Framework
+matlab,influencedBy,object oriented programming
 zend server,isA,Tool/Framework
 cartes du ciel,isA,Tool/Framework
+stella,influencedBy,visual programming language
 magicdraw,uses,java
+swift,influencedBy,object oriented programming
 advanced resource connector,isA,Tool/Framework
 gnome keyring,isA,Tool/Framework
 thue,isA,Programming Language
@@ -10257,6 +10265,7 @@ milkytracker,isA,Tool/Framework
 scribus,isA,Tool/Framework
 frontlinesms,isA,Tool/Framework
 pdfsharp,uses,c sharp
+lua,influencedBy,functional
 blackbox,isA,Tool/Framework
 express data path,isA,Tool/Framework
 phatch,uses,python
@@ -10271,6 +10280,7 @@ mediagoblin,uses,sql
 gpsd,uses,python
 couenne,isA,Tool/Framework
 heurist,uses,php
+clu,influencedBy,procedural programming
 mason,uses,java
 akka,uses,scala
 orm,isA,Programming Concept
@@ -10294,14 +10304,15 @@ michigan terminal system,isA,Tool/Framework
 calligra plan,isA,Tool/Framework
 harbour,isA,Programming Language
 corel photo paint,isA,Tool/Framework
+eiffel,influencedBy,generic programming
 mirc,uses,c++
 recoll,uses,python
 openl tablets,isA,Tool/Framework
-tcl,influences,object oriented programming
 opencpn,uses,c++
 xcb,uses,c
 sjeng,uses,c
 customer account data engine,uses,sql
+concept oriented,isA,Programming Concept
 epsilon,isA,Programming Language
 liquid rhythm,isA,Tool/Framework
 generic programming,isA,Programming Concept
@@ -10310,8 +10321,6 @@ hosxp,isA,Tool/Framework
 toolbox,isA,Tool/Framework
 ibm opendx,isA,Tool/Framework
 becky!,isA,Tool/Framework
-swift,influences,block
-concept oriented,isA,Programming Concept
 gold box,isA,Tool/Framework
 padre,uses,perl
 quiet internet pager,uses,delphi
@@ -10330,6 +10339,7 @@ phosh,uses,javascript
 futhark,isA,Programming Language
 conductor,uses,javascript
 renjin,uses,java
+kotlin,influencedBy,programming paradigm
 seafile,isA,Tool/Framework
 mosync,uses,c
 3d slicer,isA,Tool/Framework
@@ -10345,6 +10355,7 @@ elliptics,isA,Tool/Framework
 rmetrics,isA,Tool/Framework
 gizzard,isA,Tool/Framework
 vertebra,uses,erlang
+apl,influencedBy,array programming
 apache c++ standard library,uses,c++
 winmerge,isA,Tool/Framework
 newsbeuter,uses,c++
@@ -10356,26 +10367,25 @@ rdoc,isA,Tool/Framework
 telehash,uses,python
 windows live writer,uses,c++
 mozilla prism,uses,c++
+das u boot,uses,c
 applied programming,isA,Programming Concept
 macruby,uses,c
 openlp,uses,python
 metview,uses,python
 grpc,uses,go
 clearhealth,isA,Tool/Framework
-das u boot,uses,c
-alice,influences,programming paradigm
 liquidfeedback,uses,lua
 julia,isA,Programming Language
 picoscope,uses,c++
 javolution,isA,Tool/Framework
 g95,uses,c
 mpxplay,uses,c
+opa,influencedBy,functional programming
 gitter,isA,Tool/Framework
 nightshade,isA,Tool/Framework
-winfig,isA,Tool/Framework
-turing,influences,object oriented programming
-plex,influences,imperative
 jruby,uses,java
+winfig,isA,Tool/Framework
+pizza,influencedBy,generic programming
 freeipa,isA,Tool/Framework
 apache commons beanutils,uses,java
 dvdisaster,isA,Tool/Framework
@@ -10385,11 +10395,9 @@ ghost,isA,Tool/Framework
 celestia,isA,Tool/Framework
 hfst,uses,python
 apache phoenix,uses,java
-ats,influences,programming paradigm
 windows live writer,uses,c sharp
 workbench,uses,c
 planta project,isA,Tool/Framework
-red,influences,functional programming
 consul,uses,go
 vrpn,uses,c++
 nnn,uses,c
@@ -10407,6 +10415,8 @@ enyo,isA,Tool/Framework
 jmodelica.org,uses,python
 askbot,uses,python
 tvpaint animation,uses,c++
+whiley,influencedBy,functional programming
+atom,influencedBy,functional programming
 data analytics acceleration library,uses,python
 gnome,uses,javascript
 apache openwebbeans,isA,Tool/Framework
@@ -10440,16 +10450,15 @@ cc65,isA,Tool/Framework
 deployment,isA,Programming Concept
 user mode linux,uses,c
 apache james,uses,java
-red,influences,imperative programming
 proguard,uses,java
 microsoft cognitive toolkit,isA,Tool/Framework
 ladspa,uses,c
 diskspd,isA,Tool/Framework
 gdal,uses,c
-pan,influences,declarative programming
 kibana,isA,Tool/Framework
 multiparadigm   macro,isA,Programming Concept
 k desktop environment 3,isA,Tool/Framework
+gödel,influencedBy,logic programming
 windows template library,uses,c++
 openplag,uses,php
 probabilistic soft logic,uses,java
@@ -10473,13 +10482,11 @@ web application distribution infrastructure,isA,Tool/Framework
 bombus,uses,java
 openproj,uses,java
 amosaic,uses,c
-cool,influences,object oriented programming
 commons daemon,uses,c
 powerman,isA,Tool/Framework
 epi info,isA,Tool/Framework
 raptor,isA,Programming Language
 rational software architect,isA,Tool/Framework
-oz,influences,constraint programming
 silk,uses,c
 punchscan,isA,Tool/Framework
 storm,isA,Tool/Framework
@@ -10510,6 +10517,7 @@ exmaralda,uses,java
 aikuma,uses,java
 openbroadcaster,uses,python
 slib,uses,scheme
+lua,influencedBy,scripting
 minio,isA,Tool/Framework
 bitcoin unlimited,isA,Tool/Framework
 caisis,uses,c sharp
@@ -10518,7 +10526,7 @@ orx,uses,c++
 wicd,uses,python
 media player classic,uses,c++
 apache flink,isA,Tool/Framework
-flix,influences,functional programming
+java,influencedBy,concurrent
 jam.py,uses,javascript
 ext2fsd,uses,c
 fluff busting purity,isA,Tool/Framework
@@ -10547,25 +10555,27 @@ firefox lockwise,uses,kotlin
 yaws,uses,erlang
 babylon.js,uses,javascript
 browserify,uses,javascript
-ns,uses,c++
+ats,influencedBy,functional programming
 gulp.js,uses,javascript
 buildamation,uses,c sharp
 structuring,isA,Programming Concept
 ren'py,uses,python
 higan,isA,Tool/Framework
+go,influencedBy,imperative programming
+ns,uses,c++
 wps office,uses,delphi
 twig,isA,Tool/Framework
-cobra,influences,object oriented programming
 hypertable,isA,Tool/Framework
 jvx,isA,Tool/Framework
 blend4web,uses,python
+nu,influencedBy,object oriented programming
 appjar,isA,Tool/Framework
 irrlicht engine,isA,Tool/Framework
 agilo for trac,isA,Tool/Framework
-euclid,influences,functional programming
 mixminion,uses,python
 libsbml,uses,c
 gplates,uses,c++
+rpl,influencedBy,structured
 horovod,isA,Tool/Framework
 opensearch,uses,java
 libgcrypt,uses,c
@@ -10580,12 +10590,14 @@ starling,isA,Tool/Framework
 gnome shell,uses,javascript
 vlc media player,isA,Tool/Framework
 opera mini,uses,java
-freemake video downloader,isA,Tool/Framework
 majordomo,isA,Tool/Framework
+nu,influencedBy,imperative programming
 netty,uses,java
-claire,influences,functional
 hike messenger,uses,python
 gnome games collection,isA,Tool/Framework
+lasso,influencedBy,exp oriented
+joyce,influencedBy,concurrent computing
+freemake video downloader,isA,Tool/Framework
 lazy evaluation,isA,Programming Concept
 groupserver,isA,Tool/Framework
 translate toolkit,uses,python
@@ -10599,21 +10611,24 @@ suanshu numerical library,uses,java
 gnu solfege,uses,python
 mktemp,uses,c
 vivaldi,isA,Tool/Framework
+tcl,influencedBy,functional programming
 avogadro,uses,c++
 boo,isA,Programming Language
 virastyar,isA,Tool/Framework
 turbogears,uses,python
 caudium,isA,Tool/Framework
 gromos,isA,Tool/Framework
-lldb,uses,c++
 qtractor,uses,c++
 codename one,uses,kotlin
 grip,isA,Tool/Framework
+qore,influencedBy,procedural
 openjdk,uses,java
 softwarezator,isA,Tool/Framework
 jamroom,uses,php
 scidavis,uses,python
 riak,uses,erlang
+lldb,uses,c++
+cpl,influencedBy,procedural programming
 rel,uses,java
 polymer,uses,javascript
 emerald,isA,Programming Language
@@ -10630,10 +10645,10 @@ playonlinux,uses,java
 kmplayer,uses,delphi
 pcem,isA,Tool/Framework
 webrtc,uses,c++
-elvis,isA,Tool/Framework
-f*,influences,imperative programming
 mariadb,isA,Tool/Framework
+elvis,isA,Tool/Framework
 user mode driver framework,isA,Tool/Framework
+curl,influencedBy,programming paradigm
 qmail,uses,c
 protocol buffers,uses,javascript
 apt rpm,uses,c++
@@ -10660,13 +10675,11 @@ remoteaccess,isA,Tool/Framework
 gnome web,isA,Tool/Framework
 oracle template library,isA,Tool/Framework
 bs,isA,Programming Language
-escher,influences,declarative programming
 grakn.ai,uses,java
 libressl,uses,c
 toonloop,isA,Tool/Framework
 epi map,isA,Tool/Framework
 gnome builder,uses,c
-fl,influences,functional programming
 gnome chess,uses,vala
 openmsx,isA,Tool/Framework
 gtk scene graph kit,uses,c
@@ -10679,13 +10692,12 @@ automatik text reader,isA,Tool/Framework
 genopro,uses,c++
 apache http server,uses,c
 phosh,uses,c
-chapel,influences,partitioned global address space
+pizza,influencedBy,algebraic data type
 qbittorrent,isA,Tool/Framework
 quod libet,isA,Tool/Framework
 mb lab,uses,python
 citrine,isA,Programming Language
 yahoo sherpa,isA,Tool/Framework
-cpl,influences,structured programming
 gnu compiler collection,isA,Tool/Framework
 sapwin,uses,c++
 myisam,uses,c
@@ -10696,7 +10708,6 @@ vassal engine,isA,Tool/Framework
 hping,isA,Tool/Framework
 firehol,isA,Tool/Framework
 centericq,uses,c++
-cpl,influences,procedural programming
 rainmeter,uses,c sharp
 cyrus imap server,isA,Tool/Framework
 seafile,uses,c
@@ -10704,12 +10715,12 @@ deltacloud,uses,ruby
 extensible storage engine,uses,c++
 triton,isA,Programming Language
 swig,uses,c++
-qore,influences,imperative
 veusz,uses,python
 handbrake,uses,c
 opensaf,isA,Tool/Framework
 freeciv,isA,Tool/Framework
 openplag,isA,Tool/Framework
+kotlin,influencedBy,declarative programming
 xowa,uses,java
 prtg network monitor,uses,delphi
 numpy,uses,python
@@ -10720,6 +10731,7 @@ yuls,uses,c++
 moea framework,uses,java
 xmove,isA,Tool/Framework
 freeglut,uses,c
+snap!,influencedBy,event driven programming
 rdock,isA,Tool/Framework
 apache subversion,uses,c
 meurs challenger,isA,Tool/Framework
@@ -10733,10 +10745,8 @@ qeep,isA,Tool/Framework
 openttd,uses,c
 datomic,isA,Tool/Framework
 blender game engine,uses,c++
-elixir,influences,process oriented programming
 scipy,uses,c++
 emacspeak,uses,tcl
-scala,influences,functional programming
 mate,isA,Tool/Framework
 cubesat space protocol,isA,Tool/Framework
 releases,isA,Programming Concept
@@ -10761,7 +10771,6 @@ mvc,isA,Programming Concept
 wso2 mashup server,uses,java
 mtr,isA,Tool/Framework
 bolt,uses,php
-joule,influences,programming paradigm
 mikumikudance,isA,Tool/Framework
 libzip,uses,perl
 pdf split and merge,isA,Tool/Framework
@@ -10781,15 +10790,15 @@ iwork,uses,c
 barebox,uses,c
 losslesscut,isA,Tool/Framework
 open semantic framework,uses,java
+apache pivot,isA,Tool/Framework
 miro,isA,Tool/Framework
-cecil,influences,object oriented programming
+p4,influencedBy,domain specific language
 gnome calculator,isA,Tool/Framework
 vmix,isA,Tool/Framework
 ikonboard,uses,perl
-apache pivot,isA,Tool/Framework
-plus,influences,structured programming
 mattermost,isA,Tool/Framework
 simple cloud api,uses,php
+ciao,influencedBy,functional programming
 sco skunkware,uses,perl
 mercurial,uses,rust
 avro keyboard,uses,delphi
@@ -10800,12 +10809,14 @@ khangman,uses,c++
 moodle,uses,php
 pyqt,isA,Tool/Framework
 wikibhasha,isA,Tool/Framework
+fl,influencedBy,function level programming
 aiki framework,uses,php
-gnome calculator,uses,c
 optaplanner,uses,java
 rstudio,uses,c++
 cpl,isA,Programming Language
 embroidermodder,uses,c++
+gnome calculator,uses,c
+raku,influencedBy,programming paradigm
 mate,uses,c++
 zinc application framework,isA,Tool/Framework
 imperative,isA,Programming Concept
@@ -10817,12 +10828,12 @@ sqlobject,isA,Tool/Framework
 lz4,isA,Tool/Framework
 appjar,uses,python
 waifu2x,uses,lua
+cecil,influencedBy,object oriented programming
 jcrom,uses,java
 graphviz,uses,c
 eclipse,uses,java
 grads,isA,Tool/Framework
 xuljet,uses,javascript
-joy,influences,concatenative programming language
 atunes,uses,java
 basex,uses,java
 gnome,uses,html
@@ -10848,6 +10859,7 @@ lift,isA,Tool/Framework
 utopia,uses,c++
 xpages,uses,html
 webware for python,isA,Tool/Framework
+genie,influencedBy,imperative programming
 miktex,uses,pascal
 language oriented programming,isA,Programming Concept
 apache cloudstack,uses,java
@@ -10859,7 +10871,6 @@ openttd,uses,c++
 apache click,uses,java
 shorewall,isA,Tool/Framework
 azurewebservices,isA,Tool/Framework
-ats,influences,imperative programming
 concurrent versions system,uses,c
 jack audio connection kit,uses,c++
 apache oozie,uses,java
@@ -10881,7 +10892,6 @@ shade sandbox,isA,Tool/Framework
 asp.net razor,uses,c sharp
 devede,uses,python
 project naptha,uses,javascript
-x10,influences,object oriented programming
 oxygene,isA,Programming Language
 kaldi,uses,c++
 bitwig studio,uses,c++
@@ -10910,29 +10920,29 @@ textgrid,uses,java
 scrum,isA,Programming Concept
 brackets,uses,javascript
 graphics layout engine,isA,Tool/Framework
-darwin,influences,object oriented programming
-curry,influences,logic
 db2 database,uses,c++
 pdf split and merge,uses,java
 dojo toolkit,uses,javascript
+frenetic,influencedBy,domain specific
 altium designer,uses,c++
 dirsync pro,isA,Tool/Framework
 inkscape,uses,python
 function level programming,isA,Programming Concept
 webapp.net,uses,javascript
-lasso,influences,procedural
 quicknet,isA,Tool/Framework
+lisp,influencedBy,reflective programming
 wing ide,uses,python
-tokio,isA,Tool/Framework
 potterswheel,isA,Tool/Framework
 telegram,isA,Tool/Framework
 grpc,uses,c++
 bbedit,isA,Tool/Framework
 xombrero,isA,Tool/Framework
+tokio,isA,Tool/Framework
+tea,influencedBy,object oriented
+raptor,influencedBy,imperative programming
 blobby volley,uses,html5
 icq,uses,kotlin
 gold,uses,c++
-processing,influences,object oriented programming
 zeromq,uses,c++
 mega,uses,java
 open power template,isA,Tool/Framework
@@ -10944,13 +10954,16 @@ openlava,uses,c
 strong ,isA,Programming Concept
 trac,isA,Programming Language
 vdpau,uses,c++
+amos,influencedBy,imperative programming
 jbpm,isA,Tool/Framework
 hiphop for php,uses,c
 firefox 3.0,uses,javascript
+ml,influencedBy,imperative programming
 clx,isA,Tool/Framework
 euphoria,isA,Programming Language
 jboss enterprise soa platform,isA,Tool/Framework
 sp,uses,apl
+nu,influencedBy,functional programming
 bigtable,uses,go
 gnome archive manager,uses,c
 dock,uses,c
@@ -10960,16 +10973,16 @@ topcat,isA,Tool/Framework
 threading building blocks,isA,Tool/Framework
 scrollkeeper,uses,c
 gadfly,isA,Tool/Framework
-staden package,uses,c
-c sharp,influences,imperative programming
 avro keyboard,uses,c++
 teleport,uses,go
 salome,uses,c++
 mozilla prism,isA,Tool/Framework
 cheese,uses,vala
-matlab,influences,procedural programming
 midletpascal,uses,c
+alef,influencedBy,structured programming
+staden package,uses,c
 eurisko,isA,Tool/Framework
+perl,influencedBy,imperative
 apt rpm,isA,Tool/Framework
 leaflet,isA,Tool/Framework
 apache arrow,uses,matlab
@@ -10990,8 +11003,8 @@ waste,uses,c++
 curses,uses,c
 windows ui library,isA,Tool/Framework
 ipython,uses,javascript
-java,influences,reflective
 troop messenger,isA,Tool/Framework
+clu,influencedBy,object oriented programming
 cinepaint,isA,Tool/Framework
 slowloris,uses,perl
 apache,isA,Tool/Framework
@@ -11006,7 +11019,6 @@ noscript,uses,css
 mary,isA,Programming Language
 wiki.js,uses,javascript
 gparted,isA,Tool/Framework
-kotlin,influences,reflective programming
 waterfox,uses,c++
 clamtk,uses,perl
 capd library,isA,Tool/Framework
@@ -11039,13 +11051,11 @@ imp,isA,Programming Language
 opendronemap,isA,Tool/Framework
 apache superset,uses,python
 seamonkey,isA,Tool/Framework
-kotlin,influences,block
 hhvm,isA,Tool/Framework
 gamemaker,uses,c sharp
 zeno,isA,Programming Language
 jakarta slide,uses,java
 vott,isA,Tool/Framework
-pure,influences,functional programming
 automatik text reader,uses,javascript
 rozofs,uses,c
 gnome screenshot,uses,c
@@ -11058,7 +11068,6 @@ bluefish,isA,Tool/Framework
 jellyfin,isA,Tool/Framework
 elmah,uses,c sharp
 sqlbuddy,uses,javascript
-perl,influences,reflective
 beast,isA,Tool/Framework
 mingw w64,uses,c++
 almquist shell,uses,c
@@ -11089,8 +11098,10 @@ sail,isA,Programming Language
 9wm,isA,Tool/Framework
 gmx multi messenger,uses,css
 mplab,isA,Tool/Framework
+c,influencedBy,imperative programming
 yandex browser,uses,c++
 pro tools,uses,c++
+flix,influencedBy,imperative programming
 jython,uses,python
 netty,isA,Tool/Framework
 contao,uses,php
@@ -11098,9 +11109,10 @@ ffado,uses,c++
 hue,isA,Tool/Framework
 nymgo,isA,Tool/Framework
 rdflib,isA,Tool/Framework
+ada,influencedBy,programming paradigm
+julia,influencedBy,multiple dispatch
 vmware workstation,uses,c++
 dap,uses,c
-oz,influences,functional programming
 opensocial,uses,php
 abas erp,uses,java
 sql,isA,Programming Language
@@ -11112,7 +11124,6 @@ freecad,uses,python
 numpy,uses,c
 scrcpy,uses,java
 ginkgo cadx,uses,c++
-xl,influences,functional
 autopackage,uses,c
 apache couchdb,uses,erlang
 calamares,uses,python
@@ -11123,7 +11134,6 @@ rife,uses,java
 climm,uses,tcl
 feh,uses,c
 tigervnc,uses,c
-go,influences,concurrent computing
 metview,uses,c++
 lv2,isA,Tool/Framework
 ippolit,isA,Tool/Framework
@@ -11138,14 +11148,14 @@ busybox,uses,c
 collabora online,uses,javascript
 openclonk,uses,c++
 zerynth,uses,c
-abiword,isA,Tool/Framework
-chapel,influences,parallel programming
 g95,isA,Tool/Framework
 diskcryptor,uses,c
+matlab,influencedBy,programming paradigm
 wink toolkit,isA,Tool/Framework
+parser,influencedBy,object oriented
+abiword,isA,Tool/Framework
 clockworkmod,uses,c++
 collectd,isA,Tool/Framework
-javascript,influences,functional programming
 rest,isA,Programming Concept
 neo4j,uses,java
 mxparser,uses,java
@@ -11156,7 +11166,6 @@ sparrow,isA,Tool/Framework
 reactive programming,isA,Programming Concept
 fluid,isA,Tool/Framework
 devede,isA,Tool/Framework
-f*,influences,programming paradigm
 sc,uses,c
 lv2,uses,c
 webtrees,uses,php
@@ -11166,20 +11175,18 @@ gimp,isA,Tool/Framework
 corosync cluster engine,uses,c
 rekentest,uses,delphi
 boss,isA,Tool/Framework
-icon,influences,structured
 activiti,uses,java
+aqua,uses,c++
 virgo,uses,java
 pychess,isA,Tool/Framework
 lynis,isA,Tool/Framework
+propel,uses,php
+julia,influencedBy,programming paradigm
 iozone,uses,c
-orwell,influences,lazy evaluation
-aqua,uses,c++
 xen,isA,Tool/Framework
 eslint,uses,javascript
 eric,uses,python
 compiled language,isA,Programming Concept
-propel,uses,php
-bosque,influences,type system
 word lens,uses,c sharp
 x cd roast,uses,c
 vktrace,isA,Tool/Framework
@@ -11189,7 +11196,6 @@ pandoc,isA,Tool/Framework
 wikitrust,isA,Tool/Framework
 apache tika,isA,Tool/Framework
 brave,isA,Tool/Framework
-oz,influences,object oriented programming
 apache airflow,uses,python
 gthumb,uses,c
 sxm,isA,Tool/Framework
@@ -11213,7 +11219,6 @@ protocol,isA,Programming Concept
 flashdevelop,isA,Tool/Framework
 vapor,uses,swift
 october,uses,php
-go,influences,object oriented programming
 intel array building blocks,isA,Tool/Framework
 tmux,isA,Tool/Framework
 consul,isA,Tool/Framework
@@ -11249,7 +11254,6 @@ tianocore edk ii,uses,c++
 stratis,isA,Tool/Framework
 newscoop,uses,php
 circuitmaker,uses,delphi
-little b,influences,functional programming
 versant object database,isA,Tool/Framework
 xvidcap,uses,c
 stardict,isA,Tool/Framework
@@ -11267,7 +11271,6 @@ f droid,uses,python
 spatiotemporal epidemiological modeler,uses,java
 pydev,uses,java
 unigine,uses,c sharp
-tea,influences,object oriented
 rosegarden,isA,Tool/Framework
 python scoop,isA,Tool/Framework
 c3d toolkit,isA,Tool/Framework
@@ -11312,6 +11315,7 @@ hessian,uses,python
 ansible,isA,Tool/Framework
 dancer,isA,Tool/Framework
 openbmc,uses,c++
+unicon,influencedBy,object oriented programming
 arduino ide,uses,c
 kig,uses,c++
 cairo,isA,Tool/Framework
@@ -11363,7 +11367,6 @@ rpcs3,uses,c
 biojs,uses,javascript
 halon,uses,c++
 flexive,uses,java
-ciao,influences,logic programming
 winmostar,uses,c
 firefox for android,uses,c++
 freeon,isA,Tool/Framework
@@ -11377,7 +11380,6 @@ pvcs,uses,c
 bluegriffon,isA,Tool/Framework
 nokia asha platform,isA,Tool/Framework
 crypto++,uses,c++
-snap,influences,imperative programming
 xforms,uses,c
 pegasus,uses,java
 vuze,isA,Tool/Framework
@@ -11386,14 +11388,13 @@ apertium,uses,c++
 mercurial,uses,c
 praat,uses,c++
 phpliteadmin,isA,Tool/Framework
-f script,influences,programming paradigm
 webware for python,uses,python
-darwin,influences,imperative programming
 torch,uses,c
 openwire,isA,Tool/Framework
 spring security,isA,Tool/Framework
 freeswitch,uses,c
 exiftool,uses,perl
+stella,influencedBy,simulation language
 pop php framework,uses,php
 erp5,uses,python
 pydio,uses,php
@@ -11438,7 +11439,6 @@ kernel mode driver framework,uses,c++
 tianocore edk ii,uses,c
 connectbot,uses,java
 firefox lockwise,isA,Tool/Framework
-squirrel,influences,imperative programming
 rsyslog,isA,Tool/Framework
 tcs bancs,uses,java
 sk1,uses,c
@@ -11451,22 +11451,23 @@ exa,uses,rust
 qgis,uses,python
 coccinella,isA,Tool/Framework
 xfe,uses,c++
+futhark,influencedBy,functional programming
 deploys,isA,Programming Concept
+eventmachine,uses,ruby
 cmdbuild,uses,java
 demetra+,uses,c++
 code::blocks,uses,c++
 webpositive,isA,Tool/Framework
-eventmachine,uses,ruby
-curl,influences,programming paradigm
 lyceum,uses,php
+c sharp,influencedBy,generic programming
 open 3d engine,isA,Tool/Framework
 wajig,uses,python
 csunit,isA,Tool/Framework
-joule,influences,dataflow
 itsnat,uses,java
 matita,isA,Tool/Framework
 ffmpeg,isA,Tool/Framework
 xmonad,isA,Tool/Framework
+alef,influencedBy,concurrent computing
 apache solr,uses,java
 cloud computing services,isA,Tool/Framework
 data driven programming,isA,Programming Concept
@@ -11501,6 +11502,7 @@ kio,isA,Tool/Framework
 xstream,uses,java
 ici,isA,Programming Language
 cdist,uses,python
+ec,influencedBy,procedural programming
 luxcorerender,uses,c++
 tinymce,isA,Tool/Framework
 scikit learn,uses,python
@@ -11512,6 +11514,8 @@ openvino,uses,python
 artificial intelligence,isA,Programming Concept
 jamvm,uses,c
 opus,isA,Tool/Framework
+conductor,isA,Tool/Framework
+lisp,influencedBy,procedural programming
 hercules,uses,c
 apache arrow,uses,c
 standard widget toolkit,uses,java
@@ -11519,8 +11523,6 @@ christmas tree exec,isA,Tool/Framework
 scidavis,uses,c++
 svnbridge,isA,Tool/Framework
 open source tripwire,uses,c++
-source,influences,scripting language
-conductor,isA,Tool/Framework
 marble,isA,Tool/Framework
 yafaray,isA,Tool/Framework
 quantum espresso,uses,c
@@ -11533,7 +11535,6 @@ monkey http server,uses,c
 rup,isA,Programming Concept
 mozilla sunbird,uses,javascript
 .net bio,uses,c sharp
-claire,influences,reflective
 simpy,uses,python
 openalpr,isA,Tool/Framework
 mofem joseph,isA,Tool/Framework
@@ -11556,19 +11557,18 @@ i net crystal clear,isA,Tool/Framework
 id tech 6,isA,Tool/Framework
 yuzu,uses,c++
 free avi video converter,uses,c sharp
-go!,influences,imperative
 moses,uses,perl
 libvirt,uses,c
 cryptonote,uses,c++
 memcached,isA,Tool/Framework
-guitar pro,uses,c++
+jwm,uses,c
 wavepad audio editor,isA,Tool/Framework
 lightspark,uses,c++
 sourcepuller,uses,c
-jwm,uses,c
-etoys,influences,prototype based programming
+s2,influencedBy,object oriented programming
+guitar pro,uses,c++
 tox,isA,Tool/Framework
-racket,influences,object oriented programming
+parasail,influencedBy,concurrent computing
 sumatra pdf,isA,Tool/Framework
 freeciv,uses,c
 tcsh,isA,Tool/Framework
@@ -11578,7 +11578,9 @@ rwth fsa toolkit,isA,Tool/Framework
 telegram,uses,c++
 pkfix,isA,Tool/Framework
 linux color management,uses,c
+go!,influencedBy,concurrent
 microsip,uses,c++
+squirrel,influencedBy,programming paradigm
 apache rampart module,uses,java
 dhammin,uses,java
 ipop,uses,c
@@ -11591,7 +11593,6 @@ quantlib,uses,c++
 hydrogen,isA,Tool/Framework
 apache heron,uses,python
 elliptics,uses,python
-scala,influences,imperative programming
 selenium,isA,Tool/Framework
 haiku depot,uses,c++
 algoid,isA,Programming Language
@@ -11625,6 +11626,5 @@ picogen,uses,c++
 flexhex,uses,c++
 apache tomee,uses,java
 vtk,uses,c
-planner,influences,logic programming
 jripples,isA,Tool/Framework
 avida,isA,Tool/Framework
