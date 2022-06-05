@@ -1,18 +1,18 @@
 import os
+import re
+from os import path, listdir
+from os.path import isfile, join
+
 import pdfplumber
 import spacy
-import re
-
-import train_custom_ner
-from os.path import isfile, join
-from os import path, listdir
-from constants import CONCEPTS_SCORES, LABELS_LIST
 from business_rules import run_all
 from business_rules.actions import BaseActions, rule_action
 from business_rules.fields import FIELD_NUMERIC
-from business_rules.variables import BaseVariables, select_rule_variable, string_rule_variable, numeric_rule_variable
+from business_rules.variables import BaseVariables, numeric_rule_variable
+
+import train_custom_ner
+from constants import CONCEPTS_SCORES, LABELS_LIST
 from knowledge_graph import generate_knowledge_graph_components_from_files, get_shortest_path_between_concepts
-from pprint import pprint
 
 
 class RequiredLabelInfo:
@@ -69,10 +69,10 @@ def apply_business_rules(max_absolute_seniority, max_required_seniority, label_n
     required_label_info = RequiredLabelInfo(label_name, required_label_values, max_required_seniority,
                                             max_absolute_seniority)
     run_all(rule_list=rules,
-                  defined_variables=RequiredLabelInfoVariables(required_label_info),
-                  defined_actions=RequiredLabelInfoActions(required_label_info),
-                  stop_on_first_trigger=True
-                  )
+            defined_variables=RequiredLabelInfoVariables(required_label_info),
+            defined_actions=RequiredLabelInfoActions(required_label_info),
+            stop_on_first_trigger=True
+            )
     return required_label_info.actual_loss_values
 
 
@@ -84,7 +84,7 @@ def get_max_seniority(list_of_seniorities):
             final_seniority_priority_list.remove(priority)
     if final_seniority_priority_list:
         return final_seniority_priority_list[0]
-    return seniority_priority_list[1] #None
+    return seniority_priority_list[1]
 
 
 def get_cv_ranking_score(cv_entities_dictionary, job_description_entities_dictionary):
@@ -218,6 +218,6 @@ Junior"""
 
 if __name__ == "__main__":
     main("Data/train.csv")
-    vertex_dataframe, graph = generate_knowledge_graph_components_from_files('Data/vertices.csv', 'Data/edges.csv')
-    listElem = get_shortest_path_between_concepts('java', 'python', graph, vertex_dataframe)
+    graph = generate_knowledge_graph_components_from_files('Data/edges.csv')
+    listElem, shortest_path = get_shortest_path_between_concepts('django', 'object oriented', graph)
     print(listElem)
