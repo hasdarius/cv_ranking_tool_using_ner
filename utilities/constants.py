@@ -84,3 +84,6 @@ REASONING_PENALIZATION = "You were penalized because we detected too many terms,
 REASONING_GRAPH_CONNECTION_P1 = "Partial Match: Although these terms are not alike: "
 REASONING_GRAPH_CONNECTION_P2 = " one being found in the Job Description and the other in the CV text, we identified "
 REASONING_GRAPH_CONNECTION_P3 = " shortest paths between them, one being the following: "
+CV_DIRECTORY = './utils/cv-directory'
+TXT_FILES_DIRECTORY = './utils/txt-amr-files'
+TTL_FILES_DIRECTORY = './utils/ttl-rdf-files'
