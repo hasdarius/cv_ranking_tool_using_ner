@@ -6,8 +6,9 @@ import pathlib
 from datetime import datetime
 from pathlib import Path
 
-from constants import TXT_FILES_DIRECTORY, TTL_FILES_DIRECTORY, CV_DIRECTORY_PATH
 from rdf2g import load_rdf2g, get_nodes
+
+from utilities.constants import TXT_FILES_DIRECTORY, TTL_FILES_DIRECTORY
 
 
 def transform_from_natural_text_to_rdf(cv_input_text, file_type):
@@ -43,12 +44,6 @@ def read_graph_from_rdf_file(filename, g, rdf_graph):
     return get_nodes(g)
 
 
-# if __name__ == "__main__":
-    #compute_gremlin_match_score(JOB_DESCRIPTION_EXAMPLE, CV_DIRECTORY_PATH)
-
-
-#
-#
 common_labels = {"Role", "FrameRole", "Frame", "AMR", "Concept", "NamedEntity",
                  "Class"}  # pentru label ce nu luam in considerare -> match case
 # la label -> ce luam in considerare propbank(verbe) sau entity type, amr-terms sau amr-core

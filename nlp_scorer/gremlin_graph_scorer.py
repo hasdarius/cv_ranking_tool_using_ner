@@ -128,7 +128,7 @@ def compute_gremlin_match_score(job_description_text, cv_folder_path):
         cv_ttl_file = transform_from_natural_text_to_rdf(text, "cv")
         cv_score, cv_reasoning = gremlin_main(job_description_ttl_file, cv_ttl_file)
         score_list.append((cv_file, cv_score, cv_reasoning))
-    return score_list
+    return sorted(score_list, key=lambda cv: cv[1], reverse=True)
 
 
 JOB_DESCRIPTION_EXAMPLE2 = """Looking for a Software Developer with at least one year of experience in Java 8, 
