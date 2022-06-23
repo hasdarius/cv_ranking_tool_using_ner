@@ -1,0 +1,1 @@
+My name is Darius and I am a Scala developer and therefore I have knowledge in both Functional Programming and also Object Oriented Programming.

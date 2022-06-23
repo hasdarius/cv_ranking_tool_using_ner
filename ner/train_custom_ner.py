@@ -11,7 +11,7 @@ from spacy.scorer import Scorer
 from spacy.training.example import Example
 from spacy.util import minibatch, compounding
 
-from constants import LABELS_LIST
+from utilities.constants import LABELS_LIST
 
 CUSTOM_SPACY_MODEL = 'Model'
 
@@ -178,7 +178,7 @@ def fine_tune_and_save_custom_model(train_data, model=None, new_model_name=None,
         for learn_rate in learn_rates:
             train_nlp = nlp
             train_model(n_iter, train_data, model=model, learn_rate=learn_rate, nlp=train_nlp)
-            f1_score = evaluate_model(train_nlp, 'Data/validate.csv')
+            f1_score = evaluate_model(train_nlp, '../Data/validate.csv')
             if f1_score >= f1_score:
                 best_iter = n_iter
                 best_learn_rate = learn_rate

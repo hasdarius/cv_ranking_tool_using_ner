@@ -1,9 +1,8 @@
 from os import path
 from pprint import pprint
 
-import train_custom_ner
-from cv_scorer import rank_cvs
-from knowledge_graph import generate_knowledge_graph_components_from_files, get_shortest_path_between_concepts
+from ner import train_custom_ner
+from ner.cv_scorer import rank_cvs
 
 
 def main(input_file):
@@ -13,7 +12,7 @@ def main(input_file):
         train_custom_ner.fine_tune_and_save_custom_model(training_data,
                                                          new_model_name='technology_it_model',
                                                          output_dir=train_custom_ner.CUSTOM_SPACY_MODEL)
-    pprint(rank_cvs(JOB_DESCRIPTION_EXAMPLE, 'D:/faculta/licenta/cv-directory'))
+    pprint(rank_cvs(JOB_DESCRIPTION_EXAMPLE, './utils/cv-directory'))
 
 
 JOB_DESCRIPTION_EXAMPLE = """Skills
