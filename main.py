@@ -14,6 +14,9 @@ JOB_DESCRIPTION_EXAMPLE2 = """Main requirements:
 - Good understanding of design patterns """
 
 
+JOB_DESCRIPTION_EXAMPLE3 = """Requirements: 2 years of experience in JavaScript."""
+
+
 def main(input_file):
     start = time.time()
     if not path.exists(train_custom_ner.CUSTOM_SPACY_MODEL):
@@ -22,19 +25,20 @@ def main(input_file):
         train_custom_ner.fine_tune_and_save_custom_model(training_data,
                                                          new_model_name='technology_it_model',
                                                          output_dir=train_custom_ner.CUSTOM_SPACY_MODEL)
-    score_list_ner = rank_cvs(JOB_DESCRIPTION_EXAMPLE2, CV_DIRECTORY)
-    score_list_gremlin = compute_gremlin_match_score(JOB_DESCRIPTION_EXAMPLE2, CV_DIRECTORY)
+    score_list_ner = rank_cvs(JOB_DESCRIPTION_EXAMPLE3, CV_DIRECTORY)
+    score_list_gremlin = compute_gremlin_match_score(JOB_DESCRIPTION_EXAMPLE3, CV_DIRECTORY)
 
     final_result_list = []
     for cv_result_ner in score_list_ner:
         cv_result_gremlin = list(filter(lambda cv_tuple: cv_tuple[0] == cv_result_ner[0], score_list_gremlin))
-        final_result_list.append((cv_result_ner[0], float((cv_result_gremlin[0][1] + cv_result_ner[1]) / 2),
+        final_result_list.append((cv_result_ner[0], float(((100 * cv_result_gremlin[0][1]) + cv_result_ner[1]) / 2),
                                   cv_result_ner[2] + cv_result_gremlin[0][2]))
 
     end = time.time()
-    pprint(final_result_list)
     elapsed_time = end - start
     print('Execution time:', elapsed_time, 'seconds')
+    pprint(final_result_list)
+
 
 JOB_DESCRIPTION_EXAMPLE = """Skills
 
