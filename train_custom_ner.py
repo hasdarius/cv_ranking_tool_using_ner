@@ -16,24 +16,11 @@ from constants import LABELS_LIST
 CUSTOM_SPACY_MODEL = 'Model'
 
 
-def create_tsv_file(input_path):
-    csv_file = open(input_path, 'r')
-    csv_file_reader = csv.reader(csv_file)
-    input_file_name, _ = os.path.splitext(input_path)
-    tsv_file_name = input_file_name + '.tsv'
-    tsv_file = open(tsv_file_name, 'wt', newline='')
-    tsv_file_writer = csv.writer(tsv_file, delimiter='\t')
-    rows = ((r[0], r[1]) for r in csv_file_reader)
-    tsv_file_writer.writerows(rows)
-    csv_file.close()
-    tsv_file.close()
-    return tsv_file_name
-
-
 def csv_to_json_with_labels(input_path, unknown_label):
-    tsv_file_name = create_tsv_file(input_path)
     try:
-        tsv_file = open(tsv_file_name, 'r')  # input file
+        csv_file = open(input_path, 'r')
+        csv_file_reader = csv.reader(csv_file)
+        rows = ((r[0], r[1]) for r in csv_file_reader)
         input_file_name, _ = os.path.splitext(input_path)
         output_file_name = input_file_name + '.json'
         output_file = open(output_file_name, 'w')  # output file
@@ -42,11 +29,11 @@ def csv_to_json_with_labels(input_path, unknown_label):
         label_dict = {}
         s = ''
         start = 0
-        for line in tsv_file:
-            if line[0:len(line) - 1] != '.\tO':
-                word, entity = line.split('\t')
+        for row in rows:
+            if row[0] + ',' + row[1] != '.,O':
+                word, entity = row[0], row[1]
                 s += word + " "
-                entity = entity[:len(entity) - 1]
+                entity = entity[:len(entity)]
                 if entity != unknown_label and len(entity) != 1:
                     d = {'text': word, 'start': start, 'end': start + len(word) - 1}
                     try:
@@ -82,15 +69,14 @@ def csv_to_json_with_labels(input_path, unknown_label):
                 data_dict = {}
                 start = 0
                 label_dict = {}
-        tsv_file.close()
-        os.remove(tsv_file_name)
+        csv_file.close()
         return output_file_name
     except Exception as e:
         logging.exception("Unable to process file" + "\n" + "error = " + str(e))
         return None
 
 
-def json_to_spacy_format(input_file):
+def json_to_spacy_format(input_file) -> object:
     try:
         training_data = []
         output_file, _ = os.path.splitext(input_file)
@@ -124,7 +110,7 @@ def train_model(n_iter, train_data, model, learn_rate, nlp):
         optimizer = nlp.begin_training()
     else:
         optimizer = nlp.create_optimizer()
-
+    optimizer.learn_rate = learn_rate
     other_pipes = [pipe for pipe in nlp.pipe_names if pipe != 'ner']
     print('Nr iters: ' + str(n_iter) + ' with learning_rate:' + str(learn_rate))
     with nlp.disable_pipes(*other_pipes):  # only train NER
@@ -152,8 +138,9 @@ def save_model(output_dir, new_model_name, nlp):
 
 
 def fine_tune_and_save_custom_model(train_data, model=None, new_model_name=None, output_dir=None):
-    learn_rates = [0.001, 0.005, 0.0001]
-    n_iters = [20, 30, 40, 50]
+    learn_rates = [0.001, 0.005]
+    n_iters = [20, 30, 40, 50, 60, 70]
+    drop = [0.5, 0.65, 0.8]
     """Setting up the pipeline and entity recognizer, and training the new entity."""
     if model is not None:
         nlp = spacy.load(model)  # load existing spacy model
@@ -170,7 +157,7 @@ def fine_tune_and_save_custom_model(train_data, model=None, new_model_name=None,
         ner.add_label(i)  # Add new entity labels to entity recognizer
 
     best_nlp = nlp
-    f1_score = 0
+    best_f1_score = 0
     best_learn_rate = learn_rates[0]
     best_iter = n_iters[0]
 
@@ -179,13 +166,14 @@ def fine_tune_and_save_custom_model(train_data, model=None, new_model_name=None,
             train_nlp = nlp
             train_model(n_iter, train_data, model=model, learn_rate=learn_rate, nlp=train_nlp)
             f1_score = evaluate_model(train_nlp, 'Data/validate.csv')
-            if f1_score >= f1_score:
+            if f1_score >= best_f1_score:
                 best_iter = n_iter
                 best_learn_rate = learn_rate
-                f1_score = f1_score
+                best_f1_score = f1_score
                 best_nlp = train_nlp
+    best_f1_score = evaluate_model(best_nlp, 'Data/test.csv')
+    print('After hyperparameter tuning -> model: ' + 'Iterations: ' + str(best_iter) + ' Learn rate:' + str(best_learn_rate) + ' F1 Score:' + str(best_f1_score))
     save_model(output_dir, new_model_name, nlp=best_nlp)
-    print('Iterations: ' + str(best_iter) + ' Learn rate:' + str(best_learn_rate) + ' F1 Score:' + str(f1_score))
 
 
 def evaluate_model(nlp, input_file):

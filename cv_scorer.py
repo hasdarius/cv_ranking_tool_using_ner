@@ -149,7 +149,7 @@ def generate_dictionary_of_concepts(doc):
         if label not in detected_keys:
             final_dictionary[label] = set()
     print('This is the dictionary of concepts:')
-    print(final_dictionary)
+    pprint(final_dictionary)
     print('-----------------------------------------------------')
 
     return final_dictionary
