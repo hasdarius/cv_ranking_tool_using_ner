@@ -102,6 +102,8 @@ def get_cv_ranking_score(cv_entities_dictionary, job_description_entities_dictio
     required_relevant_keys = ['Programming Language', 'Programming Concept', 'Tool/Framework']
     knowledge_graph_required_labels = [x for key in required_relevant_keys for x in
                                        job_description_entities_dictionary.get(key)]
+    maximum_score = get_max_score_for_job_description(job_description_entities_dictionary, max_absolute_seniority)
+    print(maximum_score)
     for label in job_description_entities_dictionary:
         if label != 'Seniority':
             required_label_values_list = job_description_entities_dictionary[label]
@@ -119,7 +121,7 @@ def get_cv_ranking_score(cv_entities_dictionary, job_description_entities_dictio
                     score += score_partial_matches(feedback_list, given_label_value, graph,
                                                    knowledge_graph_required_labels, label, max_required_seniority)
 
-    return score
+    return score/maximum_score
 
 
 def score_partial_matches(feedback_list, given_label_value, graph, knowledge_graph_required_labels, label,
@@ -171,6 +173,16 @@ def read_cv_entities_from_txt(document_path, nlp):
     text = re.sub(r"[^a-zA-Z0-9]", " ", text)
     doc = nlp(text)
     return generate_dictionary_of_concepts(doc)
+
+
+def get_max_score_for_job_description(job_description_entities, seniority):
+    score = 0
+    pprint(CONCEPTS_SCORES[seniority])
+    for label in job_description_entities:
+        if label != 'Seniority':
+            nr_of_instances = len(job_description_entities[label])
+            score += nr_of_instances * CONCEPTS_SCORES[seniority]['Max ' + label]
+    return score
 
 
 def rank_cvs(job_description_text, cv_folder):
