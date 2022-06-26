@@ -135,7 +135,7 @@ def score_partial_matches(feedback_list, given_label_value, graph, knowledge_gra
             reasoning = REASONING_GRAPH_CONNECTION_P1 + "<<" + required_label_value + ">>, <<" + given_label_value + ">>" + REASONING_GRAPH_CONNECTION_P2 + str(
                 nr_of_shortest_paths) + REASONING_GRAPH_CONNECTION_P3
             for connection_tuple in shortest_path:
-                reasoning = reasoning + "<<" + connection_tuple[0][0] + ">> which <<" + connection_tuple[1][
+                reasoning = reasoning + "<<" + connection_tuple[0][0] + ">> which has a relationship of type<<" + connection_tuple[1][
                     'relationship'] + ">> with <<" + connection_tuple[0][1] + ">>, "
 
             feedback_list.append(reasoning)

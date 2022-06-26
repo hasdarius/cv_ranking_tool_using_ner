@@ -8975,6 +8975,7 @@ wakanda,uses,c++
 dark engine,isA,Tool/Framework
 lfe,influencedBy,concurrent computing
 php,influencedBy,object oriented programming
+java,influencedBy,object oriented programming
 harbour,influencedBy,object oriented programming
 odoo,uses,javascript
 xito,isA,Tool/Framework

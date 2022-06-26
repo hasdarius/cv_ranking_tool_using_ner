@@ -26,14 +26,11 @@ def get_shortest_path_between_concepts(from_concept, to_concept, graph):
     results = list(nx.all_shortest_paths(graph, from_concept, to_concept))
     nr_of_shortest_paths = len(results)
 
-    if nr_of_shortest_paths > 0:
+    if not nr_of_shortest_paths > 0:
         # The distance is the number of vertices in the shortest path minus one.
-        print("Vertex is reachable in the following nr of ways: ", nr_of_shortest_paths)
-    else:
         print("End node could not be reached!")
     shortest_path = nx.path_graph(results[0])
     result = list(map(lambda edge: (edge, graph.edges[edge[0], edge[1]]), shortest_path.edges()))
-    pprint(result)
     return result, nr_of_shortest_paths
 
 
