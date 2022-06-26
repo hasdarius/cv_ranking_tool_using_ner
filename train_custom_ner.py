@@ -16,7 +16,7 @@ from constants import LABELS_LIST
 CUSTOM_SPACY_MODEL = 'Model'
 
 
-def csv_to_spacy_format(input_path, unknown_label):
+def csv_to_spacy_format(input_path, unknown_label ='-'):
     try:
         csv_file = open(input_path, 'r')
         csv_file_reader = csv.reader(csv_file)
