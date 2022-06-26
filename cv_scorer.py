@@ -102,8 +102,9 @@ def get_cv_ranking_score(cv_entities_dictionary, job_description_entities_dictio
     required_relevant_keys = ['Programming Language', 'Programming Concept', 'Tool/Framework']
     knowledge_graph_required_labels = [x for key in required_relevant_keys for x in
                                        job_description_entities_dictionary.get(key)]
-    maximum_score = get_max_score_for_job_description(job_description_entities_dictionary, max_absolute_seniority)
-    print(maximum_score)
+    maximum_score_for_job_description = get_max_score_for_job_description(job_description_entities_dictionary,
+                                                                          max_absolute_seniority)
+    print(maximum_score_for_job_description)
     for label in job_description_entities_dictionary:
         if label != 'Seniority':
             required_label_values_list = job_description_entities_dictionary[label]
@@ -121,7 +122,8 @@ def get_cv_ranking_score(cv_entities_dictionary, job_description_entities_dictio
                     score += score_partial_matches(feedback_list, given_label_value, graph,
                                                    knowledge_graph_required_labels, label, max_required_seniority)
 
-    return score/maximum_score
+    print(score)
+    return min(1, (score / maximum_score_for_job_description))
 
 
 def score_partial_matches(feedback_list, given_label_value, graph, knowledge_graph_required_labels, label,
@@ -177,11 +179,12 @@ def read_cv_entities_from_txt(document_path, nlp):
 
 def get_max_score_for_job_description(job_description_entities, seniority):
     score = 0
-    pprint(CONCEPTS_SCORES[seniority])
+    scores_for_seniority = CONCEPTS_SCORES[seniority]
     for label in job_description_entities:
         if label != 'Seniority':
             nr_of_instances = len(job_description_entities[label])
-            score += nr_of_instances * CONCEPTS_SCORES[seniority]['Max ' + label]
+            nr_of_partial_instances = scores_for_seniority['Max ' + label] - nr_of_instances
+            score += nr_of_instances * scores_for_seniority['Full ' + label] + nr_of_partial_instances * scores_for_seniority['Partial ' + label]
     return score
 
 
