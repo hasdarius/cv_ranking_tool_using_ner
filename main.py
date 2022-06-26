@@ -41,10 +41,15 @@ from cv_scorer import rank_cvs
 # Junior"""
 
 JOB_DESCRIPTION_EXAMPLE = """
-Seniority: Junior, Mid\\
-Software developer with Demonstrated proficiency with OOP languages such as: Java, Scala for a minimum of 1 year
-Nice to have: Spring, Jenkins, Junit, Cucumber
-Nice to have: OCA certificate
+Looking for a mid software developer.
+Skills in:
+- Java for 3+ years or other similar programming languages: Scala, Kotlin.
+- Open and willing to learn new technologies
+- Strong Java Core, Spring Boot knowledge
+- Experience with tools like jUnit, Maven and Jenkins
+- Good understanding of design patterns
+- Developed REST API's using Spring Boot
+- Bachelor Degree in Computer Science
 """
 
 if __name__ == "__main__":
