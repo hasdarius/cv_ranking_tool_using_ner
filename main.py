@@ -58,13 +58,16 @@ if __name__ == "__main__":
     if option == 'train':
         if path.exists(train_custom_ner.CUSTOM_SPACY_MODEL):
             shutil.rmtree(train_custom_ner.CUSTOM_SPACY_MODEL)
-        json_file_name = train_custom_ner.csv_to_json_with_labels('Data/train.csv', '-')
-        training_data = train_custom_ner.json_to_spacy_format(json_file_name)
+        training_data = train_custom_ner.csv_to_spacy_format('Data/train.csv', '-')
         train_custom_ner.fine_tune_and_save_custom_model(training_data,
                                                          new_model_name='technology_it_model',
                                                          output_dir=train_custom_ner.CUSTOM_SPACY_MODEL)
     else:
         if option == 'score':
-            pprint(rank_cvs(JOB_DESCRIPTION_EXAMPLE, './cv-directory'))
+            if not path.exists(train_custom_ner.CUSTOM_SPACY_MODEL):
+                print('A model does not exist. Before scoring, you need to train a model')
+            else:
+                pprint(rank_cvs(JOB_DESCRIPTION_EXAMPLE, './cv-directory'))
         else:
             print("The only available option when running the tool are 'train' and 'score'")
+

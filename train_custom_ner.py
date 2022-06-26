@@ -16,92 +16,34 @@ from constants import LABELS_LIST
 CUSTOM_SPACY_MODEL = 'Model'
 
 
-def csv_to_json_with_labels(input_path, unknown_label):
+def csv_to_spacy_format(input_path, unknown_label):
     try:
         csv_file = open(input_path, 'r')
         csv_file_reader = csv.reader(csv_file)
         rows = ((r[0], r[1]) for r in csv_file_reader)
         input_file_name, _ = os.path.splitext(input_path)
-        output_file_name = input_file_name + '.json'
-        output_file = open(output_file_name, 'w')  # output file
-        data_dict = {}
-        annotations = []
-        label_dict = {}
-        s = ''
+        training_data = []
+        entities_list = []
+        sentence = ''
         start = 0
         for row in rows:
             if row[0] + ',' + row[1] != '.,O':
                 word, entity = row[0], row[1]
-                s += word + " "
+                sentence += word + " "
                 entity = entity[:len(entity)]
                 if entity != unknown_label and len(entity) != 1:
-                    d = {'text': word, 'start': start, 'end': start + len(word) - 1}
-                    try:
-                        label_dict[entity].append(d)
-                    except:
-                        label_dict[entity] = []
-                        label_dict[entity].append(d)
+                    new_occurrence = (start, start + len(word), entity)
+                    entities_list.append(new_occurrence)
                 start += len(word) + 1
             else:
-                data_dict['content'] = s
-                s = ''
-                label_list = []
-                for entities in list(label_dict.keys()):
-                    for i in range(len(label_dict[entities])):
-                        if label_dict[entities][i]['text'] != '':
-                            l = [entities, label_dict[entities][i]]
-                            for j in range(i + 1, len(label_dict[entities])):
-                                if label_dict[entities][i]['text'] == label_dict[entities][j]['text']:
-                                    di = {'start': label_dict[entities][j]['start'],
-                                          'end': label_dict[entities][j]['end'],
-                                          'text': label_dict[entities][i]['text']}
-                                    l.append(di)
-                                    label_dict[entities][j]['text'] = ''
-                            label_list.append(l)
-
-                for entities in label_list:
-                    label = {'label': [entities[0]], 'points': entities[1:]}
-                    annotations.append(label)
-                data_dict['annotation'] = annotations
-                annotations = []
-                json.dump(data_dict, output_file)
-                output_file.write('\n')
-                data_dict = {}
+                training_data.append((sentence, {"entities": entities_list}))
                 start = 0
-                label_dict = {}
+                sentence = ''
+                entities_list = []
         csv_file.close()
-        return output_file_name
-    except Exception as e:
-        logging.exception("Unable to process file" + "\n" + "error = " + str(e))
-        return None
-
-
-def json_to_spacy_format(input_file) -> object:
-    try:
-        training_data = []
-        output_file, _ = os.path.splitext(input_file)
-        with open(input_file, 'r') as f:
-            lines = f.readlines()
-
-        for line in lines:
-            data = json.loads(line)
-            text = data['content']
-            entities = []
-            for annotation in data['annotation']:
-                point = annotation['points'][0]
-                labels = annotation['label']
-                if not isinstance(labels, list):
-                    labels = [labels]
-
-                for label in labels:
-                    entities.append((point['start'], point['end'] + 1, label))
-
-            training_data.append((text, {"entities": entities}))
-
-        os.remove(input_file)
         return training_data
     except Exception as e:
-        logging.exception("Unable to process " + input_file + "\n" + "error = " + str(e))
+        logging.exception("Unable to process file" + "\n" + "error = " + str(e))
         return None
 
 
@@ -140,7 +82,6 @@ def save_model(output_dir, new_model_name, nlp):
 def fine_tune_and_save_custom_model(train_data, model=None, new_model_name=None, output_dir=None):
     learn_rates = [0.001, 0.005]
     n_iters = [20, 30, 40, 50, 60, 70]
-    drop = [0.5, 0.65, 0.8]
     """Setting up the pipeline and entity recognizer, and training the new entity."""
     if model is not None:
         nlp = spacy.load(model)  # load existing spacy model
@@ -177,8 +118,7 @@ def fine_tune_and_save_custom_model(train_data, model=None, new_model_name=None,
 
 
 def evaluate_model(nlp, input_file):
-    json_file_name = csv_to_json_with_labels(input_file, '-')
-    validate_data = json_to_spacy_format(json_file_name)
+    validate_data = csv_to_spacy_format(input_file)
     examples = []
     scorer = Scorer()
     for text, annotations in validate_data:

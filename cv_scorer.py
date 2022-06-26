@@ -91,7 +91,8 @@ def get_max_seniority(list_of_seniorities):
     return seniority_priority_list[1]  # None
 
 
-def get_cv_ranking_score(cv_entities_dictionary, job_description_entities_dictionary, feedback_list, graph):
+def get_cv_ranking_score(cv_entities_dictionary, job_description_entities_dictionary, graph):
+    feedback_list = []
     max_required_seniority = get_max_seniority(
         list(map(lambda x: x.lower(), job_description_entities_dictionary['Seniority'])))
     max_given_seniority = get_max_seniority(list(map(lambda x: x.lower(), cv_entities_dictionary['Seniority'])))
@@ -104,7 +105,6 @@ def get_cv_ranking_score(cv_entities_dictionary, job_description_entities_dictio
                                        job_description_entities_dictionary.get(key)]
     maximum_score_for_job_description = get_max_score_for_job_description(job_description_entities_dictionary,
                                                                           max_absolute_seniority)
-    print(maximum_score_for_job_description)
     for label in job_description_entities_dictionary:
         if label != 'Seniority':
             required_label_values_list = job_description_entities_dictionary[label]
@@ -122,8 +122,7 @@ def get_cv_ranking_score(cv_entities_dictionary, job_description_entities_dictio
                     score += score_partial_matches(feedback_list, given_label_value, graph,
                                                    knowledge_graph_required_labels, label, max_required_seniority)
 
-    print(score)
-    return min(1, (score / maximum_score_for_job_description))
+    return score / maximum_score_for_job_description, feedback_list
 
 
 def score_partial_matches(feedback_list, given_label_value, graph, knowledge_graph_required_labels, label,
@@ -198,7 +197,6 @@ def rank_cvs(job_description_text, cv_folder):
     score_list = []
     for cv_file in cv_files:
         _, file_extension = os.path.splitext(cv_file)
-        feedback_list = []
         if file_extension == ".pdf":
             cv_entities_dictionary = read_cv_entities_from_pdf(cv_folder + '/' + cv_file, custom_nlp)
         else:
@@ -206,6 +204,6 @@ def rank_cvs(job_description_text, cv_folder):
                 cv_entities_dictionary = read_cv_entities_from_txt(cv_folder + '/' + cv_file, custom_nlp)
             else:
                 cv_entities_dictionary = {}
-        cv_score = get_cv_ranking_score(cv_entities_dictionary, job_description_entities, feedback_list, graph)
+        cv_score, feedback_list = get_cv_ranking_score(cv_entities_dictionary, job_description_entities, graph)
         score_list.append((cv_file, cv_score, feedback_list))
     return sorted(score_list, key=lambda cv: cv[1], reverse=True)
