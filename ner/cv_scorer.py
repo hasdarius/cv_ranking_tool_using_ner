@@ -4,80 +4,27 @@ from os import listdir
 from os.path import isfile, join
 from pprint import pprint
 
-import pdfplumber
 import spacy
-from business_rules import run_all
-from business_rules.actions import BaseActions, rule_action
-from business_rules.fields import FIELD_NUMERIC
-from business_rules.variables import BaseVariables, numeric_rule_variable
 
-import train_custom_ner
-from constants import CONCEPTS_SCORES, REASONING_PERFECT_MATCH, REASONING_PERFECT_MATCH_TYPE, \
-    REASONING_GRAPH_CONNECTION_P1, REASONING_GRAPH_CONNECTION_P2, LABELS_LIST, REASONING_PENALIZATION, \
-    REASONING_GRAPH_CONNECTION_P3
-from knowledge_graph import get_shortest_path_between_concepts, generate_knowledge_graph_components_from_files
+from ner import train_custom_ner
+from utilities.business_ruler import apply_business_rules
+from utilities.constants import CONCEPTS_SCORES, REASONING_PERFECT_MATCH, REASONING_PERFECT_MATCH_TYPE, \
+    REASONING_GRAPH_CONNECTION_P1, REASONING_GRAPH_CONNECTION_P2, REASONING_GRAPH_CONNECTION_P3
+from utilities.filde_reader import generate_dictionary_of_concepts, read_cv_entities_from_pdf, read_cv_entities_from_txt
+from dbpedia.knowledge_graph import get_shortest_path_between_concepts, generate_knowledge_graph_components_from_files
 
-
-class RequiredLabelInfo:
-    def __init__(self, label_name, required_values, max_required_seniority, max_absolute_seniority,
-                 max_required_values=9999):
-        self.name = label_name
-        self.values = required_values
-        self.max_absolute_seniority = max_absolute_seniority
-        self.loss_value = 0.25
-        self.max_required_values = max_required_values
-        self.actual_loss_values = 0
-
-
-class RequiredLabelInfoVariables(BaseVariables):
-
-    def __init__(self, label_info):
-        self.label_info = label_info
-
-    @numeric_rule_variable(label='Maximum number of words with a specific label before being penalized')
-    def get_max_required_value_for_label(self):
-        label_info = self.label_info
-        label_info.max_required_values = max(2 * len(label_info.values),
-                                             CONCEPTS_SCORES[label_info.max_absolute_seniority][
-                                                 'Max ' + label_info.name])
-        return label_info.max_required_values
-
-
-class RequiredLabelInfoActions(BaseActions):
-
-    def __init__(self, label_info):
-        self.label_info = label_info
-
-    @rule_action(params={"given_values_length": FIELD_NUMERIC})
-    def penalize(self, given_values_length):
-        self.label_info.actual_loss_values = (
-                                                     self.label_info.max_required_values - given_values_length) * self.label_info.loss_value
-
-
-def apply_business_rules(max_absolute_seniority, max_required_seniority, label_name, required_label_values,
-                         given_label_values, feedback_list):
-    given_label_values_length = len(given_label_values)
-    rules = [
-        # expiration_days < 5 AND current_inventory > 20
-        {"conditions":
-             {"name": "get_max_required_value_for_label",
-              "operator": "less_than",
-              "value": given_label_values_length,
-              },
-         "actions": [
-             {"name": "penalize",
-              "params": {"given_values_length": given_label_values_length},
-              }
-         ]}]
-    required_label_info = RequiredLabelInfo(label_name, required_label_values, max_required_seniority,
-                                            max_absolute_seniority)
-    if run_all(rule_list=rules,
-               defined_variables=RequiredLabelInfoVariables(required_label_info),
-               defined_actions=RequiredLabelInfoActions(required_label_info),
-               stop_on_first_trigger=True
-               ):
-        feedback_list.append(REASONING_PENALIZATION + "<<" + label_name + ">>.")
-    return required_label_info.actual_loss_values
+def get_cv_ranking_score(cv_entities_dictionary, job_description_entities_dictionary, graph):
+    max_required_seniority = get_max_seniority(
+        list(map(lambda x: x.lower(), job_description_entities_dictionary['Seniority'])))
+    max_given_seniority = get_max_seniority(list(map(lambda x: x.lower(), cv_entities_dictionary['Seniority'])))
+    max_absolute_seniority = get_max_seniority([max_required_seniority, max_given_seniority])
+    required_relevant_keys = ['Programming Language', 'Programming Concept', 'Tool/Framework']
+    knowledge_graph_required_labels = [x for key in required_relevant_keys for x in
+                                       job_description_entities_dictionary.get(key)]
+    score, feedback_list = compute_score(cv_entities_dictionary, graph, job_description_entities_dictionary,
+                          knowledge_graph_required_labels, max_absolute_seniority, max_given_seniority,
+                          max_required_seniority)
+    return score, feedback_list
 
 
 def get_max_seniority(list_of_seniorities):
@@ -91,18 +38,11 @@ def get_max_seniority(list_of_seniorities):
     return seniority_priority_list[1]  # None
 
 
-def get_cv_ranking_score(cv_entities_dictionary, job_description_entities_dictionary, graph):
-    feedback_list = []
-    max_required_seniority = get_max_seniority(
-        list(map(lambda x: x.lower(), job_description_entities_dictionary['Seniority'])))
-    max_given_seniority = get_max_seniority(list(map(lambda x: x.lower(), cv_entities_dictionary['Seniority'])))
+def compute_score(cv_entities_dictionary, feedback_list, graph, job_description_entities_dictionary,
+                  knowledge_graph_required_labels, max_absolute_seniority, max_given_seniority, max_required_seniority):
     score = 0
     if max_given_seniority is not None:
         score = CONCEPTS_SCORES[max_given_seniority]['Seniority']
-    max_absolute_seniority = get_max_seniority([max_required_seniority, max_given_seniority])
-    required_relevant_keys = ['Programming Language', 'Programming Concept', 'Tool/Framework']
-    knowledge_graph_required_labels = [x for key in required_relevant_keys for x in
-                                       job_description_entities_dictionary.get(key)]
     maximum_score_for_job_description = get_max_score_for_job_description(job_description_entities_dictionary,
                                                                           max_absolute_seniority)
     for label in job_description_entities_dictionary:
@@ -110,7 +50,7 @@ def get_cv_ranking_score(cv_entities_dictionary, job_description_entities_dictio
             required_label_values_list = job_description_entities_dictionary[label]
             given_label_values_list = cv_entities_dictionary[label]
 
-            score += apply_business_rules(max_absolute_seniority, max_required_seniority, label,
+            score += apply_business_rules(max_absolute_seniority, label,
                                           required_label_values_list,
                                           given_label_values_list, feedback_list)
             for given_label_value in given_label_values_list:
