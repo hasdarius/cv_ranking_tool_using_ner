@@ -26,8 +26,8 @@ if __name__ == "__main__":
             if not path.exists(train_custom_ner.CUSTOM_SPACY_MODEL):
                 print('A model does not exist. Before scoring, you need to train a model')
             else:
-                score_list_ner = rank_cvs(JOB_DESCRIPTION_EXAMPLE, CV_DIRECTORY)
-                score_list_gremlin = compute_gremlin_match_score(JOB_DESCRIPTION_EXAMPLE3, CV_DIRECTORY)
+                score_list_ner = rank_cvs(JOB_DESCRIPTION_1_PATH, CV_DIRECTORY)
+                score_list_gremlin = compute_gremlin_match_score(JOB_DESCRIPTION_1_PATH, CV_DIRECTORY)
 
                 final_result_list = []
                 for cv_result_ner in score_list_ner:

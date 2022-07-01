@@ -118,7 +118,9 @@ def gremlin_main(input_file1, input_file2):
     return final_similarity_score, reasoning
 
 
-def compute_gremlin_match_score(job_description_text, cv_folder_path):
+def compute_gremlin_match_score(job_description_file, cv_folder_path):
+    text_file = open(job_description_file, "r")
+    job_description_text = text_file.read()
     cv_files_list = [file for file in listdir(cv_folder_path) if isfile(join(cv_folder_path, file))]
     job_description_ttl_file = transform_from_natural_text_to_rdf(job_description_text, "job-description")
     score_list = []
@@ -129,15 +131,4 @@ def compute_gremlin_match_score(job_description_text, cv_folder_path):
         cv_score, cv_reasoning = gremlin_main(job_description_ttl_file, cv_ttl_file)
         score_list.append((cv_file, cv_score, cv_reasoning))
     return sorted(score_list, key=lambda cv: cv[1], reverse=True)
-
-
-JOB_DESCRIPTION_EXAMPLE2 = """Looking for a Software Developer with at least one year of experience in Java 8, 
-it would be nice to have experience in Spring Boot, Gradle, you must have a bachelor degree in Computer Science or 
-Mathematics or Economics. """
-
-JOB_DESCRIPTION_EXAMPLE3 = """Main requirements: 
-- Java development experience 3+ years 
-- Open and willing to learn new technologies
-- Strong Java Core knowledge
-- Good understanding of design patterns """
 

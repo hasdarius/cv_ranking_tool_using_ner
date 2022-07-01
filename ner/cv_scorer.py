@@ -110,25 +110,23 @@ def generate_dictionary_of_concepts(doc):
     return final_dictionary
 
 
-def rank_cvs(job_description_text, cv_folder):
+def rank_cvs(job_description_file, cv_folder):
     graph = generate_knowledge_graph_components_from_files('Data/edges.csv')
     custom_nlp = spacy.load(train_custom_ner.CUSTOM_SPACY_MODEL)
-    job_description_text = re.sub(r"[^a-zA-Z0-9]", " ", job_description_text)
-    nlp_doc = custom_nlp(job_description_text)
-    job_description_entities = generate_dictionary_of_concepts(nlp_doc)  # read job description entities in dictionary
+    job_description_dictionary = generate_dictionary_of_concepts(read_entities_from_txt(job_description_file, custom_nlp))
     cv_files = [file for file in listdir(cv_folder) if isfile(join(cv_folder, file))]
     score_list = []
     for cv_file in cv_files:
         _, file_extension = os.path.splitext(cv_file)
         if file_extension == ".pdf":
             cv_entities_dictionary = generate_dictionary_of_concepts(
-                read_cv_entities_from_pdf(cv_folder + '/' + cv_file, custom_nlp))
+                read_entities_from_pdf(cv_folder + '/' + cv_file, custom_nlp))
         else:
             if file_extension == ".txt":
                 cv_entities_dictionary = generate_dictionary_of_concepts(
-                    read_cv_entities_from_txt(cv_folder + '/' + cv_file, custom_nlp))
+                    read_entities_from_txt(cv_folder + '/' + cv_file, custom_nlp))
             else:
                 cv_entities_dictionary = {}
-        cv_score, feedback_list = get_cv_ranking_score(cv_entities_dictionary, job_description_entities, graph)
+        cv_score, feedback_list = get_cv_ranking_score(cv_entities_dictionary, job_description_dictionary, graph)
         score_list.append((cv_file, cv_score, feedback_list))
     return sorted(score_list, key=lambda cv: cv[1], reverse=True)
