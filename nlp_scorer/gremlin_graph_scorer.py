@@ -1,3 +1,5 @@
+import re
+
 import nest_asyncio
 
 from rdf2g import rdflib, expand_tree, clear_graph
@@ -121,6 +123,7 @@ def gremlin_main(input_file1, input_file2):
 def compute_gremlin_match_score(job_description_file, cv_folder_path):
     text_file = open(job_description_file, "r")
     job_description_text = text_file.read()
+    job_description_text = re.sub(r"[^a-zA-Z0-9]", " ", job_description_text)
     cv_files_list = [file for file in listdir(cv_folder_path) if isfile(join(cv_folder_path, file))]
     job_description_ttl_file = transform_from_natural_text_to_rdf(job_description_text, "job-description")
     score_list = []
