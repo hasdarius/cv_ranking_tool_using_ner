@@ -1,17 +1,15 @@
 import os
-import re
 from os import listdir
 from os.path import isfile, join
-from pprint import pprint
 
 import spacy
 
+from dbpedia.knowledge_graph import *
 from ner import train_custom_ner
 from utilities.business_ruler import apply_business_rules
-from utilities.constants import CONCEPTS_SCORES, REASONING_PERFECT_MATCH, REASONING_PERFECT_MATCH_TYPE, \
-    REASONING_GRAPH_CONNECTION_P1, REASONING_GRAPH_CONNECTION_P2, REASONING_GRAPH_CONNECTION_P3
-from utilities.filde_reader import generate_dictionary_of_concepts, read_cv_entities_from_pdf, read_cv_entities_from_txt
-from dbpedia.knowledge_graph import get_shortest_path_between_concepts, generate_knowledge_graph_components_from_files
+from utilities.constants import *
+from utilities.file_reader import *
+
 
 def get_cv_ranking_score(cv_entities_dictionary, job_description_entities_dictionary, graph):
     max_required_seniority = get_max_seniority(
@@ -22,8 +20,8 @@ def get_cv_ranking_score(cv_entities_dictionary, job_description_entities_dictio
     knowledge_graph_required_labels = [x for key in required_relevant_keys for x in
                                        job_description_entities_dictionary.get(key)]
     score, feedback_list = compute_score(cv_entities_dictionary, graph, job_description_entities_dictionary,
-                          knowledge_graph_required_labels, max_absolute_seniority, max_given_seniority,
-                          max_required_seniority)
+                                         knowledge_graph_required_labels, max_absolute_seniority, max_given_seniority,
+                                         max_required_seniority)
     return score, feedback_list
 
 
@@ -38,9 +36,10 @@ def get_max_seniority(list_of_seniorities):
     return seniority_priority_list[1]  # None
 
 
-def compute_score(cv_entities_dictionary, feedback_list, graph, job_description_entities_dictionary,
+def compute_score(cv_entities_dictionary, graph, job_description_entities_dictionary,
                   knowledge_graph_required_labels, max_absolute_seniority, max_given_seniority, max_required_seniority):
     score = 0
+    feedback_list = []
     if max_given_seniority is not None:
         score = CONCEPTS_SCORES[max_given_seniority]['Seniority']
     maximum_score_for_job_description = get_max_score_for_job_description(job_description_entities_dictionary,
@@ -75,12 +74,25 @@ def score_partial_matches(feedback_list, given_label_value, graph, knowledge_gra
             reasoning = REASONING_GRAPH_CONNECTION_P1 + "<<" + required_label_value + ">>, <<" + given_label_value + ">>" + REASONING_GRAPH_CONNECTION_P2 + str(
                 nr_of_shortest_paths) + REASONING_GRAPH_CONNECTION_P3
             for connection_tuple in shortest_path:
-                reasoning = reasoning + "<<" + connection_tuple[0][0] + ">> which has a relationship of type<<" + connection_tuple[1][
-                    'relationship'] + ">> with <<" + connection_tuple[0][1] + ">>, "
+                reasoning = reasoning + "<<" + connection_tuple[0][0] + ">> which has a relationship of type<<" + \
+                            connection_tuple[1][
+                                'relationship'] + ">> with <<" + connection_tuple[0][1] + ">>, "
 
             feedback_list.append(reasoning)
             return CONCEPTS_SCORES[max_required_seniority]['Partial ' + label]
     return 0
+
+
+def get_max_score_for_job_description(job_description_entities, seniority):
+    score = 0
+    scores_for_seniority = CONCEPTS_SCORES[seniority]
+    for label in job_description_entities:
+        if label != 'Seniority':
+            nr_of_instances = len(job_description_entities[label])
+            nr_of_partial_instances = scores_for_seniority['Max ' + label] - nr_of_instances
+            score += nr_of_instances * scores_for_seniority['Full ' + label] + nr_of_partial_instances * \
+                     scores_for_seniority['Partial ' + label]
+    return score
 
 
 def generate_dictionary_of_concepts(doc):
@@ -98,35 +110,6 @@ def generate_dictionary_of_concepts(doc):
     return final_dictionary
 
 
-def read_cv_entities_from_pdf(document_path, nlp):
-    pdf = pdfplumber.open(document_path)
-    text = ""
-    for page in pdf.pages:
-        text = text + "\n" + page.extract_text()
-    text = re.sub(r"[^a-zA-Z0-9]", " ", text)
-    doc = nlp(text)
-    return generate_dictionary_of_concepts(doc)
-
-
-def read_cv_entities_from_txt(document_path, nlp):
-    text_file = open(document_path, "r")
-    text = text_file.read()
-    text = re.sub(r"[^a-zA-Z0-9]", " ", text)
-    doc = nlp(text)
-    return generate_dictionary_of_concepts(doc)
-
-
-def get_max_score_for_job_description(job_description_entities, seniority):
-    score = 0
-    scores_for_seniority = CONCEPTS_SCORES[seniority]
-    for label in job_description_entities:
-        if label != 'Seniority':
-            nr_of_instances = len(job_description_entities[label])
-            nr_of_partial_instances = scores_for_seniority['Max ' + label] - nr_of_instances
-            score += nr_of_instances * scores_for_seniority['Full ' + label] + nr_of_partial_instances * scores_for_seniority['Partial ' + label]
-    return score
-
-
 def rank_cvs(job_description_text, cv_folder):
     graph = generate_knowledge_graph_components_from_files('Data/edges.csv')
     custom_nlp = spacy.load(train_custom_ner.CUSTOM_SPACY_MODEL)
@@ -138,10 +121,12 @@ def rank_cvs(job_description_text, cv_folder):
     for cv_file in cv_files:
         _, file_extension = os.path.splitext(cv_file)
         if file_extension == ".pdf":
-            cv_entities_dictionary = read_cv_entities_from_pdf(cv_folder + '/' + cv_file, custom_nlp)
+            cv_entities_dictionary = generate_dictionary_of_concepts(
+                read_cv_entities_from_pdf(cv_folder + '/' + cv_file, custom_nlp))
         else:
             if file_extension == ".txt":
-                cv_entities_dictionary = read_cv_entities_from_txt(cv_folder + '/' + cv_file, custom_nlp)
+                cv_entities_dictionary = generate_dictionary_of_concepts(
+                    read_cv_entities_from_txt(cv_folder + '/' + cv_file, custom_nlp))
             else:
                 cv_entities_dictionary = {}
         cv_score, feedback_list = get_cv_ranking_score(cv_entities_dictionary, job_description_entities, graph)

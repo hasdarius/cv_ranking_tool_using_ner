@@ -141,5 +141,3 @@ JOB_DESCRIPTION_EXAMPLE3 = """Main requirements:
 - Strong Java Core knowledge
 - Good understanding of design patterns """
 
-if __name__ == "__main__":
-    gremlin_main("past-temporal-demo-amr.ttl", "past-temporal-demo-amr-ex2.ttl")

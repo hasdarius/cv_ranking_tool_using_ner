@@ -1,5 +1,4 @@
 import csv
-import json
 import logging
 import os
 import random
@@ -11,7 +10,7 @@ from spacy.scorer import Scorer
 from spacy.training.example import Example
 from spacy.util import minibatch, compounding
 
-from constants import LABELS_LIST
+from utilities.constants import LABELS_LIST
 
 CUSTOM_SPACY_MODEL = 'Model'
 
