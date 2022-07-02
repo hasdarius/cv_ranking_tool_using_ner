@@ -5,16 +5,13 @@ import random
 import shutil
 from pathlib import Path
 from pprint import pprint
-from sys import path
 
 import spacy
 from spacy.scorer import Scorer
 from spacy.training.example import Example
 from spacy.util import minibatch, compounding
 
-from utilities.constants import LABELS_LIST
-
-CUSTOM_SPACY_MODEL = 'Model'
+from utilities.constants import *
 
 
 def csv_to_spacy_format(input_path, unknown_label='-'):
@@ -137,7 +134,7 @@ def evaluate_model(nlp, input_file):
 
 
 def begin_training():
-    if path.exists(CUSTOM_SPACY_MODEL):
+    if os.path.exists(CUSTOM_SPACY_MODEL):
         shutil.rmtree(CUSTOM_SPACY_MODEL)
     training_data = csv_to_spacy_format('Data/train.csv', '-')
     fine_tune_and_save_custom_model(training_data,

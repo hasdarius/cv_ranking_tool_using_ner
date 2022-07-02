@@ -73,6 +73,8 @@ CONCEPTS_SCORES = {
     }
 }
 
+CUSTOM_SPACY_MODEL = "Model"
+
 LABELS_LIST = ["Programming Language", "Certification", "Seniority", "Tool/Framework", "IT Specialization",
                "Programming Concept"]
 

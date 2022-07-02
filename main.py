@@ -1,18 +1,14 @@
-import shutil
 import sys
-import os.path as path
-from pprint import pprint
 import time
 
-from ner import train_custom_ner
 from ner.cv_scorer import rank_cvs
+from ner.train_custom_ner import *
 from nlp_scorer.gremlin_graph_scorer import compute_gremlin_match_score
-from ner.train_custom_ner import begin_training
-
 from utilities.constants import *
+from utilities.file_util import write_tuple_list_to_csv
 
 
-def main():
+def main(job_description_file, cv_directory):
     start = time.time()
     args = sys.argv[1:]
     option = args[0]
@@ -20,11 +16,11 @@ def main():
         begin_training()
     else:
         if option == 'score':
-            if not path.exists(train_custom_ner.CUSTOM_SPACY_MODEL):
+            if not os.path.exists(CUSTOM_SPACY_MODEL):
                 print('A model does not exist. Before scoring, you need to train a model')
             else:
-                score_list_ner = rank_cvs(JOB_DESCRIPTION_1_PATH, CV_DIRECTORY)
-                score_list_gremlin = compute_gremlin_match_score(JOB_DESCRIPTION_1_PATH, CV_DIRECTORY)
+                score_list_ner = rank_cvs(job_description_file, cv_directory)
+                score_list_gremlin = compute_gremlin_match_score(job_description_file, cv_directory)
 
                 final_result_list = []
                 for cv_result_ner in score_list_ner:
@@ -38,10 +34,12 @@ def main():
                 elapsed_time = end - start
                 print('Execution time:', elapsed_time, 'seconds')
                 pprint(sorted(final_result_list, key=lambda resume: resume[1], reverse=True))
-                write_tuple_list_to_csv(final_result_list, "results.csv")
+
+                write_tuple_list_to_csv(final_result_list, "results_" + os.path.basename(job_description_file) + ".csv")
         else:
             print("The only available option when running the application are 'train' and 'score'")
 
 
 if __name__ == "__main__":
-    main()
+    main(JOB_DESCRIPTION_1_PATH, CV_DIRECTORY)
+

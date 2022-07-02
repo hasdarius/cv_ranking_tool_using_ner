@@ -21,6 +21,7 @@ def read_from_txt(file_path):
 
 
 def write_tuple_list_to_csv(tuple_list, file_name):
-    file = open(file_name, 'w', newline='')
+    file = open(file_name, 'w+', newline='')
     writer = csv.writer(file)
+    writer.writerow(('Resume file', 'Score', 'Reasoning'))
     writer.writerows(tuple_list)
