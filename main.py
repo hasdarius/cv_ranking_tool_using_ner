@@ -7,6 +7,7 @@ import time
 from ner import train_custom_ner
 from ner.cv_scorer import rank_cvs
 from nlp_scorer.gremlin_graph_scorer import compute_gremlin_match_score
+from ner.train_custom_ner import begin_training
 
 from utilities.constants import *
 
@@ -16,12 +17,7 @@ def main():
     args = sys.argv[1:]
     option = args[0]
     if option == 'train':
-        if path.exists(train_custom_ner.CUSTOM_SPACY_MODEL):
-            shutil.rmtree(train_custom_ner.CUSTOM_SPACY_MODEL)
-        training_data = train_custom_ner.csv_to_spacy_format('Data/train.csv', '-')
-        train_custom_ner.fine_tune_and_save_custom_model(training_data,
-                                                         new_model_name='technology_it_model',
-                                                         output_dir=train_custom_ner.CUSTOM_SPACY_MODEL)
+        begin_training()
     else:
         if option == 'score':
             if not path.exists(train_custom_ner.CUSTOM_SPACY_MODEL):

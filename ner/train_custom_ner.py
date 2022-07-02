@@ -2,8 +2,10 @@ import csv
 import logging
 import os
 import random
+import shutil
 from pathlib import Path
 from pprint import pprint
+from sys import path
 
 import spacy
 from spacy.scorer import Scorer
@@ -15,7 +17,7 @@ from utilities.constants import LABELS_LIST
 CUSTOM_SPACY_MODEL = 'Model'
 
 
-def csv_to_spacy_format(input_path, unknown_label ='-'):
+def csv_to_spacy_format(input_path, unknown_label='-'):
     try:
         csv_file = open(input_path, 'r')
         csv_file_reader = csv.reader(csv_file)
@@ -112,7 +114,8 @@ def fine_tune_and_save_custom_model(train_data, model=None, new_model_name=None,
                 best_f1_score = f1_score
                 best_nlp = train_nlp
     best_f1_score = evaluate_model(best_nlp, 'Data/test.csv')
-    print('After hyperparameter tuning -> model: ' + 'Iterations: ' + str(best_iter) + ' Learn rate:' + str(best_learn_rate) + ' F1 Score:' + str(best_f1_score))
+    print('After hyperparameter tuning -> model: ' + 'Iterations: ' + str(best_iter) + ' Learn rate:' + str(
+        best_learn_rate) + ' F1 Score:' + str(best_f1_score))
     save_model(output_dir, new_model_name, nlp=best_nlp)
 
 
@@ -131,3 +134,12 @@ def evaluate_model(nlp, input_file):
     print('---------------------')
     f1_score = scores['ents_f']
     return f1_score
+
+
+def begin_training():
+    if path.exists(CUSTOM_SPACY_MODEL):
+        shutil.rmtree(CUSTOM_SPACY_MODEL)
+    training_data = csv_to_spacy_format('Data/train.csv', '-')
+    fine_tune_and_save_custom_model(training_data,
+                                    new_model_name='technology_it_model',
+                                    output_dir=CUSTOM_SPACY_MODEL)
