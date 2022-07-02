@@ -1,0 +1,39 @@
+Skills
+
+Must have
+
+- Mandatory Computer Science Faculty / Cybernetics / Mathematics / Informatics graduated
+- Min 1 Year working hands on experience in Object oriented, Scala, Ruby
+- Dependency Injection/ Inversion of Control (Spring or JBoss)
+- Unit and Mock Testing (JUnit, Mockito, Arquillian, Cucumber)
+- Message Service (JMS)
+- Web Services (JAX-RS, JAX-WS)
+- Strong understanding of Design and Architectural Patterns
+- Apache Maven
+- Continuous Integration tools (Jenkins or similar)
+- Linux operating system
+- Stash: GIT Repository Management
+- Spoken English language is a must
+
+Nice to have
+
+- Apache Camel
+- Enterprise Integration Patterns
+- Architecture for XML Binding (JAXB)
+- XML Transformations (XSLT, XSD, DTD)
+- FitNesse
+- Drools
+- Agile Methodologies (SCRUM and Kanban)
+- Additional knowledge of financial products is a plus
+
+Languages
+
+Romanian: C2 Proficient
+
+English: C1 Advanced
+
+OCA certificate
+
+Seniority
+
+Junior

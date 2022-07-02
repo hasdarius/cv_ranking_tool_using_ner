@@ -1,0 +1,5 @@
+"Main requirements:
+- Java development experience 3+ years
+- Open and willing to learn new technologies
+- Strong Java Core knowledge
+- Good understanding of design patterns

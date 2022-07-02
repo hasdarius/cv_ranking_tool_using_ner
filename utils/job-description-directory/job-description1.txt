@@ -1,0 +1,9 @@
+Looking for a mid software developer.
+Skills in:
+- Java for 3+ years or other similar programming languages: Scala, Kotlin.
+- Open and willing to learn new technologies
+- Strong Java Core, Spring Boot knowledge
+- Experience with tools like jUnit, Maven and Jenkins
+- Good understanding of design patterns
+- Developed REST API's using Spring Boot
+- Bachelor Degree in Computer Science

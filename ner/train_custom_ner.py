@@ -1,8 +1,8 @@
 import csv
-import json
 import logging
 import os
 import random
+import shutil
 from pathlib import Path
 from pprint import pprint
 
@@ -11,111 +11,37 @@ from spacy.scorer import Scorer
 from spacy.training.example import Example
 from spacy.util import minibatch, compounding
 
-from utilities.constants import LABELS_LIST
-
-CUSTOM_SPACY_MODEL = 'Model'
+from utilities.constants import *
 
 
-def create_tsv_file(input_path):
-    csv_file = open(input_path, 'r')
-    csv_file_reader = csv.reader(csv_file)
-    input_file_name, _ = os.path.splitext(input_path)
-    tsv_file_name = input_file_name + '.tsv'
-    tsv_file = open(tsv_file_name, 'wt', newline='')
-    tsv_file_writer = csv.writer(tsv_file, delimiter='\t')
-    rows = ((r[0], r[1]) for r in csv_file_reader)
-    tsv_file_writer.writerows(rows)
-    csv_file.close()
-    tsv_file.close()
-    return tsv_file_name
-
-
-def csv_to_json_with_labels(input_path, unknown_label):
-    tsv_file_name = create_tsv_file(input_path)
+def csv_to_spacy_format(input_path, unknown_label='-'):
     try:
-        tsv_file = open(tsv_file_name, 'r')  # input file
+        csv_file = open(input_path, 'r')
+        csv_file_reader = csv.reader(csv_file)
+        rows = ((r[0], r[1]) for r in csv_file_reader)
         input_file_name, _ = os.path.splitext(input_path)
-        output_file_name = input_file_name + '.json'
-        output_file = open(output_file_name, 'w')  # output file
-        data_dict = {}
-        annotations = []
-        label_dict = {}
-        s = ''
+        training_data = []
+        entities_list = []
+        sentence = ''
         start = 0
-        for line in tsv_file:
-            if line[0:len(line) - 1] != '.\tO':
-                word, entity = line.split('\t')
-                s += word + " "
-                entity = entity[:len(entity) - 1]
+        for row in rows:
+            if row[0] + ',' + row[1] != '.,O':
+                word, entity = row[0], row[1]
+                sentence += word + " "
+                entity = entity[:len(entity)]
                 if entity != unknown_label and len(entity) != 1:
-                    d = {'text': word, 'start': start, 'end': start + len(word) - 1}
-                    try:
-                        label_dict[entity].append(d)
-                    except:
-                        label_dict[entity] = []
-                        label_dict[entity].append(d)
+                    new_occurrence = (start, start + len(word), entity)
+                    entities_list.append(new_occurrence)
                 start += len(word) + 1
             else:
-                data_dict['content'] = s
-                s = ''
-                label_list = []
-                for entities in list(label_dict.keys()):
-                    for i in range(len(label_dict[entities])):
-                        if label_dict[entities][i]['text'] != '':
-                            l = [entities, label_dict[entities][i]]
-                            for j in range(i + 1, len(label_dict[entities])):
-                                if label_dict[entities][i]['text'] == label_dict[entities][j]['text']:
-                                    di = {'start': label_dict[entities][j]['start'],
-                                          'end': label_dict[entities][j]['end'],
-                                          'text': label_dict[entities][i]['text']}
-                                    l.append(di)
-                                    label_dict[entities][j]['text'] = ''
-                            label_list.append(l)
-
-                for entities in label_list:
-                    label = {'label': [entities[0]], 'points': entities[1:]}
-                    annotations.append(label)
-                data_dict['annotation'] = annotations
-                annotations = []
-                json.dump(data_dict, output_file)
-                output_file.write('\n')
-                data_dict = {}
+                training_data.append((sentence, {"entities": entities_list}))
                 start = 0
-                label_dict = {}
-        tsv_file.close()
-        os.remove(tsv_file_name)
-        return output_file_name
-    except Exception as e:
-        logging.exception("Unable to process file" + "\n" + "error = " + str(e))
-        return None
-
-
-def json_to_spacy_format(input_file):
-    try:
-        training_data = []
-        output_file, _ = os.path.splitext(input_file)
-        with open(input_file, 'r') as f:
-            lines = f.readlines()
-
-        for line in lines:
-            data = json.loads(line)
-            text = data['content']
-            entities = []
-            for annotation in data['annotation']:
-                point = annotation['points'][0]
-                labels = annotation['label']
-                if not isinstance(labels, list):
-                    labels = [labels]
-
-                for label in labels:
-                    entities.append((point['start'], point['end'] + 1, label))
-
-            training_data.append((text, {"entities": entities}))
-
-        os.remove(input_file)
+                sentence = ''
+                entities_list = []
+        csv_file.close()
         return training_data
     except Exception as e:
-        logging.exception("Unable to process " + input_file + "\n" + "error = " + str(e))
+        logging.exception("Unable to process file" + "\n" + "error = " + str(e))
         return None
 
 
@@ -124,7 +50,7 @@ def train_model(n_iter, train_data, model, learn_rate, nlp):
         optimizer = nlp.begin_training()
     else:
         optimizer = nlp.create_optimizer()
-
+    optimizer.learn_rate = learn_rate
     other_pipes = [pipe for pipe in nlp.pipe_names if pipe != 'ner']
     print('Nr iters: ' + str(n_iter) + ' with learning_rate:' + str(learn_rate))
     with nlp.disable_pipes(*other_pipes):  # only train NER
@@ -152,8 +78,8 @@ def save_model(output_dir, new_model_name, nlp):
 
 
 def fine_tune_and_save_custom_model(train_data, model=None, new_model_name=None, output_dir=None):
-    learn_rates = [0.001, 0.005, 0.0001]
-    n_iters = [20, 30, 40, 50]
+    learn_rates = [0.001, 0.005]
+    n_iters = [20, 30, 40, 50, 60, 70]
     """Setting up the pipeline and entity recognizer, and training the new entity."""
     if model is not None:
         nlp = spacy.load(model)  # load existing spacy model
@@ -170,7 +96,7 @@ def fine_tune_and_save_custom_model(train_data, model=None, new_model_name=None,
         ner.add_label(i)  # Add new entity labels to entity recognizer
 
     best_nlp = nlp
-    f1_score = 0
+    best_f1_score = 0
     best_learn_rate = learn_rates[0]
     best_iter = n_iters[0]
 
@@ -178,19 +104,20 @@ def fine_tune_and_save_custom_model(train_data, model=None, new_model_name=None,
         for learn_rate in learn_rates:
             train_nlp = nlp
             train_model(n_iter, train_data, model=model, learn_rate=learn_rate, nlp=train_nlp)
-            f1_score = evaluate_model(train_nlp, '../Data/validate.csv')
-            if f1_score >= f1_score:
+            f1_score = evaluate_model(train_nlp, 'Data/validate.csv')
+            if f1_score >= best_f1_score:
                 best_iter = n_iter
                 best_learn_rate = learn_rate
-                f1_score = f1_score
+                best_f1_score = f1_score
                 best_nlp = train_nlp
+    best_f1_score = evaluate_model(best_nlp, 'Data/test.csv')
+    print('After hyperparameter tuning -> model: ' + 'Iterations: ' + str(best_iter) + ' Learn rate:' + str(
+        best_learn_rate) + ' F1 Score:' + str(best_f1_score))
     save_model(output_dir, new_model_name, nlp=best_nlp)
-    print('Iterations: ' + str(best_iter) + ' Learn rate:' + str(best_learn_rate) + ' F1 Score:' + str(f1_score))
 
 
 def evaluate_model(nlp, input_file):
-    json_file_name = csv_to_json_with_labels(input_file, '-')
-    validate_data = json_to_spacy_format(json_file_name)
+    validate_data = csv_to_spacy_format(input_file)
     examples = []
     scorer = Scorer()
     for text, annotations in validate_data:
@@ -204,3 +131,12 @@ def evaluate_model(nlp, input_file):
     print('---------------------')
     f1_score = scores['ents_f']
     return f1_score
+
+
+def begin_training():
+    if os.path.exists(CUSTOM_SPACY_MODEL):
+        shutil.rmtree(CUSTOM_SPACY_MODEL)
+    training_data = csv_to_spacy_format('Data/train.csv', '-')
+    fine_tune_and_save_custom_model(training_data,
+                                    new_model_name='technology_it_model',
+                                    output_dir=CUSTOM_SPACY_MODEL)

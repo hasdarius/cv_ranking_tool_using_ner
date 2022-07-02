@@ -73,6 +73,8 @@ CONCEPTS_SCORES = {
     }
 }
 
+CUSTOM_SPACY_MODEL = "Model"
+
 LABELS_LIST = ["Programming Language", "Certification", "Seniority", "Tool/Framework", "IT Specialization",
                "Programming Concept"]
 
@@ -87,3 +89,9 @@ REASONING_GRAPH_CONNECTION_P3 = " shortest paths between them, one being the fol
 CV_DIRECTORY = './utils/cv-directory'
 TXT_FILES_DIRECTORY = './utils/txt-amr-files'
 TTL_FILES_DIRECTORY = './utils/ttl-rdf-files'
+
+JOB_DESCRIPTION_1_PATH = "./utils/job-description-directory/job-description1.txt"
+JOB_DESCRIPTION_2_PATH = "./utils/job-description-directory/job-description2.txt"
+JOB_DESCRIPTION_3_PATH = "./utils/job-description-directory/job-description3.txt"
+JOB_DESCRIPTION_4_PATH = "./utils/job-description-directory/job-description4.txt"
+
