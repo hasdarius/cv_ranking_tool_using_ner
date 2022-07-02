@@ -10,7 +10,8 @@ from nlp_scorer.gremlin_graph_scorer import compute_gremlin_match_score
 
 from utilities.constants import *
 
-if __name__ == "__main__":
+
+def main():
     start = time.time()
     args = sys.argv[1:]
     option = args[0]
@@ -41,7 +42,10 @@ if __name__ == "__main__":
                 elapsed_time = end - start
                 print('Execution time:', elapsed_time, 'seconds')
                 pprint(sorted(final_result_list, key=lambda resume: resume[1], reverse=True))
+                write_tuple_list_to_csv(final_result_list, "results.csv")
         else:
-            print("The only available option when running the tool are 'train' and 'score'")
+            print("The only available option when running the application are 'train' and 'score'")
 
 
+if __name__ == "__main__":
+    main()
