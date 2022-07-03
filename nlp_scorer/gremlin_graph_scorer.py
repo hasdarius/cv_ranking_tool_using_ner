@@ -14,7 +14,7 @@ from nlp_scorer.natural_text_to_graph.process_amr_rdf import read_graph_from_rdf
 from nlp_scorer.graph_similarity_algorithm.graph_score_reasoning import generate_score_explanation
 from nlp_scorer.graph_similarity_algorithm.graph_similarity_algorithm import initialize_similarity_matrix, \
     apply_similarity_measure, get_graph_similarity
-from utilities.file_util import read_from_txt
+from utilities.file_util import read_from_txt, read_from_pdf
 
 COMMON_KEY_LABELS = ['rdfs:comment', 'iri', 'rdfs:label', '@id', '@label', 'amr-core:root', 'amr-core:has-sentence',
                      'amr-core:has-id', 'amr-core:has-date']
@@ -114,7 +114,7 @@ def compute_gremlin_match_score(job_description_file, cv_folder_path):
 
         _, file_extension = os.path.splitext(cv_file)
         if file_extension == ".pdf":
-            text = read_cv_entities_from_pdf(cv_folder_path + '/' + cv_file)
+            text = read_from_pdf(cv_folder_path + '/' + cv_file)
         else:
             if file_extension == ".txt":
                 text_file = open(cv_folder_path + '/' + cv_file, "r")
@@ -126,11 +126,3 @@ def compute_gremlin_match_score(job_description_file, cv_folder_path):
         score_list.append((cv_file, cv_score, cv_reasoning))
     return sorted(score_list, key=lambda cv: cv[1], reverse=True)
 
-
-def read_cv_entities_from_pdf(document_path):
-    pdf = pdfplumber.open(document_path)
-    text = ""
-    for page in pdf.pages:
-        text = text + "\n" + page.extract_text()
-    text = re.sub(r"[^a-zA-Z0-9]", " ", text)
-    return text
