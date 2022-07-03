@@ -54,7 +54,7 @@ def apply_similarity_measure(matrix, node_mapping_g1, node_mapping_g2, nodes_nei
     terminated = False
     iterations = 0
     while not terminated:
-        max_difference = 0
+        max_difference = -1
         for iri_node_g1 in iri_keys_g1:
             for iri_node_g2 in iri_keys_g2:
                 in_similarity_score = get_similarity_score_for_neighbours(iri_node_g1, iri_node_g2, node_mapping_g1,
@@ -65,7 +65,7 @@ def apply_similarity_measure(matrix, node_mapping_g1, node_mapping_g2, nodes_nei
                                                                            nodes_neighbours_g2, "out-neighbours",
                                                                            matrix)
                 node_label_similarity = get_nodes_similarity(iri_node_g1, iri_node_g2, list_node_g1, list_node_g2)
-                temp_result = (in_similarity_score + out_similarity_score + node_label_similarity) / 3
+                temp_result = round((in_similarity_score + out_similarity_score + node_label_similarity) / 3, 10)
                 max_difference = max(
                     abs(matrix[node_mapping_g1[iri_node_g1]][node_mapping_g2[iri_node_g2]] - temp_result),
                     max_difference)
@@ -99,20 +99,23 @@ def get_similarity_score_for_neighbours(iri_node_g1, iri_node_g2, node_mapping_g
 def get_best_similarity_score(neighbour_list1, neighbour_list2, node_mapping_list1, node_mapping_list2, matrix, mode):
     similarity_score = 0
     best_choices_dict = {}
+    neighbour_list1 = sorted(neighbour_list1)
+    neighbour_list2 = sorted(neighbour_list2)
     for neighbour_iri in neighbour_list1:
-        best_match_score = 0
+        best_match_score = -1
         best_match_index = -1
         index_neighbour1 = node_mapping_list1[neighbour_iri]
         for neighbour_iri2 in neighbour_list2:
-            if neighbour_iri2 not in best_choices_dict:
+            index_neighbour2 = node_mapping_list2[neighbour_iri2]
+            if index_neighbour2 not in best_choices_dict:
                 if mode == 0:
-                    if matrix[index_neighbour1][node_mapping_list2[neighbour_iri2]] > best_match_score:
-                        best_match_score = matrix[index_neighbour1][node_mapping_list2[neighbour_iri2]]
-                        best_match_index = node_mapping_list2[neighbour_iri2]
+                    if matrix[index_neighbour1][index_neighbour2] > best_match_score:
+                        best_match_score = matrix[index_neighbour1][index_neighbour2]
+                        best_match_index = index_neighbour2
                 else:
-                    if matrix[node_mapping_list2[neighbour_iri2]][index_neighbour1] > best_match_score:
-                        best_match_score = matrix[node_mapping_list2[neighbour_iri2]][index_neighbour1]
-                        best_match_index = node_mapping_list2[neighbour_iri2]
+                    if matrix[index_neighbour2][index_neighbour1] > best_match_score:
+                        best_match_score = matrix[index_neighbour2][index_neighbour1]
+                        best_match_index = index_neighbour2
         best_choices_dict[best_match_index] = best_match_score
     scores_list = list(best_choices_dict.values())
     for score in scores_list:
