@@ -1,6 +1,8 @@
+import os
 import re
 
 import nest_asyncio
+import pdfplumber
 
 from rdf2g import rdflib, expand_tree, clear_graph
 from rdf2g import setup_graph
@@ -12,7 +14,7 @@ from nlp_scorer.natural_text_to_graph.process_amr_rdf import read_graph_from_rdf
 from nlp_scorer.graph_similarity_algorithm.graph_score_reasoning import generate_score_explanation
 from nlp_scorer.graph_similarity_algorithm.graph_similarity_algorithm import initialize_similarity_matrix, \
     apply_similarity_measure, get_graph_similarity
-from utilities.file_util import read_from_txt
+from utilities.file_util import read_from_txt, read_from_pdf
 
 COMMON_KEY_LABELS = ['rdfs:comment', 'iri', 'rdfs:label', '@id', '@label', 'amr-core:root', 'amr-core:has-sentence',
                      'amr-core:has-id', 'amr-core:has-date']
@@ -86,33 +88,15 @@ def gremlin_main(input_file1, input_file2):
                                                      nodes_neighbours_graph1, nodes_neighbours_graph2, node_list_g1,
                                                      node_list_g2)
 
-    # print("-----SIMILARITY--MATRIX--INITIAL-----")
-    # for line in similarity_matrix:
-    #     print('  '.join(map(str, line)))
-
     similarity_matrix = apply_similarity_measure(similarity_matrix, node_matrix_mapping_graph1,
                                                  node_matrix_mapping_graph2, nodes_neighbours_graph1,
                                                  nodes_neighbours_graph2, node_list_g1, node_list_g2, 0.1)
-
-    # print("-----SIMILARITY--MATRIX--FINAL-----")
-    #
-    # for line in similarity_matrix:
-    #     print('  '.join(map(str, line)))
 
     matched_nodes_list = []
     final_similarity_score = get_graph_similarity(similarity_matrix, len(node_matrix_mapping_graph1.keys()),
                                                   len(node_matrix_mapping_graph2.keys()), matched_nodes_list)
 
     print("Final similarity score between the 2 graphs: " + str(final_similarity_score))
-
-    # print("-----Node--Mapping--G1")
-    # pprint(node_matrix_mapping_graph1)
-    #
-    # print("-----Node--Mapping--G2")
-    # pprint(node_matrix_mapping_graph2)
-
-    # pprint(get_best_matched_node_info(matched_nodes_list, node_matrix_mapping_graph1, node_matrix_mapping_graph2,
-    #        nodes_neighbours_graph1, nodes_neighbours_graph2, node_list_g1, node_list_g2))
 
     reasoning = generate_score_explanation(matched_nodes_list, node_matrix_mapping_graph1, node_matrix_mapping_graph2,
                                            nodes_neighbours_graph1, nodes_neighbours_graph2, node_list_g1, node_list_g2)
@@ -127,8 +111,16 @@ def compute_gremlin_match_score(job_description_file, cv_folder_path):
     job_description_ttl_file = transform_from_natural_text_to_rdf(job_description_text, "job-description")
     score_list = []
     for cv_file in cv_files_list:
-        text_file = open(cv_folder_path + '/' + cv_file, "r")
-        text = text_file.read()
+
+        _, file_extension = os.path.splitext(cv_file)
+        if file_extension == ".pdf":
+            text = read_from_pdf(cv_folder_path + '/' + cv_file)
+        else:
+            if file_extension == ".txt":
+                text_file = open(cv_folder_path + '/' + cv_file, "r")
+                text = text_file.read()
+            else:
+                text = []
         cv_ttl_file = transform_from_natural_text_to_rdf(text, "cv")
         cv_score, cv_reasoning = gremlin_main(job_description_ttl_file, cv_ttl_file)
         score_list.append((cv_file, cv_score, cv_reasoning))
